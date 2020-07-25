@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
     /// <summary>
     /// A simple UI panel to show any mod conflict notifications.

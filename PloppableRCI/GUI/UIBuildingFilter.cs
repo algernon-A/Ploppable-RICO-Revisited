@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using ColossalFramework.UI;
-using System.Windows.Forms.VisualStyles;
 
 namespace PloppableRICO
 {
@@ -53,7 +52,7 @@ namespace PloppableRICO
                 {
                     categoryToggles[i].isChecked = false;
                 }
-                
+
                 // Select this toggle.
                 control.isChecked = true;
             }
