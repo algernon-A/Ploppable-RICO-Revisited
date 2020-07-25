@@ -21,8 +21,20 @@
             buildingData.m_flags &= ~Building.Flags.Abandoned;
             buildingData.m_flags &= ~Building.Flags.Demolishing;
 
-            // Make sure building isn't 'turned off' (otherwise this could be an issue with coverted parks, monuments, etc. that were previously turned off). 
+            // Make sure building isn't 'turned off' (otherwise this could be an issue with coverted parks, monuments, etc. that were previously turned off).
             buildingData.m_problems &= ~Notification.Problem.TurnedOff;
+
+            if (ModSettings.noValueRico)
+            {
+                // Disable the "Low land value" complaint
+                buildingData.m_problems &= ~Notification.Problem.LandValueLow;
+            }
+
+            if (ModSettings.noServicesRico)
+            {
+                // Disable the "Too few services" complaint
+                buildingData.m_problems &= ~Notification.Problem.TooFewServices;
+            }
         }
     }
 }
