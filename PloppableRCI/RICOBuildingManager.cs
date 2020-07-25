@@ -8,7 +8,7 @@ using UnityEngine;
 namespace PloppableRICO
 {
     /// <summary>
-    /// The data object that tracks what buildings are plopped, and which were grown. We can use this data to apply differnt AI logic to each. 
+    /// The data object that tracks what buildings are plopped, and which were grown. We can use this data to apply differnt AI logic to each.
     /// </summary>
 
     public class RICOBuildingManager : SerializableDataExtensionBase
@@ -40,18 +40,18 @@ namespace PloppableRICO
 
         public static void AddBuilding(BuildingInfo prefab, uint ID)
         {
-            //This is called from building tool. The data it sets is read by methods in the RICO AIs and BuildingTool detours. 
+            //This is called from building tool. The data it sets is read by methods in the RICO AIs and BuildingTool detours.
 
             Debug.Log("Add Building Called with ID = " + ID);
 
-            if (prefab.m_buildingAI is PloppableOffice || prefab.m_buildingAI is PloppableExtractor || prefab.m_buildingAI is PloppableResidential || prefab.m_buildingAI is PloppableCommercial || prefab.m_buildingAI is PloppableIndustrial)
+            if (prefab.m_buildingAI is PloppableOfficeAI || prefab.m_buildingAI is PloppableExtractorAI || prefab.m_buildingAI is PloppableResidentialAI || prefab.m_buildingAI is PloppableCommercialAI || prefab.m_buildingAI is PloppableIndustrialAI)
             {
 
                 RICOInstanceData data = RICOBuildingManager.RICOInstanceData[(int)ID];
                 if (data != null)
                 {
                     data.Name = prefab.name;
-                    data.plopped = true; //since this is called from building tool, it must be plopped. 
+                    data.plopped = true; //since this is called from building tool, it must be plopped.
                 }
 
             }
@@ -141,7 +141,7 @@ namespace PloppableRICO
 			Name = s.ReadSharedString();
 			//Depth = s.ReadInt32();
 			plopped = s.ReadBool();
-	
+
 		}
 
 		public void AfterDeserialize(DataSerializer s) {}
