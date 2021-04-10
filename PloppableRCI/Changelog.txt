@@ -1,4 +1,7 @@
-﻿Version 2.4.4
+﻿- Adjust thumbnail and preview image rendering
+
+
+Version 2.4.4
 
 - Fix local RICO settings being saved with incorrect building name when existing author settings use an incomplete name
 - Redo 'Ploppable Options' options panel with manual layout (instead of using game's autolayout), to fix options panel crash for some Chinese users
