@@ -45,9 +45,9 @@ namespace PloppableRICO
 
             // Basic layout.
             component.tooltipAnchor = UITooltipAnchor.Anchored;
-            component.horizontalAlignment = UIHorizontalAlignment.Center;
-            component.verticalAlignment = UIVerticalAlignment.Middle;
-            component.pivot = UIPivotPoint.TopCenter;
+            component.horizontalAlignment = UIHorizontalAlignment.Left;
+            component.verticalAlignment = UIVerticalAlignment.Top;
+            component.pivot = UIPivotPoint.TopLeft;
             component.foregroundSpriteMode = UIForegroundSpriteMode.Fill;
             component.group = component.parent;
 

@@ -525,7 +525,7 @@ namespace PloppableRICO
             // Event handler on grandparent size change.
             buildingPanel.parent.eventSizeChanged += (control, size) =>
             {
-                // If we're visible, resize to match the new grandparent side.
+                // If we're visible, resize to match the new grandparent size.
                 if (scrollPanel.isVisible)
                 {
                     // New size.

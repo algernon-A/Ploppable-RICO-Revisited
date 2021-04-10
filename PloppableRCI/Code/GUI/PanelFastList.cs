@@ -383,6 +383,9 @@ namespace PloppableRICO
         /// <param name="pos">Index position in the list</param>
         public void DisplayAt(float pos)
         {
+            // Force autolayout off, just in case something else has set it.
+            autoLayout = false;
+
             if (m_itemsData == null || m_itemsData.m_size == 0 || m_itemWidth <= 0 || m_itemHeight <= 0) return;
 
             m_selectedId = -1;
@@ -432,7 +435,6 @@ namespace PloppableRICO
                         {
                             item.component.enabled = false;
                         }
-
                         item.component.relativePosition = new Vector3(j * itemWidth, i * itemHeight /*- offset*/);
                     }
                 }
