@@ -35,7 +35,7 @@
     <Translation ID="PRR_OPT_SUB" String="サブ-サービス" />
     <Translation ID="PRR_OPT_UIC" String="UIカテゴリー" />
     <Translation ID="PRR_OPT_CST" String="建築費" />
-    <Translation ID="PRR_OPT_CNT" String="労働者数/世帯数" />
+    <Translation ID="PRR_OPT_CNT" String="職場数/世帯数" />
     <Translation ID="PRR_OPT_POP" String="Realistic Population Modを使用" />
     <Translation ID="PRR_OPT_POL" String="汚染を有効化" />
     <Translation ID="PRR_OPT_GRO" String="Growable" />
@@ -43,7 +43,7 @@
     <Translation ID="PRR_OPT_JB1" String="初等教育以上の職場" />
     <Translation ID="PRR_OPT_JB2" String="中等教育以上の職場" />
     <Translation ID="PRR_OPT_JB3" String="高等教育以上の職場" />
-    <Translation ID="PRR_OPT_URP" String="Realistic Populationオプションが有効のため Population設定が無効" />
+    <Translation ID="PRR_OPT_URP" String="Realistic Populationオプションが有効のため無効" />
     <Translation ID="PRR_CAT_MON" String="モニュメント" />
     <Translation ID="PRR_CAT_BEA" String="公園" />
     <Translation ID="PRR_CAT_EDU" String="教育" />
@@ -76,8 +76,8 @@
     <Translation ID="PRR_UIC_NON" String="なし" />
     <Translation ID="PRR_SET" String="設定" />
     <Translation ID="PRR_SET_RICO" String="RICO設定" />
-    <Translation ID="PRR_SET_HASMOD" String="Modの設定" />
-    <Translation ID="PRR_SET_HASAUT" String="作者の設定" />
+    <Translation ID="PRR_SET_HASMOD" String="Modによる設定" />
+    <Translation ID="PRR_SET_HASAUT" String="作者による設定" />
     <Translation ID="PRR_SET_HASLOC" String="ローカル設定" />
     <Translation ID="PRR_SET_HASANY" String="全て" />
     <Translation ID="PRR_SET_HASNON" String="設定なし" />
@@ -95,8 +95,22 @@
     <Translation ID="PRR_OPTION_SVC" String="&quot;公共サービスが少なすぎます&quot;という警告を除外" />
     <Translation ID="PRR_OPTION_HST" String="設置したGrowableアセットを歴史的建造物に指定" />
     <Translation ID="PRR_OPTION_BLC" String="設置したGrowableアセットのレベルをAdvanced Building Level Controlでロック" />
+    <Translation ID="PRR_OPTION_DEM" String="ブルドーザーの設定 (歴史的建造物には影響しません)" />
+    <Translation ID="PRR_OPTION_BDZ" String="RICOアセットを取り壊す前に確認する" />
+    <Translation ID="PRR_OPTION_IMP" String="RICOアセットを自動的に取り壊す" />
+    <Translation ID="PRR_OPTION_IMP2" String="（例：道路やその他の建物を設置する場合）" />
+    <Translation ID="PRR_OPTION_CST" String="建築費設定" />
+    <Translation ID="PRR_OPTION_COV" String="建築費を補正" />
+    <Translation ID="PRR_OPTION_CPH" String="1世帯あたりの費用" />
+    <Translation ID="PRR_OPTION_CHM" String="住宅レベルごとの追加費用 (%)" />
+    <Translation ID="PRR_OPTION_CJ0" String="学歴不問の職場1あたりの費用" />
+    <Translation ID="PRR_OPTION_CJ1" String="初等教育以上の職場1あたりの費用" />
+    <Translation ID="PRR_OPTION_CJ2" String="中等教育以上の職場1あたりの費用" />
+    <Translation ID="PRR_OPTION_CJ3" String="高等教育以上の職場1あたりの費用" />
+    <Translation ID="PRR_OPTION_NOT" String="通知設定" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="デバッグロギングを有効化" />
     <Translation ID="PRR_OPTION_FORCERESET" String="ゲームロード時に前回の統計をリセット" />
+    <Translation ID="PRR_OPTION_SPDHDR" String="ゲームスピードが僅かに向上するがパネル展開に遅延が発生" />
     <Translation ID="PRR_OPTION_THUMBACK" String="サムネイルの背景" />
     <Translation ID="PRR_THUMB_COLOR" String="色" />
     <Translation ID="PRR_THUMB_PLAIN" String="無地" />

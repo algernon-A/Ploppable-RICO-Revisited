@@ -17,11 +17,11 @@
     <Translation ID="PRR_SUB_LOW" String="Lage dichtheid" />
     <Translation ID="PRR_SUB_HEC" String="Hoge dichtheid ecologisch" />
     <Translation ID="PRR_SUB_LEC" String="Lage dichtheid ecologisch" />
-    <Translation ID="PRR_SUB_LEI" String="Uitgaan" />
+    <Translation ID="PRR_SUB_LEI" String="Vrije tijd" />
     <Translation ID="PRR_SUB_TOU" String="Tourisme" />
     <Translation ID="PRR_SUB_ORG" String="Ecologisch" />
     <Translation ID="PRR_SUB_GEN" String="Algemeen" />
-    <Translation ID="PRR_SUB_ITC" String="IT kluster" />
+    <Translation ID="PRR_SUB_ITC" String="IT cluster" />
     <Translation ID="PRR_SUB_FAR" String="Agrarisch" />
     <Translation ID="PRR_SUB_FOR" String="Bosbouw" />
     <Translation ID="PRR_SUB_OIL" String="Olie" />
@@ -31,25 +31,32 @@
     <Translation ID="PRR_FTR_NAM" String="Naam" />
     <Translation ID="PRR_FTR_SET" String="Filter: Mod/Auteur/lokaal/Alles" />
     <Translation ID="PRR_OPT_SET" String="instellingen" />
+    <Translation ID="PRR_OPT_AUT" String="Auteur" />
+    <Translation ID="PRR_OPT_LOC" String="Lokaal" />
     <Translation ID="PRR_OPT_ENA" String="RICO activeren" />
-    <Translation ID="PRR_OPT_SER" String="Gebouwstype" />
+    <Translation ID="PRR_OPT_SER" String="Gebouwtype" />
     <Translation ID="PRR_OPT_SUB" String="Sub-type" />
     <Translation ID="PRR_OPT_UIC" String="UI categorie" />
     <Translation ID="PRR_OPT_CST" String="Bouwkosten" />
     <Translation ID="PRR_OPT_CNT" String="Arbeider/woning ratio" />
-    <Translation ID="PRR_OPT_POP" String="Gebruik 'Realistic pop' mod" />
+    <Translation ID="PRR_OPT_POP" String="Gebruik ‘Realistic Pop.’ mod" />
     <Translation ID="PRR_OPT_POL" String="Vervuiling inschakelen" />
     <Translation ID="PRR_OPT_GRO" String="Groeibaar" />
-    <Translation ID="PRR_OPT_JB0" String="Banen voor onopgeleiden" />
-    <Translation ID="PRR_OPT_JB1" String="Banen voor opgeleiden" />
-    <Translation ID="PRR_OPT_JB2" String="Banen voor hoogopgeleiden" />
-    <Translation ID="PRR_OPT_JB3" String="Banen voor zeer hoogopgeleiden" />
+    <Translation ID="PRR_OPT_JB0" String="Banen voor ongeschoolde" />
+    <Translation ID="PRR_OPT_JB1" String="Banen voor geschoolde" />
+    <Translation ID="PRR_OPT_JB2" String="Banen voor goedgeschoolde" />
+    <Translation ID="PRR_OPT_JB3" String="Banen voor hooggeschoolde" />
+    <Translation ID="PRR_OPT_URP" String="Bevolking instellingen zĳn uitgeschakeld omdat “Gebruik ‘Realistic Pop.’ mod” is aangevinkt." />
     <Translation ID="PRR_CAT_MON" String="Monumenten" />
     <Translation ID="PRR_CAT_BEA" String="Versiering" />
     <Translation ID="PRR_CAT_EDU" String="Opleiding" />
+    <Translation ID="PRR_CAT_HEA" String="Gezondheid" />
+    <Translation ID="PRR_CAT_FIR" String="Brandweer" />
+    <Translation ID="PRR_CAT_POL" String="Politie" />
     <Translation ID="PRR_CAT_POW" String="Electriciteit" />
     <Translation ID="PRR_CAT_WAT" String="Water" />
-    <Translation ID="PRR_CAT_HEA" String="Gezondheid" />
+    <Translation ID="PRR_CAT_GAR" String="Afval" />
+    <Translation ID="PRR_CAT_PIN" String="Industrie van de speler" />
     <Translation ID="PRR_CAT_RES" String="Woningen" />
     <Translation ID="PRR_CAT_COM" String="Commercieel" />
     <Translation ID="PRR_CAT_OFF" String="Kantoren" />
@@ -73,8 +80,11 @@
     <Translation ID="PRR_SET" String="Instellingen" />
     <Translation ID="PRR_SET_RICO" String="RICO-instellingen" />
     <Translation ID="PRR_SET_HASMOD" String="MOD-instellingen" />
-    <Translation ID="PRR_SET_HASAUT" String="Autheurs instellingen" />
+    <Translation ID="PRR_SET_NOMOD" String="Geen mod-instellingen" />
+    <Translation ID="PRR_SET_HASAUT" String="Autheursinstellingen" />
+    <Translation ID="PRR_SET_NOAUT" String="Geen autheursinstellingen" />
     <Translation ID="PRR_SET_HASLOC" String="Lokale instellingen" />
+    <Translation ID="PRR_SET_NOLOC" String="Geen lokale instellingen" />
     <Translation ID="PRR_SET_HASANY" String="Alle instellingen" />
     <Translation ID="PRR_SET_HASNON" String="Geen instellingen" />
     <Translation ID="PRR_SAV_SAV" String="Opslaan" />
@@ -96,7 +106,16 @@
     <Translation ID="PRR_OPTION_RCO" String="Alle RICO gebouwen (inclusief groeibare)" />
     <Translation ID="PRR_OPTION_OTH" String="Groeibare niet-RICO gebouwen" />
     <Translation ID="PRR_OPTION_BDZ" String="Goedkeuring vragen vóór het verwijderen van plopped RICO gebouwen" />
-    <Translation ID="PRR_OPTION_IMP" String="Sta toe dat plopped RICO gebouwen automatisch worden verwijderd en dat er overheen gebouwd wordt. (bijv. als je wegen bouwt of gebouwen plaatst." />
+    <Translation ID="PRR_OPTION_IMP" String="Sta toe dat plopped RICO gebouwen automatisch worden verwijderd en dat er overheen gebouwd wordt." />
+    <Translation ID="PRR_OPTION_IMP2" String="(bv. als je wegen bouwt of gebouwen plaatst)" />
+    <Translation ID="PRR_OPTION_CST" String="Kostopties" />
+    <Translation ID="PRR_OPTION_COV" String="Bouwkosten overschrĳven" />
+    <Translation ID="PRR_OPTION_CPH" String="Kosten per huishouden" />
+    <Translation ID="PRR_OPTION_CHM" String="Bĳkomende factor per huishoud niveau" />
+    <Translation ID="PRR_OPTION_CJ0" String="Kost per ongescholde baan" />
+    <Translation ID="PRR_OPTION_CJ1" String="Kost per gescholde baan" />
+    <Translation ID="PRR_OPTION_CJ2" String="Kost per goedgescholde baan" />
+    <Translation ID="PRR_OPTION_CJ3" String="Kost per hooggeschoolde baan" />
     <Translation ID="PRR_OPTION_LOA" String="Laadopties" />
     <Translation ID="PRR_OPTION_LOG" String="Inlogopties" />
     <Translation ID="PRR_OPTION_TMB" String="Thumbnail-opties" />
@@ -104,6 +123,8 @@
     <Translation ID="PRR_OPTION_GRO" String="Opties voor groeibare gebouwen" />
     <Translation ID="PRR_OPTION_COM" String="Klachtopties" />
     <Translation ID="PRR_OPTION_MOD" String="Mod opties" />
+    <Translation ID="PRR_OPTION_NOT" String="Melding opties" />
+    <Translation ID="PRR_OPTION_WHATSNEW" String="Toon berichten over “nieuwigheden”" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="Schakel extra 'debugging' logging in" />
     <Translation ID="PRR_OPTION_FORCERESET" String="Forceer reset van bestaande gebouwgegevens van het spel" />
     <Translation ID="PRR_OPTION_REGENTHUMBS" String="Regenereer thumbnails" />
@@ -128,13 +149,13 @@
     <Translation ID="ERR_CON1" String="The conflicterende mod's zijn:" />
     <Translation ID="PRR_ERR_CON0" String="Ploppable RICO Revisited heeft een conflict gedetecteerd met ten minste één andere mod." />
     <Translation ID="PRR_ERR_CON1" String="Deze mods moeten verwijderd worden voordat Ploppable RICO Revisited kan werken." />
-    <Translation ID="PRR_CON_PTG0" String="Plop the Growables mod gedetecteerd." />
-    <Translation ID="PRR_CON_PTG1" String="Plop the Growables mod gedetecteerd - de meeste functies zitten ook in Ploppable RICO Revisited. Wees voorzichtig om beide mods te gebruiken, de instellingen kunnen een conflict geven." />
+    <Translation ID="PRR_CON_PTG0" String="“Plop the Growables”-mod gedetecteerd." />
+    <Translation ID="PRR_CON_PTG1" String="“Plop the Growables” mod gedetecteerd - de meeste functies zitten ook in Ploppable RICO Revisited. Wees voorzichtig om beide mods te gebruiken, de instellingen kunnen een conflict geven." />
     <Translation ID="PRR_CON_PTG2" String="Het is nog steeds ok om ze beide te gebruiken - ALS hun instellingen geen conflict geven!" />
     <Translation ID="PRR_UPD_23_0" String="Plopplable RICO Revisited 2.3 update" />
     <Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisited' is geüpdatet naar versie 2.3. De belangrijkste functies van deze update zijn: " />
-    <Translation ID="PRR_UPD_23_2" String="Ploppable RICO' heeft nu: 'Plop the Growables' functionaliteit voor RICO en niet-RICO gebouwen. Bekijk bij de opties voor meer details. " />
-    <Translation ID="PRR_UPD_23_3" String="Het is nu mogelijk om RICO's groeibare gebouwen buiten een specifieke zone te plaatsen (in te stellen)." />
+    <Translation ID="PRR_UPD_23_2" String="Ploppable RICO' heeft nu: “Plop the Growables” functionaliteit voor RICO en niet-RICO gebouwen. Bekijk bij de opties voor meer details. " />
+    <Translation ID="PRR_UPD_23_3" String="Het is nu mogelijk om RICO's groeibare gebouwen buiten een specifieke zone te plaatsen (instelbaar)." />
     <Translation ID="PRR_UPD_23_4" String="Klachten over lage landwaarden en onvoldoende dienstverlening zijn nu uit te schakelen." />
     <Translation ID="PRR_UPD_23_5" String="Verbeterde rendering van de thumbnails van de gebouwen. Zo worden deze alleen laten zien als deze nodig zijn, waardoor geheugegebruik wordt verlaagd en opstarttijd wordt verbeterd. " />
     <Translation ID="PRR_UPD_234_0" String="Voeg optie toe om waarschuwingen aan of uit te zetten als je plopped RICO gebouwen verwijderd." />
@@ -143,5 +164,8 @@
     <Translation ID="PRR_UPD_235_1" String="Voeg waarschuwing toe als 'Plop the Growables' mod ook actief is." />
     <Translation ID="PRR_UPD_235_2" String="Verbeterde mod conflict en error notificatie." />
     <Translation ID="PRR_UPD_236_0" String="Verbeter mod conflict detectie en notificatie." />
+    <Translation ID="PRR_UPD_237_0" String="Herstel foutmelding van “Harmony” bĳ het inladen in de editors." />
+    <Translation ID="PRR_UPD_240_0" String="Voeg instelbare kostoverschrĳdingen toe." />
+    <Translation ID="PRR_UPD_240_1" String="Voeg de optie toe om automatisch het gebouwniveau te vergrendelen van geplaatste groeibare gebouwen (vereist “Advanced Building Level Control”-mod)." />
   </Translations>
 </Language>
