@@ -1,4 +1,7 @@
-﻿- Adjust thumbnail and preview image rendering
+﻿Version 2.4.5
+
+- Adjust thumbnail and preview image rendering
+- Add support for Yet Another Toolbar panel resizing (note: scaling is not yet fully implemented)
 
 
 Version 2.4.4

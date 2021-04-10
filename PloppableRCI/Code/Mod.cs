@@ -19,7 +19,7 @@ namespace PloppableRICO
         internal static string Version => BaseVersion + " " + Beta;
         internal static string Beta => "";
         internal static int BetaVersion => 0;
-        private static string BaseVersion => "2.4.4";
+        private static string BaseVersion => "2.4.5";
 
 
         /// <summary>
