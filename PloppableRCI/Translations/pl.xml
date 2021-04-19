@@ -6,11 +6,11 @@
     <Translation ID="PRR_LVL" String="Poz." />
     <Translation ID="PRR_HOU" String="Gospodarstwa domowe" />
     <Translation ID="PRR_WOR" String="Miejsca pracy" />
-    <Translation ID="PRR_SRV_NON" String="Brak specjalizacji" />
+    <Translation ID="PRR_SRV_NON" String="Brak" />
     <Translation ID="PRR_SRV_RES" String="Mieszkalne" />
     <Translation ID="PRR_SRV_IND" String="Przemysłowe" />
-    <Translation ID="PRR_SRV_OFF" String="Biuro" />
-    <Translation ID="PRR_SRV_COM" String="Handlowy" />
+    <Translation ID="PRR_SRV_OFF" String="Biurowe" />
+    <Translation ID="PRR_SRV_COM" String="Handlowe" />
     <Translation ID="PRR_SRV_EXT" String="Wydobycie" />
     <Translation ID="PRR_SRV_DUM" String="Wyłączony" />
     <Translation ID="PRR_SUB_HIG" String="Wysoka" />
@@ -31,11 +31,14 @@
     <Translation ID="PRR_FTR_NAM" String="Nazwa" />
     <Translation ID="PRR_FTR_SET" String="Filtr ustawień: Mod/Autor/Własne/Dowolne" />
     <Translation ID="PRR_OPT_SET" String="Ustawienia" />
+    <Translation ID="PRR_OPT_MOD" String="Mod" />
+    <Translation ID="PRR_OPT_AUT" String="Autor" />
+    <Translation ID="PRR_OPT_LOC" String="Własne" />
     <Translation ID="PRR_OPT_ENA" String="Włącz RICO" />
     <Translation ID="PRR_OPT_SER" String="Typ" />
     <Translation ID="PRR_OPT_SUB" String="Podtyp" />
     <Translation ID="PRR_OPT_UIC" String="Kategoria UI" />
-    <Translation ID="PRR_OPT_CST" String="Koszt konstrukcji" />
+    <Translation ID="PRR_OPT_CST" String="Koszt budowy" />
     <Translation ID="PRR_OPT_CNT" String="Liczba mieszkańców/pracowników" />
     <Translation ID="PRR_OPT_POP" String="Użyj moda Realistic Pop" />
     <Translation ID="PRR_OPT_POL" String="Włącz zanieczyszczenie" />
@@ -44,21 +47,26 @@
     <Translation ID="PRR_OPT_JB1" String="Wyedukowani" />
     <Translation ID="PRR_OPT_JB2" String="Dobrze wyedukowani" />
     <Translation ID="PRR_OPT_JB3" String="Bardzo dobrze wyedukowani" />
+    <Translation ID="PRR_OPT_URP" String="Ustawienia populacji są wyłączone, bo opcja Realistyczna Populacja jest włączona" />
     <Translation ID="PRR_CAT_MON" String="Monumenty" />
     <Translation ID="PRR_CAT_BEA" String="Upiększanie" />
     <Translation ID="PRR_CAT_EDU" String="Edukacja" />
-    <Translation ID="PRR_CAT_POW" String="Zasilanie" />
-    <Translation ID="PRR_CAT_WAT" String="Woda" />
     <Translation ID="PRR_CAT_HEA" String="Zdrowie" />
+    <Translation ID="PRR_CAT_FIR" String="Straż pożarna" />
+    <Translation ID="PRR_CAT_POL" String="Policja" />
+    <Translation ID="PRR_CAT_POW" String="Elektryczność" />
+    <Translation ID="PRR_CAT_WAT" String="Woda" />
+    <Translation ID="PRR_CAT_GAR" String="Odpady" />
+    <Translation ID="PRR_CAT_PIN" String="Przemysł gracza" />
     <Translation ID="PRR_CAT_RES" String="Mieszkalne" />
     <Translation ID="PRR_CAT_COM" String="Handlowe" />
-    <Translation ID="PRR_CAT_OFF" String="Biuro" />
-    <Translation ID="PRR_CAT_IND" String="Przemysł" />
+    <Translation ID="PRR_CAT_OFF" String="Biurowe" />
+    <Translation ID="PRR_CAT_IND" String="Przemysłowe" />
     <Translation ID="PRR_UIC_REL" String="Mieszkalne o niskiej gęstości" />
     <Translation ID="PRR_UIC_REH" String="Mieszkalne o dużej gęstości" />
     <Translation ID="PRR_UIC_COL" String="Budynki handlowe o niskiej gęstości" />
     <Translation ID="PRR_UIC_COH" String="Budynki handlowe o dużej gęstości" />
-    <Translation ID="PRR_UIC_OFF" String="Biura" />
+    <Translation ID="PRR_UIC_OFF" String="Biurowe" />
     <Translation ID="PRR_UIC_IND" String="Przemysł" />
     <Translation ID="PRR_UIC_FAR" String="Rolnictwo" />
     <Translation ID="PRR_UIC_FOR" String="Leśnictwo" />
@@ -73,8 +81,11 @@
     <Translation ID="PRR_SET" String="Ustawienia" />
     <Translation ID="PRR_SET_RICO" String="Ustawienia RICO" />
     <Translation ID="PRR_SET_HASMOD" String="Ustawienia moda" />
+    <Translation ID="PRR_SET_NOMOD" String="Brak ustawień moda" />
     <Translation ID="PRR_SET_HASAUT" String="Ustawienia autora" />
+    <Translation ID="PRR_SET_NOAUT" String="Brak ustawień autora" />
     <Translation ID="PRR_SET_HASLOC" String="Ustawienia gracza" />
+    <Translation ID="PRR_SET_NOLOC" String="Brak własnych ustawień" />
     <Translation ID="PRR_SET_HASANY" String="Dowolne ustawienia" />
     <Translation ID="PRR_SET_HASNON" String="Brak ustawień" />
     <Translation ID="PRR_SAV_SAV" String="Zapisz" />
@@ -91,16 +102,19 @@
     <Translation ID="PRR_OPTION_VAL" String="Ignoruj problem 'niskiej wartości ziemi'" />
     <Translation ID="PRR_OPTION_SVC" String="Ignoruj problem 'zbyt niskich usług komunalnych'" />
     <Translation ID="PRR_OPTION_HST" String="Zamień wszystkie ręcznie umieszczone budynki rozwijalne na zabytki" />
+    <Translation ID="PRR_OPTION_BLC" String="Zablokuj poziomy użytych rozwijalnych używając Advanced Building Level Control" />
     <Translation ID="PRR_OPTION_RPL" String="Ręcznie umieszczone budynki RICO" />
     <Translation ID="PRR_OPTION_RGR" String="Budynki RICO samopojawiające się w strefach" />
     <Translation ID="PRR_OPTION_RCO" String="Wszystkie budynki RICO (w tym rozwijalne)" />
     <Translation ID="PRR_OPTION_OTH" String="Rozwijalne budynki nie-RICO" />
+    <Translation ID="PRR_OPTION_DEM" String="Opcje wyburzania (nie ma wpływu na budynki historyczne)" />
     <Translation ID="PRR_OPTION_BDZ" String="Potwierdzenie wymagane do wyburzenia budynków nierozwijalnych (ręcznie stawianych)" />
     <Translation ID="PRR_OPTION_IMP" String="Zezwalaj na automatyczne wyburzanie ręcznie ustawionych budynków RICO (np. podczas budowy drogi albo stawiania innych budynków)" />
-    <Translation ID="PRR_OPTION_CST" String="Opcje wyburzania" />
-    <Translation ID="PRR_OPTION_COV" String="Pytaj przed wyburzaniem budynków RICO" />
-    <Translation ID="PRR_OPTION_CPH" String="Dopuść automatyczne burzenie budynków RICO  podczas budowania ( np. kiedy budujesz drogę lub stawiasz budynek )" />
-    <Translation ID="PRR_OPTION_CHM" String="Opcje kosztów" />
+    <Translation ID="PRR_OPTION_IMP2" String="(np. przy budowe dróg i innych budynków)" />
+    <Translation ID="PRR_OPTION_CST" String="Opcje kosztów" />
+    <Translation ID="PRR_OPTION_COV" String="Nadpisz koszt budynku" />
+    <Translation ID="PRR_OPTION_CPH" String="Koszt za mieszkanie" />
+    <Translation ID="PRR_OPTION_CHM" String="Dodatkowy mnożnik za poziom mieszkania (%)" />
     <Translation ID="PRR_OPTION_CJ2" String="Dodatkowy multiplikator na poziom gospodarstwa" />
     <Translation ID="PRR_OPTION_LOA" String="Opcje wczytywania" />
     <Translation ID="PRR_OPTION_LOG" String="Opcje logowania" />
@@ -138,7 +152,7 @@
     <Translation ID="PRR_CON_PTG2" String="Można nadal używać obu modów razem - JEŚLI ich ustawienia nie konfliktują ze sobą!" />
     <Translation ID="PRR_UPD_23_0" String="Ploppable RICO Revisited aktualizacja 2.3" />
     <Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisited został zaktualizowany do wersji 2.3. Niektóre elementy tej aktualizacji:" />
-    <Translation ID="PRR_UPD_23_2" String="RICO zawiera teraz funkcję 'Postaw Budynki Rozwijalne' działającą dla obu typów budynków RICO oraz nie-RICO. Sprawdź panel opcji aby zapoznać się ze szczegółami." />
+    <Translation ID="PRR_UPD_23_2" String="RICO zawiera teraz funkcję 'Postaw Budynki Rozwijalne' działającą dla obu typów budynków RICO oraz nie-RICO. Sprawdź panel opcji aby zapoznać się zeszczegółami." />
     <Translation ID="PRR_UPD_23_3" String="Rozwijalne budynki RICO mogą być teraz ustawiane poza ich strefami (konfigurowalne)." />
     <Translation ID="PRR_UPD_23_4" String="Skargi &quot;niska wartość gruntów&quot; i &quot;niewystarczajace usługi&quot; można teraz wyłączyć." />
     <Translation ID="PRR_UPD_23_5" String="Usprawniono renderer miniaturek budynków, który tworzy teraz obrazy kiedy są potrzebne, redukując użycie pamięci and poprawiając czas wgrywania." />

@@ -57,6 +57,7 @@
     <Translation ID="PRR_CAT_POW" String="Eletricidade" />
     <Translation ID="PRR_CAT_WAT" String="Água" />
     <Translation ID="PRR_CAT_GAR" String="Lixo" />
+    <Translation ID="PRR_CAT_PIN" String="Indústria do Jogador" />
     <Translation ID="PRR_CAT_RES" String="Residencial" />
     <Translation ID="PRR_CAT_COM" String="Comercial" />
     <Translation ID="PRR_CAT_OFF" String="Escritório" />
@@ -80,11 +81,11 @@
     <Translation ID="PRR_SET" String="Configurações" />
     <Translation ID="PRR_SET_RICO" String="Configurações do RICO" />
     <Translation ID="PRR_SET_HASMOD" String="Configurações do Mod" />
-
+    <Translation ID="PRR_SET_NOMOD" String="Sem Configurações do Mod" />
     <Translation ID="PRR_SET_HASAUT" String="Configurações do Autor" />
-
+    <Translation ID="PRR_SET_NOAUT" String="Sem Configurações do Autor" />
     <Translation ID="PRR_SET_HASLOC" String="Configurações Locais" />
-
+    <Translation ID="PRR_SET_NOLOC" String="Sem Configurações Locais" />
     <Translation ID="PRR_SET_HASANY" String="Qualquer Configuração" />
     <Translation ID="PRR_SET_HASNON" String="Não-Configurado" />
     <Translation ID="PRR_SAV_SAV" String="Salvar" />

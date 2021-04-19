@@ -20,7 +20,7 @@
     <Translation ID="PRR_SUB_LEI" String="レジャー" />
     <Translation ID="PRR_SUB_TOU" String="観光" />
     <Translation ID="PRR_SUB_ORG" String="エコ（オーガニック）" />
-    <Translation ID="PRR_SUB_GEN" String="汎用" />
+    <Translation ID="PRR_SUB_GEN" String="一般" />
     <Translation ID="PRR_SUB_ITC" String="ITクラスター" />
     <Translation ID="PRR_SUB_FAR" String="農業" />
     <Translation ID="PRR_SUB_FOR" String="林業" />
