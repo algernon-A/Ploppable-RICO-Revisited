@@ -46,9 +46,9 @@
     <Translation ID="PRR_CAT_MON" String="Anıtlar" />
     <Translation ID="PRR_CAT_BEA" String="Güzelleştirme" />
     <Translation ID="PRR_CAT_EDU" String="Eğitim" />
+    <Translation ID="PRR_CAT_HEA" String="Sağlık" />
     <Translation ID="PRR_CAT_POW" String="Enerji" />
     <Translation ID="PRR_CAT_WAT" String="Su" />
-    <Translation ID="PRR_CAT_HEA" String="Sağlık" />
     <Translation ID="PRR_CAT_RES" String="Konut" />
     <Translation ID="PRR_CAT_COM" String="Ticari" />
     <Translation ID="PRR_CAT_OFF" String="Ofis" />
@@ -101,11 +101,5 @@
     <Translation ID="ERR_HAR1" String="Bu problemin olası sebepleri arasında:" />
     <Translation ID="ERR_HAR2" String="Zorunlu Harmony 2 modu yerleştirilmemiş" />
     <Translation ID="ERR_HAR3" String="Eski ve/veya arızalı bir mod, Harmony 2'nin düzgün çalışmasını engelliyor" />
-    <Translation ID="PRR_UPD_21_0" String="Tekrar gözden geçirilmiş RICO Yapıştırıcısı 2.1 güncellemesi" />
-    <Translation ID="PRR_UPD_21_1" String="Tekrar gözden geçirilmiş RICO Yapıştırıcısı 2.1 güncellemesi" />
-    <Translation ID="PRR_UPD_21_2" String="Yeni modun seçenekleri (oyunun seçenekler bölümünden ulaşılabilir)" />
-    <Translation ID="PRR_UPD_21_3" String="Satürasyonu yüksek harita teması kullanan kullanıcılara yardımcı olmak için, önizleme görsellerinin aydınlatması düzeltildi." />
-    <Translation ID="PRR_UPD_21_4" String="Varolan büyüyen binalardan tasarlanan lokal RICO ayarları, varsayılan olarak büyüyen olarak ayarlanacak ve orijinal binanın varsayılan ev halkı ve istihdam değerlerini miras alacaktır." />
-    <Translation ID="PRR_UPD_21_5" String="Eğer oyununuz kendi iç sınırlarına yaklaştıysa, konut hane halkı sayılarını oyun yüklenirken azaltma riskini azaltıcı ek önlemler." />
   </Translations>
 </Language>

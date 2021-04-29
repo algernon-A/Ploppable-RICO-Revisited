@@ -30,6 +30,9 @@
     <Translation ID="PRR_FTR_NON" String="없음" />
     <Translation ID="PRR_FTR_NAM" String="이름" />
     <Translation ID="PRR_FTR_SET" String="필터 설정 : Mod/Author/Local/Any" />
+    <Translation ID="PRR_OPT_MOD" String="모드 설정" />
+    <Translation ID="PRR_OPT_AUT" String="제작자 설정" />
+    <Translation ID="PRR_OPT_LOC" String="개인 설정" />
     <Translation ID="PRR_OPT_ENA" String="RICO 활성화" />
     <Translation ID="PRR_OPT_SER" String="종류" />
     <Translation ID="PRR_OPT_SUB" String="하위 종류" />
@@ -43,12 +46,16 @@
     <Translation ID="PRR_OPT_JB1" String="교육 받음" />
     <Translation ID="PRR_OPT_JB2" String="좋은 교육 받음" />
     <Translation ID="PRR_OPT_JB3" String="높은 교육 받음" />
+    <Translation ID="PRR_OPT_URP" String="Realistic Population 모드와 연동되고 있기에 인원을 수동으로 설정할 수 없습니다." />
     <Translation ID="PRR_CAT_MON" String="고유 건물" />
     <Translation ID="PRR_CAT_BEA" String="공원 및 광장" />
     <Translation ID="PRR_CAT_EDU" String="교육" />
+    <Translation ID="PRR_CAT_HEA" String="의료" />
+    <Translation ID="PRR_CAT_FIR" String="소방" />
+    <Translation ID="PRR_CAT_POL" String="경찰" />
     <Translation ID="PRR_CAT_POW" String="전력" />
     <Translation ID="PRR_CAT_WAT" String="물" />
-    <Translation ID="PRR_CAT_HEA" String="의료" />
+    <Translation ID="PRR_CAT_GAR" String="쓰레기" />
     <Translation ID="PRR_CAT_RES" String="거주지" />
     <Translation ID="PRR_CAT_COM" String="상업" />
     <Translation ID="PRR_CAT_OFF" String="사무" />
@@ -71,9 +78,12 @@
     <Translation ID="PRR_UIC_NON" String="없음" />
     <Translation ID="PRR_SET" String="설정" />
     <Translation ID="PRR_SET_RICO" String="RICO 설정" />
-    <Translation ID="PRR_SET_HASMOD" String="Mod 설정" />
+    <Translation ID="PRR_SET_HASMOD" String="모드 설정" />
+    <Translation ID="PRR_SET_NOMOD" String="모드 설정 제외" />
     <Translation ID="PRR_SET_HASAUT" String="제작자 설정" />
+    <Translation ID="PRR_SET_NOAUT" String="제작자 설정 제외" />
     <Translation ID="PRR_SET_HASLOC" String="개인 설정" />
+    <Translation ID="PRR_SET_NOLOC" String="개인 설정 제외" />
     <Translation ID="PRR_SET_HASANY" String="어느 설정이든" />
     <Translation ID="PRR_SET_HASNON" String="설정 없음" />
     <Translation ID="PRR_SAV_SAV" String="저장" />
@@ -90,12 +100,17 @@
     <Translation ID="PRR_OPTION_VAL" String="낮은 토지 가격' 불만 무시" />
     <Translation ID="PRR_OPTION_SVC" String="공공 서비스 부족' 불만 무시" />
     <Translation ID="PRR_OPTION_HST" String="건설하는 RICO 건물을 역사적 건물로 만들기" />
+    <Translation ID="PRR_OPTION_BLC" String="Advanced Building Level Control 모드를 사용하여 건물의 레벨을 고정하기" />
     <Translation ID="PRR_OPTION_RPL" String="RICO ploppable 건물" />
     <Translation ID="PRR_OPTION_RGR" String="RICO growable 건물" />
     <Translation ID="PRR_OPTION_RCO" String="모든 RICO 건물 (growable 포함)" />
     <Translation ID="PRR_OPTION_OTH" String="RICO가 아닌 growable 건물" />
     <Translation ID="PRR_OPTION_BDZ" String="건설된 RICO 건물을 블도저로 철거하기 전에 묻기" />
-    <Translation ID="PRR_OPTION_IMP" String="건설된 RICO 건물이 자동으로 철거되어 그 위에 건설할 수 있도록 허용. (예, 길을 놓거나 건물을 배치할 때)" />
+    <Translation ID="PRR_OPTION_IMP" String="건설된 RICO 건물이 자동으로 철거되어 그 위에 건설할 수 있도록 허용" />
+    <Translation ID="PRR_OPTION_IMP2" String="(예 : 길을 놓거나 건물을 배치할 때)" />
+    <Translation ID="PRR_OPTION_CST" String="가격 옵션" />
+    <Translation ID="PRR_OPTION_COV" String="건설 가격 강제 지정" />
+    <Translation ID="PRR_OPTION_CPH" String="가구당 가격" />
     <Translation ID="PRR_OPTION_LOA" String="Loading 옵션" />
     <Translation ID="PRR_OPTION_LOG" String="Logging 옵션" />
     <Translation ID="PRR_OPTION_TMB" String="Thumbnail 옵션" />

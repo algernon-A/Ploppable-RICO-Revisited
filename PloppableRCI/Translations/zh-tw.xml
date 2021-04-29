@@ -51,9 +51,9 @@
     <Translation ID="PRR_CAT_MON" String="獨特建築" />
     <Translation ID="PRR_CAT_BEA" String="城市美化" />
     <Translation ID="PRR_CAT_EDU" String="教育系統" />
+    <Translation ID="PRR_CAT_HEA" String="醫療保健系統" />
     <Translation ID="PRR_CAT_POW" String="供電系統" />
     <Translation ID="PRR_CAT_WAT" String="供水汙水處理供暖系統" />
-    <Translation ID="PRR_CAT_HEA" String="醫療保健系統" />
     <Translation ID="PRR_CAT_RES" String="住宅區" />
     <Translation ID="PRR_CAT_COM" String="商業區" />
     <Translation ID="PRR_CAT_OFF" String="辦公區" />
@@ -124,10 +124,10 @@
     <Translation ID="PRR_OPTION_MOREDEBUG" String="啟用額外的除錯日誌記錄" />
     <Translation ID="PRR_OPTION_FORCERESET" String="在遊戲加載時強制重置現有建築統計數值" />
     <Translation ID="PRR_OPTION_REGENTHUMBS" String="重創建特寫式資訊縮略圖" />
-    <Translation ID="PRR_OPTION_SPDHDR" String= "此功能提升遊戲效能， 但會導致開啟界面時延遲：" />
-    <Translation ID="PRR_OPTION_SPEED" String= "界面未激活時轉入後臺待命(無須每幀即時更新)" />
-    <Translation ID="PRR_OPTION_FASTHDR" String= "渲染縮略圖更加快速，但會佔用更多記憶體：" />
-    <Translation ID="PRR_OPTION_FASTHUMB" String= "加速渲染縮略圖" />
+    <Translation ID="PRR_OPTION_SPDHDR" String="此功能提升遊戲效能， 但會導致開啟界面時延遲：" />
+    <Translation ID="PRR_OPTION_SPEED" String="界面未激活時轉入後臺待命(無須每幀即時更新)" />
+    <Translation ID="PRR_OPTION_FASTHDR" String="渲染縮略圖更加快速，但會佔用更多記憶體：" />
+    <Translation ID="PRR_OPTION_FASTHUMB" String="加速渲染縮略圖" />
     <Translation ID="PRR_OPTION_THUMBACK" String="縮略圖背景" />
     <Translation ID="PRR_THUMB_COLOR" String="純色" />
     <Translation ID="PRR_THUMB_PLAIN" String="面板顏色" />
@@ -162,10 +162,5 @@
     <Translation ID="PRR_UPD_235_2" String="改進模組(Mod)衝突和錯誤通知。" />
     <Translation ID="PRR_UPD_236_0" String="改進模組(Mod)衝突和錯誤通知。" />
     <Translation ID="PRR_UPD_237_0" String="修復當加載到編輯器中時 “Harmony” 擴展文檔錯誤訊息提示。" />
-    <Translation ID="PRR_UPD_240_0" String="添加花費覆蓋配置。" />
-    <Translation ID="PRR_UPD_240_1" String="為即刻放置可成長型(Growable)建築添加一個等級鎖定選項(須要 ”高級建築等級控制(Advanced Building Level Control)“ 模組(Mod)。" />
-    <Translation ID="PRR_UPD_240_2" String="添加模組(Mod)、作者、本地設置選項選單面板(可比現有激活者查看更多其他設置)。" />
-    <Translation ID="PRR_UPD_240_3" String="當使用 ‘使用真實’ 設置時禁用人口文字區域。" />
-    <Translation ID="PRR_UPD_241_0" String="改進對擁有不同級別的 ”歷史建築“ 更好的支援" />
   </Translations>
 </Language>

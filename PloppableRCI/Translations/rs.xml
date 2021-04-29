@@ -51,9 +51,9 @@
     <Translation ID="PRR_CAT_MON" String="Spomenici" />
     <Translation ID="PRR_CAT_BEA" String="Ulepšavanje" />
     <Translation ID="PRR_CAT_EDU" String="Obrazovanje" />
+    <Translation ID="PRR_CAT_HEA" String="Zdravlje" />
     <Translation ID="PRR_CAT_POW" String="Struja" />
     <Translation ID="PRR_CAT_WAT" String="Voda" />
-    <Translation ID="PRR_CAT_HEA" String="Zdravlje" />
     <Translation ID="PRR_CAT_RES" String="Stambeni" />
     <Translation ID="PRR_CAT_COM" String="Komercijalni" />
     <Translation ID="PRR_CAT_OFF" String="Kancelarijski" />

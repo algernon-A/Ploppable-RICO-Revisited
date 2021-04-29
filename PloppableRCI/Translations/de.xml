@@ -153,7 +153,7 @@
     <Translation ID="PRR_ERR_CON0" String="Ploppable RICO Revisited hat einen Konflikt mit mindestens einer anderen Mod entdeckt." />
     <Translation ID="PRR_ERR_CON1" String="Diese Mods müssen entfernt werden, damit Ploppable RICO Revisited funktionieren kann." />
     <Translation ID="PRR_CON_PTG0" String="Plop the Growables Mod entdeckt" />
-    <Translation ID="PRR_CON_PTG1" String="Plop the Growables mod entdeckt - die meisten Funktionen dieser Mod sind in Ploppable RICO Revisited bereits eingebaut.  Es ist vorsicht geboten, diese zwei Mods gemeinsam zu verwenden, da ihre Einstellungen in Konflikt geraten können." />
+    <Translation ID="PRR_CON_PTG1" String="Plop the Growables mod entdeckt - die meisten Funktionen dieser Mod sind in Ploppable RICO Revisited bereits eingebaut. Es ist vorsicht geboten, diese zwei Mods gemeinsam zu verwenden, da ihre Einstellungen in Konflikt geraten können." />
     <Translation ID="PRR_CON_PTG2" String="Wenn ALLE Einstellungen übereinstimmen, könnten beide Mods nebeneinander verwendet werden, ohne dass es zu Konflikten kommt!" />
     <Translation ID="PRR_UPD_23_0" String="Ploppable RICO Revisited Update 2.3" />
     <Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisited wurde auf Version 2.3 geupdatet. Einige wichtige Neuerungen:" />

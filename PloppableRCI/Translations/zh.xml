@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Language UniqueName="zh" ReadableName="简体中文">
   <Translations>
+    <Translation ID="PRR_NAME" String="建筑等级" />
     <Translation ID="PRR_LEVEL" String="建筑等级" />
     <Translation ID="PRR_LVL" String="建筑等级" />
     <Translation ID="PRR_HOU" String="住户数量" />
@@ -46,9 +47,9 @@
     <Translation ID="PRR_CAT_MON" String="独特建筑" />
     <Translation ID="PRR_CAT_BEA" String="环境美化" />
     <Translation ID="PRR_CAT_EDU" String="教育服务" />
+    <Translation ID="PRR_CAT_HEA" String="医疗服务" />
     <Translation ID="PRR_CAT_POW" String="电力能源" />
     <Translation ID="PRR_CAT_WAT" String="水源与供暖" />
-    <Translation ID="PRR_CAT_HEA" String="医疗服务" />
     <Translation ID="PRR_CAT_RES" String="住宅建筑" />
     <Translation ID="PRR_CAT_COM" String="商业建筑" />
     <Translation ID="PRR_CAT_OFF" String="办公建筑" />

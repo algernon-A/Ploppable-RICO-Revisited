@@ -50,9 +50,13 @@
     <Translation ID="PRR_CAT_MON" String="Monumentos" />
     <Translation ID="PRR_CAT_BEA" String="Embellecimiento" />
     <Translation ID="PRR_CAT_EDU" String="Educación" />
+    <Translation ID="PRR_CAT_HEA" String="Salud" />
+    <Translation ID="PRR_CAT_FIR" String="Departamento de bomberos" />
+    <Translation ID="PRR_CAT_POL" String="Policia" />
     <Translation ID="PRR_CAT_POW" String="Electricidad" />
     <Translation ID="PRR_CAT_WAT" String="Acueducto" />
-    <Translation ID="PRR_CAT_HEA" String="Salud" />
+    <Translation ID="PRR_CAT_GAR" String="Basura" />
+    <Translation ID="PRR_CAT_PIN" String="Industria del jugador" />
     <Translation ID="PRR_CAT_RES" String="Residencial" />
     <Translation ID="PRR_CAT_COM" String="Comercial" />
     <Translation ID="PRR_CAT_OFF" String="Oficinas" />
@@ -88,7 +92,7 @@
     <Translation ID="TRN_CHOICE" String="Seleccionar lenguaje" />
     <Translation ID="TRN_SYS" String="Usar lenguaje del juego" />
     <Translation ID="PRR_DESCRIPTION" String="Permitir edificios RICO con un tamaño mayor a 4x4 y personalización de edificios de RICO" />
-    <Translation ID="PRR_OPTION_PLP" String="Colocar edificios expandibles instantáneamente  (sin construcción)" />
+    <Translation ID="PRR_OPTION_PLP" String="Colocar edificios expandibles instantáneamente (sin construcción)" />
     <Translation ID="PRR_OPTION_ZON" String="Edificios expandibles pueden sobrevivir fuera de la zona correcta" />
     <Translation ID="PRR_OPTION_SPC" String="Edificios expandibles pueden sobrevivir sin las especializaciones de distrito requeridas" />
     <Translation ID="PRR_OPTION_VAL" String="Ignorar queja de Valor de terreno bajo'" />
@@ -102,6 +106,7 @@
     <Translation ID="PRR_OPTION_DEM" String="Opciones de demolición" />
     <Translation ID="PRR_OPTION_BDZ" String="Preguntar antes de demoler construcciones RICO colocadas" />
     <Translation ID="PRR_OPTION_IMP" String="Permitir que edificios RICO colocados sean auto-demolidas y sobre construidas (ej. al construir carreteras o colocar edificios" />
+    <Translation ID="PRR_OPTION_IMP2" String="(ejemplo: cuando colocas carreteras u otros edificios)" />
     <Translation ID="PRR_OPTION_CST" String="Opciones de Costo" />
     <Translation ID="PRR_OPTION_COV" String="Anular costo de construcción" />
     <Translation ID="PRR_OPTION_CPH" String="Costo por hogar" />
@@ -117,6 +122,8 @@
     <Translation ID="PRR_OPTION_GRO" String="Opciones de expandido" />
     <Translation ID="PRR_OPTION_COM" String="Opciones de quejas" />
     <Translation ID="PRR_OPTION_MOD" String="Opciones del mod" />
+    <Translation ID="PRR_OPTION_NOT" String="Opciones de notificacion" />
+    <Translation ID="PRR_OPTION_WHATSNEW" String="Mostrar mensajes que hay nuevo" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="Activar registro de depuración extendido" />
     <Translation ID="PRR_OPTION_FORCERESET" String="Forzar reseteo de las estadísticas de los edificios en la carga del juego" />
     <Translation ID="PRR_OPTION_REGENTHUMBS" String="Regenerar miniaturas (thumbnails)" />
@@ -160,6 +167,6 @@
     <Translation ID="PRR_UPD_237_0" String="Arreglar el mensaje de error incorrectamente mostrado al cargar editores" />
     <Translation ID="PRR_UPD_240_0" String="Agregar anulaciones de costo configurables" />
     <Translation ID="PRR_UPD_240_1" String="Agregar opción para bloquear automáticamente el nivel de edificio de los expandibles colocados (requiere el mod Control Avanzado de Nivel de Edificio)" />
-    <Translation ID="PRR_UPD_240_4" String="Actualizar el paquete CitiesHarmony a la versión 1.0.6 con Harmony 2.0.4" />
+    <Translation ID="PRR_UPD_243_0" String="Añadir opcion para desactivar notificaciones de actualizacion" />
   </Translations>
 </Language>
