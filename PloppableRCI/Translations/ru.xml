@@ -5,7 +5,7 @@
     <Translation ID="PRR_LEVEL" String="Уровень" />
     <Translation ID="PRR_LVL" String="Ур." />
     <Translation ID="PRR_HOU" String="Семьи" />
-    <Translation ID="PRR_WOR" String="Рабочие" />
+    <Translation ID="PRR_WOR" String="Рабочие места" />
     <Translation ID="PRR_SRV_NON" String="Неопределено" />
     <Translation ID="PRR_SRV_RES" String="Жильё" />
     <Translation ID="PRR_SRV_IND" String="Промышленность" />
