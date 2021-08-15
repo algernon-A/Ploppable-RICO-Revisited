@@ -21,7 +21,7 @@
     <Translation ID="PRR_SUB_TOU" String="Turystyka" />
     <Translation ID="PRR_SUB_ORG" String="Ekologiczna" />
     <Translation ID="PRR_SUB_GEN" String="Zwykła" />
-    <Translation ID="PRR_SUB_ITC" String="Klaster IT" />
+    <Translation ID="PRR_SUB_ITC" String="Dziedzina IT" />
     <Translation ID="PRR_SUB_FAR" String="Rolnictwo" />
     <Translation ID="PRR_SUB_FOR" String="Leśnictwo" />
     <Translation ID="PRR_SUB_OIL" String="Przemysł naftowy" />
@@ -75,7 +75,7 @@
     <Translation ID="PRR_UIC_LEI" String="Rozrywka i wypoczynek" />
     <Translation ID="PRR_UIC_TOU" String="Turystyka" />
     <Translation ID="PRR_UIC_ORG" String="Sklepy z produktami ekologicznymi" />
-    <Translation ID="PRR_UIC_ITC" String="Klaster IT" />
+    <Translation ID="PRR_UIC_ITC" String="Dziedzina IT" />
     <Translation ID="PRR_UIC_ECO" String="Domy samowystarczalne" />
     <Translation ID="PRR_UIC_NON" String="Brak" />
     <Translation ID="PRR_SET" String="Ustawienia" />
@@ -122,7 +122,8 @@
     <Translation ID="PRR_OPTION_PLO" String="Opcje budynków ręcznie stawianych" />
     <Translation ID="PRR_OPTION_GRO" String="Opcje budynków samopojawiających się" />
     <Translation ID="PRR_OPTION_COM" String="Opcje zgłaszanych problemów" />
-    <Translation ID="PRR_OPTION_MOD" String="Opcje modu" />
+    <Translation ID="PRR_OPTION_MOD" String="Opcje modyfikacji" />
+    <Translation ID="PRR_OPTION_NOT" String="Opcje powiadomień" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="Włącz dodatkowe logi błędów" />
     <Translation ID="PRR_OPTION_FORCERESET" String="Wymuś reset statystyk budynków przy wczytywaniu gry" />
     <Translation ID="PRR_OPTION_REGENTHUMBS" String="Odtwórz miniaturki" />

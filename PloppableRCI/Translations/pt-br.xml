@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Language UniqueName="pt-br" ReadableName="Português brasileiro">
+<Language UniqueName="pt-br" ReadableName="Português Brasileiro">
   <Translations>
     <Translation ID="PRR_NAME" String="Poppable RICO Revisitado" />
     <Translation ID="PRR_LEVEL" String="Nível" />

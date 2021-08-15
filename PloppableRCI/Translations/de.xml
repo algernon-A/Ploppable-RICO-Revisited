@@ -3,7 +3,7 @@
   <Translations>
     <Translation ID="PRR_NAME" String="Ploppable RICO Revisited" />
     <Translation ID="PRR_LEVEL" String="Stufe" />
-    <Translation ID="PRR_LVL" String="St" />
+    <Translation ID="PRR_LVL" String="St." />
     <Translation ID="PRR_HOU" String="Haushalte" />
     <Translation ID="PRR_WOR" String="Arbeitsplätze" />
     <Translation ID="PRR_SRV_NON" String="Ohne Spezialisierung" />

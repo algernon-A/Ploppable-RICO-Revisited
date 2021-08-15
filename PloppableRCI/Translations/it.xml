@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="it" ReadableName="Italiano">
+  <Translations>
+    <Translation ID="PRR_NAME" String="Ploppable RICO rivisitato" />
+    <Translation ID="PRR_LEVEL" String="Livello" />
+    <Translation ID="PRR_LVL" String="Lv" />
+    <Translation ID="PRR_HOU" String="Abitazioni" />
+    <Translation ID="PRR_WOR" String="Posti di lavoro" />
+    <Translation ID="PRR_SRV_NON" String="Non assegnato" />
+    <Translation ID="PRR_SRV_RES" String="Residenziale" />
+    <Translation ID="PRR_SRV_IND" String="Industriale" />
+    <Translation ID="PRR_SRV_OFF" String="Ufficio" />
+    <Translation ID="PRR_SRV_COM" String="Commerciale" />
+    <Translation ID="PRR_SRV_EXT" String="Estrattore" />
+    <Translation ID="PRR_SRV_DUM" String="Passiva" />
+    <Translation ID="PRR_SUB_HIG" String="Alta" />
+    <Translation ID="PRR_SUB_LOW" String="Bassa" />
+    <Translation ID="PRR_SUB_HEC" String="Alta eco" />
+    <Translation ID="PRR_SUB_LEC" String="Bassa eco" />
+    <Translation ID="PRR_SUB_LEI" String="Intrattenimento" />
+    <Translation ID="PRR_SUB_TOU" String="Turismo" />
+    <Translation ID="PRR_SUB_ORG" String="Eco (organico)" />
+    <Translation ID="PRR_SUB_GEN" String="Generico" />
+    <Translation ID="PRR_SUB_ITC" String="Cluster IT" />
+    <Translation ID="PRR_SUB_FAR" String="Agricoltura" />
+    <Translation ID="PRR_SUB_FOR" String="Falegnameria" />
+    <Translation ID="PRR_SUB_OIL" String="Petrolio" />
+    <Translation ID="PRR_SUB_ORE" String="Minerali" />
+    <Translation ID="PRR_FTR_ALL" String="Tutte" />
+    <Translation ID="PRR_FTR_NON" String="Nessuna" />
+    <Translation ID="PRR_FTR_NAM" String="Nome" />
+    <Translation ID="PRR_FTR_SET" String="Filtra impostazioni: Mod/Autore/Locale/Qualsiasi" />
+    <Translation ID="PRR_OPT_SET" String="Impostazioni" />
+    <Translation ID="PRR_OPT_MOD" String="Mod" />
+    <Translation ID="PRR_OPT_AUT" String="Autore" />
+    <Translation ID="PRR_OPT_LOC" String="Locale" />
+    <Translation ID="PRR_OPT_ENA" String="Attiva RICO" />
+    <Translation ID="PRR_OPT_SER" String="Servizio" />
+    <Translation ID="PRR_OPT_SUB" String="Sotto-servizio" />
+    <Translation ID="PRR_OPT_UIC" String="Categoria UI" />
+    <Translation ID="PRR_OPT_CST" String="Costo di costruzione" />
+    <Translation ID="PRR_OPT_CNT" String="Numero di Lavoratori/Famiglie" />
+    <Translation ID="PRR_OPT_POP" String="Usa Realistic Pop mod" />
+    <Translation ID="PRR_OPT_POL" String="Attiva inquinamento" />
+    <Translation ID="PRR_OPT_JB0" String="Lavoro senza istruzione" />
+    <Translation ID="PRR_OPT_JB1" String="Lavoro con istruzione di base" />
+    <Translation ID="PRR_OPT_JB2" String="Lavoro con istruzione superiore" />
+    <Translation ID="PRR_OPT_JB3" String="Lavoro con con alta istruzione" />
+    <Translation ID="PRR_OPT_URP" String="Le impostazione della popolazione sono disattivati perché l'opzione di Realistic Population è attiva" />
+    <Translation ID="PRR_CAT_MON" String="Monumenti" />
+    <Translation ID="PRR_CAT_BEA" String="Abbellimento" />
+    <Translation ID="PRR_CAT_EDU" String="Educazione" />
+    <Translation ID="PRR_CAT_HEA" String="Sanità" />
+    <Translation ID="PRR_CAT_POL" String="Polizia" />
+    <Translation ID="PRR_CAT_POW" String="Energia" />
+    <Translation ID="PRR_CAT_WAT" String="Acqua" />
+    <Translation ID="PRR_CAT_GAR" String="Immondizia" />
+    <Translation ID="PRR_CAT_PIN" String="Industrie del giocatore" />
+    <Translation ID="PRR_CAT_RES" String="Residenziale" />
+    <Translation ID="PRR_CAT_COM" String="Commerciale" />
+    <Translation ID="PRR_CAT_OFF" String="Ufficio" />
+    <Translation ID="PRR_CAT_IND" String="Industriale" />
+    <Translation ID="PRR_UIC_REL" String="Residenziale basso" />
+    <Translation ID="PRR_UIC_REH" String="Residenziale alto" />
+    <Translation ID="PRR_UIC_COL" String="Commerciale basso" />
+    <Translation ID="PRR_UIC_COH" String="Commerciale alto" />
+    <Translation ID="PRR_UIC_OFF" String="Ufficio" />
+    <Translation ID="PRR_UIC_IND" String="Industriale" />
+    <Translation ID="PRR_UIC_FAR" String="Agricoltura" />
+    <Translation ID="PRR_UIC_FOR" String="Falegnameria" />
+    <Translation ID="PRR_UIC_OIL" String="Petrolio" />
+    <Translation ID="PRR_UIC_ORE" String="Minerali" />
+    <Translation ID="PRR_UIC_LEI" String="Intrattenimento" />
+    <Translation ID="PRR_UIC_TOU" String="Turismo" />
+    <Translation ID="PRR_UIC_ORG" String="Commerciale organico" />
+    <Translation ID="PRR_UIC_ITC" String="Cluster IT" />
+    <Translation ID="PRR_UIC_ECO" String="Abitazioni autonome" />
+    <Translation ID="PRR_UIC_NON" String="Non assegnato" />
+    <Translation ID="PRR_SET" String="Impostazioni" />
+    <Translation ID="PRR_SET_RICO" String="Impostazioni RICO" />
+    <Translation ID="PRR_SET_HASMOD" String="Impostazioni da mod" />
+    <Translation ID="PRR_SET_NOMOD" String="Nessuna impostazione della mod" />
+    <Translation ID="PRR_SET_HASAUT" String="Impostazioni dall'autore" />
+    <Translation ID="PRR_SET_NOAUT" String="Nessuna impostazione dell'autore" />
+    <Translation ID="PRR_SET_HASLOC" String="Impostazioni locali" />
+    <Translation ID="PRR_SET_NOLOC" String="Nessuna impostazione locale" />
+    <Translation ID="PRR_SET_HASANY" String="Qualsiasi impostazione" />
+    <Translation ID="PRR_SET_HASNON" String="Nessuna impostazione" />
+    <Translation ID="PRR_SAV_SAV" String="Salva" />
+    <Translation ID="PRR_SAV_ADD" String="Aggiungi impostazione locale" />
+    <Translation ID="PRR_SAV_REM" String="Rimuovi impostazione locale" />
+    <Translation ID="PRR_SAV_APP" String="Salva e applica" />
+    <Translation ID="PRR_EXP" String="ATTENZIONE: SPERIMENTALE" />
+    <Translation ID="TRN_CHOICE" String="Imposta linguaggio" />
+    <Translation ID="TRN_SYS" String="Usa linguaggio di sistema" />
+    <Translation ID="PRR_DESCRIPTION" String="Abilita le strutture RICO più grandi di 4x4 e la loro personalizzazione" />
+    <Translation ID="PRR_OPTION_PLP" String="Inserisce le strutture immediatamente (senza costruzione)" />
+    <Translation ID="PRR_OPTION_ZON" String="Le strutture growables possono rimanere al di fuori della loro zona" />
+    <Translation ID="PRR_OPTION_SPC" String="Le strutture growables possono rimanere al di fuori della loro zona specializzata" />
+    <Translation ID="ERR_CON0" String="Rilevato conflitto con mod!" />
+    <Translation ID="ERR_CON1" String="Le mod in conflitto sono:" />
+    <Translation ID="PRR_UPD_234_2" String="Migliorate le notifiche di updates." />
+    <Translation ID="PRR_UPD_235_1" String="Aggiunto messaggio se &quot;Plop the Growables&quot; mod è attiva." />
+    <Translation ID="PRR_UPD_235_2" String="Migliorata l'identificazione e notifica di conflitti tra mod." />
+    <Translation ID="PRR_UPD_236_0" String="Migliorata l'identificazione e notifica di conflitti tra mod." />
+    <Translation ID="PRR_UPD_237_0" String="Fix per un errore di Harmony che appariva erroneamente quando un editor era caricato." />
+    <Translation ID="PRR_UPD_240_0" String="Aggiunto campo per cambiare il costo della struttura." />
+    <Translation ID="PRR_UPD_240_1" String="Aggiunta l'opzione per bloccare automaticamente il livello delle strutture ploppate (Richiede Advanced Building Level Control mod)" />
+    <Translation ID="PRR_UPD_240_2" String="Aggiunta selezione mod/autore/locale nel pannello delle impostazioni (Per vedere impostazioni a parte quella correntemente attiva)" />
+    <Translation ID="PRR_UPD_240_3" String="Disabilitati i campi di popolazione quando &quot;Usa realtà&quot; è attivo." />
+    <Translation ID="PRR_UPD_241_0" String="Migliorato il supporto per strutture storiche di livelli diversi." />
+    <Translation ID="PRR_UPD_242_0" String="Le strutture di servizio non sono più visibili di default nel pannello impostazioni RICO." />
+    <Translation ID="PRR_UPD_243_0" String="Aggiunta opzione per disabilitare le notifiche." />
+  </Translations>
+</Language>

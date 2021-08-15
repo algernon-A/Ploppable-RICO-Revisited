@@ -52,8 +52,12 @@
     <Translation ID="PRR_CAT_BEA" String="Ulepšavanje" />
     <Translation ID="PRR_CAT_EDU" String="Obrazovanje" />
     <Translation ID="PRR_CAT_HEA" String="Zdravlje" />
+    <Translation ID="PRR_CAT_FIR" String="Vatrogasna služba" />
+    <Translation ID="PRR_CAT_POL" String="Policija" />
     <Translation ID="PRR_CAT_POW" String="Struja" />
     <Translation ID="PRR_CAT_WAT" String="Voda" />
+    <Translation ID="PRR_CAT_GAR" String="Smeće" />
+    <Translation ID="PRR_CAT_PIN" String="Industrija igrača" />
     <Translation ID="PRR_CAT_RES" String="Stambeni" />
     <Translation ID="PRR_CAT_COM" String="Komercijalni" />
     <Translation ID="PRR_CAT_OFF" String="Kancelarijski" />
@@ -106,6 +110,7 @@
     <Translation ID="PRR_OPTION_DEM" String="Opcije rušenja" />
     <Translation ID="PRR_OPTION_BDZ" String="Pitaj pre rušenja postavljenih RICO zgrada" />
     <Translation ID="PRR_OPTION_IMP" String="Dopusti postavljenim RICO zgradama da budu automatski srušene i izgrađene preko (npr. kada se gradi put ili postavljaju zgrade)" />
+    <Translation ID="PRR_OPTION_IMP2" String="(npr. pri postavljanju puteva ili drugih zgrada)" />
     <Translation ID="PRR_OPTION_CST" String="Opcije cene" />
     <Translation ID="PRR_OPTION_COV" String="Zameni cenu građenja" />
     <Translation ID="PRR_OPTION_CPH" String="Cena po domaćinstvu." />
@@ -121,6 +126,8 @@
     <Translation ID="PRR_OPTION_GRO" String="Podešavanja izgrađivanja" />
     <Translation ID="PRR_OPTION_COM" String="Podešavanja žalbi" />
     <Translation ID="PRR_OPTION_MOD" String="Podešavanja modova" />
+    <Translation ID="PRR_OPTION_NOT" String="Podešavanja obaveštenja" />
+    <Translation ID="PRR_OPTION_WHATSNEW" String="Prikaži šta je novo obaveštenja" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="Omogući dodatno logvanje debugovanja" />
     <Translation ID="PRR_OPTION_FORCERESET" String="Prisili reset već postojaćih statisika zgrada pri učitavanju igrice" />
     <Translation ID="PRR_OPTION_REGENTHUMBS" String="Regeneriši ikone" />
@@ -167,5 +174,7 @@
     <Translation ID="PRR_UPD_240_2" String="Dodat mod/autor(lokalna podešavanja meni u panel podešavanja (da se vide podešavanja druga od trenutno aktivnih)" />
     <Translation ID="PRR_UPD_240_3" String="Ugasi populaciono polje teksta kada je uključeno podešavanje „koristi realnost”" />
     <Translation ID="PRR_UPD_241_0" String="Poboljšaj podršku za istoričke zgrade sa različitim njivoima." />
+    <Translation ID="PRR_UPD_242_0" String="Uslužne zgrade više nisu podrazumevno vidljive u panelu za RICO podešavanja" />
+    <Translation ID="PRR_UPD_243_0" String="Dodata opcija za gašenje obaveštenja" />
   </Translations>
 </Language>

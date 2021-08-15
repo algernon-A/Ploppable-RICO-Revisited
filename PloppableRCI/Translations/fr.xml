@@ -2,7 +2,6 @@
 <Language UniqueName="fr" ReadableName="Français">
   <Translations>
     <Translation ID="PRR_NAME" String="Ploppable RICO revisité" />
-    <Translation ID="PRR_NAME" String="Ploppable RICO revisité" />
     <Translation ID="PRR_LEVEL" String="Niveau" />
     <Translation ID="PRR_LVL" String="Niv." />
     <Translation ID="PRR_HOU" String="Ménages" />

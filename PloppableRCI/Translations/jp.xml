@@ -30,6 +30,10 @@
     <Translation ID="PRR_FTR_NON" String="解除" />
     <Translation ID="PRR_FTR_NAM" String="アセット名" />
     <Translation ID="PRR_FTR_SET" String="フィルター設定: Mod/作者/ローカル/全て" />
+    <Translation ID="PRR_OPT_SET" String="設定" />
+    <Translation ID="PRR_OPT_MOD" String="Mod" />
+    <Translation ID="PRR_OPT_AUT" String="作者" />
+    <Translation ID="PRR_OPT_LOC" String="ローカル" />
     <Translation ID="PRR_OPT_ENA" String="RICOを有効化" />
     <Translation ID="PRR_OPT_SER" String="サービス" />
     <Translation ID="PRR_OPT_SUB" String="サブ-サービス" />
@@ -76,9 +80,12 @@
     <Translation ID="PRR_UIC_NON" String="なし" />
     <Translation ID="PRR_SET" String="設定" />
     <Translation ID="PRR_SET_RICO" String="RICO設定" />
-    <Translation ID="PRR_SET_HASMOD" String="Modによる設定" />
-    <Translation ID="PRR_SET_HASAUT" String="作者による設定" />
-    <Translation ID="PRR_SET_HASLOC" String="ローカル設定" />
+    <Translation ID="PRR_SET_HASMOD" String="Modによる設定有り" />
+    <Translation ID="PRR_SET_NOMOD" String="Modによる設定なし" />
+    <Translation ID="PRR_SET_HASAUT" String="作者による設定有り" />
+    <Translation ID="PRR_SET_NOAUT" String="作者による設定なし" />
+    <Translation ID="PRR_SET_HASLOC" String="ローカルの設定有り" />
+    <Translation ID="PRR_SET_NOLOC" String="ローカルの設定なし" />
     <Translation ID="PRR_SET_HASANY" String="全て" />
     <Translation ID="PRR_SET_HASNON" String="設定なし" />
     <Translation ID="PRR_SAV_SAV" String="セーブ" />
@@ -88,6 +95,7 @@
     <Translation ID="PRR_EXP" String="注意：実験的" />
     <Translation ID="TRN_CHOICE" String="言語選択" />
     <Translation ID="TRN_SYS" String="システムのデフォルト" />
+    <Translation ID="PRR_DESCRIPTION" String="4 x 4サイズ以上のRICOの建物と、RICOの建物をカスタマイズを可能にします" />
     <Translation ID="PRR_OPTION_PLP" String="Growableアセットを即座に設置" />
     <Translation ID="PRR_OPTION_ZON" String="Growableアセットをゾーニングエリア外でも存続可能にする" />
     <Translation ID="PRR_OPTION_SPC" String="Growableアセットを地区設定に拘らず存続可能にする" />
@@ -95,6 +103,10 @@
     <Translation ID="PRR_OPTION_SVC" String="&quot;公共サービスが少なすぎます&quot;という警告を除外" />
     <Translation ID="PRR_OPTION_HST" String="設置したGrowableアセットを歴史的建造物に指定" />
     <Translation ID="PRR_OPTION_BLC" String="設置したGrowableアセットのレベルをAdvanced Building Level Controlでロック" />
+    <Translation ID="PRR_OPTION_RPL" String="RICO ploppableの建物" />
+    <Translation ID="PRR_OPTION_RGR" String="RICO growableの建物" />
+    <Translation ID="PRR_OPTION_RCO" String="全てのRICOの建物(growableも含む)" />
+    <Translation ID="PRR_OPTION_OTH" String="RICO未対応のgrowableな建物" />
     <Translation ID="PRR_OPTION_DEM" String="ブルドーザーの設定 (歴史的建造物には影響しません)" />
     <Translation ID="PRR_OPTION_BDZ" String="RICOアセットを取り壊す前に確認する" />
     <Translation ID="PRR_OPTION_IMP" String="RICOアセットを自動的に取り壊す" />
@@ -107,14 +119,28 @@
     <Translation ID="PRR_OPTION_CJ1" String="初等教育以上の職場1あたりの費用" />
     <Translation ID="PRR_OPTION_CJ2" String="中等教育以上の職場1あたりの費用" />
     <Translation ID="PRR_OPTION_CJ3" String="高等教育以上の職場1あたりの費用" />
+    <Translation ID="PRR_OPTION_LOA" String="ロードのオプション" />
+    <Translation ID="PRR_OPTION_LOG" String="ログののオプション" />
+    <Translation ID="PRR_OPTION_TMB" String="サムネイルのオプション" />
+    <Translation ID="PRR_OPTION_PLO" String="Ploppableのオプション" />
+    <Translation ID="PRR_OPTION_GRO" String="Growableのオプション" />
+    <Translation ID="PRR_OPTION_COM" String="警告のオプション" />
+    <Translation ID="PRR_OPTION_MOD" String="Modのオプション" />
     <Translation ID="PRR_OPTION_NOT" String="通知設定" />
+    <Translation ID="PRR_OPTION_WHATSNEW" String="新着メッセージを表示" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="デバッグロギングを有効化" />
     <Translation ID="PRR_OPTION_FORCERESET" String="ゲームロード時に前回の統計をリセット" />
+    <Translation ID="PRR_OPTION_REGENTHUMBS" String="サムネイルを再生成" />
     <Translation ID="PRR_OPTION_SPDHDR" String="ゲームスピードが僅かに向上するがパネル展開に遅延が発生" />
+    <Translation ID="PRR_OPTION_SPEED" String="未使用時のパネルを無効化" />
+    <Translation ID="PRR_OPTION_FASTHDR" String="サムネイルの描画速度が向上しますが、メモリ使用量が増えます" />
+    <Translation ID="PRR_OPTION_FASTHUMB" String="サムネイルの描画を高速化します" />
     <Translation ID="PRR_OPTION_THUMBACK" String="サムネイルの背景" />
     <Translation ID="PRR_THUMB_COLOR" String="色" />
     <Translation ID="PRR_THUMB_PLAIN" String="無地" />
     <Translation ID="PRR_THUMB_SKY" String="青空" />
+    <Translation ID="MES_CLS" String="閉じる" />
+    <Translation ID="MES_DSA" String="次回から非表示" />
     <Translation ID="MES_PAGE" String="詳細はModのSteamワークショップページを参照して下さい。" />
     <Translation ID="PRR_ERR_FAT" String="Modが正常に動作せず、シャットダウンしました。" />
     <Translation ID="PRR_ERR_HAR" String="Ploppable RICO Revisited は&quot;Harmony&quot;パッチを完了できませんでした。" />
@@ -126,5 +152,8 @@
     <Translation ID="ERR_CON1" String="競合するMod:" />
     <Translation ID="PRR_ERR_CON0" String="Ploppable RICO Revisited は、少なくとも1つの他のModとの競合を検出しました。" />
     <Translation ID="PRR_ERR_CON1" String="これらのModは Ploppable RICO Revisited が動作する為に削除する必要があります。" />
+    <Translation ID="PRR_CON_PTG0" String="Plop the Growables Modを検出しました" />
+    <Translation ID="PRR_CON_PTG1" String="Plop the Growables MODが検出されました - このMODの機能は、Ploppable RICO Revisitedにほぼ内蔵されています。2つのMODを同時に使用する場合は、競合する可能性があります。" />
+    <Translation ID="PRR_CON_PTG2" String="しかし、両方のModを併用しても問題はありません。" />
   </Translations>
 </Language>

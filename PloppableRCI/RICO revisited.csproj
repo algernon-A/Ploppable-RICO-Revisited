@@ -145,6 +145,7 @@
     <Content Include="License.txt" />
     <Content Include="Samples\PloppableRICODefinition.xml" />
     <Content Include="Translations\gr.xml" />
+    <Content Include="Translations\it.xml" />
     <Content Include="Translations\kr.xml" />
     <Content Include="Translations\pt-br.xml" />
     <Content Include="Translations\de.xml" />
