@@ -152,7 +152,7 @@
     <Content Include="Translations\rs.xml" />
     <Content Include="Translations\es.xml" />
     <Content Include="Translations\fr.xml" />
-    <Content Include="Translations\jp.xml" />
+    <Content Include="Translations\ja.xml" />
     <Content Include="Translations\nl.xml" />
     <Content Include="Translations\pl.xml" />
     <Content Include="Translations\ru.xml" />
