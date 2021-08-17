@@ -61,7 +61,7 @@ namespace PloppableRICO
 
             // Check if the relevant 'ignore low land value complaint' setting is set.
             if ((ModSettings.noValueOther && !isRICO) || (ModSettings.noValueRicoGrow && isRICO) || (ModSettings.noValueRicoPlop && IsRICOPloppable(buildingID)))
-                {
+            {
                 // It is - force land value complaint off.
                 levelUp.landValueTooLow = false;
             }
