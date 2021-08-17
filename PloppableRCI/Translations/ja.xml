@@ -154,7 +154,7 @@
     <Translation ID="PRR_ERR_CON1" String="Ploppable RICO Revisitedが動作する前に、これらのMODを削除する必要があります。"/>
     <Translation ID="PRR_CON_PTG0" String="Plop the Growables MODを検出"/>
     <Translation ID="PRR_CON_PTG1" String="Plop the Growables MODを検出 - 機能のほとんどは、Ploppable RICO Revisitedに組み込まれています。 2つのMODを一緒に使用する場合は、設定が矛盾する可能性があります。"/>
-    <Translation ID="PRR_CON_PTG2" String="しかし、両方を一緒に使っても問題ありません -  設定に競合が無いこと！"/>
+    <Translation ID="PRR_CON_PTG2" String="しかし、両方を一緒に使っても問題ありません - 設定に競合が無いこと！"/>
     <Translation ID="PRR_UPD_23_0" String="Plopplable RICO Revisited 2.3 update"/>
     <Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisited has been updated to version 2.3.  Some key features of this update are:"/>
     <Translation ID="PRR_UPD_23_2" String="Ploppable RICO now includes 'Plop the Growables'-style functionality for both RICO and non-RICO buildings - see the options panel for details."/>
