@@ -1,4 +1,7 @@
-﻿Version 2.4.5
+﻿- Change land value complaint disabling from LevelUpExtension to Harmony Postfix (fixes issues where the LevelUpExtension doesn't work for some players)
+
+
+Version 2.4.5
 
 - Adjust thumbnail and preview image rendering
 - Add support for Yet Another Toolbar panel resizing (note: scaling is not yet fully implemented)

@@ -66,7 +66,7 @@
     <Translation ID="PRR_UIC_REH" String="Жильё выс. плотности" />
     <Translation ID="PRR_UIC_COL" String="Коммерция низ. плотности" />
     <Translation ID="PRR_UIC_COH" String="Коммерция выс. плотности" />
-    <Translation ID="PRR_UIC_OFF" String="Офис" />
+    <Translation ID="PRR_UIC_OFF" String="Офисы" />
     <Translation ID="PRR_UIC_IND" String="Промышленность" />
     <Translation ID="PRR_UIC_FAR" String="Сельское хозяйство" />
     <Translation ID="PRR_UIC_FOR" String="Лесная промышленность" />

@@ -10,7 +10,9 @@ namespace PloppableRICO
     /// </summary>
     public class LevelUpExtension : LevelUpExtensionBase
     {
-
+        /*
+         * Disable residential and commercial level up extension pending possible replacement by Harmony Postfixes to resolve issues with some users where LevelUpExtension changes are being dishonored or overwritten.
+         * 
         /// <summary>
         /// Residential level up control - game extension method.
         /// Used to override 'low land value' complaint as appropriate.
@@ -68,7 +70,7 @@ namespace PloppableRICO
 
             return levelUp;
         }
-
+        */
 
         /// <summary>
         /// Industrial level up control - game extension method.

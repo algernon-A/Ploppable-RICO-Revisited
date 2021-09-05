@@ -31,6 +31,7 @@
     <Translation ID="PRR_FTR_NAM" String="Nombre" />
     <Translation ID="PRR_FTR_SET" String="Filtro de Ajuste Mod/Autor/Local/Cualquiera" />
     <Translation ID="PRR_OPT_SET" String="Ajustes" />
+    <Translation ID="PRR_OPT_MOD" String="Mod" />
     <Translation ID="PRR_OPT_AUT" String="Autor" />
     <Translation ID="PRR_OPT_LOC" String="Local" />
     <Translation ID="PRR_OPT_ENA" String="Habilitar RICO" />
@@ -40,7 +41,7 @@
     <Translation ID="PRR_OPT_CST" String="Coste de construcción" />
     <Translation ID="PRR_OPT_CNT" String="Cuenta de trabajadores/hogares" />
     <Translation ID="PRR_OPT_POP" String="Usar Realistic Pop mod" />
-    <Translation ID="PRR_OPT_POL" String="Habilitar Polución" />
+    <Translation ID="PRR_OPT_POL" String="Habilitar Contaminación" />
     <Translation ID="PRR_OPT_GRO" String="Expandible" />
     <Translation ID="PRR_OPT_JB0" String="Puestos de trabajo para analfabetas" />
     <Translation ID="PRR_OPT_JB1" String="Puestos de trabajo para alfabetas" />
@@ -68,7 +69,7 @@
     <Translation ID="PRR_UIC_OFF" String="Oficinas" />
     <Translation ID="PRR_UIC_IND" String="Fábricas" />
     <Translation ID="PRR_UIC_FAR" String="Agricultura" />
-    <Translation ID="PRR_UIC_FOR" String="Silvicultura" />
+    <Translation ID="PRR_UIC_FOR" String="Industria forestal" />
     <Translation ID="PRR_UIC_OIL" String="Industria petrolera" />
     <Translation ID="PRR_UIC_ORE" String="Minería" />
     <Translation ID="PRR_UIC_LEI" String="Ocio" />
@@ -89,14 +90,14 @@
     <Translation ID="PRR_SAV_REM" String="Remover configuraciones del edificio" />
     <Translation ID="PRR_SAV_APP" String="Guardar y aplicar cambios " />
     <Translation ID="PRR_EXP" String="ADVERTENCIA: EXPERIMENTAL" />
-    <Translation ID="TRN_CHOICE" String="Seleccionar lenguaje" />
-    <Translation ID="TRN_SYS" String="Usar lenguaje del juego" />
+    <Translation ID="TRN_CHOICE" String="Seleccionar idioma" />
+    <Translation ID="TRN_SYS" String="Usar idioma del juego" />
     <Translation ID="PRR_DESCRIPTION" String="Permitir edificios RICO con un tamaño mayor a 4x4 y personalización de edificios de RICO" />
     <Translation ID="PRR_OPTION_PLP" String="Colocar edificios expandibles instantáneamente (sin construcción)" />
     <Translation ID="PRR_OPTION_ZON" String="Edificios expandibles pueden sobrevivir fuera de la zona correcta" />
     <Translation ID="PRR_OPTION_SPC" String="Edificios expandibles pueden sobrevivir sin las especializaciones de distrito requeridas" />
-    <Translation ID="PRR_OPTION_VAL" String="Ignorar queja de Valor de terreno bajo'" />
-    <Translation ID="PRR_OPTION_SVC" String="Ignorar queja de 'Muy pocos servicios'" />
+    <Translation ID="PRR_OPTION_VAL" String="Ignorar queja de 'valor de terreno bajo'" />
+    <Translation ID="PRR_OPTION_SVC" String="Ignorar queja de 'muy pocos servicios'" />
     <Translation ID="PRR_OPTION_HST" String="Declarar todos los edificios expandibles históricos" />
     <Translation ID="PRR_OPTION_BLC" String="Bloquear nivel de edificios expandibles colocados utilizando Control Avanzado de Nivel de Edificio" />
     <Translation ID="PRR_OPTION_RPL" String="Edificios RICO colocables" />
@@ -115,7 +116,7 @@
     <Translation ID="PRR_OPTION_CJ1" String="Costo por puesto de trabajo alfabeta" />
     <Translation ID="PRR_OPTION_CJ2" String="Costo por puesto de trabajo bachiller" />
     <Translation ID="PRR_OPTION_CJ3" String="Costo por puesto de trabajo universitario" />
-    <Translation ID="PRR_OPTION_LOA" String="Opciones de cargado" />
+    <Translation ID="PRR_OPTION_LOA" String="Opciones de carga" />
     <Translation ID="PRR_OPTION_LOG" String="Opciones de inicio de sesión" />
     <Translation ID="PRR_OPTION_TMB" String="Opciones de miniatura" />
     <Translation ID="PRR_OPTION_PLO" String="Opciones de colocado" />
@@ -165,8 +166,12 @@
     <Translation ID="PRR_UPD_235_2" String="Notificaciones de incompatibilidades entre mods y de error mejoradas" />
     <Translation ID="PRR_UPD_236_0" String="Mejorar la notificación y detección de incompatibilidades de mods." />
     <Translation ID="PRR_UPD_237_0" String="Arreglar el mensaje de error incorrectamente mostrado al cargar editores" />
-    <Translation ID="PRR_UPD_240_0" String="Agregar anulaciones de costo configurables" />
-    <Translation ID="PRR_UPD_240_1" String="Agregar opción para bloquear automáticamente el nivel de edificio de los expandibles colocados (requiere el mod Control Avanzado de Nivel de Edificio)" />
+    <Translation ID="PRR_UPD_240_0" String="Añadir anulaciones de costo configurables" />
+    <Translation ID="PRR_UPD_240_1" String="Añadir opción para bloquear automáticamente el nivel de edificio de los expandibles colocados (requiere el mod Control Avanzado de Nivel de Edificio)" />
+    <Translation ID="PRR_UPD_240_2" String="Añadir el menú de selección de ajustes de mod/autor/local al panel de ajustes (permite ver ajustes que no están activados)" />
+    <Translation ID="PRR_UPD_240_3" String="Deshabilitar campos de texto de población cuando la opción de 'use reality' esté activada." />
+    <Translation ID="PRR_UPD_241_0" String="Mejorar soporte de edificios históricos con diferentes niveles" />
+    <Translation ID="PRR_UPD_242_0" String="Los edificios de servicio ya no se muestran de manera predeterminada en el panel de ajustes de RICO" />
     <Translation ID="PRR_UPD_243_0" String="Añadir opcion para desactivar notificaciones de actualizacion" />
   </Translations>
 </Language>
