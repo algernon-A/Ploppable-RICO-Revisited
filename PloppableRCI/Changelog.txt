@@ -1,4 +1,6 @@
-﻿- Change land value complaint disabling from LevelUpExtension to Harmony Postfix (fixes issues where the LevelUpExtension doesn't work for some players)
+﻿Version 2.4.6
+
+- Change land value complaint disabling from LevelUpExtension to Harmony Postfix (fixes issues where the LevelUpExtension doesn't work for some players)
 
 
 Version 2.4.5
