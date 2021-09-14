@@ -1,7 +1,4 @@
-﻿using ColossalFramework;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
     /// <summary>
     /// Internal static RICO utilities class.
