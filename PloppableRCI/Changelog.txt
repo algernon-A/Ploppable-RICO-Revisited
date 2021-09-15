@@ -1,4 +1,9 @@
-﻿Version 2.4.6
+﻿Version 2.4.7
+
+- Stop Ploppable RICO buildings from being collapsed by disasters (prevents several issues caused by the Disasters DLC not being written to take into account the existence of Ploppable RICO buildings)
+
+
+Version 2.4.6
 
 - Change land value complaint disabling from LevelUpExtension to Harmony Postfix (fixes issues where the LevelUpExtension doesn't work for some players)
 

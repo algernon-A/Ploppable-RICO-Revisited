@@ -15,7 +15,7 @@ namespace PloppableRICO
         /// </summary>
         /// <param name="__instance">Harmony original instance reference</param>
         /// <returns></returns>
-        public static bool Prefix(ref bool __result, CommonBuildingAI __instance, ushort buildingID)
+        public static bool Prefix(ref bool __result, CommonBuildingAI __instance)
         {
             if (RICOUtils.IsRICOPloppableAI(__instance as PrivateBuildingAI))
             {
