@@ -14,10 +14,10 @@ namespace PloppableRICO
         /// All we do is call (via reverse patch) the original method and painlessly catch any exceptions.
         /// </summary>
         /// <param name="__instance">Harmony original instance reference</param>
-        /// <returns></returns>
+        /// <returns>False if the base method shouldn't be called (collapse has been prevented), true otherwise</returns>
         public static bool Prefix(ref bool __result, CommonBuildingAI __instance)
         {
-            if (RICOUtils.IsRICOPloppableAI(__instance as PrivateBuildingAI))
+            if (ModSettings.noCollapse && RICOUtils.IsRICOPloppableAI(__instance as PrivateBuildingAI))
             {
                 __result = false;
 

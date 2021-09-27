@@ -92,7 +92,20 @@ namespace PloppableRICO
             costPerJob0Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob0);
             costPerJob1Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob1);
             costPerJob2Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob2);
-            costPerJob3Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob3);
+
+            // Natural disasters.
+            currentY += TitleMarginY;
+            UILabel disasterLabel = UIControls.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_DIS"), textScale: 1.125f);
+            disasterLabel.font = Resources.FindObjectsOfTypeAll<UIFont>().FirstOrDefault((UIFont f) => f.name == "OpenSans-Semibold");
+            currentY += disasterLabel.height + TitleMarginY;
+
+            // Add auto-demolish checkbox.
+            UICheckBox noCollapseCheck = UIControls.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_NOC"));
+            noCollapseCheck.relativePosition = new Vector2(LeftMargin, currentY);
+            noCollapseCheck.isChecked = ModSettings.noCollapse;
+            noCollapseCheck.tabIndex = ++tabbingIndex;
+            noCollapseCheck.eventCheckChanged += NoCollapseCheckChanged;
+            currentY += CheckRowHeight;
         }
 
 
@@ -146,6 +159,18 @@ namespace PloppableRICO
         private void OverrideCostCheckChanged(UIComponent control, bool isChecked)
         {
             ModSettings.overrideCost = isChecked;
+            SettingsUtils.SaveSettings();
+        }
+
+
+        /// <summary>
+        /// Event handler for no collapse checkbox.
+        /// </summary>
+        /// <param name="control">Calling UIComponent</param>
+        /// <param name="isChecked">New isChecked state</param>
+        private void NoCollapseCheckChanged(UIComponent control, bool isChecked)
+        {
+            ModSettings.noCollapse = isChecked;
             SettingsUtils.SaveSettings();
         }
 

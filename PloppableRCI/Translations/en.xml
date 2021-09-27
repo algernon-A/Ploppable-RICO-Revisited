@@ -119,6 +119,8 @@
     <Translation ID="PRR_OPTION_CJ1" String="Cost per educated job" />
     <Translation ID="PRR_OPTION_CJ2" String="Cost per well-educated job" />
     <Translation ID="PRR_OPTION_CJ3" String="Cost per highly-educated job" />
+    <Translation ID="PRR_OPTION_DIS" String="Disasters" />
+    <Translation ID="PRR_OPTION_NOC" String="Ploppable RICO buildings aren't affected by disasters (prevents bugs)" />
     <Translation ID="PRR_OPTION_LOA" String="Loading options" />
     <Translation ID="PRR_OPTION_LOG" String="Logging options" />
     <Translation ID="PRR_OPTION_TMB" String="Thumbnail options" />

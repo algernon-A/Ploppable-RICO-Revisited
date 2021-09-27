@@ -40,6 +40,9 @@ namespace PloppableRICO
         internal static bool warnBulldoze = false;
         internal static bool autoDemolish = false;
 
+        // Disasters DLC behaviour.
+        internal static bool noCollapse = true;
+
         // Cost overides.
         internal static bool overrideCost = false;
         internal static int costPerHousehold = 100;
@@ -103,6 +106,9 @@ namespace PloppableRICO
 
         [XmlElement("PlopOther")]
         public bool PlopOther { get => ModSettings.plopOther; set => ModSettings.plopOther = value; }
+
+        [XmlElement("NoCollapse")]
+        public bool NoCollapse { get => ModSettings.noCollapse; set => ModSettings.noCollapse = value; }
 
         [XmlElement("NoZonesRico")]
         public bool NoZonesRico { get => ModSettings.noZonesRico; set => ModSettings.noZonesRico = value; }

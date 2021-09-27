@@ -1,4 +1,7 @@
-﻿Version 2.4.7
+﻿- Add option to toggle if Ploppable RICO buildings are collapsed by disasters
+
+
+Version 2.4.7
 
 - Stop Ploppable RICO buildings from being collapsed by disasters (prevents several issues caused by the Disasters DLC not being written to take into account the existence of Ploppable RICO buildings)
 
