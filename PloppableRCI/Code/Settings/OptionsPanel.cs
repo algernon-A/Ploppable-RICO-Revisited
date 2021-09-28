@@ -88,17 +88,18 @@ namespace PloppableRICO
                 // Create a base panel attached to our game object, perfectly overlaying the game options panel.
                 UIPanel basePanel = optionsGameObject.AddComponent<UIPanel>();
                 basePanel.absolutePosition = optionsPanel.absolutePosition;
-                basePanel.size = optionsPanel.size;
+                basePanel.width = optionsPanel.width;
+                basePanel.height = 744f;
 
                 // Add tabstrip.
                 UITabstrip tabStrip = basePanel.AddUIComponent<UITabstrip>();
                 tabStrip.relativePosition = new Vector3(0, 0);
-                tabStrip.size = new Vector2(744, 713);
+                tabStrip.size = new Vector2(744f, 600f);
 
                 // Tab container (the panels underneath each tab).
                 UITabContainer tabContainer = basePanel.AddUIComponent<UITabContainer>();
-                tabContainer.relativePosition = new Vector3(0, 40);
-                tabContainer.size = new Vector3(744, 713);
+                tabContainer.relativePosition = new Vector2(0f, 40f);
+                tabContainer.size = new Vector2(744f, 713f);
                 tabStrip.tabPages = tabContainer;
 
                 // Add tabs and panels.
