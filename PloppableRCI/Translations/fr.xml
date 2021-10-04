@@ -119,6 +119,7 @@
     <Translation ID="PRR_OPTION_TMB" String="Options de vignette" />
     <Translation ID="PRR_OPTION_PLO" String="Options de placables" />
     <Translation ID="PRR_OPTION_GRO" String="Options de construits" />
+    <Translation ID="PRR_OPTION_DIS" String="Catastrophe" />
     <Translation ID="PRR_OPTION_COM" String="Options des plaintes" />
     <Translation ID="PRR_OPTION_MOD" String="Options du mod" />
     <Translation ID="PRR_OPTION_MOREDEBUG" String="Activer la journalisation de débogage supplémentaire" />
