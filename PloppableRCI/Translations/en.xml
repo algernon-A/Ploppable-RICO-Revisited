@@ -115,7 +115,7 @@
     <Translation ID="PRR_OPTION_COV" String="Override building cost" />
     <Translation ID="PRR_OPTION_CPH" String="Cost per household" />
     <Translation ID="PRR_OPTION_CHM" String="Additional multiplier per household level (%)" />
-    <Translation ID="PRR_OPTION_CJ0" String="Cost per undeducated job" />
+    <Translation ID="PRR_OPTION_CJ0" String="Cost per uneducated job" />
     <Translation ID="PRR_OPTION_CJ1" String="Cost per educated job" />
     <Translation ID="PRR_OPTION_CJ2" String="Cost per well-educated job" />
     <Translation ID="PRR_OPTION_CJ3" String="Cost per highly-educated job" />
