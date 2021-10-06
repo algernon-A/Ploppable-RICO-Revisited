@@ -120,7 +120,7 @@
     <Translation ID="PRR_OPTION_CJ2" String="Зарплата работников со ср. образованием" />
     <Translation ID="PRR_OPTION_CJ3" String="Зарплата работников с высш. образованием" />
     <Translation ID="PRR_OPTION_DIS" String="Стихийные бедствия" />
-    <Translation ID="PRR_OPTION_NOC" String="Здания RICO plappable не подвергаются стихийным бедствиям" />
+    <Translation ID="PRR_OPTION_NOC" String="Здания RICO Ploppable не подвержены стихийным бедствиям (предотвращает ошибки)" />
     <Translation ID="PRR_OPTION_LOA" String="Настройки загрузки" />
     <Translation ID="PRR_OPTION_LOG" String="Настройки журнала" />
     <Translation ID="PRR_OPTION_TMB" String="Настройки миниатюр" />
