@@ -72,12 +72,12 @@ namespace PloppableRICO
             thumbGroup.AddButton(Translations.Translate("PRR_OPTION_REGENTHUMBS"), () => PloppableTool.Instance.RegenerateThumbnails());
 
             // Add speed boost checkbox.
-            UIHelperBase speedGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_SPDHDR"));
+           /* UIHelperBase speedGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_SPDHDR"));
             speedGroup.AddCheckbox(Translations.Translate("PRR_OPTION_SPEED"), ModSettings.speedBoost, isChecked =>
             {
                 ModSettings.speedBoost = isChecked;
                 SettingsUtils.SaveSettings();
-            });
+            });*/
         }
     }
 }
