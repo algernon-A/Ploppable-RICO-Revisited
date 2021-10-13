@@ -31,6 +31,7 @@
     <Translation ID="PRR_FTR_NAM" String="Naam" />
     <Translation ID="PRR_FTR_SET" String="Filter: Mod/Auteur/lokaal/Alles" />
     <Translation ID="PRR_OPT_SET" String="instellingen" />
+    <Translation ID="PRR_OPT_MOD" String="Mod" />
     <Translation ID="PRR_OPT_AUT" String="Auteur" />
     <Translation ID="PRR_OPT_LOC" String="Lokaal" />
     <Translation ID="PRR_OPT_ENA" String="RICO activeren" />
@@ -101,10 +102,12 @@
     <Translation ID="PRR_OPTION_VAL" String="Negeer lage landwaardemeldingen" />
     <Translation ID="PRR_OPTION_SVC" String="Negeer onvoldoende dienstverleningsmeldingen" />
     <Translation ID="PRR_OPTION_HST" String="Maak alle geplaatste gebouwen historisch" />
+    <Translation ID="PRR_OPTION_BLC" String="vergrendel het niveau van een geplaatst gebouw met 'advanced building level control'" />
     <Translation ID="PRR_OPTION_RPL" String="RICO plaatsbare gebouwen" />
     <Translation ID="PRR_OPTION_RGR" String="RICO groeibare gebouwen" />
     <Translation ID="PRR_OPTION_RCO" String="Alle RICO gebouwen (inclusief groeibare)" />
     <Translation ID="PRR_OPTION_OTH" String="Groeibare niet-RICO gebouwen" />
+    <Translation ID="PRR_OPTION_DEM" String="Sloop instellingen (geen effect op historische gebouwen)" />
     <Translation ID="PRR_OPTION_BDZ" String="Goedkeuring vragen vóór het verwijderen van plopped RICO gebouwen" />
     <Translation ID="PRR_OPTION_IMP" String="Sta toe dat plopped RICO gebouwen automatisch worden verwijderd en dat er overheen gebouwd wordt." />
     <Translation ID="PRR_OPTION_IMP2" String="(bv. als je wegen bouwt of gebouwen plaatst)" />
@@ -161,11 +164,17 @@
     <Translation ID="PRR_UPD_234_0" String="Voeg optie toe om waarschuwingen aan of uit te zetten als je plopped RICO gebouwen verwijderd." />
     <Translation ID="PRR_UPD_234_1" String="Voeg optie toe om auto-bulldoze aan of uit te zetten als je over een 'plopped RICO gebouw' bouwt." />
     <Translation ID="PRR_UPD_234_2" String="Verbeterde update notificaties." />
+    <Translation ID="PRR_UPD_235_0" String="groei opties volgen nu standaard het ''plop the growables'' gedrag (geen invloed op huidige instellingen)" />
     <Translation ID="PRR_UPD_235_1" String="Voeg waarschuwing toe als 'Plop the Growables' mod ook actief is." />
     <Translation ID="PRR_UPD_235_2" String="Verbeterde mod conflict en error notificatie." />
     <Translation ID="PRR_UPD_236_0" String="Verbeter mod conflict detectie en notificatie." />
     <Translation ID="PRR_UPD_237_0" String="Herstel foutmelding van “Harmony” bĳ het inladen in de editors." />
     <Translation ID="PRR_UPD_240_0" String="Voeg instelbare kostoverschrĳdingen toe." />
     <Translation ID="PRR_UPD_240_1" String="Voeg de optie toe om automatisch het gebouwniveau te vergrendelen van geplaatste groeibare gebouwen (vereist “Advanced Building Level Control”-mod)." />
+    <Translation ID="PRR_UPD_240_2" String="mod/auteur/lokale instellingen selectie menu toegevoegen aan instellingen paneel (om andere instellingen te zien dan de huidige actieve)" />
+    <Translation ID="PRR_UPD_240_3" String="Schakeld populatie tekst veld uit als de optie ''use reality'' is aangevinkt" />
+    <Translation ID="PRR_UPD_241_0" String="Verbeterd ondersteuning voor ''historical buildings'' van verschillende niveau's" />
+    <Translation ID="PRR_UPD_242_0" String="onderhouds gebouwen zijn niet langer zichtbaar in het ''RICO'' instellingen paneel" />
+    <Translation ID="PRR_UPD_243_0" String="voeg optie toe om update notificaties uit te zetten." />
   </Translations>
 </Language>
