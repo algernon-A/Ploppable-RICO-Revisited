@@ -147,7 +147,6 @@ namespace PloppableRICO
                 PloppableButton.disabledBgSprite = "ToolbarIconGroup6Disabled";
                 PloppableButton.relativePosition = new Vector2(800, 0);
                 PloppableButton.name = "PloppableButton";
-                PloppableButton.tooltip = Translations.Translate("PRR_NAME");
 
                 // Event handler - show the Ploppable Tool panel when the button is clicked.
                 PloppableButton.eventClick += (component, clickEvent) =>
@@ -303,6 +302,9 @@ namespace PloppableRICO
         {
             // Set settings button text.
             showSettings.text = Translations.Translate("PRR_SET");
+
+            // Change RICO button tooltip.
+            PloppableButton.tooltip = Translations.Translate("PRR_NAME");
 
             // Populate tooltips.
             UICategories tooltips = new UICategories();

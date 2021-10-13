@@ -1,4 +1,8 @@
-﻿Version 2.4.8
+﻿- Remove obsolete 'Speed Boost' option
+- Fix RICO button tooltip not updating on language change
+
+
+Version 2.4.8
 
 - Add option to toggle if Ploppable RICO buildings are collapsed by disasters
 
