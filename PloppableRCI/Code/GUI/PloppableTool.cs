@@ -83,10 +83,10 @@ namespace PloppableRICO
                     _instance.DrawPloppablePanel();
 
                     // Deactivate to start with if we're speed boosting.
-                    /*if (ModSettings.speedBoost)
+                    if (ModSettings.speedBoost)
                     {
                         _gameObject.SetActive(false);
-                    }*/
+                    }
 
                     // Initialise construction time dictionary.
                     _instance.constructionTimes = new Dictionary<BuildingInfo, int>();
@@ -261,10 +261,10 @@ namespace PloppableRICO
                 buildingPanel.eventVisibilityChanged += (component, isVisible) =>
                 {
                     // Additional check to allow for the case where speedboost has been deactivated mid-game while the panel was deactivated.
-                    /*if ((ModSettings.speedBoost) || (isVisible && !buildingPanel.gameObject.activeSelf))
+                    if ((ModSettings.speedBoost) || (isVisible && !buildingPanel.gameObject.activeSelf))
                     {
                         buildingPanel.gameObject.SetActive(isVisible);
-                    }*/
+                    }
 
                     // Other checks.
                     if(isVisible)
