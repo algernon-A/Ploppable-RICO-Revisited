@@ -73,14 +73,13 @@
     <Compile Include="Code\AI\AIUtils.cs" />
     <Compile Include="Code\AI\WorkplaceAI.cs" />
     <Compile Include="Code\Patches\CollapseBuilding.cs" />
-    <Compile Include="Code\Patches\LevelUpPatches.cs" />
+    <Compile Include="Code\Patches\ComplaintPatches.cs" />
     <Compile Include="Code\Utils\Logging.cs" />
     <Compile Include="Code\GUI\PanelFastList.cs" />
     <Compile Include="Code\GUI\PloppablePanel.cs" />
     <Compile Include="Code\GUI\UIPreviewRenderer.cs" />
     <Compile Include="Code\GUI\Thumbnails.cs" />
     <Compile Include="Code\Interfaces.cs" />
-    <Compile Include="Code\LevelUpExtension.cs" />
     <Compile Include="Code\Notifications\DontShowAgainMessageBox.cs" />
     <Compile Include="Code\Notifications\ListMessageBox.cs" />
     <Compile Include="Code\Notifications\MessageBoxBase.cs" />
