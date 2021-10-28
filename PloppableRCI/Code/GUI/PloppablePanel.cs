@@ -200,6 +200,12 @@ namespace PloppableRICO
         /// <returns>A tooltip string</returns>
         private string BuildingTooltip(BuildingData building)
         {
+            // Safety check.
+            if (building?.prefab == null)
+            {
+                return String.Empty;
+            }
+
             StringBuilder tooltip = new StringBuilder();
 
             tooltip.AppendLine(building.DisplayName);
