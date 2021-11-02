@@ -1,4 +1,9 @@
-﻿Version 2.4.9
+﻿Version 2.4.10
+
+- Add Harmony patch to fix game error where large buildings can occasionally have negative income (tax revenue)
+
+
+Version 2.4.9
 
 - Change too few services complaint disabling from LevelUpExtension to Harmony Postfix (fixes issues where the LevelUpExtension doesn't work for some players)
 - Fix RICO button tooltip not updating on language change
