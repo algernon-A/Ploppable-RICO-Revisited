@@ -5,9 +5,6 @@ using ColossalFramework.Math;
 using HarmonyLib;
 
 
-#pragma warning disable IDE0060 // Remove unused parameter
-
-
 /// <summary>
 /// Patch for PrivateBuildingAI.BuildingLoaded to catch Ploppable RICO buildings and override their initialisation with Ploppable RICO assets.
 /// This is used to catch Ploppable RICO buildings created from PrivateBuilding (growable) originals; normally, their original stats would initialise before Ploppable RICO can override.
@@ -24,8 +21,7 @@ namespace PloppableRICO
 		/// <param name="__instance">Original object instance reference</param>
 		/// <param name="buildingID">Building instance ID</param>
 		/// <param name="data">Building data</param>
-		/// <param name="version">Version</param>
-		public static bool Prefix(PrivateBuildingAI __instance, ushort buildingID, ref Building data, uint version)
+		public static bool Prefix(PrivateBuildingAI __instance, ushort buildingID, ref Building data)
 		{
 			// Don't do anything if the flag isn't set.
 			if (!ModSettings.resetOnLoad)
@@ -117,8 +113,7 @@ namespace PloppableRICO
 		/// <param name="__instance">Original object instance reference</param>
 		/// <param name="buildingID">Building instance ID</param>
 		/// <param name="data">Building data</param>
-		/// <param name="version">Version</param>
-		public static void Postfix(PrivateBuildingAI __instance, ushort buildingID, ref Building data, uint version)
+		public static void Postfix(PrivateBuildingAI __instance, ushort buildingID, ref Building data)
         {
 			// Check to see if this is one of ours and that's not abandoned.
 			if (__instance is GrowableResidentialAI && (data.m_flags & Building.Flags.Abandoned) == 0)
@@ -145,7 +140,7 @@ namespace PloppableRICO
 					ModSettings.resetOnLoad = true;
 
 					// Attempt reset for this building.
-					Prefix(__instance, buildingID, ref data, version);
+					Prefix(__instance, buildingID, ref data);
 
 					// Restore original resetOnLoad seeting.
 					ModSettings.resetOnLoad = oldReset;
@@ -173,10 +168,8 @@ namespace PloppableRICO
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		public static void EnsureCitizenUnitsRev(object instance, ushort buildingID, ref Building data, int homeCount, int workCount, int visitCount, int studentCount)
 		{
-			Logging.Error("EnsureCitizenUnits reverse Harmony patch wasn't applied");
+			Logging.Error("EnsureCitizenUnits reverse Harmony patch wasn't applied with params ", instance.ToString(), ":", buildingID.ToString(), ":", data.ToString(), ":", homeCount.ToString(), ":", workCount.ToString(), ":", visitCount.ToString(), ":", studentCount.ToString());
 			throw new NotImplementedException("Harmony reverse patch not applied");
 		}
 	}
 }
-
-#pragma warning restore IDE0060 // Remove unused parameter

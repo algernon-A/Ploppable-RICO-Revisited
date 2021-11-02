@@ -3,7 +3,7 @@ using System.Reflection;
 using HarmonyLib;
 
 
-namespace PloppableRICO.Code.Patches
+namespace PloppableRICO
 {
     /// <summary>
     /// Harmony patches to override OnCalculateResidentialLevelUp and OnCommercialResidentialUp to force disabling of 'land value too low' complaints for all buildings.

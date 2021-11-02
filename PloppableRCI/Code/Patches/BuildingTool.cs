@@ -5,9 +5,6 @@ using ColossalFramework;
 using HarmonyLib;
 
 
-#pragma warning disable IDE0060 // Remove unused parameter
-
-
 namespace PloppableRICO
 {
 	/// <summary>
@@ -24,9 +21,8 @@ namespace PloppableRICO
 		/// </summary>
 		/// <param name="__result">Original method result</param>
 		/// <param name="info">Building prefab</param>
-		/// <param name="building">Building instance data (ingnored)</param>
 		/// <returns>False (don't continue execution chain) if this is a RICO building (original return value changed to true), true (continue exection chain) otherwise.</returns>
-		public static bool Prefix (ref bool __result, BuildingInfo info, ref Building building)
+		public static bool Prefix (ref bool __result, BuildingInfo info)
 		{
 			// Only do this if our settings are set to ensure RICO buildings are important.
 			if (!ModSettings.autoDemolish)
@@ -61,12 +57,7 @@ namespace PloppableRICO
 		/// </summary>
 		/// <param name="__result">Original method result (unchanged)</param>
 		/// <param name="info">BuildingInfo prefab for this building (unchanged)</param>
-		/// <param name="position">Building position (ignored)</param>
-		/// <param name="angle">Building rotation (ignored)</param>
-		/// <param name="relocating">Building relocation (ignored)</param>
-		/// <param name="needMoney">Is money needed (ignored)</param>
-		/// <param name="fixedHeight">Fixed height (ignored)</param>
-		internal static void Postfix(ref ushort __result, ref BuildingInfo info, Vector3 position, float angle, int relocating, bool needMoney, bool fixedHeight)
+		internal static void Postfix(ref ushort __result, ref BuildingInfo info)
 		{
 			// Check that we have a valid building ID.
 			if (__result == 0)
@@ -125,9 +116,7 @@ namespace PloppableRICO
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		protected static void BuildingCompletedRev(object instance, ushort buildingID, ref Building buildingData)
 		{
-			Logging.Error("BuildingCompleted reverse Harmony patch wasn't applied");
+			Logging.Error("BuildingCompleted reverse Harmony patch wasn't applied with params ", instance.ToString(), ":", buildingID.ToString(), ":", buildingData.ToString());
 		}
 	}
 }
-
-#pragma warning restore IDE0060 // Remove unused parameter
