@@ -102,7 +102,7 @@
     <Translation ID="PRR_OPTION_VAL" String="Negeer lage landwaardemeldingen" />
     <Translation ID="PRR_OPTION_SVC" String="Negeer onvoldoende dienstverleningsmeldingen" />
     <Translation ID="PRR_OPTION_HST" String="Maak alle geplaatste gebouwen historisch" />
-    <Translation ID="PRR_OPTION_BLC" String="vergrendel het niveau van een geplaatst gebouw met 'advanced building level control'" />
+    <Translation ID="PRR_OPTION_BLC" String="vergrendel het niveau van een geplaatst gebouw met ''advanced building level control''" />
     <Translation ID="PRR_OPTION_RPL" String="RICO plaatsbare gebouwen" />
     <Translation ID="PRR_OPTION_RGR" String="RICO groeibare gebouwen" />
     <Translation ID="PRR_OPTION_RCO" String="Alle RICO gebouwen (inclusief groeibare)" />
@@ -119,6 +119,8 @@
     <Translation ID="PRR_OPTION_CJ1" String="Kost per gescholde baan" />
     <Translation ID="PRR_OPTION_CJ2" String="Kost per goedgescholde baan" />
     <Translation ID="PRR_OPTION_CJ3" String="Kost per hooggeschoolde baan" />
+    <Translation ID="PRR_OPTION_DIS" String="Rampen" />
+    <Translation ID="PRR_OPTION_NOC" String="Plaatsbare ''RICO'' gebouwen worden niet beinvloed door rampen(voorkomt problemen)" />
     <Translation ID="PRR_OPTION_LOA" String="Laadopties" />
     <Translation ID="PRR_OPTION_LOG" String="Inlogopties" />
     <Translation ID="PRR_OPTION_TMB" String="Thumbnail-opties" />

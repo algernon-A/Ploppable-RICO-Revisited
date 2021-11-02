@@ -119,8 +119,8 @@
     <Translation ID="PRR_OPTION_CJ1" String="初等教育以上の労働者一人あたりの費用" />
     <Translation ID="PRR_OPTION_CJ2" String="中等教育以上の労働者一人あたりの費用" />
     <Translation ID="PRR_OPTION_CJ3" String="高等教育以上の労働者一人あたりの費用" />
-    <Translation ID="PRR_OPTION_DIS" String="災害"/>
-    <Translation ID="PRR_OPTION_NOC" String="Ploppableで設置したRICOの建物は、災害の影響を受けません（バグを防止）"/>
+    <Translation ID="PRR_OPTION_DIS" String="災害" />
+    <Translation ID="PRR_OPTION_NOC" String="Ploppableで設置したRICOの建物は、災害の影響を受けません（バグを防止）" />
     <Translation ID="PRR_OPTION_LOA" String="ロードのオプション" />
     <Translation ID="PRR_OPTION_LOG" String="ログのオプション" />
     <Translation ID="PRR_OPTION_TMB" String="サムネイルのオプション" />
