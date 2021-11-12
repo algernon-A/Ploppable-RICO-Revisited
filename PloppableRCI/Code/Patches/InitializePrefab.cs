@@ -48,11 +48,11 @@ namespace PloppableRICO
 			// (those two methods are more different than you might think - discovered that the hard way).
 			Package.Asset asset = PackageManager.FindAssetByName(__instance.name, Package.AssetType.Object);
 
-			if (asset?.package?.packagePath != null)
+			// Get custom asset filesystem location (if CRP pacakge).
+			string crpPath = asset?.package?.packagePath;
+
+			if (!string.IsNullOrEmpty(crpPath))
 			{
-				// Get custom asset filesystem location (if CRP pacakge).
-				string crpPath = asset.package.packagePath;
-				
 				// Look for RICO settings file.
 				string ricoDefPath = Path.Combine(Path.GetDirectoryName(crpPath), "PloppableRICODefinition.xml");
 
