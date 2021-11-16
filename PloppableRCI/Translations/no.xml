@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="no" ReadableName="Norsk">
+  <Translations>
+    <Translation ID="PRR_NAME" String="Ploppable RICO Revisited" />
+    <Translation ID="PRR_LEVEL" String="Level" />
+    <Translation ID="PRR_LVL" String="Lvl" />
+    <Translation ID="PRR_HOU" String="Husstand" />
+    <Translation ID="PRR_WOR" String="Arbeidsplass" />
+    <Translation ID="PRR_SRV_NON" String="Ingen" />
+    <Translation ID="PRR_SRV_RES" String="Hushold" />
+    <Translation ID="PRR_SRV_IND" String="Industri" />
+    <Translation ID="PRR_SRV_OFF" String="Kontorer" />
+    <Translation ID="PRR_SRV_COM" String="Kommersiell" />
+    <Translation ID="PRR_SRV_EXT" String="Avtrekker" />
+    <Translation ID="PRR_SUB_HIG" String="Høy" />
+    <Translation ID="PRR_SUB_LOW" String="Lav" />
+    <Translation ID="PRR_SUB_HEC" String="Høy økologisk" />
+    <Translation ID="PRR_SUB_LEC" String="Lav økologisk" />
+    <Translation ID="PRR_SUB_LEI" String="Fritid" />
+    <Translation ID="PRR_SUB_TOU" String="Turist" />
+    <Translation ID="PRR_SUB_ORG" String="Økologisk" />
+    <Translation ID="PRR_SUB_GEN" String="Generelt" />
+    <Translation ID="PRR_SUB_ITC" String="IT kontor" />
+    <Translation ID="PRR_SUB_FAR" String="Gårdsbruk" />
+    <Translation ID="PRR_SUB_FOR" String="Skogbruk" />
+    <Translation ID="PRR_SUB_OIL" String="Olje" />
+    <Translation ID="PRR_SUB_ORE" String="Mineral" />
+    <Translation ID="PRR_FTR_ALL" String="Alle" />
+    <Translation ID="PRR_FTR_NON" String="Ingen" />
+    <Translation ID="PRR_FTR_NAM" String="Navn" />
+    <Translation ID="PRR_FTR_SET" String="Instillingsfilter: Mod/Forfatter/lokal/alle" />
+    <Translation ID="PRR_OPT_SET" String="Instillinger" />
+    <Translation ID="PRR_OPT_MOD" String="Mod" />
+    <Translation ID="PRR_OPT_AUT" String="Forfatter" />
+    <Translation ID="PRR_OPT_LOC" String="Lokal" />
+    <Translation ID="PRR_OPT_ENA" String="Skru på RICO" />
+    <Translation ID="PRR_OPT_SER" String="Service" />
+    <Translation ID="PRR_OPT_SUB" String="Undertjeneste" />
+    <Translation ID="PRR_OPT_UIC" String="UI-Kategori" />
+    <Translation ID="PRR_OPT_CST" String="Byggkostnad" />
+    <Translation ID="PRR_OPT_CNT" String="Arbeider/Antall hjem" />
+    <Translation ID="PRR_OPT_POP" String="Bruk Realistic pop mod" />
+    <Translation ID="PRR_OPT_POL" String="Skru på Befolkning" />
+    <Translation ID="PRR_OPT_GRO" String="Voksbar" />
+    <Translation ID="PRR_OPT_JB0" String="Uutdannede jobber" />
+    <Translation ID="PRR_OPT_JB1" String="Utdannede jobber" />
+    <Translation ID="PRR_OPT_JB2" String="Velutdannede jobber" />
+    <Translation ID="PRR_OPT_JB3" String="Høy utdannede jobber" />
+    <Translation ID="PRR_OPT_URP" String="Befolkningsinnstillinger er deaktivert fordi alternativet Realistisk befolkning er aktivert" />
+    <Translation ID="PRR_CAT_MON" String="Monumenter" />
+    <Translation ID="PRR_CAT_BEA" String="Forskjønnelse" />
+    <Translation ID="PRR_CAT_EDU" String="Utdannelse" />
+    <Translation ID="PRR_CAT_HEA" String="Helse" />
+    <Translation ID="PRR_CAT_FIR" String="Brannvesenet" />
+    <Translation ID="PRR_CAT_POL" String="Politi" />
+    <Translation ID="PRR_CAT_POW" String="Strøm" />
+    <Translation ID="PRR_CAT_WAT" String="Vann" />
+    <Translation ID="PRR_CAT_GAR" String="Søppel" />
+    <Translation ID="PRR_CAT_PIN" String="Spiller industri" />
+    <Translation ID="PRR_CAT_RES" String="Boliger" />
+    <Translation ID="PRR_CAT_COM" String="Kommersiell" />
+    <Translation ID="PRR_CAT_OFF" String="Kontorer" />
+    <Translation ID="PRR_CAT_IND" String="Industrier" />
+    <Translation ID="PRR_UIC_REL" String="Små boliger" />
+    <Translation ID="PRR_UIC_REH" String="Stor boliger" />
+    <Translation ID="PRR_UIC_COL" String="Små Kommersielle" />
+    <Translation ID="PRR_UIC_COH" String="Stor Kommersielle" />
+    <Translation ID="PRR_UIC_OFF" String="Kontorer" />
+    <Translation ID="PRR_UIC_IND" String="Industrier" />
+    <Translation ID="PRR_UIC_FAR" String="Gårdsbruk" />
+    <Translation ID="PRR_UIC_FOR" String="Skogbruk" />
+    <Translation ID="PRR_UIC_OIL" String="Olje" />
+    <Translation ID="PRR_UIC_ORE" String="Mineral" />
+    <Translation ID="PRR_UIC_LEI" String="Fritid" />
+    <Translation ID="PRR_UIC_TOU" String="Turist" />
+    <Translation ID="PRR_UIC_ORG" String="Organisk Kommersiell" />
+    <Translation ID="PRR_UIC_ITC" String="IT kontor" />
+    <Translation ID="PRR_UIC_ECO" String="Selvforsynte boliger" />
+    <Translation ID="PRR_UIC_NON" String="Ingen" />
+    <Translation ID="PRR_SET" String="Instillinger" />
+    <Translation ID="PRR_SET_RICO" String="RICO instillinger" />
+    <Translation ID="PRR_SET_HASMOD" String="Mod instillinger" />
+    <Translation ID="PRR_SET_NOMOD" String="Ingen mod instillinger" />
+    <Translation ID="PRR_SET_HASAUT" String="Forfatter instillinger" />
+    <Translation ID="PRR_SET_NOAUT" String="Ingen forfatter instillinger" />
+    <Translation ID="PRR_SET_HASLOC" String="Lokale instillinger" />
+    <Translation ID="PRR_SET_NOLOC" String="Ingen lokale instillinger" />
+    <Translation ID="PRR_SET_HASANY" String="Eventuelle instillinger" />
+    <Translation ID="PRR_SET_HASNON" String="Ingen instillinger" />
+    <Translation ID="PRR_SAV_SAV" String="Lagre" />
+    <Translation ID="PRR_SAV_ADD" String="Legg til lokalt" />
+    <Translation ID="PRR_SAV_REM" String="fjern lokalt" />
+    <Translation ID="PRR_SAV_APP" String="Lagre og brukt " />
+    <Translation ID="PRR_EXP" String="FORSIKTIG: TESTMATRIALE" />
+    <Translation ID="TRN_CHOICE" String="Velg språk" />
+    <Translation ID="TRN_SYS" String="Bruke system språk" />
+    <Translation ID="PRR_DESCRIPTION" String="Tillat RICO-byggninger større enn 4x4 i størrelse og RICO-bygninger tilpassninger" />
+    <Translation ID="PRR_OPTION_PLP" String="Plasser vekstbare bygninger umiddelbart (ingen konstruksjon)" />
+    <Translation ID="PRR_OPTION_ZON" String="Voksbare bygninger kan overleve utenfor riktig sone" />
+    <Translation ID="PRR_OPTION_SPC" String="Voksbare bygninger kan ikke overleve uten distrikt spesifikasjoner" />
+    <Translation ID="PRR_OPTION_VAL" String="Ignorer klagen om lav landverdi" />
+    <Translation ID="PRR_OPTION_SVC" String="Ignorer klagen om for få tjenester" />
+    <Translation ID="PRR_OPTION_HST" String="Gjøre alle plopped bygninger historiske" />
+    <Translation ID="PRR_OPTION_BLC" String="Lås ploppede vekstnivåer ved hjelp av avansert byging nivå kontrol" />
+    <Translation ID="PRR_OPTION_RPL" String="RICO ploppable bygninger" />
+    <Translation ID="PRR_OPTION_RGR" String="RICO vekstbare bygninger" />
+    <Translation ID="PRR_OPTION_RCO" String="Alle RICO bygninger (inkludert vekstbare)" />
+    <Translation ID="PRR_OPTION_OTH" String="Ikke RICO vekstbare bygninger" />
+    <Translation ID="PRR_OPTION_DEM" String="Rivingsalterbatuver  (påvirker ikke historiske bygninger)" />
+    <Translation ID="PRR_OPTION_BDZ" String="Spør før riving av plopped RICO bygninger" />
+    <Translation ID="PRR_OPTION_IMP" String="Tillat plopped RICO bygninger til og bli automatisk rivd ned" />
+    <Translation ID="PRR_OPTION_IMP2" String="(f.ekes. ved plassering av veier eller andre bygninger)" />
+    <Translation ID="PRR_OPTION_CST" String="Kostnadsalternativer" />
+    <Translation ID="PRR_OPTION_COV" String="Overkjør byggningskostnader" />
+    <Translation ID="PRR_OPTION_CPH" String="Kostnad per bolig" />
+    <Translation ID="PRR_OPTION_CHM" String="Ekstra multiplikator per husholdningsnivå (%)" />
+    <Translation ID="PRR_OPTION_CJ0" String="Kostnad per uutdannet jobb" />
+    <Translation ID="PRR_OPTION_CJ1" String="Kostnad per utdannet jobb" />
+    <Translation ID="PRR_OPTION_CJ2" String="Kostnad per velutdannet jobb" />
+    <Translation ID="PRR_OPTION_CJ3" String="Kostnad per høyutdannet jobb" />
+    <Translation ID="PRR_OPTION_DIS" String="Katastrofer" />
+    <Translation ID="PRR_OPTION_NOC" String="Ploppable RICO bygninger er ikke påvirket av katastrofer (forhindrer bugs)" />
+    <Translation ID="PRR_OPTION_LOA" String="Laster instillinger" />
+    <Translation ID="PRR_OPTION_LOG" String="Laster instillinger" />
+    <Translation ID="PRR_OPTION_TMB" String="Thumbnail instillinger" />
+    <Translation ID="PRR_OPTION_PLO" String="Ploppable instillinger" />
+    <Translation ID="PRR_OPTION_GRO" String="Vekstbare instillinger" />
+    <Translation ID="PRR_OPTION_COM" String="Klage instillinger" />
+    <Translation ID="PRR_OPTION_MOD" String="Mod instillinger" />
+    <Translation ID="PRR_OPTION_NOT" String="Varsel instillinger" />
+    <Translation ID="PRR_OPTION_WHATSNEW" String="Vis nye meldinger" />
+  </Translations>
+</Language>
