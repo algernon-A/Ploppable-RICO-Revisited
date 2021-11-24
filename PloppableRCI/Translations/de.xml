@@ -119,6 +119,8 @@
     <Translation ID="PRR_OPTION_CJ1" String="Kosten je gebildetem Arbeiter" />
     <Translation ID="PRR_OPTION_CJ2" String="Kosten je gut gebildetem Arbeiter" />
     <Translation ID="PRR_OPTION_CJ3" String="Kosten je hochgebildetem Arbeiter" />
+    <Translation ID="PRR_OPTION_DIS" String="Katastrophen" />
+    <Translation ID="PRR_OPTION_NOC" String="Ploppable RICO Gebäude sind nicht von Katastrophen betroffen (Vermeidet Fehler)" />
     <Translation ID="PRR_OPTION_LOA" String="Lade-Einstellungen" />
     <Translation ID="PRR_OPTION_LOG" String="Protokoll-Einstellungen" />
     <Translation ID="PRR_OPTION_TMB" String="Miniaturansicht-Einstellungen" />
