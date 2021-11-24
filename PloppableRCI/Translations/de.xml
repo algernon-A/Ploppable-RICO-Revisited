@@ -94,7 +94,7 @@
     <Translation ID="PRR_SAV_APP" String="Speichern und anwenden" />
     <Translation ID="PRR_EXP" String="ACHTUNG: EXPERIMENTELL" />
     <Translation ID="TRN_CHOICE" String="Sprache ändern" />
-    <Translation ID="TRN_SYS" String="Systemsprache verwenden" />
+    <Translation ID="TRN_SYS" String="Systemsprache" />
     <Translation ID="PRR_DESCRIPTION" String="Lässt RICO-Gebäude mit einem Grundriss größer als 4 × 4 zu sowie RICO-Bearbeitung" />
     <Translation ID="PRR_OPTION_PLP" String="Erstelle aufstufende Gebäude sofort (ohne Konstruktionsanimation)" />
     <Translation ID="PRR_OPTION_ZON" String="Gebäude bleiben außerhalb ihrer ursprünglichen Zone bestehen" />
