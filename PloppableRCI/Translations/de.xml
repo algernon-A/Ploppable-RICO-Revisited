@@ -133,7 +133,7 @@
     <Translation ID="PRR_OPTION_MOREDEBUG" String="Zusätzliche Debugging-Protokolle" />
     <Translation ID="PRR_OPTION_FORCERESET" String="Bestehende Gebäudewerte werden beim Laden immer zurückgesetzt" />
     <Translation ID="PRR_OPTION_REGENTHUMBS" String="Thumbnails erneuern" />
-    <Translation ID="PRR_OPTION_SPDHDR" String="Erhöht die Spielgeschwindigkeit etwas, sorgt aber für eine Verzögerung beim Öffnen des Menüs" />
+    <Translation ID="PRR_OPTION_SPDHDR" String="Erhöhte Spielgeschwindigkeit, verzögertes Menu-öffnen" />
     <Translation ID="PRR_OPTION_SPEED" String="Menü deaktivieren, wenn es nicht verwendet wird" />
     <Translation ID="PRR_OPTION_FASTHDR" String="Vorschaubilder werden schneller gerendert, benötigt allerdings mehr Speicher" />
     <Translation ID="PRR_OPTION_FASTHUMB" String="Rendert Miniaturansichten mit erhöhter Geschwindigkeit" />
