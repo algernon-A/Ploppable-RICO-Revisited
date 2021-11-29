@@ -43,7 +43,7 @@ namespace PloppableRICO
 
 
     /// <summary>
-    /// Harmony patches to override OnCalculateResidentialLevelUp and OnCommercialResidentialUp to force disabling of 'land value too low' complaints for all buildings.
+    /// Harmony patches to override OnCalculateResidentialLevelUp and OnCommercialResidentialUp to force disabling of 'too few services' complaints for all buildings.
     /// </summary>
     [HarmonyPatch]
     public static class TooFewServicesComplaintPatches
