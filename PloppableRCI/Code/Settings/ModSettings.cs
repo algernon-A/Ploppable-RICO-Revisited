@@ -11,7 +11,6 @@ namespace PloppableRICO
     {
         // General mod settings.
         internal static bool speedBoost = false;
-        internal static bool resetOnLoad = false;
         internal static int thumbBacks = (byte)ThumbBackCats.skybox;
 
         // Growable plopping settings.

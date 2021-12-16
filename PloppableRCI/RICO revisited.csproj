@@ -96,7 +96,6 @@
     <Compile Include="Code\Settings\PanelUtils.cs" />
     <Compile Include="Code\Utils\ModUtils.cs" />
     <Compile Include="Code\Patches\PrivateBuildingAI.cs" />
-    <Compile Include="Code\Patches\BuildingLoaded.cs" />
     <Compile Include="Code\Patches\MonumentsPatch.cs" />
     <Compile Include="Code\Patches\RealisticCitizenUnits.cs" />
     <Compile Include="Code\Patches\Patcher.cs" />
