@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="id" ReadableName="Bahasa Indonesia">
+	<Translations>
+		<Translation ID="PRR_NAME" String="Ploppable RICO Revisited" />
+		<Translation ID="PRR_LEVEL" String="Level" />
+		<Translation ID="PRR_LVL" String="Lvl" />
+		<Translation ID="PRR_HOU" String="Rumah tangga" />
+		<Translation ID="PRR_WOR" String="Tempat kerja" />
+		<Translation ID="PRR_SRV_NON" String="Tidak ada" />
+		<Translation ID="PRR_SRV_RES" String="Perumahan" />
+		<Translation ID="PRR_SRV_IND" String="Industri" />
+		<Translation ID="PRR_SRV_OFF" String="Perkantoran" />
+		<Translation ID="PRR_SRV_COM" String="Pertokoan" />
+		<Translation ID="PRR_SRV_EXT" String="Ekstraktor" />
+		<Translation ID="PRR_SRV_DUM" String="Tidak berfungsi" />
+		<Translation ID="PRR_SUB_HIG" String="Kepadatan tinggi" />
+		<Translation ID="PRR_SUB_LOW" String="Kepadatan rendah" />
+		<Translation ID="PRR_SUB_HEC" String="Kepadatan tinggi 'eco'" />
+		<Translation ID="PRR_SUB_LEC" String="Kepadatan rendah 'eco'" />
+		<Translation ID="PRR_SUB_LEI" String="Hiburan" />
+		<Translation ID="PRR_SUB_TOU" String="Pariwisata" />
+		<Translation ID="PRR_SUB_ORG" String="Eco (organik)" />
+		<Translation ID="PRR_SUB_GEN" String="Umum" />
+		<Translation ID="PRR_SUB_ITC" String="Kluster IT" />
+		<Translation ID="PRR_SUB_FAR" String="Pertanian" />
+		<Translation ID="PRR_SUB_FOR" String="Perhutanan" />
+		<Translation ID="PRR_SUB_OIL" String="Minyak" />
+		<Translation ID="PRR_SUB_ORE" String="Tambang bijih" />
+		<Translation ID="PRR_FTR_ALL" String="Semua" />
+		<Translation ID="PRR_FTR_NON" String="Tidak ada" />
+		<Translation ID="PRR_FTR_NAM" String="Nama" />
+		<Translation ID="PRR_FTR_SET" String="Filter pengaturan: Mod/Pembuat/Lokal/Semua" />
+		<Translation ID="PRR_OPT_SET" String="Pengaturan" />
+		<Translation ID="PRR_OPT_MOD" String="Mod" />
+		<Translation ID="PRR_OPT_AUT" String="Pembuat" />
+		<Translation ID="PRR_OPT_LOC" String="Lokal" />
+		<Translation ID="PRR_OPT_ENA" String="Aktifkan RICO" />
+		<Translation ID="PRR_OPT_SER" String="Tipe" />
+		<Translation ID="PRR_OPT_SUB" String="Subtipe" />
+		<Translation ID="PRR_OPT_UIC" String="Kategori UI" />
+		<Translation ID="PRR_OPT_CST" String="Biaya konstruksi" />
+		<Translation ID="PRR_OPT_CNT" String="Jumlah pekerja/rumah" />
+		<Translation ID="PRR_OPT_POP" String="Gunakan mod &quot;Realistic Population&quot;" />
+		<Translation ID="PRR_OPT_POL" String="Aktifkan polusi" />
+		<Translation ID="PRR_OPT_GRO" String="Bangunan bisa berkembang" />
+		<Translation ID="PRR_OPT_JB0" String="Pekerjaan tanpa pendidikan" />
+		<Translation ID="PRR_OPT_JB1" String="Pekerjaan dengan pendidikan dasar" />
+		<Translation ID="PRR_OPT_JB2" String="Pekerjaan dengan pendidikan menengah" />
+		<Translation ID="PRR_OPT_JB3" String="Pekerjaan dengan pendidikan tinggi" />
+		<Translation ID="PRR_OPT_URP" String="Pengaturan populasi dimatikan karena opsi Populasi Realistis diaktifkan" />
+		<Translation ID="PRR_CAT_MON" String="Monumen" />
+		<Translation ID="PRR_CAT_BEA" String="Memperindah" />
+		<Translation ID="PRR_CAT_EDU" String="Pendidikan" />
+		<Translation ID="PRR_CAT_HEA" String="Kesehatan" />
+		<Translation ID="PRR_CAT_FIR" String="Pemadam kebakaran" />
+		<Translation ID="PRR_CAT_POL" String="Polisi" />
+		<Translation ID="PRR_CAT_POW" String="Listrik" />
+		<Translation ID="PRR_CAT_WAT" String="Air" />
+		<Translation ID="PRR_CAT_GAR" String="Sampah" />
+		<Translation ID="PRR_CAT_PIN" String="Industri pemain" />
+		<Translation ID="PRR_CAT_RES" String="Perumahan" />
+		<Translation ID="PRR_CAT_COM" String="Pertokoan" />
+		<Translation ID="PRR_CAT_OFF" String="Perkantoran" />
+		<Translation ID="PRR_CAT_IND" String="Industri" />
+		<Translation ID="PRR_UIC_REL" String="Rumah" />
+		<Translation ID="PRR_UIC_REH" String="Apartemen" />
+		<Translation ID="PRR_UIC_COL" String="Toko kecil" />
+		<Translation ID="PRR_UIC_COH" String="Toko besar" />
+		<Translation ID="PRR_UIC_OFF" String="Kantor" />
+		<Translation ID="PRR_UIC_IND" String="Industri" />
+		<Translation ID="PRR_UIC_FAR" String="Pertanian" />
+		<Translation ID="PRR_UIC_FOR" String="Perhutanan" />
+		<Translation ID="PRR_UIC_OIL" String="Minyak" />
+		<Translation ID="PRR_UIC_ORE" String="Tambang bijih" />
+		<Translation ID="PRR_UIC_LEI" String="Hiburan" />
+		<Translation ID="PRR_UIC_TOU" String="Pariwisata" />
+		<Translation ID="PRR_UIC_ORG" String="Pertokoan produk organik" />
+		<Translation ID="PRR_UIC_ITC" String="Kluster IT" />
+		<Translation ID="PRR_UIC_ECO" String="Rumah mandiri" />
+		<Translation ID="PRR_UIC_NON" String="Tidak ada" />
+		<Translation ID="PRR_SET" String="Pengaturan" />
+		<Translation ID="PRR_SET_RICO" String="Pengaturan RICO" />
+		<Translation ID="PRR_SET_HASMOD" String="Pengaturan mod" />
+		<Translation ID="PRR_SET_NOMOD" String="Pengaturan tanpa mod" />
+		<Translation ID="PRR_SET_HASAUT" String="Pengaturan pembuat" />
+		<Translation ID="PRR_SET_NOAUT" String="Pengaturan tanpa pembuat" />
+		<Translation ID="PRR_SET_HASLOC" String="Pengaturan lokal" />
+		<Translation ID="PRR_SET_NOLOC" String="Pengaturan tanpa lokal" />
+		<Translation ID="PRR_SET_HASANY" String="Semua pengaturan" />
+		<Translation ID="PRR_SET_HASNON" String="Tanpa pengaturan" />
+		<Translation ID="PRR_SAV_SAV" String="Simpan" />
+		<Translation ID="PRR_SAV_ADD" String="Tambah lokal" />
+		<Translation ID="PRR_SAV_REM" String="Hapus lokal" />
+		<Translation ID="PRR_SAV_APP" String="Simpan dan terapkan perubahan" />
+		<Translation ID="PRR_EXP" String="PERINGATAN: DALAM PERCOBAAN" />
+		<Translation ID="TRN_CHOICE" String="Atur bahasa" />
+		<Translation ID="TRN_SYS" String="Gunakan bahasa sistem" />
+		<Translation ID="PRR_DESCRIPTION" String="Memungkinkan bangunan RICO berukuran lebih besar dari 4x4 dan kustomisasi bangunan RICO" />
+		<Translation ID="PRR_OPTION_PLP" String="Langsung taruh bangunan bisa berkembang (tanpa konstruksi)" />
+		<Translation ID="PRR_OPTION_ZON" String="Bangunan bisa berkembang bisa bertahan diluar zona yang benar" />
+		<Translation ID="PRR_OPTION_SPC" String="Bangunan bisa berkembang bisa bertahan diluar spesialisasi distrik wajib" />
+		<Translation ID="PRR_OPTION_VAL" String="Abaikan keluhan 'harga tanah rendah'" />
+		<Translation ID="PRR_OPTION_SVC" String="Abaikan keluhan 'terlalu sedikit layanan'" />
+		<Translation ID="PRR_OPTION_HST" String="Buat semua bangunan yang ditaruh histroris" />
+		<Translation ID="PRR_OPTION_BLC" String="Kunci level bangunan bisa berkembang yang diletakkan dengan &quot;Advanced Building Level Control&quot;" />
+		<Translation ID="PRR_OPTION_RPL" String="Bangunan RICO (yang) bisa diletakkan" />
+		<Translation ID="PRR_OPTION_RGR" String="Bangunan RICO (yang) bisa berkembang" />
+		<Translation ID="PRR_OPTION_RCO" String="Semua bangunan RICO (termasuk yang bisa berkembang)" />
+		<Translation ID="PRR_OPTION_OTH" String="Bangunan non-RICO (yang) bisa berkembang" />
+		<Translation ID="PRR_OPTION_DEM" String="Opsi penghancuran (tidak mempengaruhi bangunan historis)" />
+		<Translation ID="PRR_OPTION_BDZ" String="Tanya sebelum menghancurkan bangunan RICO yang diletakkan" />
+		<Translation ID="PRR_OPTION_IMP" String="Izinkan bangunan RICO yang diletakkan untuk dihancurkan otomatis" />
+		<Translation ID="PRR_OPTION_IMP2" String="(seperti saat menaruh jalan atau bangunan lain)" />
+		<Translation ID="PRR_OPTION_CST" String="Opsi biaya" />
+		<Translation ID="PRR_OPTION_COV" String="Abaikan biaya pembangunan" />
+		<Translation ID="PRR_OPTION_CPH" String="Biaya per rumah tangga" />
+		<Translation ID="PRR_OPTION_CHM" String="Pengali tambahan tiap level rumah tangga (%)" />
+		<Translation ID="PRR_OPTION_CJ0" String="Biaya tiap pekerjaan tanpa pendidikan" />
+		<Translation ID="PRR_OPTION_CJ1" String="Biaya tiap pekerjaan dengan pendidikan dasar" />
+		<Translation ID="PRR_OPTION_CJ2" String="Biaya tiap pekerjaan dengan pendidikan menengah" />
+		<Translation ID="PRR_OPTION_CJ3" String="Biaya tiap pekerjaan dengan pendidikan tinggi" />
+		<Translation ID="PRR_OPTION_DIS" String="Bencana" />
+		<Translation ID="PRR_OPTION_NOC" String="Bangunan RICO (yang) bisa diletakkan tidak terdampak bencana (mencegah bug)" />
+		<Translation ID="PRR_OPTION_LOA" String="Pengaturan loading" />
+		<Translation ID="PRR_OPTION_LOG" String="Pengaturan log" />
+		<Translation ID="PRR_OPTION_TMB" String="Pengaturan thumbnail" />
+		<Translation ID="PRR_OPTION_PLO" String="Pengaturan (bangunan) bisa diletakkan" />
+		<Translation ID="PRR_OPTION_GRO" String="Pengaturan (bangunan) bisa dikembangkan" />
+		<Translation ID="PRR_OPTION_COM" String="Pengaturan keluhan" />
+		<Translation ID="PRR_OPTION_MOD" String="Pengaturan mod" />
+		<Translation ID="PRR_OPTION_NOT" String="Pengaturan notifikasi" />
+		<Translation ID="PRR_OPTION_WHATSNEW" String="Tunjukkan pesan &quot;yang baru&quot;" />
+		<Translation ID="PRR_OPTION_MOREDEBUG" String="Nyalakan log debugging tambahan" />
+		<Translation ID="PRR_OPTION_FORCERESET" String="Atur ulang paksa untuk statistik bangunan saat memuat permainan" />
+		<Translation ID="PRR_OPTION_REGENTHUMBS" String="Perbarui thumbnail" />
+		<Translation ID="PRR_OPTION_SPDHDR" String="Sedikit meningkatkan kecepatan permainan tapi bisa ada penundaan saat membuka panel" />
+		<Translation ID="PRR_OPTION_SPEED" String="Matikan panel saat tidak dipakai" />
+		<Translation ID="PRR_OPTION_FASTHDR" String="Memunculkan thumbnail lebih cepat, tapi memakai lebih banyak memori" />
+		<Translation ID="PRR_OPTION_FASTHUMB" String="Pemunculan thumbnail dipercepat" />
+		<Translation ID="PRR_OPTION_THUMBACK" String="Latar belakang thumbnail" />
+		<Translation ID="PRR_THUMB_COLOR" String="Warna" />
+		<Translation ID="PRR_THUMB_PLAIN" String="Warna datar" />
+		<Translation ID="PRR_THUMB_SKY" String="Skybox" />
+		<Translation ID="MES_CLS" String="Tutup" />
+		<Translation ID="MES_DSA" String="Jangan tampilkan lagi" />
+		<Translation ID="MES_PAGE" String="Silahkan lihat halaman mod di Workshop Steam untuk informasi tambahan" />
+		<Translation ID="PRR_ERR_FAT" String="Ini berarti bahwa mod ini tidak bisa beroperasi dan sudah dimatikan." />
+		<Translation ID="PRR_ERR_HAR" String="Ploppable RICO Revisited tidak bisa menyelesaikan penambalan Harmony yang diperlukan." />
+		<Translation ID="ERR_HAR0" String="Galat penambalan Harmony" />
+		<Translation ID="ERR_HAR1" String="Kemungkinan penyebab masalah termasuk:" />
+		<Translation ID="ERR_HAR2" String="Mod &quot;Harmony 2 mod dependency&quot; yang diperlukan belum diinstal" />
+		<Translation ID="ERR_HAR3" String="Mod lama dan/atau rusak mencegah mod &quot;Harmony 2&quot; beroperasi dengan benar" />
+		<Translation ID="ERR_CON0" String="Konflik mod terdeteksi!" />
+		<Translation ID="ERR_CON1" String="Mod yang bertentangan adalah:" />
+		<Translation ID="PRR_ERR_CON0" String="Ploppable RICO Revisited mendeteksi konflik dengan setidaknya satu mod lain." />
+		<Translation ID="PRR_ERR_CON1" String="Mod ini harus dihapus sebelum Ploppable RICO Revisited bisa beroperasi" />
+		<Translation ID="PRR_CON_PTG0" String="Mod &quot;Plop the Growables&quot; terdeteksi" />
+		<Translation ID="PRR_CON_PTG1" String="Mod &quot;Plop the Growables&quot; terdeteksi - kebanyakan fungsi mod ini sudah digabung dalam Ploppable RICO Revisited. Harap berhati-hati saat memakai kedua mod bersama, karena pengaturannya bisa bertabrakan." />
+		<Translation ID="PRR_CON_PTG2" String="Tidak mengapa menggunakan keduanya bersama - JIKA pengaturannya tidak bertabrakan!" />
+		<Translation ID="PRR_UPD_23_0" String="Update Ploppable RICO Revisited 2.3" />
+		<Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisited telah diperbarui ke versi 2.3. Fitur utama dari update ini adalah:" />
+		<Translation ID="PRR_UPD_23_3" String="Bangunan RICO (yang) bisa dikembangkan bisa diletakkan di luar zona (bisa dikonfigurasi)," />
+		<Translation ID="PRR_UPD_23_4" String="Keluhan tentang 'harga tanah rendah' dan 'layanan tidak cukup'' bisa dimatikan." />
+		<Translation ID="PRR_UPD_23_5" String="Peningkatan pemunculan thumbnail bangunan yang hanya memunculkan gambar yang diperlukan, mengurangi memori dan mempersingkat waktu loading." />
+		<Translation ID="PRR_UPD_234_0" String="Menambah opsi untuk menyalakan atau mematikan peringatan saat menghancurkan bangunan RICO yang diletakkan" />
+		<Translation ID="PRR_UPD_234_1" String="Menambah opsi penghancuran otomatis saat membangun diatas bangunan RICO yang diletakkan." />
+		<Translation ID="PRR_UPD_234_2" String="Peningkatan notifikasi update." />
+		<Translation ID="PRR_UPD_235_0" String="Tindakan &quot;Plop the Growables&quot; sekarang dinyalakan pada opsi (bangunan) bisa dikembangkan secara default (tidak berpengaruh pada pegaturan yang ada)." />
+		<Translation ID="PRR_UPD_235_1" String="Menambah peringatan jika mod &quot;Plop the Growables&quot; juga aktif." />
+		<Translation ID="PRR_UPD_235_2" String="Peningkatan notifikasi konflik dan galat mod." />
+		<Translation ID="PRR_UPD_237_0" String="Memperbaiki tampilnya pesan galat Harmony saat masuk editor." />
+		<Translation ID="PRR_UPD_240_1" String="Menambah opsi untuk mengunci otomatis level bangunan bisa berkembang yang diletakkan (perlu mod &quot;Advanced Building Level Control&quot;)." />
+		<Translation ID="PRR_UPD_240_2" String="Menambah menu pilihan pengaturan mod/pembuat/lokal ke panel pengaturan (untuk melihat pengaturan selain yang sedang aktif)." />
+		<Translation ID="PRR_UPD_240_3" String="Menonaktifkan bidang teks populasi jika opsi &quot;gunakan realistis&quot; digunakan." />
+		<Translation ID="PRR_UPD_241_0" String="Peningkatan dukungan untuk bangunan historis dengan level berbeda" />
+		<Translation ID="PRR_UPD_242_0" String="Bangunan layanan tidak akan lagi terlihat di panel pengaturan RICO secara default" />
+		<Translation ID="PRR_UPD_243_0" String="Menambah opsi untuk mematikan notifikasi update" />
+	</Translations>
+</Language>
