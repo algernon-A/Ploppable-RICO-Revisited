@@ -1,4 +1,9 @@
-﻿Version 2.4.10
+﻿Version 2.4.10.1 -
+
+- Remove redundant code and limit checks
+
+
+Version 2.4.10
 
 - Add Harmony patch to fix game error where large buildings can occasionally have negative income (tax revenue)
 
