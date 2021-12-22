@@ -1,182 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Language UniqueName="ja" ReadableName="日本語">
-  <Translations>
-    <Translation ID="PRR_NAME" String="Ploppable RICO Revisited" />
-    <Translation ID="PRR_LEVEL" String="レベル" />
-    <Translation ID="PRR_LVL" String="Lvl" />
-    <Translation ID="PRR_HOU" String="世帯数" />
-    <Translation ID="PRR_WOR" String="労働者" />
-    <Translation ID="PRR_SRV_NON" String="なし" />
-    <Translation ID="PRR_SRV_RES" String="住宅" />
-    <Translation ID="PRR_SRV_IND" String="産業" />
-    <Translation ID="PRR_SRV_OFF" String="オフィス" />
-    <Translation ID="PRR_SRV_COM" String="商業" />
-    <Translation ID="PRR_SRV_EXT" String="生産" />
-    <Translation ID="PRR_SRV_DUM" String="ダミー" />
-    <Translation ID="PRR_SUB_HIG" String="高密度" />
-    <Translation ID="PRR_SUB_LOW" String="低密度" />
-    <Translation ID="PRR_SUB_HEC" String="高密度エコ" />
-    <Translation ID="PRR_SUB_LEC" String="低密度エコ" />
-    <Translation ID="PRR_SUB_LEI" String="レジャー" />
-    <Translation ID="PRR_SUB_TOU" String="観光" />
-    <Translation ID="PRR_SUB_ORG" String="エコ(オーガニック)" />
-    <Translation ID="PRR_SUB_GEN" String="一般" />
-    <Translation ID="PRR_SUB_ITC" String="ITクラスター" />
-    <Translation ID="PRR_SUB_FAR" String="農業" />
-    <Translation ID="PRR_SUB_FOR" String="林業" />
-    <Translation ID="PRR_SUB_OIL" String="石油業" />
-    <Translation ID="PRR_SUB_ORE" String="鉱業" />
-    <Translation ID="PRR_FTR_ALL" String="全選択" />
-    <Translation ID="PRR_FTR_NON" String="解除" />
-    <Translation ID="PRR_FTR_NAM" String="アセット名" />
-    <Translation ID="PRR_FTR_SET" String="フィルター設定: MOD/作者/ローカル/全て" />
-    <Translation ID="PRR_OPT_SET" String="設定" />
-    <Translation ID="PRR_OPT_MOD" String="MOD" />
-    <Translation ID="PRR_OPT_AUT" String="作者" />
-    <Translation ID="PRR_OPT_LOC" String="ローカル" />
-    <Translation ID="PRR_OPT_ENA" String="RICOを有効化" />
-    <Translation ID="PRR_OPT_SER" String="サービス" />
-    <Translation ID="PRR_OPT_SUB" String="サブサービス" />
-    <Translation ID="PRR_OPT_UIC" String="UIカテゴリー" />
-    <Translation ID="PRR_OPT_CST" String="建設費" />
-    <Translation ID="PRR_OPT_CNT" String="労働者/世帯数" />
-    <Translation ID="PRR_OPT_POP" String="Realistic Population Revisited MODを使用" />
-    <Translation ID="PRR_OPT_POL" String="汚染を有効化" />
-    <Translation ID="PRR_OPT_GRO" String="Growable" />
-    <Translation ID="PRR_OPT_JB0" String="未教育の仕事" />
-    <Translation ID="PRR_OPT_JB1" String="初等教育以上の労働者" />
-    <Translation ID="PRR_OPT_JB2" String="中等教育以上の労働者" />
-    <Translation ID="PRR_OPT_JB3" String="高等教育以上の労働者" />
-    <Translation ID="PRR_OPT_URP" String="Realistic Populationオプションが有効のため、人口(世帯数)の設定は無効になります" />
-    <Translation ID="PRR_CAT_MON" String="モニュメント" />
-    <Translation ID="PRR_CAT_BEA" String="公園" />
-    <Translation ID="PRR_CAT_EDU" String="教育" />
-    <Translation ID="PRR_CAT_HEA" String="健康" />
-    <Translation ID="PRR_CAT_FIR" String="消防" />
-    <Translation ID="PRR_CAT_POL" String="警察" />
-    <Translation ID="PRR_CAT_POW" String="電力" />
-    <Translation ID="PRR_CAT_WAT" String="水道" />
-    <Translation ID="PRR_CAT_GAR" String="ゴミ" />
-    <Translation ID="PRR_CAT_PIN" String="ユニーク工場" />
-    <Translation ID="PRR_CAT_RES" String="住宅" />
-    <Translation ID="PRR_CAT_COM" String="商業" />
-    <Translation ID="PRR_CAT_OFF" String="オフィス" />
-    <Translation ID="PRR_CAT_IND" String="産業" />
-    <Translation ID="PRR_UIC_REL" String="低密度住宅" />
-    <Translation ID="PRR_UIC_REH" String="高密度住宅" />
-    <Translation ID="PRR_UIC_COL" String="低密度商業" />
-    <Translation ID="PRR_UIC_COH" String="高密度商業" />
-    <Translation ID="PRR_UIC_OFF" String="オフィス" />
-    <Translation ID="PRR_UIC_IND" String="産業" />
-    <Translation ID="PRR_UIC_FAR" String="農業" />
-    <Translation ID="PRR_UIC_FOR" String="林業" />
-    <Translation ID="PRR_UIC_OIL" String="石油業" />
-    <Translation ID="PRR_UIC_ORE" String="鉱業" />
-    <Translation ID="PRR_UIC_LEI" String="レジャー" />
-    <Translation ID="PRR_UIC_TOU" String="観光" />
-    <Translation ID="PRR_UIC_ORG" String="エコ(オーガニック)" />
-    <Translation ID="PRR_UIC_ITC" String="ITクラスター" />
-    <Translation ID="PRR_UIC_ECO" String="自給自足型住宅" />
-    <Translation ID="PRR_UIC_NON" String="なし" />
-    <Translation ID="PRR_SET" String="設定" />
-    <Translation ID="PRR_SET_RICO" String="RICOの設定" />
-    <Translation ID="PRR_SET_HASMOD" String="MODでの設定有り" />
-    <Translation ID="PRR_SET_NOMOD" String="MODでの設定なし" />
-    <Translation ID="PRR_SET_HASAUT" String="作者の設定有り" />
-    <Translation ID="PRR_SET_NOAUT" String="作者の設定なし" />
-    <Translation ID="PRR_SET_HASLOC" String="ローカルの設定有り" />
-    <Translation ID="PRR_SET_NOLOC" String="ローカルの設定なし" />
-    <Translation ID="PRR_SET_HASANY" String="全ての設定" />
-    <Translation ID="PRR_SET_HASNON" String="設定なし" />
-    <Translation ID="PRR_SAV_SAV" String="セーブ" />
-    <Translation ID="PRR_SAV_ADD" String="ローカルに設定を追加" />
-    <Translation ID="PRR_SAV_REM" String="ローカルの設定を消去" />
-    <Translation ID="PRR_SAV_APP" String="保存して変更を適用" />
-    <Translation ID="PRR_EXP" String="注意: 実験的！" />
-    <Translation ID="TRN_CHOICE" String="言語設定" />
-    <Translation ID="TRN_SYS" String="システム言語を使用" />
-    <Translation ID="PRR_DESCRIPTION" String="4 x 4サイズ以上のRICOの建物と、RICOの建物をカスタマイズを可能にします" />
-    <Translation ID="PRR_OPTION_PLP" String="Growableの建物を即座に設置(建設描画無し)" />
-    <Translation ID="PRR_OPTION_ZON" String="Growableの建物をゾーニング外でも存続可能にする" />
-    <Translation ID="PRR_OPTION_SPC" String="Growableの建物を地区設定に影響せず存続可能にする" />
-    <Translation ID="PRR_OPTION_VAL" String="&quot;地価が低すぎます&quot; の警告を除外" />
-    <Translation ID="PRR_OPTION_SVC" String="&quot;公共サービスが少なすぎます&quot; の警告を除外" />
-    <Translation ID="PRR_OPTION_HST" String="設置したGrowableの建物を歴史的建造物に指定" />
-    <Translation ID="PRR_OPTION_BLC" String="設置したGrowableの建物レベルをAdvanced Building Level Controlでロック" />
-    <Translation ID="PRR_OPTION_RPL" String="RICO ploppableの建物" />
-    <Translation ID="PRR_OPTION_RGR" String="RICO growableの建物" />
-    <Translation ID="PRR_OPTION_RCO" String="全てのRICOの建物(growableも含む)" />
-    <Translation ID="PRR_OPTION_OTH" String="RICO未対応のgrowableな建物" />
-    <Translation ID="PRR_OPTION_DEM" String="ブルドーザーの設定 (歴史的建造物は無視)" />
-    <Translation ID="PRR_OPTION_BDZ" String="RICOの建物を取り壊す前に確認する" />
-    <Translation ID="PRR_OPTION_IMP" String="RICOの建物を自動撤去(MODを使用)を許可する" />
-    <Translation ID="PRR_OPTION_IMP2" String="(例: 道路や他の建物を設置する場合)" />
-    <Translation ID="PRR_OPTION_CST" String="建築費設定" />
-    <Translation ID="PRR_OPTION_COV" String="建築費を補正" />
-    <Translation ID="PRR_OPTION_CPH" String="1世帯あたりの費用" />
-    <Translation ID="PRR_OPTION_CHM" String="住宅レベルごとの追加費用 (%)" />
-    <Translation ID="PRR_OPTION_CJ0" String="未教育の労働者一人あたりの費用" />
-    <Translation ID="PRR_OPTION_CJ1" String="初等教育以上の労働者一人あたりの費用" />
-    <Translation ID="PRR_OPTION_CJ2" String="中等教育以上の労働者一人あたりの費用" />
-    <Translation ID="PRR_OPTION_CJ3" String="高等教育以上の労働者一人あたりの費用" />
-    <Translation ID="PRR_OPTION_DIS" String="災害" />
-    <Translation ID="PRR_OPTION_NOC" String="Ploppableで設置したRICOの建物は、災害の影響を受けません（バグを防止）" />
-    <Translation ID="PRR_OPTION_LOA" String="ロードのオプション" />
-    <Translation ID="PRR_OPTION_LOG" String="ログのオプション" />
-    <Translation ID="PRR_OPTION_TMB" String="サムネイルのオプション" />
-    <Translation ID="PRR_OPTION_PLO" String="Ploppableのオプション" />
-    <Translation ID="PRR_OPTION_GRO" String="Growableのオプション" />
-    <Translation ID="PRR_OPTION_COM" String="警告のオプション" />
-    <Translation ID="PRR_OPTION_MOD" String="MODのオプション" />
-    <Translation ID="PRR_OPTION_NOT" String="通知の設定" />
-    <Translation ID="PRR_OPTION_WHATSNEW" String="新着メッセージを表示" />
-    <Translation ID="PRR_OPTION_MOREDEBUG" String="追加のデバッグログを有効化" />
-    <Translation ID="PRR_OPTION_FORCERESET" String="ゲームロード時に、既存建物の統計情報を強制的にリセット" />
-    <Translation ID="PRR_OPTION_REGENTHUMBS" String="サムネイルの再生成" />
-    <Translation ID="PRR_OPTION_SPDHDR" String="ゲーム速度を少し上げますが、パネル展開時に遅延が発生します" />
-    <Translation ID="PRR_OPTION_SPEED" String="未使用時はパネルを無効にする" />
-    <Translation ID="PRR_OPTION_FASTHDR" String="サムネイルの描画速度が向上しますが、メモリ使用量が増えます" />
-    <Translation ID="PRR_OPTION_FASTHUMB" String="サムネイルの描画を高速化します" />
-    <Translation ID="PRR_OPTION_THUMBACK" String="サムネイルの背景" />
-    <Translation ID="PRR_THUMB_COLOR" String="カラー" />
-    <Translation ID="PRR_THUMB_PLAIN" String="無地" />
-    <Translation ID="PRR_THUMB_SKY" String="青空" />
-    <Translation ID="MES_CLS" String="閉じる" />
-    <Translation ID="MES_DSA" String="次回から非表示" />
-    <Translation ID="MES_PAGE" String="詳細は、MODがあるSteamのワークショップを確認してください。" />
-    <Translation ID="PRR_ERR_FAT" String="正常にMODが起動できないため、動作をシャットダウンしました。" />
-    <Translation ID="PRR_ERR_HAR" String="Ploppable RICO Revisitedは、必要なHarmony 2.0 MODのパッチ動作を完了できません。" />
-    <Translation ID="ERR_HAR0" String="Harmony 2.0 MODでエラーが発生しました" />
-    <Translation ID="ERR_HAR1" String="エラーが起きる原因として、考えられるのは以下の通りです。" />
-    <Translation ID="ERR_HAR2" String="依存関係にある、必要なHarmony 2 MODがインストールされていません。" />
-    <Translation ID="ERR_HAR3" String="古いMODや壊れたMODが、Harmony 2.0 MODの動作を妨げています。" />
-    <Translation ID="ERR_CON0" String="MODの競合が検出されました！" />
-    <Translation ID="ERR_CON1" String="競合するMOD:" />
-    <Translation ID="PRR_ERR_CON0" String="Ploppable RICO Revisited は、少なくとも1つ以上のMODと競合を検出しました" />
-    <Translation ID="PRR_ERR_CON1" String="Ploppable RICO Revisitedが動作する前に、これらのMODを削除する必要があります。" />
-    <Translation ID="PRR_CON_PTG0" String="Plop the Growables MODを検出" />
-    <Translation ID="PRR_CON_PTG1" String="Plop the Growables MODを検出 - 機能のほとんどは、Ploppable RICO Revisitedに組み込まれています。 2つのMODを一緒に使用する場合は、設定が矛盾する可能性があります。" />
-    <Translation ID="PRR_CON_PTG2" String="しかし、両方を一緒に使っても問題ありません - 設定に競合が無ければ！" />
-    <Translation ID="PRR_UPD_23_0" String="Plopplable RICO Revisited 2.3 アップデート" />
-    <Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisitedがバージョン2.3に更新されました。このアップデートの主な機能は次のとおりです。" />
-    <Translation ID="PRR_UPD_23_2" String="Ploppable RICOには、RICOと非RICOの両方の建物に「PloptheGrowables」スタイルの機能が含まれるようになりました。詳細については、オプションパネルを参照してください。" />
-    <Translation ID="PRR_UPD_23_3" String="RICOの成長可能な建物が、ゾーンの外に配置できるようになりました（設定可能）。" />
-    <Translation ID="PRR_UPD_23_4" String="「地価が低い」および「サービスが不十分」に関する苦情を無効にできるようになりました。" />
-    <Translation ID="PRR_UPD_23_5" String="建物のサムネイルレンダリング機能を改善し、必要なときにのみ画像を生成することで、メモリを削減し読み込み時間を短縮しました。" />
-    <Translation ID="PRR_UPD_234_0" String="崩壊したRICOの建物を破壊するときの警告を有効または無効にするオプションを追加しました。" />
-    <Translation ID="PRR_UPD_234_1" String="崩壊したRICOの建物の上に建てるときに、自動撤去を有効または無効にするオプションを追加しました。" />
-    <Translation ID="PRR_UPD_234_2" String="更新通知が改善されました。" />
-    <Translation ID="PRR_UPD_235_0" String="Growableオプションでは、「Plop the Growables」動作がデフォルトで有効になっています（既存の設定には影響しません）。" />
-    <Translation ID="PRR_UPD_235_1" String="Plop the Growables' modもアクティブな場合の警告を追加しました。" />
-    <Translation ID="PRR_UPD_235_2" String="modの競合とエラー時の通知が改善しました。" />
-    <Translation ID="PRR_UPD_236_0" String="modの競合の検出と通知を改善しました。" />
-    <Translation ID="PRR_UPD_237_0" String="エディターをロードするときに誤って表示されるHarmony 2.0 MODのエラーメッセージを修正しました。" />
-    <Translation ID="PRR_UPD_240_0" String="コストの無視を追加しました（設定可能）。" />
-    <Translation ID="PRR_UPD_240_1" String="配置されたglowablesの建物レベルを自動的にロックするオプションを追加しました（Advanced Building Level Control modが必要です）。" />
-    <Translation ID="PRR_UPD_240_2" String="設定パネルにmod/author/local設定の選択メニューを追加しました（現在のアクティブな設定以外の設定を見るため）。" />
-    <Translation ID="PRR_UPD_240_3" String="「現実的な人口を使用する」オプションが設定されている場合、人口テキストフィールドを無効にします。" />
-    <Translation ID="PRR_UPD_241_0" String="さまざまなレベルの歴史的建造物のサポートを改善しました。" />
-    <Translation ID="PRR_UPD_242_0" String="RICOの設定パネルで、サービスビルがデフォルトで表示されなくなりました。" />
-    <Translation ID="PRR_UPD_243_0" String="更新通知を無効にするオプションを追加しました。" />
-  </Translations>
+	<Translations>
+		<Translation ID="PRR_NAME" String="Ploppable RICO Revisited" />
+		<Translation ID="PRR_LEVEL" String="レベル" />
+		<Translation ID="PRR_LVL" String="Lvl" />
+		<Translation ID="PRR_HOU" String="世帯数" />
+		<Translation ID="PRR_WOR" String="労働者" />
+		<Translation ID="PRR_SRV_NON" String="なし" />
+		<Translation ID="PRR_SRV_RES" String="住宅" />
+		<Translation ID="PRR_SRV_IND" String="産業" />
+		<Translation ID="PRR_SRV_OFF" String="オフィス" />
+		<Translation ID="PRR_SRV_COM" String="商業" />
+		<Translation ID="PRR_SRV_EXT" String="生産" />
+		<Translation ID="PRR_SRV_DUM" String="ダミー" />
+		<Translation ID="PRR_SUB_HIG" String="高密度" />
+		<Translation ID="PRR_SUB_LOW" String="低密度" />
+		<Translation ID="PRR_SUB_HEC" String="高密度エコ" />
+		<Translation ID="PRR_SUB_LEC" String="低密度エコ" />
+		<Translation ID="PRR_SUB_LEI" String="レジャー" />
+		<Translation ID="PRR_SUB_TOU" String="観光" />
+		<Translation ID="PRR_SUB_ORG" String="エコ(オーガニック)" />
+		<Translation ID="PRR_SUB_GEN" String="一般" />
+		<Translation ID="PRR_SUB_ITC" String="ITクラスター" />
+		<Translation ID="PRR_SUB_FAR" String="農業" />
+		<Translation ID="PRR_SUB_FOR" String="林業" />
+		<Translation ID="PRR_SUB_OIL" String="石油業" />
+		<Translation ID="PRR_SUB_ORE" String="鉱業" />
+		<Translation ID="PRR_FTR_ALL" String="全選択" />
+		<Translation ID="PRR_FTR_NON" String="解除" />
+		<Translation ID="PRR_FTR_NAM" String="アセット名" />
+		<Translation ID="PRR_FTR_SET" String="フィルター設定: MOD/作者/ローカル/全て" />
+		<Translation ID="PRR_OPT_SET" String="設定" />
+		<Translation ID="PRR_OPT_MOD" String="MOD" />
+		<Translation ID="PRR_OPT_AUT" String="作者" />
+		<Translation ID="PRR_OPT_LOC" String="ローカル" />
+		<Translation ID="PRR_OPT_ENA" String="RICOを有効化" />
+		<Translation ID="PRR_OPT_SER" String="サービス" />
+		<Translation ID="PRR_OPT_SUB" String="サブサービス" />
+		<Translation ID="PRR_OPT_UIC" String="UIカテゴリー" />
+		<Translation ID="PRR_OPT_CST" String="建設費" />
+		<Translation ID="PRR_OPT_CNT" String="労働者/世帯数" />
+		<Translation ID="PRR_OPT_POP" String="Realistic Population Revisited MODを使用" />
+		<Translation ID="PRR_OPT_POL" String="汚染を有効化" />
+		<Translation ID="PRR_OPT_GRO" String="Growable" />
+		<Translation ID="PRR_OPT_JB0" String="未教育の仕事" />
+		<Translation ID="PRR_OPT_JB1" String="初等教育以上の労働者" />
+		<Translation ID="PRR_OPT_JB2" String="中等教育以上の労働者" />
+		<Translation ID="PRR_OPT_JB3" String="高等教育以上の労働者" />
+		<Translation ID="PRR_OPT_URP" String="Realistic Populationオプションが有効のため、人口(世帯数)の設定は無効になります" />
+		<Translation ID="PRR_CAT_MON" String="モニュメント" />
+		<Translation ID="PRR_CAT_BEA" String="公園" />
+		<Translation ID="PRR_CAT_EDU" String="教育" />
+		<Translation ID="PRR_CAT_HEA" String="健康" />
+		<Translation ID="PRR_CAT_FIR" String="消防" />
+		<Translation ID="PRR_CAT_POL" String="警察" />
+		<Translation ID="PRR_CAT_POW" String="電力" />
+		<Translation ID="PRR_CAT_WAT" String="水道" />
+		<Translation ID="PRR_CAT_GAR" String="ゴミ" />
+		<Translation ID="PRR_CAT_PIN" String="ユニーク工場" />
+		<Translation ID="PRR_CAT_RES" String="住宅" />
+		<Translation ID="PRR_CAT_COM" String="商業" />
+		<Translation ID="PRR_CAT_OFF" String="オフィス" />
+		<Translation ID="PRR_CAT_IND" String="産業" />
+		<Translation ID="PRR_UIC_REL" String="低密度住宅" />
+		<Translation ID="PRR_UIC_REH" String="高密度住宅" />
+		<Translation ID="PRR_UIC_COL" String="低密度商業" />
+		<Translation ID="PRR_UIC_COH" String="高密度商業" />
+		<Translation ID="PRR_UIC_OFF" String="オフィス" />
+		<Translation ID="PRR_UIC_IND" String="産業" />
+		<Translation ID="PRR_UIC_FAR" String="農業" />
+		<Translation ID="PRR_UIC_FOR" String="林業" />
+		<Translation ID="PRR_UIC_OIL" String="石油業" />
+		<Translation ID="PRR_UIC_ORE" String="鉱業" />
+		<Translation ID="PRR_UIC_LEI" String="レジャー" />
+		<Translation ID="PRR_UIC_TOU" String="観光" />
+		<Translation ID="PRR_UIC_ORG" String="エコ(オーガニック)" />
+		<Translation ID="PRR_UIC_ITC" String="ITクラスター" />
+		<Translation ID="PRR_UIC_ECO" String="自給自足型住宅" />
+		<Translation ID="PRR_UIC_NON" String="なし" />
+		<Translation ID="PRR_SET" String="設定" />
+		<Translation ID="PRR_SET_RICO" String="RICOの設定" />
+		<Translation ID="PRR_SET_HASMOD" String="MODでの設定有り" />
+		<Translation ID="PRR_SET_NOMOD" String="MODでの設定なし" />
+		<Translation ID="PRR_SET_HASAUT" String="作者の設定有り" />
+		<Translation ID="PRR_SET_NOAUT" String="作者の設定なし" />
+		<Translation ID="PRR_SET_HASLOC" String="ローカルの設定有り" />
+		<Translation ID="PRR_SET_NOLOC" String="ローカルの設定なし" />
+		<Translation ID="PRR_SET_HASANY" String="全ての設定" />
+		<Translation ID="PRR_SET_HASNON" String="設定なし" />
+		<Translation ID="PRR_SAV_SAV" String="セーブ" />
+		<Translation ID="PRR_SAV_ADD" String="ローカルに設定を追加" />
+		<Translation ID="PRR_SAV_REM" String="ローカルの設定を消去" />
+		<Translation ID="PRR_SAV_APP" String="保存して変更を適用" />
+		<Translation ID="PRR_EXP" String="注意: 実験的！" />
+		<Translation ID="TRN_CHOICE" String="言語設定" />
+		<Translation ID="TRN_SYS" String="システム言語を使用" />
+		<Translation ID="PRR_DESCRIPTION" String="4 x 4サイズ以上のRICOの建物と、RICOの建物をカスタマイズを可能にします" />
+		<Translation ID="PRR_OPTION_PLP" String="Growableの建物を即座に設置(建設描画無し)" />
+		<Translation ID="PRR_OPTION_ZON" String="Growableの建物をゾーニング外でも存続可能にする" />
+		<Translation ID="PRR_OPTION_SPC" String="Growableの建物を地区設定に影響せず存続可能にする" />
+		<Translation ID="PRR_OPTION_VAL" String="&quot;地価が低すぎます&quot; の警告を除外" />
+		<Translation ID="PRR_OPTION_SVC" String="&quot;公共サービスが少なすぎます&quot; の警告を除外" />
+		<Translation ID="PRR_OPTION_HST" String="設置したGrowableの建物を歴史的建造物に指定" />
+		<Translation ID="PRR_OPTION_BLC" String="設置したGrowableの建物レベルをAdvanced Building Level Controlでロック" />
+		<Translation ID="PRR_OPTION_RPL" String="RICO ploppableの建物" />
+		<Translation ID="PRR_OPTION_RGR" String="RICO growableの建物" />
+		<Translation ID="PRR_OPTION_RCO" String="全てのRICOの建物(growableも含む)" />
+		<Translation ID="PRR_OPTION_OTH" String="RICO未対応のgrowableな建物" />
+		<Translation ID="PRR_OPTION_DEM" String="ブルドーザーの設定 (歴史的建造物は無視)" />
+		<Translation ID="PRR_OPTION_BDZ" String="RICOの建物を取り壊す前に確認する" />
+		<Translation ID="PRR_OPTION_IMP" String="RICOの建物を自動撤去(MODを使用)を許可する" />
+		<Translation ID="PRR_OPTION_IMP2" String="(例: 道路や他の建物を設置する場合)" />
+		<Translation ID="PRR_OPTION_CST" String="建築費設定" />
+		<Translation ID="PRR_OPTION_COV" String="建築費を補正" />
+		<Translation ID="PRR_OPTION_CPH" String="1世帯あたりの費用" />
+		<Translation ID="PRR_OPTION_CHM" String="住宅レベルごとの追加費用 (%)" />
+		<Translation ID="PRR_OPTION_CJ0" String="未教育の労働者一人あたりの費用" />
+		<Translation ID="PRR_OPTION_CJ1" String="初等教育以上の労働者一人あたりの費用" />
+		<Translation ID="PRR_OPTION_CJ2" String="中等教育以上の労働者一人あたりの費用" />
+		<Translation ID="PRR_OPTION_CJ3" String="高等教育以上の労働者一人あたりの費用" />
+		<Translation ID="PRR_OPTION_DIS" String="災害" />
+		<Translation ID="PRR_OPTION_NOC" String="Ploppableで設置したRICOの建物は、災害の影響を受けません（バグを防止）" />
+		<Translation ID="PRR_OPTION_LOA" String="ロードのオプション" />
+		<Translation ID="PRR_OPTION_LOG" String="ログのオプション" />
+		<Translation ID="PRR_OPTION_TMB" String="サムネイルのオプション" />
+		<Translation ID="PRR_OPTION_PLO" String="Ploppableのオプション" />
+		<Translation ID="PRR_OPTION_GRO" String="Growableのオプション" />
+		<Translation ID="PRR_OPTION_COM" String="警告のオプション" />
+		<Translation ID="PRR_OPTION_MOD" String="MODのオプション" />
+		<Translation ID="PRR_OPTION_NOT" String="通知の設定" />
+		<Translation ID="PRR_OPTION_WHATSNEW" String="新着メッセージを表示" />
+		<Translation ID="PRR_OPTION_MOREDEBUG" String="追加のデバッグログを有効化" />
+		<Translation ID="PRR_OPTION_FORCERESET" String="ゲームロード時に、既存建物の統計情報を強制的にリセット" />
+		<Translation ID="PRR_OPTION_REGENTHUMBS" String="サムネイルの再生成" />
+		<Translation ID="PRR_OPTION_SPDHDR" String="ゲーム速度を少し上げますが、パネル展開時に遅延が発生します" />
+		<Translation ID="PRR_OPTION_SPEED" String="未使用時はパネルを無効にする" />
+		<Translation ID="PRR_OPTION_FASTHDR" String="サムネイルの描画速度が向上しますが、メモリ使用量が増えます" />
+		<Translation ID="PRR_OPTION_FASTHUMB" String="サムネイルの描画を高速化します" />
+		<Translation ID="PRR_OPTION_THUMBACK" String="サムネイルの背景" />
+		<Translation ID="PRR_THUMB_COLOR" String="カラー" />
+		<Translation ID="PRR_THUMB_PLAIN" String="無地" />
+		<Translation ID="PRR_THUMB_SKY" String="青空" />
+		<Translation ID="MES_CLS" String="閉じる" />
+		<Translation ID="MES_DSA" String="次回から非表示" />
+		<Translation ID="MES_PAGE" String="詳細は、MODがあるSteamのワークショップを確認してください。" />
+		<Translation ID="PRR_ERR_FAT" String="正常にMODが起動できないため、動作をシャットダウンしました。" />
+		<Translation ID="PRR_ERR_HAR" String="Ploppable RICO Revisitedは、必要なHarmony 2.0 MODのパッチ動作を完了できません。" />
+		<Translation ID="ERR_HAR0" String="Harmony 2.0 MODでエラーが発生しました" />
+		<Translation ID="ERR_HAR1" String="エラーが起きる原因として、考えられるのは以下の通りです。" />
+		<Translation ID="ERR_HAR2" String="依存関係にある、必要なHarmony 2 MODがインストールされていません。" />
+		<Translation ID="ERR_HAR3" String="古いMODや壊れたMODが、Harmony 2.0 MODの動作を妨げています。" />
+		<Translation ID="ERR_CON0" String="MODの競合が検出されました！" />
+		<Translation ID="ERR_CON1" String="競合するMOD:" />
+		<Translation ID="PRR_ERR_CON0" String="Ploppable RICO Revisited は、少なくとも1つ以上のMODと競合を検出しました" />
+		<Translation ID="PRR_ERR_CON1" String="Ploppable RICO Revisitedが動作する前に、これらのMODを削除する必要があります。" />
+		<Translation ID="PRR_CON_PTG0" String="Plop the Growables MODを検出" />
+		<Translation ID="PRR_CON_PTG1" String="Plop the Growables MODを検出 - 機能のほとんどは、Ploppable RICO Revisitedに組み込まれています。 2つのMODを一緒に使用する場合は、設定が矛盾する可能性があります。" />
+		<Translation ID="PRR_CON_PTG2" String="しかし、両方を一緒に使っても問題ありません - 設定に競合が無ければ！" />
+		<Translation ID="PRR_UPD_23_0" String="Plopplable RICO Revisited 2.3 アップデート" />
+		<Translation ID="PRR_UPD_23_1" String="Ploppable RICO Revisitedがバージョン2.3に更新されました。このアップデートの主な機能は次のとおりです。" />
+		<Translation ID="PRR_UPD_23_2" String="Ploppable RICOには、RICOと非RICOの両方の建物に「PloptheGrowables」スタイルの機能が含まれるようになりました。詳細については、オプションパネルを参照してください。" />
+		<Translation ID="PRR_UPD_23_3" String="RICOの成長可能な建物が、ゾーンの外に配置できるようになりました（設定可能）。" />
+		<Translation ID="PRR_UPD_23_4" String="「地価が低い」および「サービスが不十分」に関する苦情を無効にできるようになりました。" />
+		<Translation ID="PRR_UPD_23_5" String="建物のサムネイルレンダリング機能を改善し、必要なときにのみ画像を生成することで、メモリを削減し読み込み時間を短縮しました。" />
+		<Translation ID="PRR_UPD_234_0" String="崩壊したRICOの建物を破壊するときの警告を有効または無効にするオプションを追加しました。" />
+		<Translation ID="PRR_UPD_234_1" String="崩壊したRICOの建物の上に建てるときに、自動撤去を有効または無効にするオプションを追加しました。" />
+		<Translation ID="PRR_UPD_234_2" String="更新通知が改善されました。" />
+		<Translation ID="PRR_UPD_235_0" String="Growableオプションでは、「Plop the Growables」動作がデフォルトで有効になっています（既存の設定には影響しません）。" />
+		<Translation ID="PRR_UPD_235_1" String="Plop the Growables' modもアクティブな場合の警告を追加しました。" />
+		<Translation ID="PRR_UPD_235_2" String="modの競合とエラー時の通知が改善しました。" />
+		<Translation ID="PRR_UPD_236_0" String="modの競合の検出と通知を改善しました。" />
+		<Translation ID="PRR_UPD_237_0" String="エディターをロードするときに誤って表示されるHarmony 2.0 MODのエラーメッセージを修正しました。" />
+		<Translation ID="PRR_UPD_240_0" String="コストの無視を追加しました（設定可能）。" />
+		<Translation ID="PRR_UPD_240_1" String="配置されたglowablesの建物レベルを自動的にロックするオプションを追加しました（Advanced Building Level Control modが必要です）。" />
+		<Translation ID="PRR_UPD_240_2" String="設定パネルにmod/author/local設定の選択メニューを追加しました（現在のアクティブな設定以外の設定を見るため）。" />
+		<Translation ID="PRR_UPD_240_3" String="「現実的な人口を使用する」オプションが設定されている場合、人口テキストフィールドを無効にします。" />
+		<Translation ID="PRR_UPD_241_0" String="さまざまなレベルの歴史的建造物のサポートを改善しました。" />
+		<Translation ID="PRR_UPD_242_0" String="RICOの設定パネルで、サービスビルがデフォルトで表示されなくなりました。" />
+		<Translation ID="PRR_UPD_243_0" String="更新通知を無効にするオプションを追加しました。" />
+	</Translations>
 </Language>
