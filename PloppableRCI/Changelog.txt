@@ -1,5 +1,6 @@
 ﻿Version 2.4.10.1 -
 
+- Fix Greek translation, add Indonesian translation
 - Remove redundant code and limit checks
 
 
