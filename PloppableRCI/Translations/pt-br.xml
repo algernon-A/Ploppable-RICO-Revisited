@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Language UniqueName="pt-br" ReadableName="Português Brasileiro">
 	<Translations>
-		<Translation ID="PRR_NAME" String="Ploppable RICO Revisitado" />
+		<Translation ID="PRR_NAME" String="Ploppable RICO Revisado" />
 		<Translation ID="PRR_LEVEL" String="Nível" />
-		<Translation ID="PRR_LVL" String="N." />
+		<Translation ID="PRR_LVL" String="Nvl" />
 		<Translation ID="PRR_HOU" String="Habitações" />
-		<Translation ID="PRR_WOR" String="Locais de Trabalho" />
+		<Translation ID="PRR_WOR" String="Locais de trabalho" />
 		<Translation ID="PRR_SRV_NON" String="Nenhum" />
 		<Translation ID="PRR_SRV_RES" String="Residencial " />
 		<Translation ID="PRR_SRV_IND" String="Industrial" />
@@ -15,21 +15,21 @@
 		<Translation ID="PRR_SRV_DUM" String="Modelo" />
 		<Translation ID="PRR_SUB_HIG" String="Alta" />
 		<Translation ID="PRR_SUB_LOW" String="Baixa" />
-		<Translation ID="PRR_SUB_HEC" String="Ecológico Alta" />
-		<Translation ID="PRR_SUB_LEC" String="Ecológico Baixa" />
+		<Translation ID="PRR_SUB_HEC" String="Eco (Sustentavél) Alta" />
+		<Translation ID="PRR_SUB_LEC" String="Eco (Sustentavél) Baixa" />
 		<Translation ID="PRR_SUB_LEI" String="Lazer" />
 		<Translation ID="PRR_SUB_TOU" String="Turismo" />
 		<Translation ID="PRR_SUB_ORG" String="Eco (Orgânico)" />
 		<Translation ID="PRR_SUB_GEN" String="Genérico" />
-		<Translation ID="PRR_SUB_ITC" String="Cluster de TI" />
-		<Translation ID="PRR_SUB_FAR" String="Indústria Agrícola" />
-		<Translation ID="PRR_SUB_FOR" String="Indústria Madeireira" />
-		<Translation ID="PRR_SUB_OIL" String="Indústria Petrolífera" />
-		<Translation ID="PRR_SUB_ORE" String="Indústria de Mineração" />
+		<Translation ID="PRR_SUB_ITC" String="Conglomerado TI" />
+		<Translation ID="PRR_SUB_FAR" String="Agrícola" />
+		<Translation ID="PRR_SUB_FOR" String="Madeireira" />
+		<Translation ID="PRR_SUB_OIL" String="Petrolífera" />
+		<Translation ID="PRR_SUB_ORE" String="Mineração" />
 		<Translation ID="PRR_FTR_ALL" String="Todas" />
 		<Translation ID="PRR_FTR_NON" String="Nenhuma" />
 		<Translation ID="PRR_FTR_NAM" String="Nome" />
-		<Translation ID="PRR_FTR_SET" String="Filtro de Config. Mod/Autor/Local/Qualquer" />
+		<Translation ID="PRR_FTR_SET" String="Filtro de config. Mod/Autor/Local/Qualquer" />
 		<Translation ID="PRR_OPT_SET" String="Configurações" />
 		<Translation ID="PRR_OPT_MOD" String="Mod" />
 		<Translation ID="PRR_OPT_AUT" String="Autor" />
@@ -37,16 +37,16 @@
 		<Translation ID="PRR_OPT_ENA" String="Ativar RICO" />
 		<Translation ID="PRR_OPT_SER" String="Serviço" />
 		<Translation ID="PRR_OPT_SUB" String="Nível de Serviço" />
-		<Translation ID="PRR_OPT_UIC" String="Categoria da IU" />
-		<Translation ID="PRR_OPT_CST" String="Custo de Construção" />
-		<Translation ID="PRR_OPT_CNT" String="Quantidade de Trabalhadores por Residência" />
+		<Translation ID="PRR_OPT_UIC" String="Categoria da interface" />
+		<Translation ID="PRR_OPT_CST" String="Custo de construção" />
+		<Translation ID="PRR_OPT_CNT" String="Quantidade de trabalhadores por residência" />
 		<Translation ID="PRR_OPT_POP" String="Usar o mod Realistic Pop" />
-		<Translation ID="PRR_OPT_POL" String="Habilitar Poluição" />
+		<Translation ID="PRR_OPT_POL" String="Habilitar poluição" />
 		<Translation ID="PRR_OPT_GRO" String="Growable" />
-		<Translation ID="PRR_OPT_JB0" String="Postos de trabalho para não-instruídos" />
-		<Translation ID="PRR_OPT_JB1" String="Postos de trabalho para instruídos" />
-		<Translation ID="PRR_OPT_JB2" String="Postos de trabalho para qualificados" />
-		<Translation ID="PRR_OPT_JB3" String="Postos de trabalho para altamente qualificados" />
+		<Translation ID="PRR_OPT_JB0" String="Trabalho para não-instruídos" />
+		<Translation ID="PRR_OPT_JB1" String="Trabalho para instruídos" />
+		<Translation ID="PRR_OPT_JB2" String="Trabalho para qualificados" />
+		<Translation ID="PRR_OPT_JB3" String="Trabalho para altamente qualificados" />
 		<Translation ID="PRR_OPT_URP" String="Configurações de população estão desabilitadas porque a opção População Realista está ativada" />
 		<Translation ID="PRR_CAT_MON" String="Monumentos" />
 		<Translation ID="PRR_CAT_BEA" String="Embelezamento" />
@@ -57,60 +57,60 @@
 		<Translation ID="PRR_CAT_POW" String="Eletricidade" />
 		<Translation ID="PRR_CAT_WAT" String="Água" />
 		<Translation ID="PRR_CAT_GAR" String="Lixo" />
-		<Translation ID="PRR_CAT_PIN" String="Indústria do Jogador" />
+		<Translation ID="PRR_CAT_PIN" String="Indústria do jogador" />
 		<Translation ID="PRR_CAT_RES" String="Residencial" />
 		<Translation ID="PRR_CAT_COM" String="Comercial" />
 		<Translation ID="PRR_CAT_OFF" String="Escritório" />
-		<Translation ID="PRR_CAT_IND" String="Indústrias" />
-		<Translation ID="PRR_UIC_REL" String="Residencial de Baixa Densidade" />
-		<Translation ID="PRR_UIC_REH" String="Residencial de Alta Densidade" />
-		<Translation ID="PRR_UIC_COL" String="Comercial de Baixa Densidade" />
-		<Translation ID="PRR_UIC_COH" String="Comercial de Alta Densidade" />
+		<Translation ID="PRR_CAT_IND" String="Indústria" />
+		<Translation ID="PRR_UIC_REL" String="Residencial de baixa densidade" />
+		<Translation ID="PRR_UIC_REH" String="Residencial de alta densidade" />
+		<Translation ID="PRR_UIC_COL" String="Comercial de baixa densidade" />
+		<Translation ID="PRR_UIC_COH" String="Comercial de alta densidade" />
 		<Translation ID="PRR_UIC_OFF" String="Escritório" />
 		<Translation ID="PRR_UIC_IND" String="Industrial" />
-		<Translation ID="PRR_UIC_FAR" String="Indústria Agrícola" />
-		<Translation ID="PRR_UIC_FOR" String="Indústria Madeireira" />
-		<Translation ID="PRR_UIC_OIL" String="Indústria Petrolífera" />
-		<Translation ID="PRR_UIC_ORE" String="Indústria de Mineração" />
+		<Translation ID="PRR_UIC_FAR" String="Agrícola" />
+		<Translation ID="PRR_UIC_FOR" String="Madeireira" />
+		<Translation ID="PRR_UIC_OIL" String="Petrolífera" />
+		<Translation ID="PRR_UIC_ORE" String="Mineração" />
 		<Translation ID="PRR_UIC_LEI" String="Lazer" />
 		<Translation ID="PRR_UIC_TOU" String="Turismo" />
-		<Translation ID="PRR_UIC_ORG" String="Comércio de Orgânicos" />
-		<Translation ID="PRR_UIC_ITC" String="Cluster de TI" />
-		<Translation ID="PRR_UIC_ECO" String="Residências Autossustentáveis" />
+		<Translation ID="PRR_UIC_ORG" String="Comércio de orgânicos" />
+		<Translation ID="PRR_UIC_ITC" String="Conglomerado TI" />
+		<Translation ID="PRR_UIC_ECO" String="Residências autossustentáveis" />
 		<Translation ID="PRR_UIC_NON" String="Nenhuma" />
 		<Translation ID="PRR_SET" String="Configurações" />
 		<Translation ID="PRR_SET_RICO" String="Configurações do RICO" />
 		<Translation ID="PRR_SET_HASMOD" String="Configurações do Mod" />
-		<Translation ID="PRR_SET_NOMOD" String="Sem Configurações do Mod" />
+		<Translation ID="PRR_SET_NOMOD" String="Sem configurações do Mod" />
 		<Translation ID="PRR_SET_HASAUT" String="Configurações do Autor" />
-		<Translation ID="PRR_SET_NOAUT" String="Sem Configurações do Autor" />
-		<Translation ID="PRR_SET_HASLOC" String="Configurações Locais" />
-		<Translation ID="PRR_SET_NOLOC" String="Sem Configurações Locais" />
-		<Translation ID="PRR_SET_HASANY" String="Qualquer Configuração" />
-		<Translation ID="PRR_SET_HASNON" String="Não-Configurado" />
+		<Translation ID="PRR_SET_NOAUT" String="Sem configurações do Autor" />
+		<Translation ID="PRR_SET_HASLOC" String="Configurações locais" />
+		<Translation ID="PRR_SET_NOLOC" String="Sem configurações locais" />
+		<Translation ID="PRR_SET_HASANY" String="Qualquer configuração" />
+		<Translation ID="PRR_SET_HASNON" String="Não configurado" />
 		<Translation ID="PRR_SAV_SAV" String="Salvar" />
-		<Translation ID="PRR_SAV_ADD" String="Adicionar Local" />
-		<Translation ID="PRR_SAV_REM" String="Remover Local" />
-		<Translation ID="PRR_SAV_APP" String="Salvar e Aplicar Alterações" />
-		<Translation ID="PRR_EXP" String="ALERTA: EXPERIMENTAL!" />
-		<Translation ID="TRN_CHOICE" String="Selecionar Idioma" />
-		<Translation ID="TRN_SYS" String="Usar Idioma do Jogo" />
-		<Translation ID="PRR_DESCRIPTION" String="Permite edifícios RICO maiores que 4x4 e personalização de edifícios RICO" />
-		<Translation ID="PRR_OPTION_PLP" String="Colocar edifícios growable instantaneamente (sem construção)" />
-		<Translation ID="PRR_OPTION_ZON" String="Edifícios growable podem sobreviver fora da zona correta" />
-		<Translation ID="PRR_OPTION_SPC" String="Edifícios growable podem sobreviver sem os requerimentos de especialização de distrito" />
+		<Translation ID="PRR_SAV_ADD" String="Adicionar local" />
+		<Translation ID="PRR_SAV_REM" String="Remover local" />
+		<Translation ID="PRR_SAV_APP" String="Salvar e aplicar alterações" />
+		<Translation ID="PRR_EXP" String="ALERTA: EXPERIMENTAL" />
+		<Translation ID="TRN_CHOICE" String="Selecionar idioma" />
+		<Translation ID="TRN_SYS" String="Usar idioma do jogo" />
+		<Translation ID="PRR_DESCRIPTION" String="Permite contruções RICO maiores que 4x4 e personalização de construções RICO" />
+		<Translation ID="PRR_OPTION_PLP" String="Colocar construções growable instantaneamente (sem construção)" />
+		<Translation ID="PRR_OPTION_ZON" String="Construções growable podem sobreviver fora da zona correta" />
+		<Translation ID="PRR_OPTION_SPC" String="Construções growable podem sobreviver sem os requerimentos de especialização de distrito" />
 		<Translation ID="PRR_OPTION_VAL" String="Ignora o aviso de baixo valor de terreno" />
 		<Translation ID="PRR_OPTION_SVC" String="Ignora o aviso de serviços insuficientes" />
 		<Translation ID="PRR_OPTION_HST" String="Converter todos os edifícios ploppable em edifícios históricos" />
-		<Translation ID="PRR_OPTION_BLC" String="Fixar nível dos growables inseridos usando o mod Advanced Building Level Control" />
-		<Translation ID="PRR_OPTION_RPL" String="Edifícios RICO ploppable" />
-		<Translation ID="PRR_OPTION_RGR" String="Edifícios RICO growable" />
-		<Translation ID="PRR_OPTION_RCO" String="Todos os edifícios RICO (incluindo growables)" />
-		<Translation ID="PRR_OPTION_OTH" String="Edifícios growable não-RICO" />
-		<Translation ID="PRR_OPTION_DEM" String="Opções de demolição (não afeta edifícios históricos)" />
-		<Translation ID="PRR_OPTION_BDZ" String="Perguntar antes de demolir edifícios RICO" />
-		<Translation ID="PRR_OPTION_IMP" String="Permitir que os edifícios RICO sejam autodemolidos" />
-		<Translation ID="PRR_OPTION_IMP2" String="(e.g. quando ao construir rodovias ou outros edifícios)" />
+		<Translation ID="PRR_OPTION_BLC" String="Fixar nível dos growables usando o mod Advanced Building Level Control" />
+		<Translation ID="PRR_OPTION_RPL" String="Construções RICO ploppable" />
+		<Translation ID="PRR_OPTION_RGR" String="Construções RICO growable" />
+		<Translation ID="PRR_OPTION_RCO" String="Todas construçõpes RICO (incluindo growables)" />
+		<Translation ID="PRR_OPTION_OTH" String="Construções growable não-RICO" />
+		<Translation ID="PRR_OPTION_DEM" String="Opções de demolição (não afeta construções históricas)" />
+		<Translation ID="PRR_OPTION_BDZ" String="Perguntar antes de demolir construções RICO" />
+		<Translation ID="PRR_OPTION_IMP" String="Permitir que os construções RICO sejam autodemolidos" />
+		<Translation ID="PRR_OPTION_IMP2" String="(ex. ao construir rodovias ou outras construções)" />
 		<Translation ID="PRR_OPTION_CST" String="Opções de custo" />
 		<Translation ID="PRR_OPTION_COV" String="Sobrepor custo de construção" />
 		<Translation ID="PRR_OPTION_CPH" String="Custo por casa" />
@@ -119,29 +119,29 @@
 		<Translation ID="PRR_OPTION_CJ1" String="Custo por emprego qualificado" />
 		<Translation ID="PRR_OPTION_CJ2" String="Custo por emprego bastante qualificado" />
 		<Translation ID="PRR_OPTION_CJ3" String="Custo por emprego altamente qualificado" />
-		<Translation ID="PRR_OPTION_LOA" String="Opções de Carregamento" />
-		<Translation ID="PRR_OPTION_LOG" String="Opções de Registro" />
-		<Translation ID="PRR_OPTION_TMB" String="Opções de Miniatura" />
-		<Translation ID="PRR_OPTION_PLO" String="Opções de Ploppable" />
-		<Translation ID="PRR_OPTION_GRO" String="Opções de Growable" />
-		<Translation ID="PRR_OPTION_COM" String="Opções de Protesto" />
-		<Translation ID="PRR_OPTION_MOD" String="Opções do Mod" />
+		<Translation ID="PRR_OPTION_LOA" String="Opções de carregamento" />
+		<Translation ID="PRR_OPTION_LOG" String="Opções de registro" />
+		<Translation ID="PRR_OPTION_TMB" String="Opções de miniatura (thumb)" />
+		<Translation ID="PRR_OPTION_PLO" String="Opções de ploppable" />
+		<Translation ID="PRR_OPTION_GRO" String="Opções de growable" />
+		<Translation ID="PRR_OPTION_COM" String="Opções de reclamações" />
+		<Translation ID="PRR_OPTION_MOD" String="Opções do mod" />
 		<Translation ID="PRR_OPTION_NOT" String="Opções de notificação" />
 		<Translation ID="PRR_OPTION_WHATSNEW" String="Mostrar mensagens do que há de novo" />
 		<Translation ID="PRR_OPTION_MOREDEBUG" String="Ativar registro de depuração adicional" />
-		<Translation ID="PRR_OPTION_FORCERESET" String="Forçar o reset das estatísticas dos edifícios no carregamento do jogo" />
-		<Translation ID="PRR_OPTION_REGENTHUMBS" String="Regenerar miniaturas (thumbnails)" />
+		<Translation ID="PRR_OPTION_FORCERESET" String="Forçar o reset das estatísticas das construções no carregamento do jogo" />
+		<Translation ID="PRR_OPTION_REGENTHUMBS" String="Regenerar miniaturas (thumbs)" />
 		<Translation ID="PRR_OPTION_SPDHDR" String="Aumenta ligeiramente a velocidade do jogo, mas causa delay ao abrir o painel" />
 		<Translation ID="PRR_OPTION_SPEED" String="Desativar painel quando não estiver em uso" />
-		<Translation ID="PRR_OPTION_FASTHDR" String="Renderiza miniaturas (thumbnails) mais rapidamente, mas usa mais memória" />
-		<Translation ID="PRR_OPTION_FASTHUMB" String="Renderiza miniaturas (thumbnails) com mais velocidade" />
-		<Translation ID="PRR_OPTION_THUMBACK" String="Fundo da miniatura" />
+		<Translation ID="PRR_OPTION_FASTHDR" String="Renderiza miniaturas (thumbs) mais rapidamente, mas usa mais memória" />
+		<Translation ID="PRR_OPTION_FASTHUMB" String="Renderiza miniaturas (thumbs) com mais velocidade" />
+		<Translation ID="PRR_OPTION_THUMBACK" String="Fundo da miniatura (thumb)" />
 		<Translation ID="PRR_THUMB_COLOR" String="Cor" />
 		<Translation ID="PRR_THUMB_PLAIN" String="Plano" />
 		<Translation ID="PRR_THUMB_SKY" String="Céu" />
 		<Translation ID="MES_CLS" String="Fechar" />
 		<Translation ID="MES_DSA" String="Não mostrar novamente" />
-		<Translation ID="MES_PAGE" String="Por favor, vá à página do mod na Oficina Steam para mais informações" />
+		<Translation ID="MES_PAGE" String="Por favor, vá à página do mod na Steam para mais informações" />
 		<Translation ID="PRR_ERR_FAT" String="Isso significa que o mod não está apto a funcionar e foi desativado." />
 		<Translation ID="PRR_ERR_HAR" String="O Ploppable RICO Revisitado não foi capaz de completar os requisitos de Harmony." />
 		<Translation ID="ERR_HAR0" String="Erro: Harmony patching" />
@@ -157,12 +157,12 @@
 		<Translation ID="PRR_CON_PTG2" String="Ainda está ok usar ambos juntos - SE suas configurações não conflitarem" />
 		<Translation ID="PRR_UPD_23_0" String="Ploppable RICO Revisitado — Atualização 2.3" />
 		<Translation ID="PRR_UPD_23_1" String="O Ploppable RICO Revisitado foi atualizado para a versão 2.3. Alguns dos recursos desta atualização são:" />
-		<Translation ID="PRR_UPD_23_2" String="O Ploppable RICO agora inclui &quot;Plop the Growables&quot; (colocar manualmente construções que originalmente surgem apenas em zoneamento). Funciona tanto para edifícios RICO quanto para edifícios não-RICO. Veja o painel de opções para mais detalhes." />
-		<Translation ID="PRR_UPD_23_3" String="Os edifícios growable RICO agora podem ser colocados fora das zonas (configurável)." />
+		<Translation ID="PRR_UPD_23_2" String="O Ploppable RICO agora inclui &quot;Plop the Growables&quot; (colocar manualmente construções que originalmente surgem apenas em zoneamento). Funciona tanto para construções RICO quanto para construções não-RICO. Veja o painel de opções para mais detalhes." />
+		<Translation ID="PRR_UPD_23_3" String="As construções growable RICO agora podem ser colocados fora das zonas (configurável)." />
 		<Translation ID="PRR_UPD_23_4" String="Os avisos sobre &quot;baixo valor de terreno&quot; e &quot;serviços insuficientes&quot; agora podem ser desativados." />
-		<Translation ID="PRR_UPD_23_5" String="Renderização da miniatura (thumbnail) de edifícios aprimorada. Agora, apenas gera imagens quando necessário, reduzindo o uso de memória e melhorando o tempo de carregamento." />
-		<Translation ID="PRR_UPD_234_0" String="Adicionar opção para habilitar ou desabilitar avisos ao demolir edifícios RICO." />
-		<Translation ID="PRR_UPD_234_1" String="Adicionar opção para habilitar ou desabilitar autodemolição ao construir sobre edifícios RICO." />
+		<Translation ID="PRR_UPD_23_5" String="Renderização da miniatura (thumb) de construções aprimorada. Agora, apenas gera imagens quando necessário, reduzindo o uso de memória e melhorando o tempo de carregamento." />
+		<Translation ID="PRR_UPD_234_0" String="Adicionar opção para habilitar ou desabilitar avisos ao demolir construções RICO." />
+		<Translation ID="PRR_UPD_234_1" String="Adicionar opção para habilitar ou desabilitar autodemolição ao construir sobre construções RICO." />
 		<Translation ID="PRR_UPD_234_2" String="Notificações de atualização melhoradas." />
 		<Translation ID="PRR_UPD_235_0" String="Opções de growables agora têm o comportamento do mod 'Plop the Growables' por padrão (não afeta opções existentes)" />
 		<Translation ID="PRR_UPD_235_1" String="Adicionar alerta se o mod 'Plop the Growables' estiver ativo também." />
@@ -172,9 +172,9 @@
 		<Translation ID="PRR_UPD_240_0" String="Adicionar sobreposições de custo configurável." />
 		<Translation ID="PRR_UPD_240_1" String="Adicionar opção para fixar automaticamente o nível dos growables inseridos (requer o mod Advanced Building Level Control)." />
 		<Translation ID="PRR_UPD_240_2" String="Adicionar menu de seleção de configurações sobre mod/autor/local ao painel de confiurações (para ver configurações outras que as ativas)" />
-		<Translation ID="PRR_UPD_240_3" String="Desabilitar textfield da população quando a opção 'usar realidade' está ativa." />
-		<Translation ID="PRR_UPD_241_0" String="Melhorar suporte para edifícios históricos com diferentes níveis" />
-		<Translation ID="PRR_UPD_242_0" String="Edifícios de serviços não são mais visíveis por padrão no painel de opções RICO" />
+		<Translation ID="PRR_UPD_240_3" String="Desabilitar configuração manual da população quando a opção 'usar realidade' está ativa." />
+		<Translation ID="PRR_UPD_241_0" String="Melhorar suporte para construções históricas com diferentes níveis" />
+		<Translation ID="PRR_UPD_242_0" String="Construções de serviços não são mais visíveis por padrão no painel de opções RICO" />
 		<Translation ID="PRR_UPD_243_0" String="Adicionar opção para desabilitar notificações de atualização" />
 	</Translations>
 </Language>

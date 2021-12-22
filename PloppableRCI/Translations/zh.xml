@@ -133,10 +133,10 @@
 		<Translation ID="PRR_OPTION_MOREDEBUG" String="启用其他调试日志记录" />
 		<Translation ID="PRR_OPTION_FORCERESET" String="在游戏加载时强制重置现有建筑数据" />
 		<Translation ID="PRR_OPTION_REGENTHUMBS" String="重新生成缩略图" />
-		<Translation ID="PRR_OPTION_SPDHDR" String= "略微改善游戏性能，但打开RICO面板会出现延迟" />
-		<Translation ID="PRR_OPTION_SPEED" String= "不使用时禁用RICO面板" />
-		<Translation ID="PRR_OPTION_FASTHDR" String= "渲染缩略图会更快，但需要更大运行内存支持：" />
-		<Translation ID="PRR_OPTION_FASTHUMB" String= "更快速的渲染缩略图" />
+		<Translation ID="PRR_OPTION_SPDHDR" String="略微改善游戏性能，但打开RICO面板会出现延迟" />
+		<Translation ID="PRR_OPTION_SPEED" String="不使用时禁用RICO面板" />
+		<Translation ID="PRR_OPTION_FASTHDR" String="渲染缩略图会更快，但需要更大运行内存支持：" />
+		<Translation ID="PRR_OPTION_FASTHUMB" String="更快速的渲染缩略图" />
 		<Translation ID="PRR_OPTION_THUMBACK" String="缩略图背景" />
 		<Translation ID="PRR_THUMB_COLOR" String="纯色" />
 		<Translation ID="PRR_THUMB_PLAIN" String="灰色" />
