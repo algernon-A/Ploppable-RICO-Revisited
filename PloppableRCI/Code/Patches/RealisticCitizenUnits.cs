@@ -62,11 +62,6 @@ namespace PloppableRICO
                     }
                     num = num2;
                     num2 = citizenUnitArray[(int)((UIntPtr)num2)].m_nextUnit;
-                    if (++num3 > 524288)
-                    {
-                        CODebugBase<LogChannel>.Error(LogChannel.Core, "Invalid list detected!\n" + Environment.StackTrace);
-                        break;
-                    }
                 } // end while
                 /*
                                 homeCount = Mathf.Max(0, homeCount);

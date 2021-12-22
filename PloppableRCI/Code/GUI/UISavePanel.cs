@@ -372,7 +372,7 @@ namespace PloppableRICO
 
         /// <summary>
         /// Updates household counts for all buildings in scene with the given prefab name.
-        /// Can also remove all housholds, setting the total to zero.
+        /// Can also remove all households, setting the total to zero.
         /// </summary>
         /// <param name="prefabName">Prefab name</param>
         /// <param name="removeAll">If true, all households will be removed (count set to 0)</param>
