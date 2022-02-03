@@ -10,8 +10,7 @@ namespace PloppableRICO
     public static class CollapseBuildingPatch
     {
         /// <summary>
-        /// Simple Prefix patch to catch Monuments panel setup exceptions.
-        /// All we do is call (via reverse patch) the original method and painlessly catch any exceptions.
+        /// Simple Prefix patch to toggle excecution of game method based on current settings.
         /// </summary>
         /// <param name="__instance">Harmony original instance reference</param>
         /// <returns>False if the base method shouldn't be called (collapse has been prevented), true otherwise</returns>
