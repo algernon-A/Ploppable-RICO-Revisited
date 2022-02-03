@@ -1,4 +1,9 @@
-﻿Version 2.4.10.1 -
+﻿Version 2.4.10.2 -
+
+- Fix English translation
+
+
+Version 2.4.10.1 -
 
 - Fix Greek translation, add Indonesian translation
 - Remove redundant code and limit checks
