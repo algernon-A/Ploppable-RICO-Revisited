@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using ColossalFramework;
@@ -22,7 +23,7 @@ namespace PloppableRICO
 		/// <param name="__result">Original method result</param>
 		/// <param name="info">Building prefab</param>
 		/// <returns>False (don't continue execution chain) if this is a RICO building (original return value changed to true), true (continue exection chain) otherwise.</returns>
-		public static bool Prefix (ref bool __result, BuildingInfo info)
+		public static bool Prefix(ref bool __result, BuildingInfo info)
 		{
 			// Only do this if our settings are set to ensure RICO buildings are important.
 			if (!ModSettings.autoDemolish)
@@ -39,7 +40,7 @@ namespace PloppableRICO
 			}
 
 			// Didn't find a ploppable RICO building (or the RICO important setting isn't set) - go onto running the original game method.
-            return true;
+			return true;
 		}
 	}
 
@@ -82,7 +83,7 @@ namespace PloppableRICO
 					if (buildingAI.m_constructionTime > 0)
 					{
 						Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result].m_frame0.m_constructState = byte.MaxValue;
-						BuildingCompletedRev(buildingAI, __result, ref Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result]);
+						BuildingCompleted.BuildingCompletedRev(buildingAI, __result, ref Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result]);
 
 						// Have to do this manually as CommonBuildingAI.BuildingCompleted won't if construction time isn't zero.
 						Singleton<BuildingManager>.instance.UpdateBuildingRenderer(__result, updateGroup: true);
@@ -102,7 +103,27 @@ namespace PloppableRICO
 				}
 			}
 		}
+	}
 
+
+	/// <summary>
+	///  Harmony reverse patch to access CommonBuildingAI.BuildingCompleted.
+	/// </summary>
+	[HarmonyPatch]
+	public static class BuildingCompleted
+	{
+		/// <summary>
+		/// Determines the target method of the reverse patch.
+		/// By default, it's the game method; this can be redirected to other mods (proposed upcoming functionality).
+		/// </summary>
+		/// <returns>Target method</returns>
+		public static MethodInfo TargetMethod()
+        {
+			// Base game patch.
+			return typeof(CommonBuildingAI).GetMethod("BuildingCompleted", BindingFlags.Instance | BindingFlags.NonPublic);
+
+			// TODO: add patch cases for ABLC, transpiler.
+        }
 
 		/// <summary>
 		/// Harmony reverse patch to access original protected method.
@@ -111,10 +132,8 @@ namespace PloppableRICO
 		/// <param name="buildingID">Building instance ID</param>
 		/// <param name="buildingData">Building instance data</param>
 		[HarmonyReversePatch]
-		[HarmonyPatch((typeof(CommonBuildingAI)), "BuildingCompleted")]
-		[HarmonyPatch(new Type[] { typeof(ushort), typeof(Building) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Ref })]
 		[MethodImpl(MethodImplOptions.NoInlining)]
-		protected static void BuildingCompletedRev(object instance, ushort buildingID, ref Building buildingData)
+		public static void BuildingCompletedRev(object instance, ushort buildingID, ref Building buildingData)
 		{
 			Logging.Error("BuildingCompleted reverse Harmony patch wasn't applied with params ", instance.ToString(), ":", buildingID.ToString(), ":", buildingData.ToString());
 		}

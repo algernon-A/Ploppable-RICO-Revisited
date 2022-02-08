@@ -30,7 +30,6 @@ namespace PloppableRICO
                 Citizen.Wealth wealthLevel = Citizen.GetWealthLevel(__instance.m_info.m_class.m_level);
                 uint num = 0u;
                 uint num2 = data.m_citizenUnits;
-                int num3 = 0;
                 while (num2 != 0u)
                 {
                     CitizenUnit.Flags flags = citizenUnitArray[(int)((UIntPtr)num2)].m_flags;
