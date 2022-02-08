@@ -1,0 +1,169 @@
+CODE,fr
+NAME,Français
+PRR_NAME,Ploppable RICO revisité
+PRR_LEVEL,Niveau
+PRR_LVL,Niv.
+PRR_HOU,Ménages
+PRR_WOR,Lieux de travail
+PRR_SRV_NON,Aucun
+PRR_SRV_RES,Résidentiel
+PRR_SRV_IND,Industrie
+PRR_SRV_OFF,Bureau
+PRR_SRV_COM,Commerce
+PRR_SRV_EXT,Extracteur
+PRR_SRV_DUM,Sans fonction
+PRR_SUB_HIG,Forte densité
+PRR_SUB_LOW,Faible densité
+PRR_SUB_HEC,Haute écologique
+PRR_SUB_LEC,Basse écologique
+PRR_SUB_LEI,Loisir
+PRR_SUB_TOU,Tourisme
+PRR_SUB_ORG,Ecologique
+PRR_SUB_GEN,Générique
+PRR_SUB_ITC,Cluster informatique
+PRR_SUB_FAR,Agriculture
+PRR_SUB_FOR,Sylviculture
+PRR_SUB_OIL,Pétrole
+PRR_SUB_ORE,Minerai
+PRR_FTR_ALL,Tout
+PRR_FTR_NON,Aucun
+PRR_FTR_NAM,Nom
+PRR_FTR_SET,Filtre des paramètres: Mod / Auteur / Local / Tout
+PRR_OPT_SET,Paramètres
+PRR_OPT_MOD,Mod
+PRR_OPT_AUT,Auteur
+PRR_OPT_LOC,Local
+PRR_OPT_ENA,Activer RICO
+PRR_OPT_SER,Un service
+PRR_OPT_SUB,Sous-service
+PRR_OPT_UIC,Catégorie UI
+PRR_OPT_CST,Coût de construction
+PRR_OPT_CNT,Nombre de travailleurs / domicile
+PRR_OPT_POP,"Utiliser le mod ""Realistic Pop"""
+PRR_OPT_POL,Activer la pollution
+PRR_OPT_GRO,Growable
+PRR_OPT_JB0,Emplois sans instruction
+PRR_OPT_JB1,Emplois instruits
+PRR_OPT_JB2,Emplois bien éduqués
+PRR_OPT_JB3,Emplois hautement qualifiés
+PRR_OPT_URP,"Les paramètres de population sont désactivés parce que l'option ""Population Réaliste"" est activée"
+PRR_CAT_MON,Monuments
+PRR_CAT_BEA,Embellissement
+PRR_CAT_EDU,Éducation
+PRR_CAT_POW,Électricité
+PRR_CAT_WAT,Eau
+PRR_CAT_HEA,Santé
+PRR_CAT_RES,Résidentiel
+PRR_CAT_COM,Commerce
+PRR_CAT_OFF,Bureau
+PRR_CAT_IND,Industrie
+PRR_UIC_REL,Résidentiel faible densité
+PRR_UIC_REH,Résidentiel forte densité
+PRR_UIC_COL,Commerce faible densité
+PRR_UIC_COH,Commerce forte densité
+PRR_UIC_OFF,Bureau
+PRR_UIC_IND,Industriel
+PRR_UIC_FAR,Agriculture
+PRR_UIC_FOR,Sylviculture
+PRR_UIC_OIL,Pétrole
+PRR_UIC_ORE,Minerai
+PRR_UIC_LEI,Loisir
+PRR_UIC_TOU,Tourisme
+PRR_UIC_ORG,Commerce biologique
+PRR_UIC_ITC,Cluster informatique
+PRR_UIC_ECO,Maisons autonomes
+PRR_UIC_NON,Aucun
+PRR_SET,Paramètres
+PRR_SET_RICO,Paramètres RICO
+PRR_SET_HASMOD,Paramètres du mod
+PRR_SET_NOMOD,Aucun paramètre
+PRR_SET_HASAUT,Paramètres d'auteur
+PRR_SET_NOAUT,Aucun paramètre d'auteur
+PRR_SET_HASLOC,Paramètres locaux
+PRR_SET_NOLOC,Aucun paramètre local
+PRR_SET_HASANY,Tous les paramétrages
+PRR_SET_HASNON,Aucun paramétrage
+PRR_SAV_SAV,Sauvegarder
+PRR_SAV_ADD,Ajouter local
+PRR_SAV_REM,Supprimer local
+PRR_SAV_APP,Enregistrer et appliquer les modifications
+PRR_EXP,ATTENTION: EXPÉRIMENTAL
+TRN_CHOICE,Définir la langue
+TRN_SYS,Utiliser la langue du système
+PRR_DESCRIPTION,Permettre des bâtiments RICO d'une taille supérieure à 4x4 et une personnalisation des bâtiments RICO
+PRR_OPTION_PLP,Construction instantanée
+PRR_OPTION_ZON,Les batiments peuvent survivre hors de la zone prévue
+PRR_OPTION_SPC,Les bâtiments peuvent survivre sans la spécialisation de quartier adéquate
+PRR_OPTION_VAL,"Ignorer la plainte ""Valeur foncière basse"""
+PRR_OPTION_SVC,"Ignorer la plainte ""Pas assez de services"""
+PRR_OPTION_HST,Rendre tous les bâtiments placés historiques
+PRR_OPTION_BLC,Fixer le taux de progression de bâtiments construits placés à l'aide du contrôleur avancé de bâtiments
+PRR_OPTION_RPL,Bâtiments RICO placables
+PRR_OPTION_RGR,Bâtiments RICO construits automatiquement
+PRR_OPTION_RCO,Tous les bâtiments RICO
+PRR_OPTION_OTH,Bâtiments construits automatiquement hors RICO
+PRR_OPTION_DEM,Options de démolition
+PRR_OPTION_BDZ,Demander avant de raser des batiments RICO plopped
+PRR_OPTION_IMP,"Permettre au bulldozer automatique et à la construction de bâtiments RICO détruits (par exemple, lors de la construction de routes ou de la pose de bâtiments)"
+PRR_OPTION_CST,Options de coût
+PRR_OPTION_COV,Réécrire les coûts de constuction
+PRR_OPTION_CPH,Coûts par ménage
+PRR_OPTION_CHM,Multiplicateur additionel par level de ménage (%)
+PRR_OPTION_CJ0,Coûts par emplois sans instruction
+PRR_OPTION_CJ1,Coûts par emplois instruits
+PRR_OPTION_CJ2,Coûts par emplois bien éduqués
+PRR_OPTION_CJ3,Coûts par emplois hautement qualifiés
+PRR_OPTION_LOA,Options de chargement
+PRR_OPTION_LOG,Options de rapport
+PRR_OPTION_TMB,Options de vignette
+PRR_OPTION_PLO,Options de placables
+PRR_OPTION_GRO,Options de construits
+PRR_OPTION_DIS,Catastrophe
+PRR_OPTION_COM,Options des plaintes
+PRR_OPTION_MOD,Options du mod
+PRR_OPTION_MOREDEBUG,Activer la journalisation de débogage supplémentaire
+PRR_OPTION_FORCERESET,Forcer la réinitialisation des statistiques de construction existantes sur la charge de jeu
+PRR_OPTION_REGENTHUMBS,Régénérer les vignettes
+PRR_OPTION_SPDHDR,Augmente légèrement la vitesse de jeu mais retarde l'ouverture du panneau
+PRR_OPTION_SPEED,Désactiver le panneau lorsqu'il n'est pas utilisé
+PRR_OPTION_FASTHDR,"Rend les vignettes plus rapidement, mais utilise plus de mémoire:"
+PRR_OPTION_FASTHUMB,Rendre les vignettes à une vitesse accélérée
+PRR_OPTION_THUMBACK,Arrière-plans de vignettes
+PRR_THUMB_COLOR,Couleur
+PRR_THUMB_PLAIN,Plaine
+PRR_THUMB_SKY,Skybox
+MES_CLS,Fermer
+MES_DSA,Ne pas réapparaitre
+MES_PAGE,Veuillez voire la page Steam Workshop du mod pour plus d'informations.
+PRR_ERR_FAT,Cela signifie que le mod ne peut pas fonctionner et s'est arrêté.
+PRR_ERR_HAR,Ploppable RICO Revisited n'a pas pu terminer les correctifs Harmony requis.
+ERR_HAR0,Erreur de correction d'harmonie
+ERR_HAR1,Les causes possibles de ce problème sont les suivantes:
+ERR_HAR2,La dépendance de mod Harmony 2 requise n'a pas été installée
+ERR_HAR3,Un ancien mod et / ou cassé empêche Harmony 2 de fonctionner correctement
+ERR_CON0,Conflit de mod détécté!
+ERR_CON1,Les mods conflictuels sont:
+PRR_ERR_CON0,Ploppable RICO Revisité a détecté un conflit avec au moins un autre mod.
+PRR_ERR_CON1,Ces mods-ci doivent être supprimés avant que Ploppable RICO Revisité soit opérationnel.
+PRR_CON_PTG0,Mod Plop the Growables détecté
+PRR_CON_PTG1,"Mod ""Plop the Growables"" détecté - la pluspart des fonctions de ce mod ont été incorporés dans Ploppable RICO Revisité. Veuillez porter attention lors de l'utilisation de ces deux mods à la fois, puisque leurs paramètres peuvent s'opposer."
+PRR_CON_PTG2,"Il est toujours possible d'utiliser les deux ensemble, aussi longtemps que leurs paramètres ne sont pas opposés!"
+PRR_UPD_23_0,Mise à jour 2.3 de Ploppable RICO Revisité
+PRR_UPD_23_1,Ploppable RICO Revisité a été mis à jour vers la version 2.3. Les points clés de cette mise à jour sont :
+PRR_UPD_23_2,"Ploppable RICO contient désormais la fonctionalité de ""placer les bâtiments zonés"" pour les bâtiments RICO et non RICO - voir les options pour plus d'informations"
+PRR_UPD_23_3,Les bâtiments zonés RICO peuvent être maintenant placés hors des zones (configurable)
+PRR_UPD_23_4,"Les plaintes ""Valeur foncière trop basse"" et ""Pas assez de services"" peuvent être désactivées."
+PRR_UPD_23_5,"Moteur de rendu des vignettes amélioré pour ne les générer que s'il y en a besoin, ce qui réduit l'utilisation de mémoire et les temps de chargement"
+PRR_UPD_234_0,Ajouter une option pour activer ou désactiver les avertissements lors de la démolition de bâtiments RICO placés.
+PRR_UPD_234_1,Ajouter une option pour activer ou désactiver la destruction automatique lors de la construction au-dessus des bâtiments RICO placés.
+PRR_UPD_234_2,Notifications améliorées des mises-à-jour.
+PRR_UPD_235_0,"Les options Growable fonctionnent maintenant par défaut comme pour ""Plop the Growables"" (n'a aucun effet sur les paramètres déjà en place)"
+PRR_UPD_235_1,"Ajouter une notification au cas-où ""Plop the Growables"" est également actif."
+PRR_UPD_235_2,Messages d'erreur et de conflit amméliorés.
+PRR_UPD_236_0,Améliorer la détection et la notification de conflit avec un mod.
+PRR_UPD_237_0,Réparer le message d'erreur de harmonie apparaissant incorrectement lorsqu'on ouvre un éditeur.
+PRR_UPD_240_0,Ajouter un remplacement configurable des coûts.
+PRR_UPD_240_1,"Ajouter l'option de fixer automatiquement le level d'un bâtiment plopped construisable (requiert le mod ""Advanced Building Level Control""). "
+PRR_UPD_240_2,Ajouter le menu de sélection des paramètres mod/auteur/local aux paramètres du jeu (pour voir d'autres paramètres qui ne sont pas activés).
+PRR_UPD_240_3,Désactiver les textes de la population si l'option d'utilisation de réalité est activée.
+PRR_UPD_241_0,Améliorer le support pour bâtiments historiques de différents niveaux.

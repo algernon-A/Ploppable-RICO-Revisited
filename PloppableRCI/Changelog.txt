@@ -1,4 +1,7 @@
-﻿Version 2.4.10.2 -
+﻿- Convert translation framework to CSV (for CrowdIn)
+
+
+Version 2.4.10.2 -
 
 - Fix English translation
 

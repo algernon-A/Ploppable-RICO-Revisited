@@ -116,7 +116,7 @@
     <Compile Include="Code\GUI\UITitlebar.cs" />
     <Compile Include="Code\GUI\UIutils.cs" />
     <Compile Include="Code\TranslationFramework\TranslationFramework.cs" />
-    <Compile Include="Code\TranslationFramework\TranslationXML.cs" />
+    <Compile Include="Code\TranslationFramework\Language.cs" />
     <Compile Include="Code\Utils\UIControls.cs" />
     <Compile Include="Code\XML\CrpDataProvider.cs" />
     <Compile Include="Code\XML\PloppableRICOBuilding.cs" />
@@ -145,27 +145,27 @@
     <Content Include="Images\PreviewImage.png" />
     <Content Include="License.txt" />
     <Content Include="Samples\PloppableRICODefinition.xml" />
-    <Content Include="Translations\id.xml" />
-    <Content Include="Translations\no.xml" />
-    <Content Include="Translations\gr.xml" />
-    <Content Include="Translations\it.xml" />
-    <Content Include="Translations\kr.xml" />
-    <Content Include="Translations\pt-br.xml" />
-    <Content Include="Translations\de.xml" />
-    <Content Include="Translations\rs.xml" />
-    <Content Include="Translations\es.xml" />
-    <Content Include="Translations\fr.xml" />
-    <Content Include="Translations\ja.xml" />
-    <Content Include="Translations\nl.xml" />
-    <Content Include="Translations\pl.xml" />
-    <Content Include="Translations\ru.xml" />
-    <Content Include="Translations\tr.xml" />
-    <Content Include="Translations\en.xml" />
-    <Content Include="Translations\zh.xml" />
-    <Content Include="Translations\zh-tw.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Translations\de-DE.csv" />
+    <None Include="Translations\nl-NL.csv" />
+    <None Include="Translations\no-NO.csv" />
+    <None Include="Translations\pl-PL.csv" />
+    <None Include="Translations\pt-BR.csv" />
+    <None Include="Translations\rs-RS.csv" />
+    <None Include="Translations\ru-RU.csv" />
+    <None Include="Translations\tr-TR.csv" />
+    <None Include="Translations\zh-TW.csv" />
+    <None Include="Translations\en.csv" />
+    <None Include="Translations\es-ES.csv" />
+    <None Include="Translations\fr-FR.csv" />
+    <None Include="Translations\gr-GR.csv" />
+    <None Include="Translations\id-ID.csv" />
+    <None Include="Translations\it-IT.csv" />
+    <None Include="Translations\ja-JP.csv" />
+    <None Include="Translations\ko-KR.csv" />
+    <None Include="Translations\zh-CN.csv" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>mkdir "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)"
@@ -176,7 +176,7 @@ del "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName
 xcopy /y "$(SolutionDir)packages\CitiesHarmony.API.2.0.0\lib\net35\CitiesHarmony.API.dll" "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)"
 $(ProjectName)"
 mkdir "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations"
-del "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations\*.xml"
+del "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations\*.csv"
 xcopy /y "$(SolutionDir)\Translations\" "$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations" /s /e
 </PostBuildEvent>
   </PropertyGroup>

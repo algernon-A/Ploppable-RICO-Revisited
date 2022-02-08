@@ -1,0 +1,176 @@
+CODE,id
+NAME,Bahasa Indonesia
+PRR_NAME,Ploppable RICO Revisited
+PRR_LEVEL,Level
+PRR_LVL,Lvl
+PRR_HOU,Rumah tangga
+PRR_WOR,Tempat kerja
+PRR_SRV_NON,Tidak ada
+PRR_SRV_RES,Perumahan
+PRR_SRV_IND,Industri
+PRR_SRV_OFF,Perkantoran
+PRR_SRV_COM,Pertokoan
+PRR_SRV_EXT,Ekstraktor
+PRR_SRV_DUM,Tidak berfungsi
+PRR_SUB_HIG,Kepadatan tinggi
+PRR_SUB_LOW,Kepadatan rendah
+PRR_SUB_HEC,Kepadatan tinggi 'eco'
+PRR_SUB_LEC,Kepadatan rendah 'eco'
+PRR_SUB_LEI,Hiburan
+PRR_SUB_TOU,Pariwisata
+PRR_SUB_ORG,Eco (organik)
+PRR_SUB_GEN,Umum
+PRR_SUB_ITC,Kluster IT
+PRR_SUB_FAR,Pertanian
+PRR_SUB_FOR,Perhutanan
+PRR_SUB_OIL,Minyak
+PRR_SUB_ORE,Tambang bijih
+PRR_FTR_ALL,Semua
+PRR_FTR_NON,Tidak ada
+PRR_FTR_NAM,Nama
+PRR_FTR_SET,Filter pengaturan: Mod/Pembuat/Lokal/Semua
+PRR_OPT_SET,Pengaturan
+PRR_OPT_MOD,Mod
+PRR_OPT_AUT,Pembuat
+PRR_OPT_LOC,Lokal
+PRR_OPT_ENA,Aktifkan RICO
+PRR_OPT_SER,Tipe
+PRR_OPT_SUB,Subtipe
+PRR_OPT_UIC,Kategori UI
+PRR_OPT_CST,Biaya konstruksi
+PRR_OPT_CNT,Jumlah pekerja/rumah
+PRR_OPT_POP,"Gunakan mod ""Realistic Population"""
+PRR_OPT_POL,Aktifkan polusi
+PRR_OPT_GRO,Bangunan bisa berkembang
+PRR_OPT_JB0,Pekerjaan tanpa pendidikan
+PRR_OPT_JB1,Pekerjaan dengan pendidikan dasar
+PRR_OPT_JB2,Pekerjaan dengan pendidikan menengah
+PRR_OPT_JB3,Pekerjaan dengan pendidikan tinggi
+PRR_OPT_URP,Pengaturan populasi dimatikan karena opsi Populasi Realistis diaktifkan
+PRR_CAT_MON,Monumen
+PRR_CAT_BEA,Memperindah
+PRR_CAT_EDU,Pendidikan
+PRR_CAT_HEA,Kesehatan
+PRR_CAT_FIR,Pemadam kebakaran
+PRR_CAT_POL,Polisi
+PRR_CAT_POW,Listrik
+PRR_CAT_WAT,Air
+PRR_CAT_GAR,Sampah
+PRR_CAT_PIN,Industri pemain
+PRR_CAT_RES,Perumahan
+PRR_CAT_COM,Pertokoan
+PRR_CAT_OFF,Perkantoran
+PRR_CAT_IND,Industri
+PRR_UIC_REL,Rumah
+PRR_UIC_REH,Apartemen
+PRR_UIC_COL,Toko kecil
+PRR_UIC_COH,Toko besar
+PRR_UIC_OFF,Kantor
+PRR_UIC_IND,Industri
+PRR_UIC_FAR,Pertanian
+PRR_UIC_FOR,Perhutanan
+PRR_UIC_OIL,Minyak
+PRR_UIC_ORE,Tambang bijih
+PRR_UIC_LEI,Hiburan
+PRR_UIC_TOU,Pariwisata
+PRR_UIC_ORG,Pertokoan produk organik
+PRR_UIC_ITC,Kluster IT
+PRR_UIC_ECO,Rumah mandiri
+PRR_UIC_NON,Tidak ada
+PRR_SET,Pengaturan
+PRR_SET_RICO,Pengaturan RICO
+PRR_SET_HASMOD,Pengaturan mod
+PRR_SET_NOMOD,Pengaturan tanpa mod
+PRR_SET_HASAUT,Pengaturan pembuat
+PRR_SET_NOAUT,Pengaturan tanpa pembuat
+PRR_SET_HASLOC,Pengaturan lokal
+PRR_SET_NOLOC,Pengaturan tanpa lokal
+PRR_SET_HASANY,Semua pengaturan
+PRR_SET_HASNON,Tanpa pengaturan
+PRR_SAV_SAV,Simpan
+PRR_SAV_ADD,Tambah lokal
+PRR_SAV_REM,Hapus lokal
+PRR_SAV_APP,Simpan dan terapkan perubahan
+PRR_EXP,PERINGATAN: DALAM PERCOBAAN
+TRN_CHOICE,Atur bahasa
+TRN_SYS,Gunakan bahasa sistem
+PRR_DESCRIPTION,Memungkinkan bangunan RICO berukuran lebih besar dari 4x4 dan kustomisasi bangunan RICO
+PRR_OPTION_PLP,Langsung taruh bangunan bisa berkembang (tanpa konstruksi)
+PRR_OPTION_ZON,Bangunan bisa berkembang bisa bertahan diluar zona yang benar
+PRR_OPTION_SPC,Bangunan bisa berkembang bisa bertahan diluar spesialisasi distrik wajib
+PRR_OPTION_VAL,Abaikan keluhan 'harga tanah rendah'
+PRR_OPTION_SVC,Abaikan keluhan 'terlalu sedikit layanan'
+PRR_OPTION_HST,Buat semua bangunan yang ditaruh histroris
+PRR_OPTION_BLC,"Kunci level bangunan bisa berkembang yang diletakkan dengan ""Advanced Building Level Control"""
+PRR_OPTION_RPL,Bangunan RICO (yang) bisa diletakkan
+PRR_OPTION_RGR,Bangunan RICO (yang) bisa berkembang
+PRR_OPTION_RCO,Semua bangunan RICO (termasuk yang bisa berkembang)
+PRR_OPTION_OTH,Bangunan non-RICO (yang) bisa berkembang
+PRR_OPTION_DEM,Opsi penghancuran (tidak mempengaruhi bangunan historis)
+PRR_OPTION_BDZ,Tanya sebelum menghancurkan bangunan RICO yang diletakkan
+PRR_OPTION_IMP,Izinkan bangunan RICO yang diletakkan untuk dihancurkan otomatis
+PRR_OPTION_IMP2,(seperti saat menaruh jalan atau bangunan lain)
+PRR_OPTION_CST,Opsi biaya
+PRR_OPTION_COV,Abaikan biaya pembangunan
+PRR_OPTION_CPH,Biaya per rumah tangga
+PRR_OPTION_CHM,Pengali tambahan tiap level rumah tangga (%)
+PRR_OPTION_CJ0,Biaya tiap pekerjaan tanpa pendidikan
+PRR_OPTION_CJ1,Biaya tiap pekerjaan dengan pendidikan dasar
+PRR_OPTION_CJ2,Biaya tiap pekerjaan dengan pendidikan menengah
+PRR_OPTION_CJ3,Biaya tiap pekerjaan dengan pendidikan tinggi
+PRR_OPTION_DIS,Bencana
+PRR_OPTION_NOC,Bangunan RICO (yang) bisa diletakkan tidak terdampak bencana (mencegah bug)
+PRR_OPTION_LOA,Pengaturan loading
+PRR_OPTION_LOG,Pengaturan log
+PRR_OPTION_TMB,Pengaturan thumbnail
+PRR_OPTION_PLO,Pengaturan (bangunan) bisa diletakkan
+PRR_OPTION_GRO,Pengaturan (bangunan) bisa dikembangkan
+PRR_OPTION_COM,Pengaturan keluhan
+PRR_OPTION_MOD,Pengaturan mod
+PRR_OPTION_NOT,Pengaturan notifikasi
+PRR_OPTION_WHATSNEW,"Tunjukkan pesan ""yang baru"""
+PRR_OPTION_MOREDEBUG,Nyalakan log debugging tambahan
+PRR_OPTION_FORCERESET,Atur ulang paksa untuk statistik bangunan saat memuat permainan
+PRR_OPTION_REGENTHUMBS,Perbarui thumbnail
+PRR_OPTION_SPDHDR,Sedikit meningkatkan kecepatan permainan tapi bisa ada penundaan saat membuka panel
+PRR_OPTION_SPEED,Matikan panel saat tidak dipakai
+PRR_OPTION_FASTHDR,"Memunculkan thumbnail lebih cepat, tapi memakai lebih banyak memori"
+PRR_OPTION_FASTHUMB,Pemunculan thumbnail dipercepat
+PRR_OPTION_THUMBACK,Latar belakang thumbnail
+PRR_THUMB_COLOR,Warna
+PRR_THUMB_PLAIN,Warna datar
+PRR_THUMB_SKY,Skybox
+MES_CLS,Tutup
+MES_DSA,Jangan tampilkan lagi
+MES_PAGE,Silahkan lihat halaman mod di Workshop Steam untuk informasi tambahan
+PRR_ERR_FAT,Ini berarti bahwa mod ini tidak bisa beroperasi dan sudah dimatikan.
+PRR_ERR_HAR,Ploppable RICO Revisited tidak bisa menyelesaikan penambalan Harmony yang diperlukan.
+ERR_HAR0,Galat penambalan Harmony
+ERR_HAR1,Kemungkinan penyebab masalah termasuk:
+ERR_HAR2,"Mod ""Harmony 2 mod dependency"" yang diperlukan belum diinstal"
+ERR_HAR3,"Mod lama dan/atau rusak mencegah mod ""Harmony 2"" beroperasi dengan benar"
+ERR_CON0,Konflik mod terdeteksi!
+ERR_CON1,Mod yang bertentangan adalah:
+PRR_ERR_CON0,Ploppable RICO Revisited mendeteksi konflik dengan setidaknya satu mod lain.
+PRR_ERR_CON1,Mod ini harus dihapus sebelum Ploppable RICO Revisited bisa beroperasi
+PRR_CON_PTG0,"Mod ""Plop the Growables"" terdeteksi"
+PRR_CON_PTG1,"Mod ""Plop the Growables"" terdeteksi - kebanyakan fungsi mod ini sudah digabung dalam Ploppable RICO Revisited. Harap berhati-hati saat memakai kedua mod bersama, karena pengaturannya bisa bertabrakan."
+PRR_CON_PTG2,Tidak mengapa menggunakan keduanya bersama - JIKA pengaturannya tidak bertabrakan!
+PRR_UPD_23_0,Update Ploppable RICO Revisited 2.3
+PRR_UPD_23_1,Ploppable RICO Revisited telah diperbarui ke versi 2.3. Fitur utama dari update ini adalah:
+PRR_UPD_23_3,"Bangunan RICO (yang) bisa dikembangkan bisa diletakkan di luar zona (bisa dikonfigurasi),"
+PRR_UPD_23_4,Keluhan tentang 'harga tanah rendah' dan 'layanan tidak cukup'' bisa dimatikan.
+PRR_UPD_23_5,"Peningkatan pemunculan thumbnail bangunan yang hanya memunculkan gambar yang diperlukan, mengurangi memori dan mempersingkat waktu loading."
+PRR_UPD_234_0,Menambah opsi untuk menyalakan atau mematikan peringatan saat menghancurkan bangunan RICO yang diletakkan
+PRR_UPD_234_1,Menambah opsi penghancuran otomatis saat membangun diatas bangunan RICO yang diletakkan.
+PRR_UPD_234_2,Peningkatan notifikasi update.
+PRR_UPD_235_0,"Tindakan ""Plop the Growables"" sekarang dinyalakan pada opsi (bangunan) bisa dikembangkan secara default (tidak berpengaruh pada pegaturan yang ada)."
+PRR_UPD_235_1,"Menambah peringatan jika mod ""Plop the Growables"" juga aktif."
+PRR_UPD_235_2,Peningkatan notifikasi konflik dan galat mod.
+PRR_UPD_237_0,Memperbaiki tampilnya pesan galat Harmony saat masuk editor.
+PRR_UPD_240_1,"Menambah opsi untuk mengunci otomatis level bangunan bisa berkembang yang diletakkan (perlu mod ""Advanced Building Level Control"")."
+PRR_UPD_240_2,Menambah menu pilihan pengaturan mod/pembuat/lokal ke panel pengaturan (untuk melihat pengaturan selain yang sedang aktif).
+PRR_UPD_240_3,"Menonaktifkan bidang teks populasi jika opsi ""gunakan realistis"" digunakan."
+PRR_UPD_241_0,Peningkatan dukungan untuk bangunan historis dengan level berbeda
+PRR_UPD_242_0,Bangunan layanan tidak akan lagi terlihat di panel pengaturan RICO secara default
+PRR_UPD_243_0,Menambah opsi untuk mematikan notifikasi update

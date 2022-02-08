@@ -1,0 +1,112 @@
+CODE,it
+NAME,Italiano
+PRR_NAME,Ploppable RICO rivisitato
+PRR_LEVEL,Livello
+PRR_LVL,Lv
+PRR_HOU,Abitazioni
+PRR_WOR,Posti di lavoro
+PRR_SRV_NON,Non assegnato
+PRR_SRV_RES,Residenziale
+PRR_SRV_IND,Industriale
+PRR_SRV_OFF,Ufficio
+PRR_SRV_COM,Commerciale
+PRR_SRV_EXT,Estrattore
+PRR_SRV_DUM,Passiva
+PRR_SUB_HIG,Alta
+PRR_SUB_LOW,Bassa
+PRR_SUB_HEC,Alta eco
+PRR_SUB_LEC,Bassa eco
+PRR_SUB_LEI,Intrattenimento
+PRR_SUB_TOU,Turismo
+PRR_SUB_ORG,Eco (organico)
+PRR_SUB_GEN,Generico
+PRR_SUB_ITC,Cluster IT
+PRR_SUB_FAR,Agricoltura
+PRR_SUB_FOR,Falegnameria
+PRR_SUB_OIL,Petrolio
+PRR_SUB_ORE,Minerali
+PRR_FTR_ALL,Tutte
+PRR_FTR_NON,Nessuna
+PRR_FTR_NAM,Nome
+PRR_FTR_SET,Filtra impostazioni: Mod/Autore/Locale/Qualsiasi
+PRR_OPT_SET,Impostazioni
+PRR_OPT_MOD,Mod
+PRR_OPT_AUT,Autore
+PRR_OPT_LOC,Locale
+PRR_OPT_ENA,Attiva RICO
+PRR_OPT_SER,Servizio
+PRR_OPT_SUB,Sotto-servizio
+PRR_OPT_UIC,Categoria UI
+PRR_OPT_CST,Costo di costruzione
+PRR_OPT_CNT,Numero di Lavoratori/Famiglie
+PRR_OPT_POP,Usa Realistic Pop mod
+PRR_OPT_POL,Attiva inquinamento
+PRR_OPT_JB0,Lavoro senza istruzione
+PRR_OPT_JB1,Lavoro con istruzione di base
+PRR_OPT_JB2,Lavoro con istruzione superiore
+PRR_OPT_JB3,Lavoro con con alta istruzione
+PRR_OPT_URP,Le impostazione della popolazione sono disattivati perché l'opzione di Realistic Population è attiva
+PRR_CAT_MON,Monumenti
+PRR_CAT_BEA,Abbellimento
+PRR_CAT_EDU,Educazione
+PRR_CAT_HEA,Sanità
+PRR_CAT_POL,Polizia
+PRR_CAT_POW,Energia
+PRR_CAT_WAT,Acqua
+PRR_CAT_GAR,Immondizia
+PRR_CAT_PIN,Industrie del giocatore
+PRR_CAT_RES,Residenziale
+PRR_CAT_COM,Commerciale
+PRR_CAT_OFF,Ufficio
+PRR_CAT_IND,Industriale
+PRR_UIC_REL,Residenziale basso
+PRR_UIC_REH,Residenziale alto
+PRR_UIC_COL,Commerciale basso
+PRR_UIC_COH,Commerciale alto
+PRR_UIC_OFF,Ufficio
+PRR_UIC_IND,Industriale
+PRR_UIC_FAR,Agricoltura
+PRR_UIC_FOR,Falegnameria
+PRR_UIC_OIL,Petrolio
+PRR_UIC_ORE,Minerali
+PRR_UIC_LEI,Intrattenimento
+PRR_UIC_TOU,Turismo
+PRR_UIC_ORG,Commerciale organico
+PRR_UIC_ITC,Cluster IT
+PRR_UIC_ECO,Abitazioni autonome
+PRR_UIC_NON,Non assegnato
+PRR_SET,Impostazioni
+PRR_SET_RICO,Impostazioni RICO
+PRR_SET_HASMOD,Impostazioni da mod
+PRR_SET_NOMOD,Nessuna impostazione della mod
+PRR_SET_HASAUT,Impostazioni dall'autore
+PRR_SET_NOAUT,Nessuna impostazione dell'autore
+PRR_SET_HASLOC,Impostazioni locali
+PRR_SET_NOLOC,Nessuna impostazione locale
+PRR_SET_HASANY,Qualsiasi impostazione
+PRR_SET_HASNON,Nessuna impostazione
+PRR_SAV_SAV,Salva
+PRR_SAV_ADD,Aggiungi impostazione locale
+PRR_SAV_REM,Rimuovi impostazione locale
+PRR_SAV_APP,Salva e applica
+PRR_EXP,ATTENZIONE: SPERIMENTALE
+TRN_CHOICE,Imposta linguaggio
+TRN_SYS,Usa linguaggio di sistema
+PRR_DESCRIPTION,Abilita le strutture RICO più grandi di 4x4 e la loro personalizzazione
+PRR_OPTION_PLP,Inserisce le strutture immediatamente (senza costruzione)
+PRR_OPTION_ZON,Le strutture growables possono rimanere al di fuori della loro zona
+PRR_OPTION_SPC,Le strutture growables possono rimanere al di fuori della loro zona specializzata
+ERR_CON0,Rilevato conflitto con mod!
+ERR_CON1,Le mod in conflitto sono:
+PRR_UPD_234_2,Migliorate le notifiche di updates.
+PRR_UPD_235_1,"Aggiunto messaggio se ""Plop the Growables"" mod è attiva."
+PRR_UPD_235_2,Migliorata l'identificazione e notifica di conflitti tra mod.
+PRR_UPD_236_0,Migliorata l'identificazione e notifica di conflitti tra mod.
+PRR_UPD_237_0,Fix per un errore di Harmony che appariva erroneamente quando un editor era caricato.
+PRR_UPD_240_0,Aggiunto campo per cambiare il costo della struttura.
+PRR_UPD_240_1,Aggiunta l'opzione per bloccare automaticamente il livello delle strutture ploppate (Richiede Advanced Building Level Control mod)
+PRR_UPD_240_2,Aggiunta selezione mod/autore/locale nel pannello delle impostazioni (Per vedere impostazioni a parte quella correntemente attiva)
+PRR_UPD_240_3,"Disabilitati i campi di popolazione quando ""Usa realtà"" è attivo."
+PRR_UPD_241_0,Migliorato il supporto per strutture storiche di livelli diversi.
+PRR_UPD_242_0,Le strutture di servizio non sono più visibili di default nel pannello impostazioni RICO.
+PRR_UPD_243_0,Aggiunta opzione per disabilitare le notifiche.

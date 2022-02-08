@@ -1,0 +1,179 @@
+CODE,ja
+NAME,日本語
+PRR_NAME,Ploppable RICO Revisited
+PRR_LEVEL,レベル
+PRR_LVL,Lvl
+PRR_HOU,世帯数
+PRR_WOR,労働者
+PRR_SRV_NON,なし
+PRR_SRV_RES,住宅
+PRR_SRV_IND,産業
+PRR_SRV_OFF,オフィス
+PRR_SRV_COM,商業
+PRR_SRV_EXT,生産
+PRR_SRV_DUM,ダミー
+PRR_SUB_HIG,高密度
+PRR_SUB_LOW,低密度
+PRR_SUB_HEC,高密度エコ
+PRR_SUB_LEC,低密度エコ
+PRR_SUB_LEI,レジャー
+PRR_SUB_TOU,観光
+PRR_SUB_ORG,エコ(オーガニック)
+PRR_SUB_GEN,一般
+PRR_SUB_ITC,ITクラスター
+PRR_SUB_FAR,農業
+PRR_SUB_FOR,林業
+PRR_SUB_OIL,石油業
+PRR_SUB_ORE,鉱業
+PRR_FTR_ALL,全選択
+PRR_FTR_NON,解除
+PRR_FTR_NAM,アセット名
+PRR_FTR_SET,フィルター設定: MOD/作者/ローカル/全て
+PRR_OPT_SET,設定
+PRR_OPT_MOD,MOD
+PRR_OPT_AUT,作者
+PRR_OPT_LOC,ローカル
+PRR_OPT_ENA,RICOを有効化
+PRR_OPT_SER,サービス
+PRR_OPT_SUB,サブサービス
+PRR_OPT_UIC,UIカテゴリー
+PRR_OPT_CST,建設費
+PRR_OPT_CNT,労働者/世帯数
+PRR_OPT_POP,Realistic Population Revisited MODを使用
+PRR_OPT_POL,汚染を有効化
+PRR_OPT_GRO,Growable
+PRR_OPT_JB0,未教育の仕事
+PRR_OPT_JB1,初等教育以上の労働者
+PRR_OPT_JB2,中等教育以上の労働者
+PRR_OPT_JB3,高等教育以上の労働者
+PRR_OPT_URP,Realistic Populationオプションが有効のため、人口(世帯数)の設定は無効になります
+PRR_CAT_MON,モニュメント
+PRR_CAT_BEA,公園
+PRR_CAT_EDU,教育
+PRR_CAT_HEA,健康
+PRR_CAT_FIR,消防
+PRR_CAT_POL,警察
+PRR_CAT_POW,電力
+PRR_CAT_WAT,水道
+PRR_CAT_GAR,ゴミ
+PRR_CAT_PIN,ユニーク工場
+PRR_CAT_RES,住宅
+PRR_CAT_COM,商業
+PRR_CAT_OFF,オフィス
+PRR_CAT_IND,産業
+PRR_UIC_REL,低密度住宅
+PRR_UIC_REH,高密度住宅
+PRR_UIC_COL,低密度商業
+PRR_UIC_COH,高密度商業
+PRR_UIC_OFF,オフィス
+PRR_UIC_IND,産業
+PRR_UIC_FAR,農業
+PRR_UIC_FOR,林業
+PRR_UIC_OIL,石油業
+PRR_UIC_ORE,鉱業
+PRR_UIC_LEI,レジャー
+PRR_UIC_TOU,観光
+PRR_UIC_ORG,エコ(オーガニック)
+PRR_UIC_ITC,ITクラスター
+PRR_UIC_ECO,自給自足型住宅
+PRR_UIC_NON,なし
+PRR_SET,設定
+PRR_SET_RICO,RICOの設定
+PRR_SET_HASMOD,MODでの設定有り
+PRR_SET_NOMOD,MODでの設定なし
+PRR_SET_HASAUT,作者の設定有り
+PRR_SET_NOAUT,作者の設定なし
+PRR_SET_HASLOC,ローカルの設定有り
+PRR_SET_NOLOC,ローカルの設定なし
+PRR_SET_HASANY,全ての設定
+PRR_SET_HASNON,設定なし
+PRR_SAV_SAV,セーブ
+PRR_SAV_ADD,ローカルに設定を追加
+PRR_SAV_REM,ローカルの設定を消去
+PRR_SAV_APP,保存して変更を適用
+PRR_EXP,注意: 実験的！
+TRN_CHOICE,言語設定
+TRN_SYS,システム言語を使用
+PRR_DESCRIPTION,4 x 4サイズ以上のRICOの建物と、RICOの建物をカスタマイズを可能にします
+PRR_OPTION_PLP,Growableの建物を即座に設置(建設描画無し)
+PRR_OPTION_ZON,Growableの建物をゾーニング外でも存続可能にする
+PRR_OPTION_SPC,Growableの建物を地区設定に影響せず存続可能にする
+PRR_OPTION_VAL,"""地価が低すぎます"" の警告を除外"
+PRR_OPTION_SVC,"""公共サービスが少なすぎます"" の警告を除外"
+PRR_OPTION_HST,設置したGrowableの建物を歴史的建造物に指定
+PRR_OPTION_BLC,設置したGrowableの建物レベルをAdvanced Building Level Controlでロック
+PRR_OPTION_RPL,RICO ploppableの建物
+PRR_OPTION_RGR,RICO growableの建物
+PRR_OPTION_RCO,全てのRICOの建物(growableも含む)
+PRR_OPTION_OTH,RICO未対応のgrowableな建物
+PRR_OPTION_DEM,ブルドーザーの設定 (歴史的建造物は無視)
+PRR_OPTION_BDZ,RICOの建物を取り壊す前に確認する
+PRR_OPTION_IMP,RICOの建物を自動撤去(MODを使用)を許可する
+PRR_OPTION_IMP2,(例: 道路や他の建物を設置する場合)
+PRR_OPTION_CST,建築費設定
+PRR_OPTION_COV,建築費を補正
+PRR_OPTION_CPH,1世帯あたりの費用
+PRR_OPTION_CHM,住宅レベルごとの追加費用 (%)
+PRR_OPTION_CJ0,未教育の労働者一人あたりの費用
+PRR_OPTION_CJ1,初等教育以上の労働者一人あたりの費用
+PRR_OPTION_CJ2,中等教育以上の労働者一人あたりの費用
+PRR_OPTION_CJ3,高等教育以上の労働者一人あたりの費用
+PRR_OPTION_DIS,災害
+PRR_OPTION_NOC,Ploppableで設置したRICOの建物は、災害の影響を受けません（バグを防止）
+PRR_OPTION_LOA,ロードのオプション
+PRR_OPTION_LOG,ログのオプション
+PRR_OPTION_TMB,サムネイルのオプション
+PRR_OPTION_PLO,Ploppableのオプション
+PRR_OPTION_GRO,Growableのオプション
+PRR_OPTION_COM,警告のオプション
+PRR_OPTION_MOD,MODのオプション
+PRR_OPTION_NOT,通知の設定
+PRR_OPTION_WHATSNEW,新着メッセージを表示
+PRR_OPTION_MOREDEBUG,追加のデバッグログを有効化
+PRR_OPTION_FORCERESET,ゲームロード時に、既存建物の統計情報を強制的にリセット
+PRR_OPTION_REGENTHUMBS,サムネイルの再生成
+PRR_OPTION_SPDHDR,ゲーム速度を少し上げますが、パネル展開時に遅延が発生します
+PRR_OPTION_SPEED,未使用時はパネルを無効にする
+PRR_OPTION_FASTHDR,サムネイルの描画速度が向上しますが、メモリ使用量が増えます
+PRR_OPTION_FASTHUMB,サムネイルの描画を高速化します
+PRR_OPTION_THUMBACK,サムネイルの背景
+PRR_THUMB_COLOR,カラー
+PRR_THUMB_PLAIN,無地
+PRR_THUMB_SKY,青空
+MES_CLS,閉じる
+MES_DSA,次回から非表示
+MES_PAGE,詳細は、MODがあるSteamのワークショップを確認してください。
+PRR_ERR_FAT,正常にMODが起動できないため、動作をシャットダウンしました。
+PRR_ERR_HAR,Ploppable RICO Revisitedは、必要なHarmony 2.0 MODのパッチ動作を完了できません。
+ERR_HAR0,Harmony 2.0 MODでエラーが発生しました
+ERR_HAR1,エラーが起きる原因として、考えられるのは以下の通りです。
+ERR_HAR2,依存関係にある、必要なHarmony 2 MODがインストールされていません。
+ERR_HAR3,古いMODや壊れたMODが、Harmony 2.0 MODの動作を妨げています。
+ERR_CON0,MODの競合が検出されました！
+ERR_CON1,競合するMOD:
+PRR_ERR_CON0,Ploppable RICO Revisited は、少なくとも1つ以上のMODと競合を検出しました
+PRR_ERR_CON1,Ploppable RICO Revisitedが動作する前に、これらのMODを削除する必要があります。
+PRR_CON_PTG0,Plop the Growables MODを検出
+PRR_CON_PTG1,Plop the Growables MODを検出 - 機能のほとんどは、Ploppable RICO Revisitedに組み込まれています。 2つのMODを一緒に使用する場合は、設定が矛盾する可能性があります。
+PRR_CON_PTG2,しかし、両方を一緒に使っても問題ありません - 設定に競合が無ければ！
+PRR_UPD_23_0,Plopplable RICO Revisited 2.3 アップデート
+PRR_UPD_23_1,Ploppable RICO Revisitedがバージョン2.3に更新されました。このアップデートの主な機能は次のとおりです。
+PRR_UPD_23_2,Ploppable RICOには、RICOと非RICOの両方の建物に「PloptheGrowables」スタイルの機能が含まれるようになりました。詳細については、オプションパネルを参照してください。
+PRR_UPD_23_3,RICOの成長可能な建物が、ゾーンの外に配置できるようになりました（設定可能）。
+PRR_UPD_23_4,「地価が低い」および「サービスが不十分」に関する苦情を無効にできるようになりました。
+PRR_UPD_23_5,建物のサムネイルレンダリング機能を改善し、必要なときにのみ画像を生成することで、メモリを削減し読み込み時間を短縮しました。
+PRR_UPD_234_0,崩壊したRICOの建物を破壊するときの警告を有効または無効にするオプションを追加しました。
+PRR_UPD_234_1,崩壊したRICOの建物の上に建てるときに、自動撤去を有効または無効にするオプションを追加しました。
+PRR_UPD_234_2,更新通知が改善されました。
+PRR_UPD_235_0,Growableオプションでは、「Plop the Growables」動作がデフォルトで有効になっています（既存の設定には影響しません）。
+PRR_UPD_235_1,Plop the Growables' modもアクティブな場合の警告を追加しました。
+PRR_UPD_235_2,modの競合とエラー時の通知が改善しました。
+PRR_UPD_236_0,modの競合の検出と通知を改善しました。
+PRR_UPD_237_0,エディターをロードするときに誤って表示されるHarmony 2.0 MODのエラーメッセージを修正しました。
+PRR_UPD_240_0,コストの無視を追加しました（設定可能）。
+PRR_UPD_240_1,配置されたglowablesの建物レベルを自動的にロックするオプションを追加しました（Advanced Building Level Control modが必要です）。
+PRR_UPD_240_2,設定パネルにmod/author/local設定の選択メニューを追加しました（現在のアクティブな設定以外の設定を見るため）。
+PRR_UPD_240_3,「現実的な人口を使用する」オプションが設定されている場合、人口テキストフィールドを無効にします。
+PRR_UPD_241_0,さまざまなレベルの歴史的建造物のサポートを改善しました。
+PRR_UPD_242_0,RICOの設定パネルで、サービスビルがデフォルトで表示されなくなりました。
+PRR_UPD_243_0,更新通知を無効にするオプションを追加しました。

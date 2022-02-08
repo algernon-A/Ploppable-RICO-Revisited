@@ -1,0 +1,102 @@
+CODE,tr
+NAME,Türk
+PRR_NAME,Revize Edilmiş RICO Yapıştırıcısı
+PRR_LEVEL,Seviye
+PRR_LVL,Svy
+PRR_HOU,Ev Halkı
+PRR_WOR,İstihdam
+PRR_SRV_NON,Yok
+PRR_SRV_RES,Konut
+PRR_SRV_IND,Endüstri
+PRR_SRV_OFF,Ofis
+PRR_SRV_COM,Ticari
+PRR_SRV_EXT,Ekstraktör
+PRR_SRV_DUM,İşlevsiz
+PRR_SUB_HIG,Yüksek
+PRR_SUB_LOW,Düşük
+PRR_SUB_HEC,Yüksek Eko
+PRR_SUB_LEC,Düşük Eko
+PRR_SUB_LEI,Eğlence
+PRR_SUB_TOU,Turizm
+PRR_SUB_ORG,Eko (organik)
+PRR_SUB_GEN,Genel
+PRR_SUB_ITC,Bilişim Bölgesi
+PRR_SUB_FAR,Çiftçilik
+PRR_SUB_FOR,Ormancılık
+PRR_SUB_OIL,Petrol
+PRR_SUB_ORE,Maden
+PRR_FTR_ALL,Hepsi
+PRR_FTR_NON,Hiçbiri
+PRR_FTR_NAM,İsim
+PRR_FTR_SET,Ayarlar Filtresi: Mod/Yazar/Lokal/Herhangi
+PRR_OPT_ENA,RICO'yu Etkinleştir
+PRR_OPT_SER,Servis
+PRR_OPT_SUB,Alt Servis
+PRR_OPT_UIC,UI kategorisi
+PRR_OPT_CST,İnşaat maliyeti
+PRR_OPT_CNT,Ev başına çalışan sayısı
+PRR_OPT_POP,Gerçekçi Pop mod kullan
+PRR_OPT_POL,Kirliliğe izin ver
+PRR_OPT_GRO,Büyüyebilen
+PRR_OPT_JB0,Eğitimsiz işler
+PRR_OPT_JB1,Eğitimli işler
+PRR_OPT_JB2,İyi Eğitimli işler
+PRR_OPT_JB3,Yüksek Eğitimli işler
+PRR_CAT_MON,Anıtlar
+PRR_CAT_BEA,Güzelleştirme
+PRR_CAT_EDU,Eğitim
+PRR_CAT_HEA,Sağlık
+PRR_CAT_POW,Enerji
+PRR_CAT_WAT,Su
+PRR_CAT_RES,Konut
+PRR_CAT_COM,Ticari
+PRR_CAT_OFF,Ofis
+PRR_CAT_IND,Endüstri
+PRR_UIC_REL,Hafif Konut
+PRR_UIC_REH,Yoğun Konut
+PRR_UIC_COL,Hafif Ticari
+PRR_UIC_COH,Yoğun Ticari
+PRR_UIC_OFF,Ofis
+PRR_UIC_IND,Endüstri
+PRR_UIC_FAR,Çiftçilik
+PRR_UIC_FOR,Ormancılık
+PRR_UIC_OIL,Petrol
+PRR_UIC_ORE,Madencilik
+PRR_UIC_LEI,Eğlence
+PRR_UIC_TOU,Turizm
+PRR_UIC_ORG,Organik Ticari
+PRR_UIC_ITC,Bilişim Bölgesi
+PRR_UIC_ECO,Kendine yeterli evler
+PRR_UIC_NON,Hiçbiri
+PRR_SET,Ayarlar
+PRR_SET_RICO,RICO Ayarları
+PRR_SET_HASMOD,Mod Ayarları
+PRR_SET_HASAUT,Yazar Ayarları
+PRR_SET_HASLOC,Lokal Ayarlar
+PRR_SET_HASANY,Tüm Ayarlar
+PRR_SET_HASNON,Ayarsız
+PRR_SAV_SAV,Sakla
+PRR_SAV_ADD,Lokal Ekle
+PRR_SAV_REM,Lokalden Kaldır
+PRR_SAV_APP,Sakla ve uygula
+PRR_EXP,DİKKAT: DENEYSEL
+TRN_CHOICE,Dil Seç
+TRN_SYS,Sistem dilini kullan
+PRR_DESCRIPTION,4x4'ten daha büyük RICO binalarına ve RICO binalarının özelleştirilmesine izin verir
+PRR_OPTION_MOREDEBUG,Hata logu oluşturulmasına izin ver
+PRR_OPTION_FORCERESET,Oyun yüklenirken bina istatistiklerini zorla sıfırla
+PRR_OPTION_REGENTHUMBS,Önizlemeleri tekrar oluştur
+PRR_OPTION_SPDHDR,Oyunu hızlandırır ancak paneli açarken daha fazla zaman harcar:
+PRR_OPTION_SPEED,Kullanılmadığında paneli etki dışı bırak
+PRR_OPTION_FASTHDR,"Önizlemeleri daha hızlı görselleştirir, ancak daha fazla hafıza kullanır:"
+PRR_OPTION_FASTHUMB,Önizlemeleri hızlı görselleştir
+PRR_OPTION_THUMBACK,Önizlemeli arkaplan
+PRR_THUMB_COLOR,Renk
+PRR_THUMB_PLAIN,Renksiz
+PRR_THUMB_SKY,Skybox
+PRR_ERR_FAT,Bu mod bu şekilde kullanılamadığı için kapatıldı.
+PRR_ERR_HAR,"Revize Edilmiş RICO Yapıştırıcısı, ihtiyacı olan Harmony 2 yamalamasını tamamlayamadı."
+ERR_HAR0,Harmony yamalama hatası
+ERR_HAR1,Bu problemin olası sebepleri arasında:
+ERR_HAR2,Zorunlu Harmony 2 modu yerleştirilmemiş
+ERR_HAR3,"Eski ve/veya arızalı bir mod, Harmony 2'nin düzgün çalışmasını engelliyor"

@@ -1,0 +1,179 @@
+CODE,en
+NAME,English
+PRR_NAME,Ploppable RICO Revisited
+PRR_LEVEL,Level
+PRR_LVL,Lvl
+PRR_HOU,Households
+PRR_WOR,Workplaces
+PRR_SRV_NON,None
+PRR_SRV_RES,Residential
+PRR_SRV_IND,Industrial
+PRR_SRV_OFF,Office
+PRR_SRV_COM,Commercial
+PRR_SRV_EXT,Extractor
+PRR_SRV_DUM,Dummy
+PRR_SUB_HIG,High
+PRR_SUB_LOW,Low
+PRR_SUB_HEC,High eco
+PRR_SUB_LEC,Low eco
+PRR_SUB_LEI,Leisure
+PRR_SUB_TOU,Tourism
+PRR_SUB_ORG,Eco (organic)
+PRR_SUB_GEN,Generic
+PRR_SUB_ITC,IT cluster
+PRR_SUB_FAR,Farming
+PRR_SUB_FOR,Forestry
+PRR_SUB_OIL,Oil
+PRR_SUB_ORE,Ore
+PRR_FTR_ALL,All
+PRR_FTR_NON,None
+PRR_FTR_NAM,Name
+PRR_FTR_SET,Settings filter: Mod/Author/Local/Any
+PRR_OPT_SET,Settings
+PRR_OPT_MOD,Mod
+PRR_OPT_AUT,Author
+PRR_OPT_LOC,Local
+PRR_OPT_ENA,Enable RICO
+PRR_OPT_SER,Service
+PRR_OPT_SUB,Sub-service
+PRR_OPT_UIC,UI category
+PRR_OPT_CST,Construction cost
+PRR_OPT_CNT,Worker/Home count
+PRR_OPT_POP,Use Realistic Pop mod
+PRR_OPT_POL,Enable pollution
+PRR_OPT_GRO,Growable
+PRR_OPT_JB0,Uneducated jobs
+PRR_OPT_JB1,Educated jobs
+PRR_OPT_JB2,Well-educated jobs
+PRR_OPT_JB3,Highly-educated jobs
+PRR_OPT_URP,Population settings are disabled because the Realistic Population option is enabled
+PRR_CAT_MON,Monuments
+PRR_CAT_BEA,Beautification
+PRR_CAT_EDU,Education
+PRR_CAT_HEA,Health
+PRR_CAT_FIR,Fire department
+PRR_CAT_POL,Police
+PRR_CAT_POW,Power
+PRR_CAT_WAT,Water
+PRR_CAT_GAR,Garbage
+PRR_CAT_PIN,Player industry
+PRR_CAT_RES,Residential
+PRR_CAT_COM,Commercial
+PRR_CAT_OFF,Office
+PRR_CAT_IND,Industrial
+PRR_UIC_REL,Residential low
+PRR_UIC_REH,Residential high
+PRR_UIC_COL,Commercial low
+PRR_UIC_COH,Commercial high
+PRR_UIC_OFF,Office
+PRR_UIC_IND,Industrial
+PRR_UIC_FAR,Farming
+PRR_UIC_FOR,Forestry
+PRR_UIC_OIL,Oil
+PRR_UIC_ORE,Ore
+PRR_UIC_LEI,Leisure
+PRR_UIC_TOU,Tourism
+PRR_UIC_ORG,Organic commercial
+PRR_UIC_ITC,IT cluster
+PRR_UIC_ECO,Self-sufficient homes
+PRR_UIC_NON,None
+PRR_SET,Settings
+PRR_SET_RICO,RICO settings
+PRR_SET_HASMOD,Mod settings
+PRR_SET_NOMOD,No mod settings
+PRR_SET_HASAUT,Author settings
+PRR_SET_NOAUT,No author settings
+PRR_SET_HASLOC,Local settings
+PRR_SET_NOLOC,No local settings
+PRR_SET_HASANY,Any settings
+PRR_SET_HASNON,No settings
+PRR_SAV_SAV,Save
+PRR_SAV_ADD,Add local
+PRR_SAV_REM,Remove local
+PRR_SAV_APP,Save and apply changes
+PRR_EXP,CAUTION: EXPERIMENTAL
+TRN_CHOICE,Set language
+TRN_SYS,Use system language
+PRR_DESCRIPTION,Allows RICO buildings greater than 4x4 in size and RICO building customisation
+PRR_OPTION_PLP,Instantly plop growable buildings (no construction)
+PRR_OPTION_ZON,Growable buildings can survive outside of the correct zone
+PRR_OPTION_SPC,Growable buildings can survive without required district specializations
+PRR_OPTION_VAL,Ignore 'low land value' complaint
+PRR_OPTION_SVC,Ignore 'too few services' complaint
+PRR_OPTION_HST,Make all plopped growables historical
+PRR_OPTION_BLC,Lock plopped growables levels using Advanced Building Level Control
+PRR_OPTION_RPL,RICO ploppable buildings
+PRR_OPTION_RGR,RICO growable buildings
+PRR_OPTION_RCO,All RICO buildings (including growables)
+PRR_OPTION_OTH,Non-RICO growable buildings
+PRR_OPTION_DEM,Demolition options (doesn't affect historical buildings)
+PRR_OPTION_BDZ,Ask before bulldozing plopped RICO buildings
+PRR_OPTION_IMP,Allow plopped RICO buildings to be auto-bulldozed
+PRR_OPTION_IMP2,(e.g. when placing roads or other buildings)
+PRR_OPTION_CST,Cost options
+PRR_OPTION_COV,Override building cost
+PRR_OPTION_CPH,Cost per household
+PRR_OPTION_CHM,Additional multiplier per household level (%)
+PRR_OPTION_CJ0,Cost per uneducated job
+PRR_OPTION_CJ1,Cost per educated job
+PRR_OPTION_CJ2,Cost per well-educated job
+PRR_OPTION_CJ3,Cost per highly-educated job
+PRR_OPTION_DIS,Disasters
+PRR_OPTION_NOC,Ploppable RICO buildings aren't affected by disasters (prevents bugs)
+PRR_OPTION_LOA,Loading options
+PRR_OPTION_LOG,Logging options
+PRR_OPTION_TMB,Thumbnail options
+PRR_OPTION_PLO,Ploppable options
+PRR_OPTION_GRO,Growable options
+PRR_OPTION_COM,Complaint options
+PRR_OPTION_MOD,Mod options
+PRR_OPTION_NOT,Notification options
+PRR_OPTION_WHATSNEW,Show what's new messages
+PRR_OPTION_MOREDEBUG,Enable additional debugging logging
+PRR_OPTION_FORCERESET,Force reset of existing building stats on game load
+PRR_OPTION_REGENTHUMBS,Regenerate thumbnails
+PRR_OPTION_SPDHDR,Increases game speed slightly but causes a delay in opening the panel
+PRR_OPTION_SPEED,Disable panel when not in use
+PRR_OPTION_FASTHDR,"Renders thumbnails more quickly, but uses more memory:"
+PRR_OPTION_FASTHUMB,Render thumbnails at accelerated speed
+PRR_OPTION_THUMBACK,Thumbnail backgrounds
+PRR_THUMB_COLOR,Color
+PRR_THUMB_PLAIN,Plain
+PRR_THUMB_SKY,Skybox
+MES_CLS,Close
+MES_DSA,Don't show again
+MES_PAGE,Please refer to the mod's Steam Workshop page for further information.
+PRR_ERR_FAT,"This means that the mod is not able to operate, and has shut down."
+PRR_ERR_HAR,Ploppable RICO Revisited was unable to complete its required Harmony patches.
+ERR_HAR0,Harmony patching error
+ERR_HAR1,Possible causes of this problem include:
+ERR_HAR2,The required Harmony 2 mod dependency was not installed
+ERR_HAR3,An old and/or broken mod is preventing Harmony 2 from operating properly
+ERR_CON0,Mod conflict detected!
+ERR_CON1,The conflicting mods are:
+PRR_ERR_CON0,Ploppable RICO Revisited detected a conflict with at least one other mod.
+PRR_ERR_CON1,These mods must be removed before Ploppable RICO Revisited can operate.
+PRR_CON_PTG0,Plop the Growables mod detected
+PRR_CON_PTG1,"Plop the Growables mod detected - most of this mod's functionality has been incorporated into Ploppable RICO Revisited. Please be careful when using the two mods together, as their settings may conflict."
+PRR_CON_PTG2,It is still okay to use both together - IF their settings don't conflict!
+PRR_UPD_23_0,Plopplable RICO Revisited 2.3 update
+PRR_UPD_23_1,Ploppable RICO Revisited has been updated to version 2.3. Some key features of this update are:
+PRR_UPD_23_2,Ploppable RICO now includes 'Plop the Growables'-style functionality for both RICO and non-RICO buildings - see the options panel for details.
+PRR_UPD_23_3,RICO growable buildings can now be placed outside of zones (configurable).
+PRR_UPD_23_4,Complaints about 'low land value' and 'not enough services' can now be disabled.
+PRR_UPD_23_5,"Improved building thumbnail renderer that now only generates images as needed, reducing memory and improving loading times."
+PRR_UPD_234_0,Add option for enabling or disabling warnings when demolishing plopped RICO buildings.
+PRR_UPD_234_1,Add option for enabling or disabling auto-bulldoze when building over the top of plopped RICO buildings.
+PRR_UPD_234_2,Improved update notifications.
+PRR_UPD_235_0,Growable options now have 'Plop the Growables' behavior enabled by default (does not affect existing settings).
+PRR_UPD_235_1,Add warning if the 'Plop the Growables' mod is also active.
+PRR_UPD_235_2,Improved mod conflict and error notifications.
+PRR_UPD_236_0,Improve mod conflict detection and notification.
+PRR_UPD_237_0,Fix Harmony error message incorrectly showing when loading into editors.
+PRR_UPD_240_0,Add configurable cost overrides.
+PRR_UPD_240_1,Add option to automatically lock the building level of plopped growables (requires Advanced Building Level Control mod).
+PRR_UPD_240_2,Add mod/author/local settings selection menu to settings panel (to see settings other than the currently active one).
+PRR_UPD_240_3,Disable population textfields when 'use reality' option is set.
+PRR_UPD_241_0,Improve support for historical buildings with different levels
+PRR_UPD_242_0,Service buildings are no longer visible by default in the RICO settings panel
+PRR_UPD_243_0,Add option to disable update notifications

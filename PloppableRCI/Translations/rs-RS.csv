@@ -1,0 +1,177 @@
+CODE,rs
+NAME,Srpski
+PRR_NAME,Ploppable RICO Revisited
+PRR_LEVEL,Nivo
+PRR_LVL,Niv
+PRR_HOU,Kuće
+PRR_WOR,Radna mesta
+PRR_SRV_NON,Bez
+PRR_SRV_RES,Stambeni
+PRR_SRV_IND,Indistrijski
+PRR_SRV_OFF,Kancelarijski
+PRR_SRV_COM,Komercijalni
+PRR_SRV_EXT,Ekstraktor
+PRR_SRV_DUM,Nefunkcionalni
+PRR_SUB_HIG,Visok
+PRR_SUB_LOW,Nizak
+PRR_SUB_HEC,Visok eko
+PRR_SUB_LEC,NIzak eko
+PRR_SUB_LEI,Ležera
+PRR_SUB_TOU,Turizam
+PRR_SUB_ORG,Ekološko
+PRR_SUB_GEN,Generično
+PRR_SUB_ITC,IT klaster
+PRR_SUB_FAR,Poljoprivreda
+PRR_SUB_FOR,Šumarstvo
+PRR_SUB_OIL,Ulje
+PRR_SUB_ORE,Rude
+PRR_FTR_ALL,Sve
+PRR_FTR_NON,Ništa
+PRR_FTR_NAM,Ime
+PRR_FTR_SET,FIlter podešavaja: Mod/Autor/Lokalno/Bilo koje
+PRR_OPT_SET,Podešavanja
+PRR_OPT_MOD,Mod
+PRR_OPT_AUT,Autor
+PRR_OPT_LOC,Lokalno
+PRR_OPT_ENA,Omogući RICO
+PRR_OPT_SER,Tip
+PRR_OPT_SUB,Pod tup
+PRR_OPT_UIC,UI kategorija
+PRR_OPT_CST,Cena izgradnje
+PRR_OPT_CNT,Broj radnika/kuća
+PRR_OPT_POP,Koristi Realistic Pop Mod
+PRR_OPT_POL,Uključi Zagađivanje
+PRR_OPT_GRO,Rastuće
+PRR_OPT_JB0,Neobrazovani poslovi
+PRR_OPT_JB1,Obrazovani poslovi
+PRR_OPT_JB2,Vrlo obrazovani poslovi
+PRR_OPT_JB3,Visoko obrazovani poslovi
+PRR_OPT_URP,Podešavanja populacije su ugašena zato što je Realistic Population mod uključen
+PRR_CAT_MON,Spomenici
+PRR_CAT_BEA,Ulepšavanje
+PRR_CAT_EDU,Obrazovanje
+PRR_CAT_HEA,Zdravlje
+PRR_CAT_FIR,Vatrogasna služba
+PRR_CAT_POL,Policija
+PRR_CAT_POW,Struja
+PRR_CAT_WAT,Voda
+PRR_CAT_GAR,Smeće
+PRR_CAT_PIN,Industrija igrača
+PRR_CAT_RES,Stambeni
+PRR_CAT_COM,Komercijalni
+PRR_CAT_OFF,Kancelarijski
+PRR_CAT_IND,Indistrijski
+PRR_UIC_REL,Stambeni nisko
+PRR_UIC_REH,Stambeni visoko
+PRR_UIC_COL,Komercijalni nisko
+PRR_UIC_COH,Komercijalni visoko
+PRR_UIC_OFF,Kancelarijski
+PRR_UIC_IND,Indistrijski
+PRR_UIC_FAR,Poljoprivreda
+PRR_UIC_FOR,Šumarstvo
+PRR_UIC_OIL,Ulje
+PRR_UIC_ORE,Rude
+PRR_UIC_LEI,Ležera
+PRR_UIC_TOU,Turizam
+PRR_UIC_ORG,Organično komercijalni
+PRR_UIC_ITC,IT klaster
+PRR_UIC_ECO,Samoizdržljive kuće
+PRR_UIC_NON,Ništa
+PRR_SET,Podešavanja
+PRR_SET_RICO,RICO podešavanja
+PRR_SET_HASMOD,Mod podešavanja
+PRR_SET_NOMOD,Bez podašavanja moda
+PRR_SET_HASAUT,Autorska podešavanja
+PRR_SET_NOAUT,Bez podešavanja autora
+PRR_SET_HASLOC,Lokalna podešanvanja
+PRR_SET_NOLOC,Bez lokalnih podešavanja
+PRR_SET_HASANY,Bilo koja podešanvanja
+PRR_SET_HASNON,Bez podešanvanja
+PRR_SAV_SAV,Sačuvaj
+PRR_SAV_ADD,Dodaj lokalno
+PRR_SAV_REM,Ukloni lokalno
+PRR_SAV_APP,Sačuvaj i primeni promene
+PRR_EXP,UPOZORENJE: EKSPERIMENTALNO
+TRN_CHOICE,Podesi jezik
+TRN_SYS,Koristi sistemski jezik
+PRR_DESCRIPTION,Dozvoljava RICO zgrade veće od 4x4 u veličini i RICO izmenjivanju zgrade
+PRR_OPTION_PLP,Odmah postavi izgrađive zgrade (bez sagradnje)
+PRR_OPTION_ZON,Izgrađive zgrade mogu da prežive izvan prave zone
+PRR_OPTION_SPC,Izgrađive zgrade mogu da prežive bez neophodne oblastne specijalizacije
+PRR_OPTION_VAL,Ignoriši žalbu 'niska vrednost zemljišta'
+PRR_OPTION_SVC,Ignoriši žalbu 'premalo usluga'
+PRR_OPTION_HST,Pretvori svaku postavljenu izgrađivu zgradu istoričkom
+PRR_OPTION_BLC,RICO postavljive zgrade
+PRR_OPTION_RPL,RICO izgrađive zgrade
+PRR_OPTION_RGR,RICO rastuće zgrade
+PRR_OPTION_RCO,Sve RICO zgrade (uključujući izgrađive)
+PRR_OPTION_OTH,Ne RICO izgrađive zgrade
+PRR_OPTION_DEM,Opcije rušenja
+PRR_OPTION_BDZ,Pitaj pre rušenja postavljenih RICO zgrada
+PRR_OPTION_IMP,Dopusti postavljenim RICO zgradama da budu automatski srušene i izgrađene preko (npr. kada se gradi put ili postavljaju zgrade)
+PRR_OPTION_IMP2,(npr. pri postavljanju puteva ili drugih zgrada)
+PRR_OPTION_CST,Opcije cene
+PRR_OPTION_COV,Zameni cenu građenja
+PRR_OPTION_CPH,Cena po domaćinstvu.
+PRR_OPTION_CHM,Dodatni množilac po njivou domaćinstva (%)
+PRR_OPTION_CJ0,Cena po poslu bez edukacije
+PRR_OPTION_CJ1,Cena po poslu uz edukaciju
+PRR_OPTION_CJ2,Cena po poslu dobre edukacije
+PRR_OPTION_CJ3,Cena po poslu visoke edukacije
+PRR_OPTION_LOA,Podešavanja učitavanja
+PRR_OPTION_LOG,Podešavanja logovanja
+PRR_OPTION_TMB,Podešavanja ikone
+PRR_OPTION_PLO,Podešavanja postavljivih zgrada.
+PRR_OPTION_GRO,Podešavanja izgrađivanja
+PRR_OPTION_COM,Podešavanja žalbi
+PRR_OPTION_MOD,Podešavanja modova
+PRR_OPTION_NOT,Podešavanja obaveštenja
+PRR_OPTION_WHATSNEW,Prikaži šta je novo obaveštenja
+PRR_OPTION_MOREDEBUG,Omogući dodatno logvanje debugovanja
+PRR_OPTION_FORCERESET,Prisili reset već postojaćih statisika zgrada pri učitavanju igrice
+PRR_OPTION_REGENTHUMBS,Regeneriši ikone
+PRR_OPTION_SPDHDR,Ubrzava brzinu igrice po malo ali izaziva duže otvaranje panela
+PRR_OPTION_SPEED,Onemogući panel izvan korišćenja
+PRR_OPTION_FASTHDR,"Renderuje ikone brže, ali koristi više memorije:"
+PRR_OPTION_FASTHUMB,Renderuje ikone ubrzanom brzinom
+PRR_OPTION_THUMBACK,Pozadine ikona
+PRR_THUMB_COLOR,Boja
+PRR_THUMB_PLAIN,Obična
+PRR_THUMB_SKY,Skybox
+MES_CLS,Zatvori
+MES_DSA,Ne pokazuj opet
+MES_PAGE,Molimo va da pogledate Steam Workshop stranicu moda za više informacija.
+PRR_ERR_FAT,"Ovo znači da mod ne mođe lepo da radi, i da je se ugasio."
+PRR_ERR_HAR,Ploppable RICO Revisited nije mogo da dovrši neophodne Harmonz zakrpe.
+ERR_HAR0,Greška pri zakrpljivanju Harmony
+ERR_HAR1,Mogući razlozi ovog problema su:
+ERR_HAR2,Neophodan Harmonz 2 mod dependencz nije instaliran
+ERR_HAR3,Stari i/ili pokvaren mod ne dopušta Harmony 2 da pravilno funkcioniše
+ERR_CON0,Detektovan konflikt modova!
+ERR_CON1,Konfliktovani modovi su:
+PRR_ERR_CON0,Ploppable RICO Revisited je detektovao konflikt sa barem jednim drugim modom.
+PRR_ERR_CON1,Ovi modovi moraju biti uklonjeni da bi Ploppable RICO Revisited radio.
+PRR_CON_PTG0,Plop the Growables mod detektovan.
+PRR_CON_PTG1,"Plop the Growables mod detektovan - Većina od funkcija ovog moda takođe postoje u Ploppable RICO Revisited. Molimo vas da budete pažljivi kada koristite ova 2 moda zajedno, zato što je moguće da se njihova podešavanja konfliktuju."
+PRR_CON_PTG2,Idalje je uredu koristiti oba moda zajedno - AKO se njihova podešavanja ne konfliktuju!
+PRR_UPD_23_0,Ploppable RICO Revisited 2.3 update
+PRR_UPD_23_1,Ploppable RICO Revisited se ažurirao na verziju 2.3 neke glavne funkcije ovog update-a su:
+PRR_UPD_23_2,Ploppable RICO sada sadrži funkciju sličnu 'Plop the Growables' za i RICO i ne RICO zgrade- pogledaj panel podešavanja za detalje.
+PRR_UPD_23_3,RICO izgrađive zgrade sada mogu da budu postavljene izvan zona (izmenjivo)
+PRR_UPD_23_4,Žalbe o 'niskoj vrednosti zemljišta' i 'nedovoljno usluga' mogu biti ugašeni
+PRR_UPD_23_5,"Poboljšan renderer ikona koji sad samo generiše ikone kada je potrebno, smanjujući memoriju i poboljšavajući brzinu učitavanja."
+PRR_UPD_234_0,Dodaj opciju za paljenje i gašenje upozorenja kada rušite postavljenje RICO zgrade.
+PRR_UPD_234_1,Dodaj opciju za paljenje i gašenje automatsko rušenje kada se gradi preko postavljenih RICO zgrada.
+PRR_UPD_234_2,Poboljšana update obaveštenja.
+PRR_UPD_235_0,Podešavanja za rastuće opcije sada imaju „Plop the Growables” ponašanje podrazumevano uključene (ne menja već postojeća podešavanja)
+PRR_UPD_235_1,Dodaj upozorenje ako je „Plop the Growables” mod takođe aktivan.
+PRR_UPD_235_2,Poboljšana obaveštenja za konflikt između modova i greške.
+PRR_UPD_236_0,Poboljšana detekcija i obaveštenje konflika između modova.
+PRR_UPD_237_0,Popravljena pogrešno pokazivanje Harmony greške kada se učitavaju editori.
+PRR_UPD_240_0,Dodata podesiva zamena cene.
+PRR_UPD_240_1,Dodata opcija za automatsko zaključavanje njivoa postavljenih rastućih zgrada. (potreban Advanced Building Level Control mod)
+PRR_UPD_240_2,Dodat mod/autor(lokalna podešavanja meni u panel podešavanja (da se vide podešavanja druga od trenutno aktivnih)
+PRR_UPD_240_3,Ugasi populaciono polje teksta kada je uključeno podešavanje „koristi realnost”
+PRR_UPD_241_0,Poboljšaj podršku za istoričke zgrade sa različitim njivoima.
+PRR_UPD_242_0,Uslužne zgrade više nisu podrazumevno vidljive u panelu za RICO podešavanja
+PRR_UPD_243_0,Dodata opcija za gašenje obaveštenja

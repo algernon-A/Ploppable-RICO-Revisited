@@ -1,0 +1,163 @@
+CODE,zh-tw
+NAME,正體中文
+PRR_NAME,Ploppable RICO Revisited 模組(Mod)
+PRR_LEVEL,建築等級
+PRR_LVL,等級
+PRR_HOU,戶數
+PRR_WOR,工作數量
+PRR_SRV_NON,無
+PRR_SRV_RES,住宅建築
+PRR_SRV_IND,工業建築
+PRR_SRV_OFF,辦公建築
+PRR_SRV_COM,商業建築
+PRR_SRV_EXT,工業產業園區 - 萃取器
+PRR_SRV_DUM,虛擬建築
+PRR_SUB_HIG,高密度
+PRR_SUB_LOW,低密度
+PRR_SUB_HEC,高密度-專業化自給住宅行政專區建築
+PRR_SUB_LEC,低密度-專業化自給住宅行政專區建築
+PRR_SUB_LEI,專業化休閒娛樂行政專區建築
+PRR_SUB_TOU,專業化觀光旅遊行政專區建築
+PRR_SUB_ORG,專業化本土製造服務和有機農業行政專區建築
+PRR_SUB_GEN,一般類型建築
+PRR_SUB_ITC,專業化IT產業行政專區建築
+PRR_SUB_FAR,專業化農牧業行政專區建築
+PRR_SUB_FOR,專業化林業行政專區建築
+PRR_SUB_OIL,專業化石化工業行政專區建
+PRR_SUB_ORE,專業化礦業行政專區建築
+PRR_FTR_ALL,全選
+PRR_FTR_NON,全不選
+PRR_FTR_NAM,名稱
+PRR_FTR_SET,過濾器設置：模組(Mod)/作者/本地/任意
+PRR_OPT_SET,設置
+PRR_OPT_MOD,模組(Mod)
+PRR_OPT_AUT,作者
+PRR_OPT_LOC,本地
+PRR_OPT_ENA,啟用為可放置型(RICO)建築
+PRR_OPT_SER,建築類型
+PRR_OPT_SUB,建築子級
+PRR_OPT_UIC,建築界面分類
+PRR_OPT_CST,建造花費
+PRR_OPT_CNT,勞工(工人)/居民
+PRR_OPT_POP,使用“真實人口(Realistic Population)”模組(Mod)
+PRR_OPT_POL,啟用建築汙染擴散
+PRR_OPT_GRO,建築可成長(Growable)功能
+PRR_OPT_JB0,未受教育之職缺
+PRR_OPT_JB1,受普通教育之職缺
+PRR_OPT_JB2,受良好教育之職缺
+PRR_OPT_JB3,受高等教育之職缺
+PRR_OPT_URP,因為 ”真實人口(Realistic Population)“ 選項已開啟，所以人口設置功能已禁用。
+PRR_CAT_MON,獨特建築
+PRR_CAT_BEA,城市美化
+PRR_CAT_EDU,教育系統
+PRR_CAT_HEA,醫療保健系統
+PRR_CAT_POW,供電系統
+PRR_CAT_WAT,供水汙水處理供暖系統
+PRR_CAT_RES,住宅區
+PRR_CAT_COM,商業區
+PRR_CAT_OFF,辦公區
+PRR_CAT_IND,工業區
+PRR_UIC_REL,低密度住宅區
+PRR_UIC_REH,高密度住宅區
+PRR_UIC_COL,低密度商業區
+PRR_UIC_COH,高密度商業區
+PRR_UIC_OFF,辦公區
+PRR_UIC_IND,工業區
+PRR_UIC_FAR,專業化農牧業行政專區
+PRR_UIC_FOR,專業化林業行政專區
+PRR_UIC_OIL,專業化石化工業行政專區
+PRR_UIC_ORE,專業化礦業行政專區
+PRR_UIC_LEI,專業化休閒娛樂行政專區
+PRR_UIC_TOU,專業化觀光旅遊行政專區
+PRR_UIC_ORG,專業化本土製造服務和有機農業行政專區
+PRR_UIC_ITC,專業化IT產業行政專區
+PRR_UIC_ECO,專業化自給住宅行政專區
+PRR_UIC_NON,全不選
+PRR_SET,設置
+PRR_SET_RICO,可放置型(RICO)設置
+PRR_SET_HASMOD,模組(Mod)設置
+PRR_SET_NOMOD,沒有模組(Mod)設置
+PRR_SET_HASAUT,作者設置
+PRR_SET_NOAUT,沒有作者設置
+PRR_SET_HASLOC,本地設置
+PRR_SET_NOLOC,沒有本地設置
+PRR_SET_HASANY,任意設置
+PRR_SET_HASNON,無設置
+PRR_SAV_SAV,保存設訂
+PRR_SAV_ADD,添加此建築設訂到全局文檔
+PRR_SAV_REM,從全局文檔中刪除此建築設訂
+PRR_SAV_APP,保存並即刻添加此建築設訂到對應界面
+PRR_EXP,注意：本“Real-Time”功能仍為測試版
+TRN_CHOICE,語言設置
+TRN_SYS,使用遊戲默認語言
+PRR_DESCRIPTION,允許可放置型(RICO)建築大於4x4區域尺吋和可客制化
+PRR_OPTION_PLP,即刻放置可成長型(Growable)建築(無建造動畫)
+PRR_OPTION_ZON,可成長型(Growable)建築可放置在非區域分配以外的任何地方
+PRR_OPTION_SPC,可成長型(Growable)建築可在專業化行政專區以外的任何地方存在
+PRR_OPTION_VAL,忽略 “地價過低” 抱怨
+PRR_OPTION_SVC,忽略 “大眾服務過少” 抱怨
+PRR_OPTION_HST,設置所有已放置的可成長型(Growable)建築為“歷史建築”
+PRR_OPTION_BLC,使用 ”高級建築等級控制(Advanced Building Level Control)“ 模組(Mod)鎖定即刻放置可成長型(Growable)建築等級。
+PRR_OPTION_RPL,可放置型(RICO)建築
+PRR_OPTION_RGR,可放置型(RICO)建築
+PRR_OPTION_RCO,所有可放置型(RICO)建築(包括可成長型(Growable)建築)
+PRR_OPTION_OTH,非可放置型(RICO)可成長型(Growable)建築
+PRR_OPTION_DEM,移除設置
+PRR_OPTION_BDZ,在移除可放置型(RICO)建築前詢問
+PRR_OPTION_IMP,允許可放置型(RICO)建築可被自動移除(例如建造道路覆蓋或其他建築覆蓋)
+PRR_OPTION_CST,花費設置
+PRR_OPTION_COV,覆蓋建築花費
+PRR_OPTION_CPH,每戶花費
+PRR_OPTION_CHM,每戶等級的額外花費倍率 (%)
+PRR_OPTION_CJ0,每個未受教育的職位花費
+PRR_OPTION_CJ1,每個受過普通教育的職位花費
+PRR_OPTION_CJ2,每個受過良好教育的職位花費
+PRR_OPTION_CJ3,每個受過高等教育的職位花費
+PRR_OPTION_LOA,讀取設置
+PRR_OPTION_LOG,日誌設置
+PRR_OPTION_TMB,縮略圖設置
+PRR_OPTION_PLO,可放置型(RICO)設置
+PRR_OPTION_GRO,可成長型(Growable)設置
+PRR_OPTION_COM,抱怨設置
+PRR_OPTION_MOD,模組(Mod)設置
+PRR_OPTION_MOREDEBUG,啟用額外的除錯日誌記錄
+PRR_OPTION_FORCERESET,在遊戲加載時強制重置現有建築統計數值
+PRR_OPTION_REGENTHUMBS,重創建特寫式資訊縮略圖
+PRR_OPTION_SPDHDR,此功能提升遊戲效能， 但會導致開啟界面時延遲：
+PRR_OPTION_SPEED,界面未激活時轉入後臺待命(無須每幀即時更新)
+PRR_OPTION_FASTHDR,渲染縮略圖更加快速，但會佔用更多記憶體：
+PRR_OPTION_FASTHUMB,加速渲染縮略圖
+PRR_OPTION_THUMBACK,縮略圖背景
+PRR_THUMB_COLOR,純色
+PRR_THUMB_PLAIN,面板顏色
+PRR_THUMB_SKY,天空環境
+MES_CLS,關閉
+MES_DSA,不在顯示
+MES_PAGE,請參閱模組(Mod)在Steam工作坊的頁面以獲得更多資訊。
+PRR_ERR_FAT,這意味著模組(Mod)將無法正常使用，並且已關閉。
+PRR_ERR_HAR,“Ploppable RICO Revisited” 模組(Mod) 無法完成因為它須要 “Harmony” 擴展文檔。
+ERR_HAR0,“Harmony” 擴展文檔錯誤
+ERR_HAR1,此問題有可能包括的原因：
+ERR_HAR2,“Harmony 2” 擴展文檔模組(Mod)沒有訂閱。
+ERR_HAR3,一些老的或壞的模組(Mod)導致 “Harmony 2” 擴展文檔模組(Mod)無法正常運轉。
+ERR_CON0,檢測到模組(Mod)衝突！
+ERR_CON1,有衝突的模組(Mod)：
+PRR_ERR_CON0,“Ploppable RICO Revisited” 模組(Mod)檢測到與至少一個其他模組(Mod)發生衝突。
+PRR_ERR_CON1,這些模組(Mod)必須退訂才能讓 “Ploppable RICO Revisited” 模組(Mod)正常運轉。
+PRR_CON_PTG0,發現 “Plop the Growables” 模組(Mod)
+PRR_CON_PTG1,發現 “Plop the Growables” 模組(Mod) - 這個模組早已經不須要，並且與“Ploppable RICO Revisited” 模組(Mod)不相容。最好不要同時使用這兩個模組，以免造成很多衝突和問題。
+PRR_CON_PTG2,可以同時使用它們，但是必須確定沒有同時開啟這些模組(Mod)中相同的功能！
+PRR_UPD_23_0,“Ploppable RICO Revisited” 模組(Mod)已更新至2.3.7版本。
+PRR_UPD_23_1,“Ploppable RICO Revisited” 模組(Mod)已更新至版本2.3.7。此更新的一些关键功能是：
+PRR_UPD_23_2,“Ploppable RICO Revisited” 模組(Mod) 現在已經包含了 “Plop the Growables” 模組(Mod)的功能可用於可放置型(RICO)建築和非可放置型(RICO)建築 - 細節可查看選項設置面板
+PRR_UPD_23_3,可成長型(Growable)現在可以放置在非區域分配之外的任何地方(可配置)。
+PRR_UPD_23_4,“地價過低” 和 “大眾服務過少” 抱怨現在可以取消提示。
+PRR_UPD_23_5,改進的建築縮略圖渲染器，現在僅根據需要而生成縮略圖，從而減少記憶體使用並縮短加載時間。
+PRR_UPD_234_0,添加一個選項用於在可放置型(RICO)建築被移除時啟用或禁用提示。
+PRR_UPD_234_1,添加一個選項用於可放置型(RICO)建築在建造別的建築時被自動移除時啟用或禁用提示。
+PRR_UPD_234_2,改進的更新通知。
+PRR_UPD_235_0,可成長型(Growable)選項現在增加了 “Plop the Growables” 功能默認開啟(不影響現有設置)。
+PRR_UPD_235_1,添加警告如果 “Plop the Growables” 模組(Mod)已開啟中。
+PRR_UPD_235_2,改進模組(Mod)衝突和錯誤通知。
+PRR_UPD_236_0,改進模組(Mod)衝突和錯誤通知。
+PRR_UPD_237_0,修復當加載到編輯器中時 “Harmony” 擴展文檔錯誤訊息提示。

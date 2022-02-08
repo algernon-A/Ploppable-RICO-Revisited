@@ -1,0 +1,177 @@
+CODE,de
+NAME,Deutsch
+PRR_NAME,Ploppable RICO Revisited
+PRR_LEVEL,Stufe
+PRR_LVL,St.
+PRR_HOU,Haushalte
+PRR_WOR,Arbeitsplätze
+PRR_SRV_NON,Ohne Spezialisierung
+PRR_SRV_RES,Wohnen
+PRR_SRV_IND,Industrie
+PRR_SRV_OFF,Büro
+PRR_SRV_COM,Gewerbe
+PRR_SRV_EXT,Rohstoffförderung
+PRR_SRV_DUM,Ohne Funktion
+PRR_SUB_HIG,Dicht bebaut
+PRR_SUB_LOW,Gering bebaut
+PRR_SUB_HEC,Großgewerbe ökologisch
+PRR_SUB_LEC,Kleingewerbe ökologisch
+PRR_SUB_LEI,Freizeit
+PRR_SUB_TOU,Tourismus
+PRR_SUB_ORG,Lokale Herstellung
+PRR_SUB_GEN,Standard
+PRR_SUB_ITC,IT-Unternehmen
+PRR_SUB_FAR,Landwirtschaft
+PRR_SUB_FOR,Forstwirtschaft
+PRR_SUB_OIL,Öl
+PRR_SUB_ORE,Erz
+PRR_FTR_ALL,Alle Kategorien
+PRR_FTR_NON,Keine Kategorie
+PRR_FTR_NAM,Name/Bezeichnung
+PRR_FTR_SET,Filtern nach: Mod/Ersteller/Lokal/Alle
+PRR_OPT_SET,RICO Einstellungen
+PRR_OPT_MOD,Mod
+PRR_OPT_AUT,Autor
+PRR_OPT_LOC,Lokale Einstellungen
+PRR_OPT_ENA,RICO aktivieren
+PRR_OPT_SER,Gebäudeart
+PRR_OPT_SUB,Unterart
+PRR_OPT_UIC,UI-Kategorie
+PRR_OPT_CST,Baukosten
+PRR_OPT_CNT,Arbeiter-/Hauhaltsanzahl
+PRR_OPT_POP,„Realistic Pop“-Mod nutzen
+PRR_OPT_POL,Verschmutzung aktivieren
+PRR_OPT_GRO,Aufstufend
+PRR_OPT_JB0,Ungebildete Arbeitskräfte
+PRR_OPT_JB1,Gebildete Arbeitskräfte
+PRR_OPT_JB2,Gut gebildete Arbeitskräfte
+PRR_OPT_JB3,Hochgebildete Arbeitskräfte
+PRR_OPT_URP,Bewohner-Einstellungen sind deaktiviert weil die Realistic Population Funktion eingeschaltet ist
+PRR_CAT_MON,Monumente
+PRR_CAT_BEA,Verschönerung
+PRR_CAT_EDU,Bildung
+PRR_CAT_HEA,Gesundheit
+PRR_CAT_FIR,Brandschutz
+PRR_CAT_POL,Polizei
+PRR_CAT_POW,Strom
+PRR_CAT_WAT,Wasser
+PRR_CAT_GAR,Müll
+PRR_CAT_PIN,Player industry
+PRR_CAT_RES,Wohngebiet
+PRR_CAT_COM,Geschäftsviertel
+PRR_CAT_OFF,Büro
+PRR_CAT_IND,Industrie
+PRR_UIC_REL,Gering besiedeltes Wohngebiet
+PRR_UIC_REH,Dicht besiedeltes Wohngebiet
+PRR_UIC_COL,Gering besiedeltes Gewerbegebiet
+PRR_UIC_COH,Dicht besiedeltes Gewerbegebiet
+PRR_UIC_OFF,Büro
+PRR_UIC_IND,Industrie
+PRR_UIC_FAR,Landwirtschaft
+PRR_UIC_FOR,Forstwirtschaft
+PRR_UIC_OIL,Öl
+PRR_UIC_ORE,Erz
+PRR_UIC_LEI,Unterhaltung
+PRR_UIC_TOU,Tourismus
+PRR_UIC_ORG,Lokale Herstellung
+PRR_UIC_ITC,IT-Cluster
+PRR_UIC_ECO,Selbstversorgende Wohngebäude
+PRR_UIC_NON,Keine Vorgaben
+PRR_SET,Einstellungen
+PRR_SET_RICO,RICO-Einstellungen
+PRR_SET_HASMOD,Mod-Einstellungen
+PRR_SET_NOMOD,Keine Mod-Einstellungen
+PRR_SET_HASAUT,Ersteller-Einstellungen
+PRR_SET_NOAUT,Keine Ersteller-Einstellungen
+PRR_SET_HASLOC,Lokale Einstellungen
+PRR_SET_NOLOC,Keine lokalen Einstellungen
+PRR_SET_HASANY,Alle Einstellungen
+PRR_SET_HASNON,Keine Einstellungen
+PRR_SAV_SAV,Speichern
+PRR_SAV_ADD,Lokale Einstellungen hinzufügen
+PRR_SAV_REM,Lokale Einstellungen entfernen
+PRR_SAV_APP,Speichern und anwenden
+PRR_EXP,ACHTUNG: EXPERIMENTELL
+TRN_CHOICE,Sprache ändern
+TRN_SYS,Systemsprache verwenden
+PRR_DESCRIPTION,Lässt RICO-Gebäude mit einem Grundriss größer als 4 × 4 zu sowie RICO-Bearbeitung
+PRR_OPTION_PLP,Erstelle aufstufende Gebäude sofort (ohne Konstruktionsanimation)
+PRR_OPTION_ZON,Gebäude bleiben außerhalb ihrer ursprünglichen Zone bestehen
+PRR_OPTION_SPC,Gebäude bleiben ohne ihre ursprünglichen Zone bestehen
+PRR_OPTION_VAL,Ignoriert Beschwerde über zu geringen Bodenrichtwert
+PRR_OPTION_SVC,Ignoriert Beschwerde über zu wenige Dienstleistungen 
+PRR_OPTION_HST,Alle platzierten Gebäude werden historisch
+PRR_OPTION_BLC,Level von platzierten Gebäuden mit Advanced Building Level Control steuern
+PRR_OPTION_RPL,RICO platzierbare Gebäude
+PRR_OPTION_RGR,RICO aufstufende Gebäude
+PRR_OPTION_RCO,Alle RICO Gebäude (inklusive Aufstufende)
+PRR_OPTION_OTH,Nicht-RICO aufstufende Gebäude
+PRR_OPTION_DEM,Abriss-Einstellungen (gilt nicht für historische Gebäude)
+PRR_OPTION_BDZ,Fragen bevor ein platziertes RICO Gebäude abgerissen wird
+PRR_OPTION_IMP,Erlaube platzierte RICO Gebäuden automatisch abzureissen
+PRR_OPTION_IMP2,(z.B. wenn andere Straßen oder Gebäude gesetzt werden)
+PRR_OPTION_CST,Kosten-Einstellungen
+PRR_OPTION_COV,Gebäudekosten überschreiben
+PRR_OPTION_CPH,Kosten je Haushalt
+PRR_OPTION_CHM,Zusätzlicher Multiplikator pro Haushalt-Level (%)
+PRR_OPTION_CJ0,Kosten je ungebildetem Arbeiter
+PRR_OPTION_CJ1,Kosten je gebildetem Arbeiter
+PRR_OPTION_CJ2,Kosten je gut gebildetem Arbeiter
+PRR_OPTION_CJ3,Kosten je hochgebildetem Arbeiter
+PRR_OPTION_LOA,Lade-Einstellungen
+PRR_OPTION_LOG,Protokoll-Einstellungen
+PRR_OPTION_TMB,Miniaturansicht-Einstellungen
+PRR_OPTION_PLO,Einstellungen für platzierbare Gebäude
+PRR_OPTION_GRO,Einstellungen für aufstufende Gebäude
+PRR_OPTION_COM,Beschwerde-Einstellungen
+PRR_OPTION_MOD,Mod-Einstellungen
+PRR_OPTION_NOT,Benachrichtigungs-Einstellungen
+PRR_OPTION_WHATSNEW,"Zeige an, was neu ist"
+PRR_OPTION_MOREDEBUG,Zusätzliche Debugging-Protokolle
+PRR_OPTION_FORCERESET,Bestehende Gebäudewerte werden beim Laden immer zurückgesetzt
+PRR_OPTION_REGENTHUMBS,Thumbnails erneuern
+PRR_OPTION_SPDHDR,"Erhöht die Spielgeschwindigkeit etwas, sorgt aber für eine Verzögerung beim Öffnen des Menüs"
+PRR_OPTION_SPEED,"Menü deaktivieren, wenn es nicht verwendet wird"
+PRR_OPTION_FASTHDR,"Vorschaubilder werden schneller gerendert, benötigt allerdings mehr Speicher"
+PRR_OPTION_FASTHUMB,Rendert Miniaturansichten mit erhöhter Geschwindigkeit
+PRR_OPTION_THUMBACK,Hintegrundfarbe Miniaturansicht
+PRR_THUMB_COLOR,Farbe
+PRR_THUMB_PLAIN,Grau
+PRR_THUMB_SKY,Skybox
+MES_CLS,Schließen
+MES_DSA,Nicht mehr anzeigen
+MES_PAGE,Bitte besuche die Steam Workshop Seite dieses Mods für weitere Informationen.
+PRR_ERR_FAT,"Das bedeutet, dass die Mod nicht funktioniert und sich deaktiviert hat."
+PRR_ERR_HAR,Ploppable RICO Revisited konnte die benötigten Harmony-Patches nicht beenden.
+ERR_HAR0,Harmony Patching-Fehler
+ERR_HAR1,Mögliche Gründe für das Problem sind:
+ERR_HAR2,Die benötigte Mod Harmony 2 ist nicht installiert
+ERR_HAR3,"Eine alte und/oder kaputte Mod verhindert, dass Harmony 2 richtig funktioniert"
+ERR_CON0,Mod-Konflikt entdeckt!
+ERR_CON1,Die folgenden Mods sind betroffen:
+PRR_ERR_CON0,Ploppable RICO Revisited hat einen Konflikt mit mindestens einer anderen Mod entdeckt.
+PRR_ERR_CON1,"Diese Mods müssen entfernt werden, damit Ploppable RICO Revisited funktionieren kann."
+PRR_CON_PTG0,Plop the Growables Mod entdeckt
+PRR_CON_PTG1,"Plop the Growables mod entdeckt - die meisten Funktionen dieser Mod sind in Ploppable RICO Revisited bereits eingebaut. Es ist vorsicht geboten, diese zwei Mods gemeinsam zu verwenden, da ihre Einstellungen in Konflikt geraten können."
+PRR_CON_PTG2,"Wenn ALLE Einstellungen übereinstimmen, könnten beide Mods nebeneinander verwendet werden, ohne dass es zu Konflikten kommt!"
+PRR_UPD_23_0,Ploppable RICO Revisited Update 2.3
+PRR_UPD_23_1,Ploppable RICO Revisited wurde auf Version 2.3 geupdatet. Einige wichtige Neuerungen:
+PRR_UPD_23_2,Ploppable RICO beinhaltet nun 'Plop the Growables'-Stil Funktionen sowohl für RICO als auch non-RICO Gebäude - Siehe Einstellungen für weitere Details.
+PRR_UPD_23_3,RICO aufstufende Gebäude können nun außerhalb von Zonen platziert werden (Einstellbar).
+PRR_UPD_23_4,Beschwerden über „zu geringer Bodenrichtwert“ und „nicht genügend Dienstleistungen“ können nun deaktiviert werden.
+PRR_UPD_23_5,"Gebäude Miniaturansichten-Erstellung optimiert, so dass nun nur benötigte Bilder erstellt werden. Die reduziert den Speicherverbrauch und verbessert die Ladezeiten."
+PRR_UPD_234_0,"Einstellbare Funktion hinzugefügt, um eine Warnung vor dem Abriss eines platzierten RICO Gebäudes zu erhalten."
+PRR_UPD_234_1,"Funktion hinzugefügt, um den automatischen Abriss eines platzierten RICO Gebäudes beim Überbauen zu ermöglichen oder abzuschalten."
+PRR_UPD_234_2,Verbesserte Benachrichtigungen über Neuerungen.
+PRR_UPD_235_0,Einstellungen für aufstufende Gebäude hat nun standardmäßig 'Plop the Growables' Verhalten aktiviert (verändert nicht bestehende Einstellungen).
+PRR_UPD_235_1,"Warnung hinzugefügt, wenn 'Plop the Growables' Mod ebenfalls aktiv ist."
+PRR_UPD_235_2,Verbesserte Mod-Konflikte und Fehler-Benachrichtigung.
+PRR_UPD_236_0,Verbesserte Mod-Konflikte-Erkennung und Benachrichtigung.
+PRR_UPD_237_0,Fälschlicherweise angezeigte Harmony Fehler Benachrichtigung beim öffnen des Editors behoben.
+PRR_UPD_240_0,Kosten-Einstellungen überschreiben hinzugefügt.
+PRR_UPD_240_1,Funktion hinzugefügt um die Stufe von auflevelnden Gebäuden automatisch festzusetzen (benötigt Advanced Building Level Control Mod).
+PRR_UPD_240_2,Auswahl-Menü für Mod/Autor/Lokale Einstellungen in den Mod-Einstellungen hinzugefügt (um andere als die gerade aktiven Einstellungen anzuzeigen).
+PRR_UPD_240_3,"Bewohneranzahl Textfeld wird deaktiviert, wenn die 'Realistic Pop-Mod' Funktion aktiviert ist."
+PRR_UPD_241_0,Verbesserte Unterstützung von historischen Gebäuden mit unterschiedlichen Stufen
+PRR_UPD_242_0,Dienstleistungs-Gebäude sind im RICO Einstellungs-Auswahl nicht mehr standardmässig sichtbar
+PRR_UPD_243_0,Funktion zum Ausschalten von Aktualisierungs-Benachrichtigungen hinzugefügt
