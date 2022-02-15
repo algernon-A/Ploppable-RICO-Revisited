@@ -1,4 +1,7 @@
-﻿- Convert translation framework to CSV (for CrowdIn)
+﻿Version 2.4.11 -
+
+- Convert translation framework to CSV (for CrowdIn)
+- Update CitiesHarmony API to 2.1.0 (Harmony 2.2)
 
 
 Version 2.4.10.2 -
