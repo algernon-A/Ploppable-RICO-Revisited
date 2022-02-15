@@ -1,166 +1,179 @@
-CODE,pl
-NAME,Polski
-PRR_NAME,Ręcznie stawiane budunki RICO odnowiony mod
-PRR_LEVEL,Poziom
-PRR_LVL,Poz.
-PRR_HOU,Gospodarstwa domowe
-PRR_WOR,Miejsca pracy
-PRR_SRV_NON,Brak
-PRR_SRV_RES,Mieszkalne
-PRR_SRV_IND,Przemysłowe
-PRR_SRV_OFF,Biurowe
-PRR_SRV_COM,Handlowe
-PRR_SRV_EXT,Wydobycie
-PRR_SRV_DUM,Wyłączony
-PRR_SUB_HIG,Wysoka
-PRR_SUB_LOW,Niska
-PRR_SUB_HEC,Wysoka eko
-PRR_SUB_LEC,Niska eko
-PRR_SUB_LEI,Rozrywka i wypoczynek
-PRR_SUB_TOU,Turystyka
-PRR_SUB_ORG,Ekologiczna
-PRR_SUB_GEN,Zwykła
-PRR_SUB_ITC,Dziedzina IT
-PRR_SUB_FAR,Rolnictwo
-PRR_SUB_FOR,Leśnictwo
-PRR_SUB_OIL,Przemysł naftowy
-PRR_SUB_ORE,Przemysł górniczy
-PRR_FTR_ALL,Wszystkie
-PRR_FTR_NON,Żadne
-PRR_FTR_NAM,Nazwa
-PRR_FTR_SET,Filtr ustawień: Mod/Autor/Własne/Dowolne
-PRR_OPT_SET,Ustawienia
-PRR_OPT_MOD,Mod
-PRR_OPT_AUT,Autor
-PRR_OPT_LOC,Własne
-PRR_OPT_ENA,Włącz RICO
-PRR_OPT_SER,Typ
-PRR_OPT_SUB,Podtyp
-PRR_OPT_UIC,Kategoria UI
-PRR_OPT_CST,Koszt budowy
-PRR_OPT_CNT,Liczba mieszkańców/pracowników
-PRR_OPT_POP,Użyj moda Realistic Pop
-PRR_OPT_POL,Włącz zanieczyszczenie
-PRR_OPT_GRO,Rozwijalny
-PRR_OPT_JB0,Niewyedukowani
-PRR_OPT_JB1,Wyedukowani
-PRR_OPT_JB2,Dobrze wyedukowani
-PRR_OPT_JB3,Bardzo dobrze wyedukowani
-PRR_OPT_URP,"Ustawienia populacji są wyłączone, bo opcja Realistyczna Populacja jest włączona"
-PRR_CAT_MON,Monumenty
-PRR_CAT_BEA,Upiększanie
-PRR_CAT_EDU,Edukacja
-PRR_CAT_HEA,Zdrowie
-PRR_CAT_FIR,Straż pożarna
-PRR_CAT_POL,Policja
-PRR_CAT_POW,Elektryczność
-PRR_CAT_WAT,Woda
-PRR_CAT_GAR,Odpady
-PRR_CAT_PIN,Przemysł gracza
-PRR_CAT_RES,Mieszkalne
-PRR_CAT_COM,Handlowe
-PRR_CAT_OFF,Biurowe
-PRR_CAT_IND,Przemysłowe
-PRR_UIC_REL,Mieszkalne o niskiej gęstości
-PRR_UIC_REH,Mieszkalne o dużej gęstości
-PRR_UIC_COL,Budynki handlowe o niskiej gęstości
-PRR_UIC_COH,Budynki handlowe o dużej gęstości
-PRR_UIC_OFF,Biurowe
-PRR_UIC_IND,Przemysł
-PRR_UIC_FAR,Rolnictwo
-PRR_UIC_FOR,Leśnictwo
-PRR_UIC_OIL,Przemysł naftowy
-PRR_UIC_ORE,Przemysł górniczy
-PRR_UIC_LEI,Rozrywka i wypoczynek
-PRR_UIC_TOU,Turystyka
-PRR_UIC_ORG,Sklepy z produktami ekologicznymi
-PRR_UIC_ITC,Dziedzina IT
-PRR_UIC_ECO,Domy samowystarczalne
-PRR_UIC_NON,Brak
-PRR_SET,Ustawienia
-PRR_SET_RICO,Ustawienia RICO
-PRR_SET_HASMOD,Ustawienia moda
-PRR_SET_NOMOD,Brak ustawień moda
-PRR_SET_HASAUT,Ustawienia autora
-PRR_SET_NOAUT,Brak ustawień autora
-PRR_SET_HASLOC,Ustawienia gracza
-PRR_SET_NOLOC,Brak własnych ustawień
-PRR_SET_HASANY,Dowolne ustawienia
-PRR_SET_HASNON,Brak ustawień
-PRR_SAV_SAV,Zapisz
-PRR_SAV_ADD,Dodaj własne ustawienia
-PRR_SAV_REM,Usuń własne ustawienia
-PRR_SAV_APP,Zapisz i zatwierdź zmiany
-PRR_EXP,UWAGA: EKSPERYMENTALNE
-TRN_CHOICE,Ustaw język
-TRN_SYS,Użyj języka systemu
-PRR_DESCRIPTION,Pozwala na budunki RICO większe niż 4x4 i na personalizację budynków RICO
-PRR_OPTION_PLP,Natychmiast umieść budynki rozwijalne (brak konstrukcji)
-PRR_OPTION_ZON,Budynki rozwijalne mogą istnieć poza dozwoloną strefą
-PRR_OPTION_SPC,Budynki rozwijalne mogą istnieć poza wymaganą specjalizacją
-PRR_OPTION_VAL,Ignoruj problem 'niskiej wartości ziemi'
-PRR_OPTION_SVC,Ignoruj problem 'zbyt niskich usług komunalnych'
-PRR_OPTION_HST,Zamień wszystkie ręcznie umieszczone budynki rozwijalne na zabytki
-PRR_OPTION_BLC,Zablokuj poziomy użytych rozwijalnych używając Advanced Building Level Control
-PRR_OPTION_RPL,Ręcznie umieszczone budynki RICO
-PRR_OPTION_RGR,Budynki RICO samopojawiające się w strefach
-PRR_OPTION_RCO,Wszystkie budynki RICO (w tym rozwijalne)
-PRR_OPTION_OTH,Rozwijalne budynki nie-RICO
-PRR_OPTION_DEM,Opcje wyburzania (nie ma wpływu na budynki historyczne)
-PRR_OPTION_BDZ,Potwierdzenie wymagane do wyburzenia budynków nierozwijalnych (ręcznie stawianych)
-PRR_OPTION_IMP,Zezwalaj na automatyczne wyburzanie ręcznie ustawionych budynków RICO (np. podczas budowy drogi albo stawiania innych budynków)
-PRR_OPTION_IMP2,(np. przy budowe dróg i innych budynków)
-PRR_OPTION_CST,Opcje kosztów
-PRR_OPTION_COV,Nadpisz koszt budynku
-PRR_OPTION_CPH,Koszt za mieszkanie
-PRR_OPTION_CHM,Dodatkowy mnożnik za poziom mieszkania (%)
-PRR_OPTION_CJ2,Dodatkowy multiplikator na poziom gospodarstwa
-PRR_OPTION_LOA,Opcje wczytywania
-PRR_OPTION_LOG,Opcje logowania
-PRR_OPTION_TMB,Opcje miniaturek
-PRR_OPTION_PLO,Opcje budynków ręcznie stawianych
-PRR_OPTION_GRO,Opcje budynków samopojawiających się
-PRR_OPTION_COM,Opcje zgłaszanych problemów
-PRR_OPTION_MOD,Opcje modyfikacji
-PRR_OPTION_NOT,Opcje powiadomień
-PRR_OPTION_MOREDEBUG,Włącz dodatkowe logi błędów
-PRR_OPTION_FORCERESET,Wymuś reset statystyk budynków przy wczytywaniu gry
-PRR_OPTION_REGENTHUMBS,Odtwórz miniaturki
-PRR_OPTION_SPDHDR,"Przyspiesza grę, otwieranie panelu zajmie więcej czasu"
-PRR_OPTION_SPEED,"Wyłącz panel, jeśli nie jest w użyciu"
-PRR_OPTION_FASTHDR,"Szybciej renderuje miniaturki, potrzebuje więcej pamięci."
-PRR_OPTION_FASTHUMB,Przyspieszone renderowanie miniaturek
-PRR_OPTION_THUMBACK,Tła miniaturek
-PRR_THUMB_COLOR,Kolor
-PRR_THUMB_PLAIN,Bez koloru
-PRR_THUMB_SKY,Wygląd nieba
-MES_CLS,Zamknij
-MES_DSA,Nie pokazuj więcej
-MES_PAGE,Proszę o wyszukanie więcej informacji na stronie moda na Steam Workshop
-PRR_ERR_FAT,Ten mod nie będzie działał.
-PRR_ERR_HAR,Ploppable RICO Revisited nie mógł ukończyć tego zadania bez aktualizacji moda 'Harmony'.
-ERR_HAR0,Bład aktualizacji moda 'Harmony'
-ERR_HAR1,Rzeczy prawdodpodobnie sprawiające problem:
-ERR_HAR2,Wymagany mod 'Harmony 2' nie został zainstalowany
-ERR_HAR3,Stary i/lub uszkodzony mod blokuje 'Harmony 2' przed prawidłowym działaniem.
-ERR_CON0,Wykryto konflikt modów!
-ERR_CON1,Kolidujące mody to:
-PRR_ERR_CON0,Mod Ploppable RICO Revisited wykrył konflikt z przynajmniej jednym modem.
-PRR_ERR_CON1,Następujące mody muszą być usunięte żeby mod Ploppable RICO Revisited zaczął działać.
-PRR_CON_PTG0,Mod Plop the Growables wykryty
-PRR_CON_PTG1,Mod Plop the Growables wykryty - większość funkcji tego moda została włączona do Ploppable RICO Revisited. Proszę być ostrożnym w używaniu obu modów ponieważ ich ustawienia mogą kolidować.
-PRR_CON_PTG2,Można nadal używać obu modów razem - JEŚLI ich ustawienia nie konfliktują ze sobą!
-PRR_UPD_23_0,Ploppable RICO Revisited aktualizacja 2.3
-PRR_UPD_23_1,Ploppable RICO Revisited został zaktualizowany do wersji 2.3. Niektóre elementy tej aktualizacji:
-PRR_UPD_23_2,RICO zawiera teraz funkcję 'Postaw Budynki Rozwijalne' działającą dla obu typów budynków RICO oraz nie-RICO. Sprawdź panel opcji aby zapoznać się zeszczegółami.
-PRR_UPD_23_3,Rozwijalne budynki RICO mogą być teraz ustawiane poza ich strefami (konfigurowalne).
-PRR_UPD_23_4,"Skargi ""niska wartość gruntów"" i ""niewystarczajace usługi"" można teraz wyłączyć."
-PRR_UPD_23_5,"Usprawniono renderer miniaturek budynków, który tworzy teraz obrazy kiedy są potrzebne, redukując użycie pamięci and poprawiając czas wgrywania."
-PRR_UPD_234_0,Dodaj opcję włączenia lub wyłączenia ostrzeżeń przed wyburzeniem budynków RICO ustawionych ręcznie.
-PRR_UPD_234_1,Dodaj opcję włączenia lub wyłączenia autowyburzania podczas budowania na budynkach RICO ustawianych ręcznie.
-PRR_UPD_234_2,Usprawnione powiadomienia o aktualizacji.
-PRR_UPD_235_0,Rozwijalne budynki zachowują się teraz domyślnie tak jak Plop the Growables (nie wpływa to na dotychczasowe ustawienia).
-PRR_UPD_235_1,"Dodaj ostrzeżenie jeśli mod ""Plop The Growables"" jest także włączony."
-PRR_UPD_235_2,Usprawnione powiadomienia o niezgodnych modach i błędach.
-PRR_UPD_236_0,Usprawnione wykrywanie konfliktów między modami i powiadomienia o nich.
-PRR_UPD_237_0,"Poprawiony komunikat o błędzie w związku z modem ""Harmony"" pokazującym się niepoprawnie podczas wczytywania w Edytorze gry."
+"CODE","pl"
+"NAME","Polski"
+"PRR_NAME","Ręcznie stawiane budunki RICO odnowiony mod"
+"PRR_LEVEL","Poziom"
+"PRR_LVL","Poz."
+"PRR_HOU","Gospodarstwa domowe"
+"PRR_WOR","Miejsca pracy"
+"PRR_SRV_NON","Brak"
+"PRR_SRV_RES","Mieszkalne"
+"PRR_SRV_IND","Przemysłowe"
+"PRR_SRV_OFF","Biurowe"
+"PRR_SRV_COM","Handlowe"
+"PRR_SRV_EXT","Wydobycie"
+"PRR_SRV_DUM","Wyłączony"
+"PRR_SUB_HIG","Wysoka"
+"PRR_SUB_LOW","Niska"
+"PRR_SUB_HEC","Wysoka eko"
+"PRR_SUB_LEC","Niska eko"
+"PRR_SUB_LEI","Rozrywka i wypoczynek"
+"PRR_SUB_TOU","Turystyka"
+"PRR_SUB_ORG","Ekologiczna"
+"PRR_SUB_GEN","Zwykła"
+"PRR_SUB_ITC","Dziedzina IT"
+"PRR_SUB_FAR","Rolnictwo"
+"PRR_SUB_FOR","Leśnictwo"
+"PRR_SUB_OIL","Przemysł naftowy"
+"PRR_SUB_ORE","Przemysł górniczy"
+"PRR_FTR_ALL","Wszystkie"
+"PRR_FTR_NON","Żadne"
+"PRR_FTR_NAM","Nazwa"
+"PRR_FTR_SET","Filtr ustawień: Mod/Autor/Własne/Dowolne"
+"PRR_OPT_SET","Ustawienia"
+"PRR_OPT_MOD","Mod"
+"PRR_OPT_AUT","Autor"
+"PRR_OPT_LOC","Własne"
+"PRR_OPT_ENA","Włącz RICO"
+"PRR_OPT_SER","Typ"
+"PRR_OPT_SUB","Podtyp"
+"PRR_OPT_UIC","Kategoria UI"
+"PRR_OPT_CST","Koszt budowy"
+"PRR_OPT_CNT","Liczba mieszkańców/pracowników"
+"PRR_OPT_POP","Użyj moda Realistic Pop"
+"PRR_OPT_POL","Włącz zanieczyszczenie"
+"PRR_OPT_GRO","Rozwijalny"
+"PRR_OPT_JB0","Niewyedukowani"
+"PRR_OPT_JB1","Wyedukowani"
+"PRR_OPT_JB2","Dobrze wyedukowani"
+"PRR_OPT_JB3","Bardzo dobrze wyedukowani"
+"PRR_OPT_URP","Ustawienia populacji są wyłączone, bo opcja Realistyczna Populacja jest włączona"
+"PRR_CAT_MON","Monumenty"
+"PRR_CAT_BEA","Upiększanie"
+"PRR_CAT_EDU","Edukacja"
+"PRR_CAT_HEA","Zdrowie"
+"PRR_CAT_FIR","Straż pożarna"
+"PRR_CAT_POL","Policja"
+"PRR_CAT_POW","Elektryczność"
+"PRR_CAT_WAT","Woda"
+"PRR_CAT_GAR","Odpady"
+"PRR_CAT_PIN","Przemysł gracza"
+"PRR_CAT_RES","Mieszkalne"
+"PRR_CAT_COM","Handlowe"
+"PRR_CAT_OFF","Biurowe"
+"PRR_CAT_IND","Przemysłowe"
+"PRR_UIC_REL","Mieszkalne o niskiej gęstości"
+"PRR_UIC_REH","Mieszkalne o dużej gęstości"
+"PRR_UIC_COL","Budynki handlowe o niskiej gęstości"
+"PRR_UIC_COH","Budynki handlowe o dużej gęstości"
+"PRR_UIC_OFF","Biurowe"
+"PRR_UIC_IND","Przemysł"
+"PRR_UIC_FAR","Rolnictwo"
+"PRR_UIC_FOR","Leśnictwo"
+"PRR_UIC_OIL","Przemysł naftowy"
+"PRR_UIC_ORE","Przemysł górniczy"
+"PRR_UIC_LEI","Rozrywka i wypoczynek"
+"PRR_UIC_TOU","Turystyka"
+"PRR_UIC_ORG","Sklepy z produktami ekologicznymi"
+"PRR_UIC_ITC","Dziedzina IT"
+"PRR_UIC_ECO","Domy samowystarczalne"
+"PRR_UIC_NON","Brak"
+"PRR_SET","Ustawienia"
+"PRR_SET_RICO","Ustawienia RICO"
+"PRR_SET_HASMOD","Ustawienia moda"
+"PRR_SET_NOMOD","Brak ustawień moda"
+"PRR_SET_HASAUT","Ustawienia autora"
+"PRR_SET_NOAUT","Brak ustawień autora"
+"PRR_SET_HASLOC","Ustawienia gracza"
+"PRR_SET_NOLOC","Brak własnych ustawień"
+"PRR_SET_HASANY","Dowolne ustawienia"
+"PRR_SET_HASNON","Brak ustawień"
+"PRR_SAV_SAV","Zapisz"
+"PRR_SAV_ADD","Dodaj własne ustawienia"
+"PRR_SAV_REM","Usuń własne ustawienia"
+"PRR_SAV_APP","Zapisz i zatwierdź zmiany"
+"PRR_EXP","UWAGA: EKSPERYMENTALNE"
+"TRN_CHOICE","Ustaw język"
+"TRN_SYS","Użyj języka systemu"
+"PRR_DESCRIPTION","Pozwala na budunki RICO większe niż 4x4 i na personalizację budynków RICO"
+"PRR_OPTION_PLP","Natychmiast umieść budynki rozwijalne (brak konstrukcji)"
+"PRR_OPTION_ZON","Budynki rozwijalne mogą istnieć poza dozwoloną strefą"
+"PRR_OPTION_SPC","Budynki rozwijalne mogą istnieć poza wymaganą specjalizacją"
+"PRR_OPTION_VAL","Ignoruj problem 'niskiej wartości ziemi'"
+"PRR_OPTION_SVC","Ignoruj problem 'zbyt niskich usług komunalnych'"
+"PRR_OPTION_HST","Zamień wszystkie ręcznie umieszczone budynki rozwijalne na zabytki"
+"PRR_OPTION_BLC","Zablokuj poziomy użytych rozwijalnych używając Advanced Building Level Control"
+"PRR_OPTION_RPL","Ręcznie umieszczone budynki RICO"
+"PRR_OPTION_RGR","Budynki RICO samopojawiające się w strefach"
+"PRR_OPTION_RCO","Wszystkie budynki RICO (w tym rozwijalne)"
+"PRR_OPTION_OTH","Rozwijalne budynki nie-RICO"
+"PRR_OPTION_DEM","Opcje wyburzania (nie ma wpływu na budynki historyczne)"
+"PRR_OPTION_BDZ","Potwierdzenie wymagane do wyburzenia budynków nierozwijalnych (ręcznie stawianych)"
+"PRR_OPTION_IMP","Zezwalaj na automatyczne wyburzanie ręcznie ustawionych budynków RICO (np. podczas budowy drogi albo stawiania innych budynków)"
+"PRR_OPTION_IMP2","(np. przy budowe dróg i innych budynków)"
+"PRR_OPTION_CST","Opcje kosztów"
+"PRR_OPTION_COV","Nadpisz koszt budynku"
+"PRR_OPTION_CPH","Koszt za mieszkanie"
+"PRR_OPTION_CHM","Dodatkowy mnożnik za poziom mieszkania (%)"
+"PRR_OPTION_CJ0","Cost per uneducated job"
+"PRR_OPTION_CJ1","Cost per educated job"
+"PRR_OPTION_CJ2","Dodatkowy multiplikator na poziom gospodarstwa"
+"PRR_OPTION_CJ3","Cost per highly-educated job"
+"PRR_OPTION_DIS","Disasters"
+"PRR_OPTION_NOC","Ploppable RICO buildings aren't affected by disasters (prevents bugs)"
+"PRR_OPTION_LOA","Opcje wczytywania"
+"PRR_OPTION_LOG","Opcje logowania"
+"PRR_OPTION_TMB","Opcje miniaturek"
+"PRR_OPTION_PLO","Opcje budynków ręcznie stawianych"
+"PRR_OPTION_GRO","Opcje budynków samopojawiających się"
+"PRR_OPTION_COM","Opcje zgłaszanych problemów"
+"PRR_OPTION_MOD","Opcje modyfikacji"
+"PRR_OPTION_NOT","Opcje powiadomień"
+"PRR_OPTION_WHATSNEW","Show what's new messages"
+"PRR_OPTION_MOREDEBUG","Włącz dodatkowe logi błędów"
+"PRR_OPTION_FORCERESET","Wymuś reset statystyk budynków przy wczytywaniu gry"
+"PRR_OPTION_REGENTHUMBS","Odtwórz miniaturki"
+"PRR_OPTION_SPDHDR","Przyspiesza grę, otwieranie panelu zajmie więcej czasu"
+"PRR_OPTION_SPEED","Wyłącz panel, jeśli nie jest w użyciu"
+"PRR_OPTION_FASTHDR","Szybciej renderuje miniaturki, potrzebuje więcej pamięci."
+"PRR_OPTION_FASTHUMB","Przyspieszone renderowanie miniaturek"
+"PRR_OPTION_THUMBACK","Tła miniaturek"
+"PRR_THUMB_COLOR","Kolor"
+"PRR_THUMB_PLAIN","Bez koloru"
+"PRR_THUMB_SKY","Wygląd nieba"
+"MES_CLS","Zamknij"
+"MES_DSA","Nie pokazuj więcej"
+"MES_PAGE","Proszę o wyszukanie więcej informacji na stronie moda na Steam Workshop"
+"PRR_ERR_FAT","Ten mod nie będzie działał."
+"PRR_ERR_HAR","Ploppable RICO Revisited nie mógł ukończyć tego zadania bez aktualizacji moda 'Harmony'."
+"ERR_HAR0","Bład aktualizacji moda 'Harmony'"
+"ERR_HAR1","Rzeczy prawdodpodobnie sprawiające problem:"
+"ERR_HAR2","Wymagany mod 'Harmony 2' nie został zainstalowany"
+"ERR_HAR3","Stary i/lub uszkodzony mod blokuje 'Harmony 2' przed prawidłowym działaniem."
+"ERR_CON0","Wykryto konflikt modów!"
+"ERR_CON1","Kolidujące mody to:"
+"PRR_ERR_CON0","Mod Ploppable RICO Revisited wykrył konflikt z przynajmniej jednym modem."
+"PRR_ERR_CON1","Następujące mody muszą być usunięte żeby mod Ploppable RICO Revisited zaczął działać."
+"PRR_CON_PTG0","Mod Plop the Growables wykryty"
+"PRR_CON_PTG1","Mod Plop the Growables wykryty - większość funkcji tego moda została włączona do Ploppable RICO Revisited. Proszę być ostrożnym w używaniu obu modów ponieważ ich ustawienia mogą kolidować."
+"PRR_CON_PTG2","Można nadal używać obu modów razem - JEŚLI ich ustawienia nie konfliktują ze sobą!"
+"PRR_UPD_23_0","Ploppable RICO Revisited aktualizacja 2.3"
+"PRR_UPD_23_1","Ploppable RICO Revisited został zaktualizowany do wersji 2.3. Niektóre elementy tej aktualizacji:"
+"PRR_UPD_23_2","RICO zawiera teraz funkcję 'Postaw Budynki Rozwijalne' działającą dla obu typów budynków RICO oraz nie-RICO. Sprawdź panel opcji aby zapoznać się zeszczegółami."
+"PRR_UPD_23_3","Rozwijalne budynki RICO mogą być teraz ustawiane poza ich strefami (konfigurowalne)."
+"PRR_UPD_23_4","Skargi ""niska wartość gruntów"" i ""niewystarczajace usługi"" można teraz wyłączyć."
+"PRR_UPD_23_5","Usprawniono renderer miniaturek budynków, który tworzy teraz obrazy kiedy są potrzebne, redukując użycie pamięci and poprawiając czas wgrywania."
+"PRR_UPD_234_0","Dodaj opcję włączenia lub wyłączenia ostrzeżeń przed wyburzeniem budynków RICO ustawionych ręcznie."
+"PRR_UPD_234_1","Dodaj opcję włączenia lub wyłączenia autowyburzania podczas budowania na budynkach RICO ustawianych ręcznie."
+"PRR_UPD_234_2","Usprawnione powiadomienia o aktualizacji."
+"PRR_UPD_235_0","Rozwijalne budynki zachowują się teraz domyślnie tak jak Plop the Growables (nie wpływa to na dotychczasowe ustawienia)."
+"PRR_UPD_235_1","Dodaj ostrzeżenie jeśli mod ""Plop The Growables"" jest także włączony."
+"PRR_UPD_235_2","Usprawnione powiadomienia o niezgodnych modach i błędach."
+"PRR_UPD_236_0","Usprawnione wykrywanie konfliktów między modami i powiadomienia o nich."
+"PRR_UPD_237_0","Poprawiony komunikat o błędzie w związku z modem ""Harmony"" pokazującym się niepoprawnie podczas wczytywania w Edytorze gry."
+"PRR_UPD_240_0","Add configurable cost overrides."
+"PRR_UPD_240_1","Add option to automatically lock the building level of plopped growables (requires Advanced Building Level Control mod)."
+"PRR_UPD_240_2","Add mod/author/local settings selection menu to settings panel (to see settings other than the currently active one)."
+"PRR_UPD_240_3","Disable population textfields when 'use reality' option is set."
+"PRR_UPD_241_0","Improve support for historical buildings with different levels"
+"PRR_UPD_242_0","Service buildings are no longer visible by default in the RICO settings panel"
+"PRR_UPD_243_0","Add option to disable update notifications"

@@ -148,24 +148,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Translations\ko-KR.csv" />
     <None Include="Translations\de-DE.csv" />
+    <None Include="Translations\el-GR.csv" />
+    <None Include="Translations\es-ES.csv" />
+    <None Include="Translations\fr-FR.csv" />
+    <None Include="Translations\id-ID.csv" />
+    <None Include="Translations\it-IT.csv" />
+    <None Include="Translations\ja-JP.csv" />
     <None Include="Translations\nl-NL.csv" />
     <None Include="Translations\no-NO.csv" />
     <None Include="Translations\pl-PL.csv" />
     <None Include="Translations\pt-BR.csv" />
-    <None Include="Translations\rs-RS.csv" />
     <None Include="Translations\ru-RU.csv" />
+    <None Include="Translations\sr-CS.csv" />
     <None Include="Translations\tr-TR.csv" />
-    <None Include="Translations\zh-TW.csv" />
-    <None Include="Translations\en.csv" />
-    <None Include="Translations\es-ES.csv" />
-    <None Include="Translations\fr-FR.csv" />
-    <None Include="Translations\gr-GR.csv" />
-    <None Include="Translations\id-ID.csv" />
-    <None Include="Translations\it-IT.csv" />
-    <None Include="Translations\ja-JP.csv" />
-    <None Include="Translations\ko-KR.csv" />
     <None Include="Translations\zh-CN.csv" />
+    <None Include="Translations\en.csv" />
+    <None Include="Translations\zh-TW.csv" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>mkdir "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)"

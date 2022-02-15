@@ -1,177 +1,179 @@
-CODE,pt-br
-NAME,Português Brasileiro
-PRR_NAME,Ploppable RICO Revisado
-PRR_LEVEL,Nível
-PRR_LVL,Nvl
-PRR_HOU,Habitações
-PRR_WOR,Locais de trabalho
-PRR_SRV_NON,Nenhum
-PRR_SRV_RES,Residencial 
-PRR_SRV_IND,Industrial
-PRR_SRV_OFF,Escritório
-PRR_SRV_COM,Comercial
-PRR_SRV_EXT,Extrator
-PRR_SRV_DUM,Modelo
-PRR_SUB_HIG,Alta
-PRR_SUB_LOW,Baixa
-PRR_SUB_HEC,Eco (Sustentavél) Alta
-PRR_SUB_LEC,Eco (Sustentavél) Baixa
-PRR_SUB_LEI,Lazer
-PRR_SUB_TOU,Turismo
-PRR_SUB_ORG,Eco (Orgânico)
-PRR_SUB_GEN,Genérico
-PRR_SUB_ITC,Conglomerado TI
-PRR_SUB_FAR,Agrícola
-PRR_SUB_FOR,Madeireira
-PRR_SUB_OIL,Petrolífera
-PRR_SUB_ORE,Mineração
-PRR_FTR_ALL,Todas
-PRR_FTR_NON,Nenhuma
-PRR_FTR_NAM,Nome
-PRR_FTR_SET,Filtro de config. Mod/Autor/Local/Qualquer
-PRR_OPT_SET,Configurações
-PRR_OPT_MOD,Mod
-PRR_OPT_AUT,Autor
-PRR_OPT_LOC,Local
-PRR_OPT_ENA,Ativar RICO
-PRR_OPT_SER,Serviço
-PRR_OPT_SUB,Nível de Serviço
-PRR_OPT_UIC,Categoria da interface
-PRR_OPT_CST,Custo de construção
-PRR_OPT_CNT,Quantidade de trabalhadores por residência
-PRR_OPT_POP,Usar o mod Realistic Pop
-PRR_OPT_POL,Habilitar poluição
-PRR_OPT_GRO,Growable
-PRR_OPT_JB0,Trabalho para não-instruídos
-PRR_OPT_JB1,Trabalho para instruídos
-PRR_OPT_JB2,Trabalho para qualificados
-PRR_OPT_JB3,Trabalho para altamente qualificados
-PRR_OPT_URP,Configurações de população estão desabilitadas porque a opção População Realista está ativada
-PRR_CAT_MON,Monumentos
-PRR_CAT_BEA,Embelezamento
-PRR_CAT_EDU,Educação
-PRR_CAT_HEA,Saúde
-PRR_CAT_FIR,Bombeiros
-PRR_CAT_POL,Polícia
-PRR_CAT_POW,Eletricidade
-PRR_CAT_WAT,Água
-PRR_CAT_GAR,Lixo
-PRR_CAT_PIN,Indústria do jogador
-PRR_CAT_RES,Residencial
-PRR_CAT_COM,Comercial
-PRR_CAT_OFF,Escritório
-PRR_CAT_IND,Indústria
-PRR_UIC_REL,Residencial de baixa densidade
-PRR_UIC_REH,Residencial de alta densidade
-PRR_UIC_COL,Comercial de baixa densidade
-PRR_UIC_COH,Comercial de alta densidade
-PRR_UIC_OFF,Escritório
-PRR_UIC_IND,Industrial
-PRR_UIC_FAR,Agrícola
-PRR_UIC_FOR,Madeireira
-PRR_UIC_OIL,Petrolífera
-PRR_UIC_ORE,Mineração
-PRR_UIC_LEI,Lazer
-PRR_UIC_TOU,Turismo
-PRR_UIC_ORG,Comércio de orgânicos
-PRR_UIC_ITC,Conglomerado TI
-PRR_UIC_ECO,Residências autossustentáveis
-PRR_UIC_NON,Nenhuma
-PRR_SET,Configurações
-PRR_SET_RICO,Configurações do RICO
-PRR_SET_HASMOD,Configurações do Mod
-PRR_SET_NOMOD,Sem configurações do Mod
-PRR_SET_HASAUT,Configurações do Autor
-PRR_SET_NOAUT,Sem configurações do Autor
-PRR_SET_HASLOC,Configurações locais
-PRR_SET_NOLOC,Sem configurações locais
-PRR_SET_HASANY,Qualquer configuração
-PRR_SET_HASNON,Não configurado
-PRR_SAV_SAV,Salvar
-PRR_SAV_ADD,Adicionar local
-PRR_SAV_REM,Remover local
-PRR_SAV_APP,Salvar e aplicar alterações
-PRR_EXP,ALERTA: EXPERIMENTAL
-TRN_CHOICE,Selecionar idioma
-TRN_SYS,Usar idioma do jogo
-PRR_DESCRIPTION,Permite contruções RICO maiores que 4x4 e personalização de construções RICO
-PRR_OPTION_PLP,Colocar construções growable instantaneamente (sem construção)
-PRR_OPTION_ZON,Construções growable podem sobreviver fora da zona correta
-PRR_OPTION_SPC,Construções growable podem sobreviver sem os requerimentos de especialização de distrito
-PRR_OPTION_VAL,Ignora o aviso de baixo valor de terreno
-PRR_OPTION_SVC,Ignora o aviso de serviços insuficientes
-PRR_OPTION_HST,Converter todos os edifícios ploppable em edifícios históricos
-PRR_OPTION_BLC,Fixar nível dos growables usando o mod Advanced Building Level Control
-PRR_OPTION_RPL,Construções RICO ploppable
-PRR_OPTION_RGR,Construções RICO growable
-PRR_OPTION_RCO,Todas construçõpes RICO (incluindo growables)
-PRR_OPTION_OTH,Construções growable não-RICO
-PRR_OPTION_DEM,Opções de demolição (não afeta construções históricas)
-PRR_OPTION_BDZ,Perguntar antes de demolir construções RICO
-PRR_OPTION_IMP,Permitir que os construções RICO sejam autodemolidos
-PRR_OPTION_IMP2,(ex. ao construir rodovias ou outras construções)
-PRR_OPTION_CST,Opções de custo
-PRR_OPTION_COV,Sobrepor custo de construção
-PRR_OPTION_CPH,Custo por casa
-PRR_OPTION_CHM,Multiplicador adicional por nível de residência (%)
-PRR_OPTION_CJ0,Custo por emprego não qualificado
-PRR_OPTION_CJ1,Custo por emprego qualificado
-PRR_OPTION_CJ2,Custo por emprego bastante qualificado
-PRR_OPTION_CJ3,Custo por emprego altamente qualificado
-PRR_OPTION_LOA,Opções de carregamento
-PRR_OPTION_LOG,Opções de registro
-PRR_OPTION_TMB,Opções de miniatura (thumb)
-PRR_OPTION_PLO,Opções de ploppable
-PRR_OPTION_GRO,Opções de growable
-PRR_OPTION_COM,Opções de reclamações
-PRR_OPTION_MOD,Opções do mod
-PRR_OPTION_NOT,Opções de notificação
-PRR_OPTION_WHATSNEW,Mostrar mensagens do que há de novo
-PRR_OPTION_MOREDEBUG,Ativar registro de depuração adicional
-PRR_OPTION_FORCERESET,Forçar o reset das estatísticas das construções no carregamento do jogo
-PRR_OPTION_REGENTHUMBS,Regenerar miniaturas (thumbs)
-PRR_OPTION_SPDHDR,"Aumenta ligeiramente a velocidade do jogo, mas causa delay ao abrir o painel"
-PRR_OPTION_SPEED,Desativar painel quando não estiver em uso
-PRR_OPTION_FASTHDR,"Renderiza miniaturas (thumbs) mais rapidamente, mas usa mais memória"
-PRR_OPTION_FASTHUMB,Renderiza miniaturas (thumbs) com mais velocidade
-PRR_OPTION_THUMBACK,Fundo da miniatura (thumb)
-PRR_THUMB_COLOR,Cor
-PRR_THUMB_PLAIN,Plano
-PRR_THUMB_SKY,Céu
-MES_CLS,Fechar
-MES_DSA,Não mostrar novamente
-MES_PAGE,"Por favor, vá à página do mod na Steam para mais informações"
-PRR_ERR_FAT,Isso significa que o mod não está apto a funcionar e foi desativado.
-PRR_ERR_HAR,O Ploppable RICO Revisitado não foi capaz de completar os requisitos de Harmony.
-ERR_HAR0,Erro: Harmony patching
-ERR_HAR1,As causas possíveis para esse problema são:
-ERR_HAR2,O mod Harmony 2 não está instalado
-ERR_HAR3,Um mod desatualizado e/ou quebrado está impedindo que o Harmony 2 funcione corretamente
-ERR_CON0,Conflito de mod detectado!
-ERR_CON1,Os mods conflitantes são:
-PRR_ERR_CON0,Ploppable RICO Revisitado detectou um conflito com ao menos um outro mod.
-PRR_ERR_CON1,Estes mods devem ser removidos antes do Ploppable RICO Revisitado poder operar.
-PRR_CON_PTG0,Mod Plop the Growables detectado
-PRR_CON_PTG1,"Mod Plop the Growables detectado - a maior parte de suas funcionalidades foram incorporadas ao Ploppable RICO Revisitado. Por favor, tenha cautela ao utilizar os dois mods juntos, pois eles podem conflitar."
-PRR_CON_PTG2,Ainda está ok usar ambos juntos - SE suas configurações não conflitarem
-PRR_UPD_23_0,Ploppable RICO Revisitado — Atualização 2.3
-PRR_UPD_23_1,O Ploppable RICO Revisitado foi atualizado para a versão 2.3. Alguns dos recursos desta atualização são:
-PRR_UPD_23_2,"O Ploppable RICO agora inclui ""Plop the Growables"" (colocar manualmente construções que originalmente surgem apenas em zoneamento). Funciona tanto para construções RICO quanto para construções não-RICO. Veja o painel de opções para mais detalhes."
-PRR_UPD_23_3,As construções growable RICO agora podem ser colocados fora das zonas (configurável).
-PRR_UPD_23_4,"Os avisos sobre ""baixo valor de terreno"" e ""serviços insuficientes"" agora podem ser desativados."
-PRR_UPD_23_5,"Renderização da miniatura (thumb) de construções aprimorada. Agora, apenas gera imagens quando necessário, reduzindo o uso de memória e melhorando o tempo de carregamento."
-PRR_UPD_234_0,Adicionar opção para habilitar ou desabilitar avisos ao demolir construções RICO.
-PRR_UPD_234_1,Adicionar opção para habilitar ou desabilitar autodemolição ao construir sobre construções RICO.
-PRR_UPD_234_2,Notificações de atualização melhoradas.
-PRR_UPD_235_0,Opções de growables agora têm o comportamento do mod 'Plop the Growables' por padrão (não afeta opções existentes)
-PRR_UPD_235_1,Adicionar alerta se o mod 'Plop the Growables' estiver ativo também.
-PRR_UPD_235_2,Conflitos de mod e notificações de erro melhoradas.
-PRR_UPD_236_0,Melhora detecção e notificação de conflitos de mod.
-PRR_UPD_237_0,Conserta a mensagem de erro do Harmony mostrada incorretamente ao carregar para editores.
-PRR_UPD_240_0,Adicionar sobreposições de custo configurável.
-PRR_UPD_240_1,Adicionar opção para fixar automaticamente o nível dos growables inseridos (requer o mod Advanced Building Level Control).
-PRR_UPD_240_2,Adicionar menu de seleção de configurações sobre mod/autor/local ao painel de confiurações (para ver configurações outras que as ativas)
-PRR_UPD_240_3,Desabilitar configuração manual da população quando a opção 'usar realidade' está ativa.
-PRR_UPD_241_0,Melhorar suporte para construções históricas com diferentes níveis
-PRR_UPD_242_0,Construções de serviços não são mais visíveis por padrão no painel de opções RICO
-PRR_UPD_243_0,Adicionar opção para desabilitar notificações de atualização
+"CODE","pt-br"
+"NAME","Português Brasileiro"
+"PRR_NAME","Ploppable RICO Revisado"
+"PRR_LEVEL","Nível"
+"PRR_LVL","Nvl"
+"PRR_HOU","Habitações"
+"PRR_WOR","Locais de trabalho"
+"PRR_SRV_NON","Nenhum"
+"PRR_SRV_RES","Residencial "
+"PRR_SRV_IND","Industrial"
+"PRR_SRV_OFF","Escritório"
+"PRR_SRV_COM","Comercial"
+"PRR_SRV_EXT","Extrator"
+"PRR_SRV_DUM","Modelo"
+"PRR_SUB_HIG","Alta"
+"PRR_SUB_LOW","Baixa"
+"PRR_SUB_HEC","Eco (Sustentavél) Alta"
+"PRR_SUB_LEC","Eco (Sustentavél) Baixa"
+"PRR_SUB_LEI","Lazer"
+"PRR_SUB_TOU","Turismo"
+"PRR_SUB_ORG","Eco (Orgânico)"
+"PRR_SUB_GEN","Genérico"
+"PRR_SUB_ITC","Conglomerado TI"
+"PRR_SUB_FAR","Agrícola"
+"PRR_SUB_FOR","Madeireira"
+"PRR_SUB_OIL","Petrolífera"
+"PRR_SUB_ORE","Mineração"
+"PRR_FTR_ALL","Todas"
+"PRR_FTR_NON","Nenhuma"
+"PRR_FTR_NAM","Nome"
+"PRR_FTR_SET","Filtro de config. Mod/Autor/Local/Qualquer"
+"PRR_OPT_SET","Configurações"
+"PRR_OPT_MOD","Mod"
+"PRR_OPT_AUT","Autor"
+"PRR_OPT_LOC","Local"
+"PRR_OPT_ENA","Ativar RICO"
+"PRR_OPT_SER","Serviço"
+"PRR_OPT_SUB","Nível de Serviço"
+"PRR_OPT_UIC","Categoria da interface"
+"PRR_OPT_CST","Custo de construção"
+"PRR_OPT_CNT","Quantidade de trabalhadores por residência"
+"PRR_OPT_POP","Usar o mod Realistic Pop"
+"PRR_OPT_POL","Habilitar poluição"
+"PRR_OPT_GRO","Growable"
+"PRR_OPT_JB0","Trabalho para não-instruídos"
+"PRR_OPT_JB1","Trabalho para instruídos"
+"PRR_OPT_JB2","Trabalho para qualificados"
+"PRR_OPT_JB3","Trabalho para altamente qualificados"
+"PRR_OPT_URP","Configurações de população estão desabilitadas porque a opção População Realista está ativada"
+"PRR_CAT_MON","Monumentos"
+"PRR_CAT_BEA","Embelezamento"
+"PRR_CAT_EDU","Educação"
+"PRR_CAT_HEA","Saúde"
+"PRR_CAT_FIR","Bombeiros"
+"PRR_CAT_POL","Polícia"
+"PRR_CAT_POW","Eletricidade"
+"PRR_CAT_WAT","Água"
+"PRR_CAT_GAR","Lixo"
+"PRR_CAT_PIN","Indústria do jogador"
+"PRR_CAT_RES","Residencial"
+"PRR_CAT_COM","Comercial"
+"PRR_CAT_OFF","Escritório"
+"PRR_CAT_IND","Indústria"
+"PRR_UIC_REL","Residencial de baixa densidade"
+"PRR_UIC_REH","Residencial de alta densidade"
+"PRR_UIC_COL","Comercial de baixa densidade"
+"PRR_UIC_COH","Comercial de alta densidade"
+"PRR_UIC_OFF","Escritório"
+"PRR_UIC_IND","Industrial"
+"PRR_UIC_FAR","Agrícola"
+"PRR_UIC_FOR","Madeireira"
+"PRR_UIC_OIL","Petrolífera"
+"PRR_UIC_ORE","Mineração"
+"PRR_UIC_LEI","Lazer"
+"PRR_UIC_TOU","Turismo"
+"PRR_UIC_ORG","Comércio de orgânicos"
+"PRR_UIC_ITC","Conglomerado TI"
+"PRR_UIC_ECO","Residências autossustentáveis"
+"PRR_UIC_NON","Nenhuma"
+"PRR_SET","Configurações"
+"PRR_SET_RICO","Configurações do RICO"
+"PRR_SET_HASMOD","Configurações do Mod"
+"PRR_SET_NOMOD","Sem configurações do Mod"
+"PRR_SET_HASAUT","Configurações do Autor"
+"PRR_SET_NOAUT","Sem configurações do Autor"
+"PRR_SET_HASLOC","Configurações locais"
+"PRR_SET_NOLOC","Sem configurações locais"
+"PRR_SET_HASANY","Qualquer configuração"
+"PRR_SET_HASNON","Não configurado"
+"PRR_SAV_SAV","Salvar"
+"PRR_SAV_ADD","Adicionar local"
+"PRR_SAV_REM","Remover local"
+"PRR_SAV_APP","Salvar e aplicar alterações"
+"PRR_EXP","ALERTA: EXPERIMENTAL"
+"TRN_CHOICE","Selecionar idioma"
+"TRN_SYS","Usar idioma do jogo"
+"PRR_DESCRIPTION","Permite contruções RICO maiores que 4x4 e personalização de construções RICO"
+"PRR_OPTION_PLP","Colocar construções growable instantaneamente (sem construção)"
+"PRR_OPTION_ZON","Construções growable podem sobreviver fora da zona correta"
+"PRR_OPTION_SPC","Construções growable podem sobreviver sem os requerimentos de especialização de distrito"
+"PRR_OPTION_VAL","Ignora o aviso de baixo valor de terreno"
+"PRR_OPTION_SVC","Ignora o aviso de serviços insuficientes"
+"PRR_OPTION_HST","Converter todos os edifícios ploppable em edifícios históricos"
+"PRR_OPTION_BLC","Fixar nível dos growables usando o mod Advanced Building Level Control"
+"PRR_OPTION_RPL","Construções RICO ploppable"
+"PRR_OPTION_RGR","Construções RICO growable"
+"PRR_OPTION_RCO","Todas construçõpes RICO (incluindo growables)"
+"PRR_OPTION_OTH","Construções growable não-RICO"
+"PRR_OPTION_DEM","Opções de demolição (não afeta construções históricas)"
+"PRR_OPTION_BDZ","Perguntar antes de demolir construções RICO"
+"PRR_OPTION_IMP","Permitir que os construções RICO sejam autodemolidos"
+"PRR_OPTION_IMP2","(ex. ao construir rodovias ou outras construções)"
+"PRR_OPTION_CST","Opções de custo"
+"PRR_OPTION_COV","Sobrepor custo de construção"
+"PRR_OPTION_CPH","Custo por casa"
+"PRR_OPTION_CHM","Multiplicador adicional por nível de residência (%)"
+"PRR_OPTION_CJ0","Custo por emprego não qualificado"
+"PRR_OPTION_CJ1","Custo por emprego qualificado"
+"PRR_OPTION_CJ2","Custo por emprego bastante qualificado"
+"PRR_OPTION_CJ3","Custo por emprego altamente qualificado"
+"PRR_OPTION_DIS","Disasters"
+"PRR_OPTION_NOC","Ploppable RICO buildings aren't affected by disasters (prevents bugs)"
+"PRR_OPTION_LOA","Opções de carregamento"
+"PRR_OPTION_LOG","Opções de registro"
+"PRR_OPTION_TMB","Opções de miniatura (thumb)"
+"PRR_OPTION_PLO","Opções de ploppable"
+"PRR_OPTION_GRO","Opções de growable"
+"PRR_OPTION_COM","Opções de reclamações"
+"PRR_OPTION_MOD","Opções do mod"
+"PRR_OPTION_NOT","Opções de notificação"
+"PRR_OPTION_WHATSNEW","Mostrar mensagens do que há de novo"
+"PRR_OPTION_MOREDEBUG","Ativar registro de depuração adicional"
+"PRR_OPTION_FORCERESET","Forçar o reset das estatísticas das construções no carregamento do jogo"
+"PRR_OPTION_REGENTHUMBS","Regenerar miniaturas (thumbs)"
+"PRR_OPTION_SPDHDR","Aumenta ligeiramente a velocidade do jogo, mas causa delay ao abrir o painel"
+"PRR_OPTION_SPEED","Desativar painel quando não estiver em uso"
+"PRR_OPTION_FASTHDR","Renderiza miniaturas (thumbs) mais rapidamente, mas usa mais memória"
+"PRR_OPTION_FASTHUMB","Renderiza miniaturas (thumbs) com mais velocidade"
+"PRR_OPTION_THUMBACK","Fundo da miniatura (thumb)"
+"PRR_THUMB_COLOR","Cor"
+"PRR_THUMB_PLAIN","Plano"
+"PRR_THUMB_SKY","Céu"
+"MES_CLS","Fechar"
+"MES_DSA","Não mostrar novamente"
+"MES_PAGE","Por favor, vá à página do mod na Steam para mais informações"
+"PRR_ERR_FAT","Isso significa que o mod não está apto a funcionar e foi desativado."
+"PRR_ERR_HAR","O Ploppable RICO Revisitado não foi capaz de completar os requisitos de Harmony."
+"ERR_HAR0","Erro: Harmony patching"
+"ERR_HAR1","As causas possíveis para esse problema são:"
+"ERR_HAR2","O mod Harmony 2 não está instalado"
+"ERR_HAR3","Um mod desatualizado e/ou quebrado está impedindo que o Harmony 2 funcione corretamente"
+"ERR_CON0","Conflito de mod detectado!"
+"ERR_CON1","Os mods conflitantes são:"
+"PRR_ERR_CON0","Ploppable RICO Revisitado detectou um conflito com ao menos um outro mod."
+"PRR_ERR_CON1","Estes mods devem ser removidos antes do Ploppable RICO Revisitado poder operar."
+"PRR_CON_PTG0","Mod Plop the Growables detectado"
+"PRR_CON_PTG1","Mod Plop the Growables detectado - a maior parte de suas funcionalidades foram incorporadas ao Ploppable RICO Revisitado. Por favor, tenha cautela ao utilizar os dois mods juntos, pois eles podem conflitar."
+"PRR_CON_PTG2","Ainda está ok usar ambos juntos - SE suas configurações não conflitarem"
+"PRR_UPD_23_0","Ploppable RICO Revisitado — Atualização 2.3"
+"PRR_UPD_23_1","O Ploppable RICO Revisitado foi atualizado para a versão 2.3. Alguns dos recursos desta atualização são:"
+"PRR_UPD_23_2","O Ploppable RICO agora inclui ""Plop the Growables"" (colocar manualmente construções que originalmente surgem apenas em zoneamento). Funciona tanto para construções RICO quanto para construções não-RICO. Veja o painel de opções para mais detalhes."
+"PRR_UPD_23_3","As construções growable RICO agora podem ser colocados fora das zonas (configurável)."
+"PRR_UPD_23_4","Os avisos sobre ""baixo valor de terreno"" e ""serviços insuficientes"" agora podem ser desativados."
+"PRR_UPD_23_5","Renderização da miniatura (thumb) de construções aprimorada. Agora, apenas gera imagens quando necessário, reduzindo o uso de memória e melhorando o tempo de carregamento."
+"PRR_UPD_234_0","Adicionar opção para habilitar ou desabilitar avisos ao demolir construções RICO."
+"PRR_UPD_234_1","Adicionar opção para habilitar ou desabilitar autodemolição ao construir sobre construções RICO."
+"PRR_UPD_234_2","Notificações de atualização melhoradas."
+"PRR_UPD_235_0","Opções de growables agora têm o comportamento do mod 'Plop the Growables' por padrão (não afeta opções existentes)"
+"PRR_UPD_235_1","Adicionar alerta se o mod 'Plop the Growables' estiver ativo também."
+"PRR_UPD_235_2","Conflitos de mod e notificações de erro melhoradas."
+"PRR_UPD_236_0","Melhora detecção e notificação de conflitos de mod."
+"PRR_UPD_237_0","Conserta a mensagem de erro do Harmony mostrada incorretamente ao carregar para editores."
+"PRR_UPD_240_0","Adicionar sobreposições de custo configurável."
+"PRR_UPD_240_1","Adicionar opção para fixar automaticamente o nível dos growables inseridos (requer o mod Advanced Building Level Control)."
+"PRR_UPD_240_2","Adicionar menu de seleção de configurações sobre mod/autor/local ao painel de confiurações (para ver configurações outras que as ativas)"
+"PRR_UPD_240_3","Desabilitar configuração manual da população quando a opção 'usar realidade' está ativa."
+"PRR_UPD_241_0","Melhorar suporte para construções históricas com diferentes níveis"
+"PRR_UPD_242_0","Construções de serviços não são mais visíveis por padrão no painel de opções RICO"
+"PRR_UPD_243_0","Adicionar opção para desabilitar notificações de atualização"

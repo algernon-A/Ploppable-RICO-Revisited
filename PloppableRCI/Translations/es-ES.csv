@@ -1,174 +1,179 @@
-CODE,es
-NAME,Español
-PRR_NAME,Poppable RICO revisado
-PRR_LEVEL,Nivel
-PRR_LVL,Nvl
-PRR_HOU,Hogares
-PRR_WOR,Lugar de Trabajo
-PRR_SRV_NON,Ninguno
-PRR_SRV_RES,Residencial 
-PRR_SRV_IND,Industrial
-PRR_SRV_OFF,Oficina
-PRR_SRV_COM,Comercial
-PRR_SRV_EXT,Extractor
-PRR_SRV_DUM,Postizo
-PRR_SUB_HIG,Alto
-PRR_SUB_LOW,Bajo
-PRR_SUB_HEC,Ecológico Alto
-PRR_SUB_LEC,Ecológico Bajo
-PRR_SUB_LEI,Ocio
-PRR_SUB_TOU,Turismo
-PRR_SUB_ORG,Ecológico
-PRR_SUB_GEN,Genérico
-PRR_SUB_ITC,Clúster de TI
-PRR_SUB_FAR,Agricultura
-PRR_SUB_FOR,Silvicultura
-PRR_SUB_OIL,Industria petrolera
-PRR_SUB_ORE,Minería
-PRR_FTR_ALL,Todos
-PRR_FTR_NON,Ninguno
-PRR_FTR_NAM,Nombre
-PRR_FTR_SET,Filtro de Ajuste Mod/Autor/Local/Cualquiera
-PRR_OPT_SET,Ajustes
-PRR_OPT_MOD,Mod
-PRR_OPT_AUT,Autor
-PRR_OPT_LOC,Local
-PRR_OPT_ENA,Habilitar RICO
-PRR_OPT_SER,Servicio
-PRR_OPT_SUB,Nivel del Servicio
-PRR_OPT_UIC,Categoría IU
-PRR_OPT_CST,Coste de construcción
-PRR_OPT_CNT,Cuenta de trabajadores/hogares
-PRR_OPT_POP,Usar Realistic Pop mod
-PRR_OPT_POL,Habilitar Contaminación
-PRR_OPT_GRO,Expandible
-PRR_OPT_JB0,Puestos de trabajo para analfabetas
-PRR_OPT_JB1,Puestos de trabajo para alfabetas
-PRR_OPT_JB2,Puestos de trabajo para bachilleres
-PRR_OPT_JB3,Puestos de trabajo para universitarios
-PRR_OPT_URP,Los ajustes de población estan desactivados debido a que la opción Realistic Population está activada
-PRR_CAT_MON,Monumentos
-PRR_CAT_BEA,Embellecimiento
-PRR_CAT_EDU,Educación
-PRR_CAT_HEA,Salud
-PRR_CAT_FIR,Departamento de bomberos
-PRR_CAT_POL,Policia
-PRR_CAT_POW,Electricidad
-PRR_CAT_WAT,Acueducto
-PRR_CAT_GAR,Basura
-PRR_CAT_PIN,Industria del jugador
-PRR_CAT_RES,Residencial
-PRR_CAT_COM,Comercial
-PRR_CAT_OFF,Oficinas
-PRR_CAT_IND,Industrias
-PRR_UIC_REL,Residencias de baja densidad
-PRR_UIC_REH,Residencias de alta densidad
-PRR_UIC_COL,Comercios de baja densidad
-PRR_UIC_COH,Comercios de alta densidad
-PRR_UIC_OFF,Oficinas
-PRR_UIC_IND,Fábricas
-PRR_UIC_FAR,Agricultura
-PRR_UIC_FOR,Industria forestal
-PRR_UIC_OIL,Industria petrolera
-PRR_UIC_ORE,Minería
-PRR_UIC_LEI,Ocio
-PRR_UIC_TOU,Turismo
-PRR_UIC_ORG,Comercio Orgánico
-PRR_UIC_ITC,Cluster de tecnología
-PRR_UIC_ECO,Residencias autosuficientes
-PRR_UIC_NON,Ninguno
-PRR_SET,Ajustes
-PRR_SET_RICO,Ajustes de RICO
-PRR_SET_HASMOD,Ajustes del Mod
-PRR_SET_HASAUT,Ajustes del Autor
-PRR_SET_HASLOC,Ajustes Locales
-PRR_SET_HASANY,Ningún ajuste
-PRR_SET_HASNON,Sin ajustes
-PRR_SAV_SAV,Guardar
-PRR_SAV_ADD,Configuraciones del edificio 
-PRR_SAV_REM,Remover configuraciones del edificio
-PRR_SAV_APP,Guardar y aplicar cambios 
-PRR_EXP,ADVERTENCIA: EXPERIMENTAL
-TRN_CHOICE,Seleccionar idioma
-TRN_SYS,Usar idioma del juego
-PRR_DESCRIPTION,Permitir edificios RICO con un tamaño mayor a 4x4 y personalización de edificios de RICO
-PRR_OPTION_PLP,Colocar edificios expandibles instantáneamente (sin construcción)
-PRR_OPTION_ZON,Edificios expandibles pueden sobrevivir fuera de la zona correcta
-PRR_OPTION_SPC,Edificios expandibles pueden sobrevivir sin las especializaciones de distrito requeridas
-PRR_OPTION_VAL,Ignorar queja de 'valor de terreno bajo'
-PRR_OPTION_SVC,Ignorar queja de 'muy pocos servicios'
-PRR_OPTION_HST,Declarar todos los edificios expandibles históricos
-PRR_OPTION_BLC,Bloquear nivel de edificios expandibles colocados utilizando Control Avanzado de Nivel de Edificio
-PRR_OPTION_RPL,Edificios RICO colocables
-PRR_OPTION_RGR,Edificios RICO expandibles
-PRR_OPTION_RCO,Todos los edificios RICO (incluídos los expandibles)
-PRR_OPTION_OTH,Edificios no-RICO expandibles
-PRR_OPTION_DEM,Opciones de demolición
-PRR_OPTION_BDZ,Preguntar antes de demoler construcciones RICO colocadas
-PRR_OPTION_IMP,Permitir que edificios RICO colocados sean auto-demolidas y sobre construidas (ej. al construir carreteras o colocar edificios
-PRR_OPTION_IMP2,(ejemplo: cuando colocas carreteras u otros edificios)
-PRR_OPTION_CST,Opciones de Costo
-PRR_OPTION_COV,Anular costo de construcción
-PRR_OPTION_CPH,Costo por hogar
-PRR_OPTION_CHM,Multiplicador adicional por nivel de hogar (%)
-PRR_OPTION_CJ0,Costo por puesto de trabajo analfabeta
-PRR_OPTION_CJ1,Costo por puesto de trabajo alfabeta
-PRR_OPTION_CJ2,Costo por puesto de trabajo bachiller
-PRR_OPTION_CJ3,Costo por puesto de trabajo universitario
-PRR_OPTION_LOA,Opciones de carga
-PRR_OPTION_LOG,Opciones de inicio de sesión
-PRR_OPTION_TMB,Opciones de miniatura
-PRR_OPTION_PLO,Opciones de colocado
-PRR_OPTION_GRO,Opciones de expandido
-PRR_OPTION_COM,Opciones de quejas
-PRR_OPTION_MOD,Opciones del mod
-PRR_OPTION_NOT,Opciones de notificacion
-PRR_OPTION_WHATSNEW,Mostrar mensajes que hay nuevo
-PRR_OPTION_MOREDEBUG,Activar registro de depuración extendido
-PRR_OPTION_FORCERESET,Forzar reseteo de las estadísticas de los edificios en la carga del juego
-PRR_OPTION_REGENTHUMBS,Regenerar miniaturas (thumbnails)
-PRR_OPTION_SPDHDR,Incrementa ligeramente la velocidad del juego pero el panel se demorará mas en abrir
-PRR_OPTION_SPEED,Desactivar el panel cuando éste no sea usado
-PRR_OPTION_FASTHDR,"Carga miniaturas (thumbnails) mas rápido, pero usará mas memoria:"
-PRR_OPTION_FASTHUMB,Cargar miniaturas (thumbnails) a mayor velocidad
-PRR_OPTION_THUMBACK,Fondos de la miniatura
-PRR_THUMB_COLOR,Color
-PRR_THUMB_PLAIN,Plano
-PRR_THUMB_SKY,Firmamento
-MES_CLS,Cerrar
-MES_DSA,No volver a mostrar
-MES_PAGE,Por favor referirse a la página de Steam Workshop del mod para más información
-PRR_ERR_FAT,"Esto significa que el mod no esta listo para operar, y se ha desactivado."
-PRR_ERR_HAR,Ploppable RICO Revisited no pudo completar los parches del mod Harmony requeridos.
-ERR_HAR0,Error de Parcheo de Harmony
-ERR_HAR1,Las posibles causas de este problema son:
-ERR_HAR2,El mod Harmony 2 no fue instalado
-ERR_HAR3,Un mod desactualizado y/o roto no deja que Harmony 2 funcione adecuadamente
-ERR_CON0,¡Incompatibilidad entre mods detectada!
-ERR_CON1,Los mods incompatibles son:
-PRR_ERR_CON0,Ploppable RICO Revisited ha detectado un conflicto con al menos un otro mod
-PRR_ERR_CON1,Estos mods deben ser removidos antes que Ploppable RICO Revisited pueda operar
-PRR_CON_PTG0,Mod Plop the Growables detectado
-PRR_CON_PTG1,"Mod Plop the Growables detectado - la mayoría de la funcionalidad de este mod ha sido incorporado a Ploppable RICO Revisited. Por favor sea cuidadoso al usar los dos mods, puesto que sus configuraciones pueden ser incompatibles"
-PRR_CON_PTG2,Sigue siendo OK usar ambos juntos - SI es que sus configuraciones no son incompatibles
-PRR_UPD_23_0,Actualización de Ploppable RICO Revisited 2.3
-PRR_UPD_23_1,PRR se ha actualizado a la versión 2.3. Algunas de las características de esta actualización son: 
-PRR_UPD_23_2,PR ahora incluye 'Plop the Growables -todavía funcionalmente para ambos tipos de edificio: RICO y no RICO - Mira las opciones para más detalles
-PRR_UPD_23_3,"Los edificios que crecen con RICO (growables), ahora pueden ser colocados fuera de las zonas (configurable)"
-PRR_UPD_23_4,El aviso sobre «suelo de poco valor» y «no hay suficientes servicios» ahora pueden ser deshabilitados
-PRR_UPD_23_5,"Mejora el redenrizado de las miniaturas de edificios, que ahora solo genera las imágenes que necesita, reduciendo memoria y mejorando el tiempo de carga"
-PRR_UPD_234_0,Añade opciones para habilitar o deshabilitar advertencias al demoler edificios RICO colocables
-PRR_UPD_234_1,Añade opciones para habilitar o deshabilitar auto-demolición al construir sobre edificios RICO colocados
-PRR_UPD_234_2,Notificaciones de atualizaciones mejoradas
-PRR_UPD_235_0,Las opciones de expandido ahora tienen el comportamiento de 'Plop the Growables' habilitado por defecto (no afecta las configuraciones preexistentes)
-PRR_UPD_235_1,Añadir advertencia de que el mod 'Plop the Growables' está también activo
-PRR_UPD_235_2,Notificaciones de incompatibilidades entre mods y de error mejoradas
-PRR_UPD_236_0,Mejorar la notificación y detección de incompatibilidades de mods.
-PRR_UPD_237_0,Arreglar el mensaje de error incorrectamente mostrado al cargar editores
-PRR_UPD_240_0,Añadir anulaciones de costo configurables
-PRR_UPD_240_1,Añadir opción para bloquear automáticamente el nivel de edificio de los expandibles colocados (requiere el mod Control Avanzado de Nivel de Edificio)
-PRR_UPD_240_2,Añadir el menú de selección de ajustes de mod/autor/local al panel de ajustes (permite ver ajustes que no están activados)
-PRR_UPD_240_3,Deshabilitar campos de texto de población cuando la opción de 'use reality' esté activada.
-PRR_UPD_241_0,Mejorar soporte de edificios históricos con diferentes niveles
-PRR_UPD_242_0,Los edificios de servicio ya no se muestran de manera predeterminada en el panel de ajustes de RICO
-PRR_UPD_243_0,Añadir opcion para desactivar notificaciones de actualizacion
+"CODE","es"
+"NAME","Español"
+"PRR_NAME","Ploppable RICO Revisitado"
+"PRR_LEVEL","Nivel"
+"PRR_LVL","Nvl"
+"PRR_HOU","Hogares"
+"PRR_WOR","Lugar de Trabajo"
+"PRR_SRV_NON","Ninguno"
+"PRR_SRV_RES","Residencial "
+"PRR_SRV_IND","Industrial"
+"PRR_SRV_OFF","Oficina"
+"PRR_SRV_COM","Comercial"
+"PRR_SRV_EXT","Extractor"
+"PRR_SRV_DUM","Postizo"
+"PRR_SUB_HIG","Alto"
+"PRR_SUB_LOW","Bajo"
+"PRR_SUB_HEC","Ecológico Alto"
+"PRR_SUB_LEC","Ecológico Bajo"
+"PRR_SUB_LEI","Ocio"
+"PRR_SUB_TOU","Turismo"
+"PRR_SUB_ORG","Ecológico"
+"PRR_SUB_GEN","Genérico"
+"PRR_SUB_ITC","Clúster de TI"
+"PRR_SUB_FAR","Agricultura"
+"PRR_SUB_FOR","Silvicultura"
+"PRR_SUB_OIL","Industria petrolera"
+"PRR_SUB_ORE","Minería"
+"PRR_FTR_ALL","Todos"
+"PRR_FTR_NON","Ninguno"
+"PRR_FTR_NAM","Nombre"
+"PRR_FTR_SET","Filtro de Ajuste Mod/Autor/Local/Cualquiera"
+"PRR_OPT_SET","Ajustes"
+"PRR_OPT_MOD","Mod"
+"PRR_OPT_AUT","Autor"
+"PRR_OPT_LOC","Local"
+"PRR_OPT_ENA","Habilitar RICO"
+"PRR_OPT_SER","Servicio"
+"PRR_OPT_SUB","Nivel del Servicio"
+"PRR_OPT_UIC","Categoría IU"
+"PRR_OPT_CST","Coste de construcción"
+"PRR_OPT_CNT","Cuenta de trabajadores/hogares"
+"PRR_OPT_POP","Usar Realistic Pop mod"
+"PRR_OPT_POL","Habilitar Contaminación"
+"PRR_OPT_GRO","Expandible"
+"PRR_OPT_JB0","Puestos de trabajo para analfabetas"
+"PRR_OPT_JB1","Puestos de trabajo para alfabetas"
+"PRR_OPT_JB2","Puestos de trabajo para bachilleres"
+"PRR_OPT_JB3","Puestos de trabajo para universitarios"
+"PRR_OPT_URP","Los ajustes de población estan desactivados debido a que la opción Realistic Population está activada"
+"PRR_CAT_MON","Monumentos"
+"PRR_CAT_BEA","Embellecimiento"
+"PRR_CAT_EDU","Educación"
+"PRR_CAT_HEA","Salud"
+"PRR_CAT_FIR","Departamento de bomberos"
+"PRR_CAT_POL","Policia"
+"PRR_CAT_POW","Electricidad"
+"PRR_CAT_WAT","Acueducto"
+"PRR_CAT_GAR","Basura"
+"PRR_CAT_PIN","Industria del jugador"
+"PRR_CAT_RES","Residencial"
+"PRR_CAT_COM","Comercial"
+"PRR_CAT_OFF","Oficinas"
+"PRR_CAT_IND","Industrias"
+"PRR_UIC_REL","Residencias de baja densidad"
+"PRR_UIC_REH","Residencias de alta densidad"
+"PRR_UIC_COL","Comercios de baja densidad"
+"PRR_UIC_COH","Comercios de alta densidad"
+"PRR_UIC_OFF","Oficinas"
+"PRR_UIC_IND","Fábricas"
+"PRR_UIC_FAR","Agricultura"
+"PRR_UIC_FOR","Industria forestal"
+"PRR_UIC_OIL","Industria petrolera"
+"PRR_UIC_ORE","Minería"
+"PRR_UIC_LEI","Ocio"
+"PRR_UIC_TOU","Turismo"
+"PRR_UIC_ORG","Comercio Orgánico"
+"PRR_UIC_ITC","Cluster de tecnología"
+"PRR_UIC_ECO","Residencias autosuficientes"
+"PRR_UIC_NON","Ninguno"
+"PRR_SET","Ajustes"
+"PRR_SET_RICO","Ajustes de RICO"
+"PRR_SET_HASMOD","Ajustes del Mod"
+"PRR_SET_NOMOD","Sin ajustes del mod"
+"PRR_SET_HASAUT","Ajustes del Autor"
+"PRR_SET_NOAUT","Sin ajustes del autor"
+"PRR_SET_HASLOC","Ajustes Locales"
+"PRR_SET_NOLOC","Sin ajustes locales"
+"PRR_SET_HASANY","Ningún ajuste"
+"PRR_SET_HASNON","Sin ajustes"
+"PRR_SAV_SAV","Guardar"
+"PRR_SAV_ADD","Configuraciones del edificio "
+"PRR_SAV_REM","Remover configuraciones del edificio"
+"PRR_SAV_APP","Guardar y aplicar cambios "
+"PRR_EXP","ADVERTENCIA: EXPERIMENTAL"
+"TRN_CHOICE","Seleccionar idioma"
+"TRN_SYS","Usar idioma del juego"
+"PRR_DESCRIPTION","Permitir edificios RICO con un tamaño mayor a 4x4 y personalización de edificios de RICO"
+"PRR_OPTION_PLP","Colocar edificios expandibles instantáneamente (sin construcción)"
+"PRR_OPTION_ZON","Edificios expandibles pueden sobrevivir fuera de la zona correcta"
+"PRR_OPTION_SPC","Edificios expandibles pueden sobrevivir sin las especializaciones de distrito requeridas"
+"PRR_OPTION_VAL","Ignorar queja de 'valor de terreno bajo'"
+"PRR_OPTION_SVC","Ignorar queja de 'muy pocos servicios'"
+"PRR_OPTION_HST","Declarar todos los edificios expandibles históricos"
+"PRR_OPTION_BLC","Bloquear nivel de edificios expandibles colocados utilizando Control Avanzado de Nivel de Edificio"
+"PRR_OPTION_RPL","Edificios RICO colocables"
+"PRR_OPTION_RGR","Edificios RICO expandibles"
+"PRR_OPTION_RCO","Todos los edificios RICO (incluídos los expandibles)"
+"PRR_OPTION_OTH","Edificios no-RICO expandibles"
+"PRR_OPTION_DEM","Opciones de demolición"
+"PRR_OPTION_BDZ","Preguntar antes de demoler construcciones RICO colocadas"
+"PRR_OPTION_IMP","Permitir que edificios RICO colocados sean auto-demolidas y sobre construidas (ej. al construir carreteras o colocar edificios"
+"PRR_OPTION_IMP2","(ejemplo: cuando colocas carreteras u otros edificios)"
+"PRR_OPTION_CST","Opciones de Costo"
+"PRR_OPTION_COV","Anular costo de construcción"
+"PRR_OPTION_CPH","Costo por hogar"
+"PRR_OPTION_CHM","Multiplicador adicional por nivel de hogar (%)"
+"PRR_OPTION_CJ0","Costo por puesto de trabajo analfabeta"
+"PRR_OPTION_CJ1","Costo por puesto de trabajo alfabeta"
+"PRR_OPTION_CJ2","Costo por puesto de trabajo bachiller"
+"PRR_OPTION_CJ3","Costo por puesto de trabajo universitario"
+"PRR_OPTION_DIS","Desastres"
+"PRR_OPTION_NOC","Los edificios ""Ploppable RICO"" no se ven afectados por desastres (previene errores)"
+"PRR_OPTION_LOA","Opciones de carga"
+"PRR_OPTION_LOG","Opciones de inicio de sesión"
+"PRR_OPTION_TMB","Opciones de miniatura"
+"PRR_OPTION_PLO","Opciones de colocado"
+"PRR_OPTION_GRO","Opciones de expandido"
+"PRR_OPTION_COM","Opciones de quejas"
+"PRR_OPTION_MOD","Opciones del mod"
+"PRR_OPTION_NOT","Opciones de notificacion"
+"PRR_OPTION_WHATSNEW","Mostrar mensajes que hay nuevo"
+"PRR_OPTION_MOREDEBUG","Activar registro de depuración extendido"
+"PRR_OPTION_FORCERESET","Forzar reseteo de las estadísticas de los edificios en la carga del juego"
+"PRR_OPTION_REGENTHUMBS","Regenerar miniaturas (thumbnails)"
+"PRR_OPTION_SPDHDR","Incrementa ligeramente la velocidad del juego pero el panel se demorará mas en abrir"
+"PRR_OPTION_SPEED","Desactivar el panel cuando éste no sea usado"
+"PRR_OPTION_FASTHDR","Carga miniaturas (thumbnails) mas rápido, pero usará mas memoria:"
+"PRR_OPTION_FASTHUMB","Cargar miniaturas (thumbnails) a mayor velocidad"
+"PRR_OPTION_THUMBACK","Fondos de la miniatura"
+"PRR_THUMB_COLOR","Color"
+"PRR_THUMB_PLAIN","Plano"
+"PRR_THUMB_SKY","Firmamento"
+"MES_CLS","Cerrar"
+"MES_DSA","No volver a mostrar"
+"MES_PAGE","Por favor referirse a la página de Steam Workshop del mod para más información"
+"PRR_ERR_FAT","Esto significa que el mod no esta listo para operar, y se ha desactivado."
+"PRR_ERR_HAR","Ploppable RICO Revisited no pudo completar los parches del mod Harmony requeridos."
+"ERR_HAR0","Error de Parcheo de Harmony"
+"ERR_HAR1","Las posibles causas de este problema son:"
+"ERR_HAR2","El mod Harmony 2 no fue instalado"
+"ERR_HAR3","Un mod desactualizado y/o roto no deja que Harmony 2 funcione adecuadamente"
+"ERR_CON0","¡Incompatibilidad entre mods detectada!"
+"ERR_CON1","Los mods incompatibles son:"
+"PRR_ERR_CON0","Ploppable RICO Revisited ha detectado un conflicto con al menos un otro mod"
+"PRR_ERR_CON1","Estos mods deben ser removidos antes que Ploppable RICO Revisited pueda operar"
+"PRR_CON_PTG0","Mod Plop the Growables detectado"
+"PRR_CON_PTG1","Mod Plop the Growables detectado - la mayoría de la funcionalidad de este mod ha sido incorporado a Ploppable RICO Revisited. Por favor sea cuidadoso al usar los dos mods, puesto que sus configuraciones pueden ser incompatibles"
+"PRR_CON_PTG2","Sigue siendo OK usar ambos juntos - SI es que sus configuraciones no son incompatibles"
+"PRR_UPD_23_0","Actualización de Ploppable RICO Revisited 2.3"
+"PRR_UPD_23_1","PRR se ha actualizado a la versión 2.3. Algunas de las características de esta actualización son: "
+"PRR_UPD_23_2","PR ahora incluye 'Plop the Growables -todavía funcionalmente para ambos tipos de edificio: RICO y no RICO - Mira las opciones para más detalles"
+"PRR_UPD_23_3","Los edificios que crecen con RICO (growables), ahora pueden ser colocados fuera de las zonas (configurable)"
+"PRR_UPD_23_4","El aviso sobre «suelo de poco valor» y «no hay suficientes servicios» ahora pueden ser deshabilitados"
+"PRR_UPD_23_5","Mejora el redenrizado de las miniaturas de edificios, que ahora solo genera las imágenes que necesita, reduciendo memoria y mejorando el tiempo de carga"
+"PRR_UPD_234_0","Añade opciones para habilitar o deshabilitar advertencias al demoler edificios RICO colocables"
+"PRR_UPD_234_1","Añade opciones para habilitar o deshabilitar auto-demolición al construir sobre edificios RICO colocados"
+"PRR_UPD_234_2","Notificaciones de atualizaciones mejoradas"
+"PRR_UPD_235_0","Las opciones de expandido ahora tienen el comportamiento de 'Plop the Growables' habilitado por defecto (no afecta las configuraciones preexistentes)"
+"PRR_UPD_235_1","Añadir advertencia de que el mod 'Plop the Growables' está también activo"
+"PRR_UPD_235_2","Notificaciones de incompatibilidades entre mods y de error mejoradas"
+"PRR_UPD_236_0","Mejorar la notificación y detección de incompatibilidades de mods."
+"PRR_UPD_237_0","Arreglar el mensaje de error incorrectamente mostrado al cargar editores"
+"PRR_UPD_240_0","Añadir anulaciones de costo configurables"
+"PRR_UPD_240_1","Añadir opción para bloquear automáticamente el nivel de edificio de los expandibles colocados (requiere el mod Control Avanzado de Nivel de Edificio)"
+"PRR_UPD_240_2","Añadir el menú de selección de ajustes de mod/autor/local al panel de ajustes (permite ver ajustes que no están activados)"
+"PRR_UPD_240_3","Deshabilitar campos de texto de población cuando la opción de 'use reality' esté activada."
+"PRR_UPD_241_0","Mejorar soporte de edificios históricos con diferentes niveles"
+"PRR_UPD_242_0","Los edificios de servicio ya no se muestran de manera predeterminada en el panel de ajustes de RICO"
+"PRR_UPD_243_0","Añadir opcion para desactivar notificaciones de actualizacion"
