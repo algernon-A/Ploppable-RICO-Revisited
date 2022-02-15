@@ -400,7 +400,7 @@ namespace PloppableRICO
 
                         if (buildingBuffer[i].m_level != newLevel)
                         {
-                            Logging.Message("found building '", prefabName, "' with level ", (buildingBuffer[i].m_level + 1).ToString(), ", overriding to level ", level.ToString());
+                            Logging.Message("found building '", prefabName, "' with level ", (buildingBuffer[i].m_level + 1), ", overriding to level ", level);
                             buildingBuffer[i].m_level = newLevel;
                         }
                     }
@@ -426,7 +426,7 @@ namespace PloppableRICO
                 }
             }
 
-            Logging.Message("set household counts to ", homeCount.ToString(), " for ", homeCountChanged.ToString(), " '", prefabName, "' buildings");
+            Logging.Message("set household counts to ", homeCount, " for ", homeCountChanged, " '", prefabName, "' buildings");
         }
 
 

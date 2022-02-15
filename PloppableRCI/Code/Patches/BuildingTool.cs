@@ -135,7 +135,7 @@ namespace PloppableRICO
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		public static void BuildingCompletedRev(object instance, ushort buildingID, ref Building buildingData)
 		{
-			Logging.Error("BuildingCompleted reverse Harmony patch wasn't applied with params ", instance.ToString(), ":", buildingID.ToString(), ":", buildingData.ToString());
+			Logging.Error("BuildingCompleted reverse Harmony patch wasn't applied with params ", instance, ":", buildingID, ":", buildingData);
 		}
 	}
 }

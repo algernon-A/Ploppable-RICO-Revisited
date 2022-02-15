@@ -53,7 +53,7 @@ namespace PloppableRICO
                                 cutCount++;
                             }
 
-                            Logging.Message("InitPrefab transpiler removing CIL (offset ", cutCount.ToString(), ") from ", i.ToString(), " (", codes[i].opcode.ToString(), " to ", codes[i + cutCount].opcode.ToString(), ") - ", targetOperand);
+                            Logging.Message("InitPrefab transpiler removing CIL (offset ", cutCount, ") from ", i, " (", codes[i].opcode, " to ", codes[i + cutCount].opcode, ") - ", targetOperand);
 
                             // Remove the CIL from the ldarg.0 to the throw (inclusive).
                             // +1 to avoid fencepost error (need to include original instruction as well).

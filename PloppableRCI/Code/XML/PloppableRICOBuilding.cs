@@ -309,7 +309,7 @@ namespace PloppableRICO
                     // Check and adjust for any rounding errors, assigning 'leftover' jobs to the lowest education level.
                     _workplaces[0] += originalWorkplaces - _workplaces.Sum();
 
-                    Logging.Message(originalWorkplaces.ToString(), " old-format workplaces for building '", name, "'; replacing with workplaces ", _workplaces[0].ToString(), " ", _workplaces[1].ToString(), " ", _workplaces[2].ToString(), " ", _workplaces[3].ToString());
+                    Logging.Message(originalWorkplaces, " old-format workplaces for building '", name, "'; replacing with workplaces ", _workplaces[0], " ", _workplaces[1], " ", _workplaces[2], " ", _workplaces[3]);
 
                     // Reset flag; these workplaces are now updated.
                     _oldWorkplacesStyle = false;
@@ -498,11 +498,11 @@ namespace PloppableRICO
                     if (newLevel == 1)
                     {
                         // Don't bother reporting errors for levels reset to 1, as those are generally for buildings that only have one level anwyay and it's just annoying users.
-                        Logging.Message("building '", name, "' has invalid level '", level.ToString(), "'. Resetting to level '", newLevel.ToString());
+                        Logging.Message("building '", name, "' has invalid level '", level, "'. Resetting to level '", newLevel);
                     }
                     else
                     {
-                        errors.AppendLine("Building '" + name + "' has invalid level '" + level.ToString() + "'. Resetting to level '" + newLevel + "'.");
+                        errors.AppendLine("Building '" + name + "' has invalid level '" + level + "'. Resetting to level '" + newLevel + "'.");
                     }
                     level = newLevel;
                 }

@@ -18,7 +18,7 @@ namespace PloppableRICO
         {
             if (resource == EconomyManager.Resource.PrivateIncome && amount < 0)
             {
-                Logging.Message("fixed private building negative income of ", amount.ToString(), " for building with subService ", subService.ToString());
+                Logging.Message("fixed private building negative income of ", amount, " for building with subService ", subService);
                 amount = -amount;
             }
         }

@@ -64,19 +64,19 @@ namespace PloppableRICO
                                     if (isLocal && building.ricoEnabled)
                                     {
                                         // Errors in local settings need to be reported, except for buildings that aren't activated in RICO (e.g. for when the user has de-activated a RICO builidng with issues).
-                                        Logging.Error("non-fatal errors for building '", building.Name, "' in local settings:\r\n", errorList.ToString());
+                                        Logging.Error("non-fatal errors for building '", building.Name, "' in local settings:\r\n", errorList);
                                     }
                                     else
                                     {
                                         // Errors in other settings should be logged if verbose logging is enabled, but otherwise continue.
-                                        Logging.Message("non-fatal errors for building '", building.Name, "' in author settings:\r\n", errorList.ToString());
+                                        Logging.Message("non-fatal errors for building '", building.Name, "' in author settings:\r\n", errorList);
                                     }
                                 }
                             }
                             else
                             {
                                 // Fatal errors!  Need to be reported direct to user and the building ignored.
-                                Logging.Error("fatal errors for building '", building.Name, "' in ", localOrAuthor, " settings:\r\n", errorList.ToString());
+                                Logging.Error("fatal errors for building '", building.Name, "' in ", localOrAuthor, " settings:\r\n", errorList);
                             }
                         }
                     }
