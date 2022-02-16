@@ -25,7 +25,6 @@ namespace PloppableRICO
 
         // Internal flags.
         internal static bool isModEnabled = false;
-        internal static bool patchOperating = false;
         private static bool harmonyLoaded = false;
 
         // Used to flag if conflicting mods are running.
@@ -47,8 +46,7 @@ namespace PloppableRICO
                 isModEnabled = false;
                 Logging.KeyMessage("not loading into game, skipping activation");
 
-                // Set harmonyLoaded and PatchOperating flags to suppress Harmony warning when e.g. loading into editor.
-                patchOperating = true;
+                // Set harmonyLoaded flag to suppress Harmony warning when e.g. loading into editor.
                 harmonyLoaded = true;
 
                 // Unload Harmony patches and exit before doing anything further.
@@ -82,9 +80,6 @@ namespace PloppableRICO
             {
                 isModEnabled = true;
                 Logging.KeyMessage("v " + PloppableRICOMod.Version + " loading");
-
-                // Ensure patch watchdog flag is properly initialised.
-                patchOperating = false;
 
                 // Check for other mods, including any soft conflicts.
                 softModConflct = ModUtils.CheckMods();
@@ -137,14 +132,6 @@ namespace PloppableRICO
         public override void OnLevelLoaded(LoadMode mode)
         {
             base.OnLevelLoaded(mode);
-
-            // Check watchdog flag.
-            if (!patchOperating)
-            {
-                // Patch wasn't operating; display harmony error and abort.
-                harmonyLoaded = false;
-                isModEnabled = false;
-            }
 
             // Check to see that Harmony 2 was properly loaded.
             if (!harmonyLoaded)
