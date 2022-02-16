@@ -11,7 +11,7 @@ namespace PloppableRICO
 	/// and opens a lot of doors.
 	/// </summary>
 	[HarmonyPatch(typeof(BuildingInfo), "InitializePrefab")]
-	public static class InitPatch
+	public static class InitializePrefabPatch
 	{
 		/// <summary>
 		/// Harmony prefix patch for BuildingInfo.InitializePrefab.
@@ -178,9 +178,6 @@ namespace PloppableRICO
 				// This means that there's been a significant failure.  Ploppable RICO settings can't be applied.
 				Logging.Error("convertPrefabs not initialised");
 			}
-
-			// If we've made it this far, the patch is working fine - set the watchdog flag to confirm.
-			Loading.patchOperating = true;
 
 			// Continue on to execute game InitializePrefab.
 			return true;
