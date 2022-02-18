@@ -27,12 +27,12 @@ namespace PloppableRICO
         /// </summary>
         public void OnEnabled()
         {
+            // Load settings file - need to do this before patching Harmony due to needing to set logging detail setting.
+            SettingsUtils.LoadSettings();
+
             // Apply Harmony patches via Cities Harmony.
             // Called here instead of OnCreated to allow the auto-downloader to do its work prior to launch.
             HarmonyHelper.DoOnHarmonyReady(() => Patcher.PatchAll());
-
-            // Load settings file.
-            SettingsUtils.LoadSettings();
 
             // Check to see if UIView is ready.
             if (UIView.GetAView() != null)
