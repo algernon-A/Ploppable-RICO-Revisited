@@ -2,6 +2,7 @@
 
 - Convert translation framework to CSV (for CrowdIn)
 - Update CitiesHarmony API to 2.1.0 (Harmony 2.2)
+- Remove InitPrefab patching watchdog
 
 
 Version 2.4.10.2 -
