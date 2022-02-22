@@ -121,6 +121,9 @@ namespace PloppableRICO
         [XmlElement("NoSpecOther")]
         public bool NoSpecOther { get => ModSettings.noSpecOther; set => ModSettings.noSpecOther = value; }
 
+        [XmlElement("NoStyleDespawn")]
+        public bool NoStyleDespawn { get => PrivateBuildingSimStep.disableStyleDespawn; set => PrivateBuildingSimStep.disableStyleDespawn = value; }
+
         [XmlElement("NoValueRicoPlop")]
         public bool NoValueRicoPlop { get => ModSettings.noValueRicoPlop; set => ModSettings.noValueRicoPlop = value; }
 

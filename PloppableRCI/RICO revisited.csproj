@@ -75,6 +75,7 @@
     <Compile Include="Code\Patches\CollapseBuilding.cs" />
     <Compile Include="Code\Patches\ComplaintPatches.cs" />
     <Compile Include="Code\Patches\NegativeIncomeFix.cs" />
+    <Compile Include="Code\Patches\PrivateBuildingSimStep.cs" />
     <Compile Include="Code\Utils\Logging.cs" />
     <Compile Include="Code\GUI\PanelFastList.cs" />
     <Compile Include="Code\GUI\PloppablePanel.cs" />
