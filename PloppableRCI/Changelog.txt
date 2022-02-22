@@ -1,4 +1,9 @@
-﻿Version 2.4.11 -
+﻿Version 2.4.12 -
+
+- Add option to prevent building styles from demolishing existing buildings
+
+
+Version 2.4.11 -
 
 - Convert translation framework to CSV (for CrowdIn)
 - Update CitiesHarmony API to 2.1.0 (Harmony 2.2)
