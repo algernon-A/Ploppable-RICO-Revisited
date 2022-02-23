@@ -96,6 +96,14 @@ namespace PloppableRICO
                     SettingsUtils.SaveSettings();
                 });
             }
+
+            // Add 'disable style despawn' checkbox.
+            UIHelperBase styleGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_STY"));
+            styleGroup.AddCheckbox(Translations.Translate("PRR_OPTION_STR"), PrivateBuildingSimStep.disableStyleDespawn, isChecked =>
+            {
+                PrivateBuildingSimStep.disableStyleDespawn = isChecked;
+                SettingsUtils.SaveSettings();
+            });
         }
     }
 }
