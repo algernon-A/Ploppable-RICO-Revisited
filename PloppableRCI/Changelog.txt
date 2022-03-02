@@ -1,6 +1,6 @@
 ﻿Version 2.4.12 -
 
-- Add option to prevent building styles from removing exiting buildings
+- Add option to prevent building styles from removing existing buildings
 
 
 Version 2.4.11 -
