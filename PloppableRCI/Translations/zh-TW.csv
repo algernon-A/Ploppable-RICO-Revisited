@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","即刻放置可成長型(Growable)建築(無建造動畫)"
 "PRR_OPTION_ZON","可成長型(Growable)建築可放置在非區域分配以外的任何地方"
 "PRR_OPTION_SPC","可成長型(Growable)建築可在專業化行政專區以外的任何地方存在"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","忽略 “地價過低” 抱怨"
 "PRR_OPTION_SVC","忽略 “大眾服務過少” 抱怨"
 "PRR_OPTION_HST","設置所有已放置的可成長型(Growable)建築為“歷史建築”"

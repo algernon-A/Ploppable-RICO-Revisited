@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Odmah postavi izgrađive zgrade (bez sagradnje)"
 "PRR_OPTION_ZON","Izgrađive zgrade mogu da prežive izvan prave zone"
 "PRR_OPTION_SPC","Izgrađive zgrade mogu da prežive bez neophodne oblastne specijalizacije"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Ignoriši žalbu 'niska vrednost zemljišta'"
 "PRR_OPTION_SVC","Ignoriši žalbu 'premalo usluga'"
 "PRR_OPTION_HST","Pretvori svaku postavljenu izgrađivu zgradu istoričkom"

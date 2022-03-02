@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Размещение growable зданий без анимации строительства"
 "PRR_OPTION_ZON","Growable здания могут размещ. и существовать без учёта зонирования"
 "PRR_OPTION_SPC","Growable здания могут существ. без необходим. районной специализации"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Игнорировать сообщение 'низкая стоимость земли'"
 "PRR_OPTION_SVC","Игнорировать сообщение 'слишком мало услуг'"
 "PRR_OPTION_HST","Сделать все размещаемые Growable здания историческими"

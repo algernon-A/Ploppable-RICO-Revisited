@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Langsung taruh bangunan bisa berkembang (tanpa konstruksi)"
 "PRR_OPTION_ZON","Bangunan bisa berkembang bisa bertahan diluar zona yang benar"
 "PRR_OPTION_SPC","Bangunan bisa berkembang bisa bertahan diluar spesialisasi distrik wajib"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Abaikan keluhan 'harga tanah rendah'"
 "PRR_OPTION_SVC","Abaikan keluhan 'terlalu sedikit layanan'"
 "PRR_OPTION_HST","Buat semua bangunan yang ditaruh histroris"

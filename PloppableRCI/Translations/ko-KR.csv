@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Growable 건물을 즉각 완공 (공사 없음)"
 "PRR_OPTION_ZON","Growable 건물이 구역(zone) 밖에서도 살아 남음."
 "PRR_OPTION_SPC","Growable 건물이 요구되는 특화 지구 설정이 없어도 살아 남음."
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","낮은 토지 가격' 불만 무시"
 "PRR_OPTION_SVC","공공 서비스 부족' 불만 무시"
 "PRR_OPTION_HST","건설하는 RICO 건물을 역사적 건물로 만들기"

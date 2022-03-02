@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Colocar edificios expandibles instantáneamente (sin construcción)"
 "PRR_OPTION_ZON","Edificios expandibles pueden sobrevivir fuera de la zona correcta"
 "PRR_OPTION_SPC","Edificios expandibles pueden sobrevivir sin las especializaciones de distrito requeridas"
+"PRR_OPTION_STY","Estilos de construcción"
+"PRR_OPTION_STR","Evitar que los estilos eliminen edificios existentes"
 "PRR_OPTION_VAL","Ignorar queja de 'valor de terreno bajo'"
 "PRR_OPTION_SVC","Ignorar queja de 'muy pocos servicios'"
 "PRR_OPTION_HST","Declarar todos los edificios expandibles históricos"

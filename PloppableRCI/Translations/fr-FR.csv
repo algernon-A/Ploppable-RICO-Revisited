@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Déployer instantanément les bâtiments croissables (sans construction)"
 "PRR_OPTION_ZON","Les bâtiments peuvent survivre hors de la zone prévue"
 "PRR_OPTION_SPC","Les bâtiments peuvent survivre sans la spécialisation de quartier adéquate"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Ignorer la plainte ""Valeur foncière basse"""
 "PRR_OPTION_SVC","Ignorer la plainte ""Pas assez de services"""
 "PRR_OPTION_HST","Classer comme historique tous les bâtiments croissables naissants"

@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Plasser vekstbare bygninger umiddelbart (ingen konstruksjon)"
 "PRR_OPTION_ZON","Voksbare bygninger kan overleve utenfor riktig sone"
 "PRR_OPTION_SPC","Voksbare bygninger kan ikke overleve uten distrikt spesifikasjoner"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Ignorer klagen om lav landverdi"
 "PRR_OPTION_SVC","Ignorer klagen om for få tjenester"
 "PRR_OPTION_HST","Gjøre alle plopped bygninger historiske"

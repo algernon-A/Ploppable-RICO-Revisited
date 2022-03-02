@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Direct gebouw plaatsen (zonder constructie)"
 "PRR_OPTION_ZON","Groeibare gebouwen kunnen buiten de correcte zone blijven staan"
 "PRR_OPTION_SPC","Groeibare gebouwen kunnen zonder specifice districsspecialisatie blijven staan"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Negeer lage landwaardemeldingen"
 "PRR_OPTION_SVC","Negeer onvoldoende dienstverleningsmeldingen"
 "PRR_OPTION_HST","Maak alle geplaatste gebouwen historisch"

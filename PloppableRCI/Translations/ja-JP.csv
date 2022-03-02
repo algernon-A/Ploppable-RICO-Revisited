@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Growableの建物を即座に設置(建設描画無し)"
 "PRR_OPTION_ZON","Growableの建物をゾーニング外でも存続可能にする"
 "PRR_OPTION_SPC","Growableの建物を地区設定に影響せず存続可能にする"
+"PRR_OPTION_STY","建築のスタイル"
+"PRR_OPTION_STR","指定したスタイルが設置済み建物の強制撤去を防止"
 "PRR_OPTION_VAL","""地価が低すぎます"" の警告を除外"
 "PRR_OPTION_SVC","""公共サービスが少なすぎます"" の警告を除外"
 "PRR_OPTION_HST","設置したGrowableの建物を歴史的建造物に指定"

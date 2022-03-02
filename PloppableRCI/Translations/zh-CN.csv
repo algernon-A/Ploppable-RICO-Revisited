@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","自长建筑立即建造成型（去除脚手架动画效果）"
 "PRR_OPTION_ZON","保留不位于指定政策区域里的自长建筑可以一直保留"
 "PRR_OPTION_SPC","没有所需产业政策的区域里的自长建筑可以一直保留"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","忽略“地价太低”问题"
 "PRR_OPTION_SVC","忽略“市政服务不足”问题"
 "PRR_OPTION_HST","手动放置的建筑均为历史建筑"

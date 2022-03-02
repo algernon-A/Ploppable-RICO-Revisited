@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Instantly plop growable buildings (no construction)"
 "PRR_OPTION_ZON","Growable buildings can survive outside of the correct zone"
 "PRR_OPTION_SPC","Growable buildings can survive without required district specializations"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Ignore 'low land value' complaint"
 "PRR_OPTION_SVC","Ignore 'too few services' complaint"
 "PRR_OPTION_HST","Make all plopped growables historical"

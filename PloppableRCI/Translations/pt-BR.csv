@@ -98,6 +98,8 @@
 "PRR_OPTION_PLP","Colocar construções growable instantaneamente (sem construção)"
 "PRR_OPTION_ZON","Construções growable podem sobreviver fora da zona correta"
 "PRR_OPTION_SPC","Construções growable podem sobreviver sem os requerimentos de especialização de distrito"
+"PRR_OPTION_STY","Building styles"
+"PRR_OPTION_STR","Prevent styles from removing existing buildings"
 "PRR_OPTION_VAL","Ignora o aviso de baixo valor de terreno"
 "PRR_OPTION_SVC","Ignora o aviso de serviços insuficientes"
 "PRR_OPTION_HST","Converter todos os edifícios ploppable em edifícios históricos"
