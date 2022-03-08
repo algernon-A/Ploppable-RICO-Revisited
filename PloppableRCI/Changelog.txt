@@ -1,5 +1,5 @@
 ﻿- Fix cross-threading issue with 'save and apply' function for residential building
-- Update citizen unit handling codefor 'save and apply' function
+- Update CitizenUnit handling code for 'save and apply' function
 
 
 Version 2.4.12 -
