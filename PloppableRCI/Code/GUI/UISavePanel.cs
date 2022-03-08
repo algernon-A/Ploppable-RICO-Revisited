@@ -387,7 +387,7 @@ namespace PloppableRICO
 
 
             // Iterate through each building in the scene.
-            for (ushort i = 0; i < buildingBuffer.Length; i++)
+            for (ushort i = 0; i < buildingBuffer.Length; ++i)
             {
                 // Check for matching name.
                 if (buildingBuffer[i].Info != null && buildingBuffer[i].Info.name != null && buildingBuffer[i].Info.name.Equals(prefabName))
@@ -416,9 +416,9 @@ namespace PloppableRICO
                             visitCount = thisAI.CalculateVisitplaceCount((ItemClass.Level)buildingBuffer[i].m_level, new Randomizer(i), buildingBuffer[i].Width, buildingBuffer[i].Length);
                         }
 
-                        // Apply changes via direct call to EnsureCitizenUnits prefix patch from this mod and increment counter.
-                        RealisticCitizenUnits.EnsureCitizenUnits(ref thisAI, i, ref buildingBuffer[i], homeCount, 0, visitCount, 0);
-                        homeCountChanged++;
+                        // Apply changes via direct call to EnsureCitizenUnits prefix patch from this mod (in Simulation thread) and increment counter.
+                        Singleton<SimulationManager>.instance.AddAction(() => RealisticCitizenUnits.EnsureCitizenUnits(ref thisAI, i, ref buildingBuffer[i], homeCount, 0, visitCount, 0));
+                        ++homeCountChanged;
                     }
 
                     // Clear any problems.
