@@ -154,13 +154,6 @@ namespace PloppableRICO
             // Save first.
             Save();
 
-            // If we're converting a residential building to something else, then we first should clear out all households.
-            if (currentBuildingData.prefab.GetService() == ItemClass.Service.Residential && !IsCurrentResidential())
-            {
-                // removeAll argument to true to remove all households.
-                UpdateHouseholds(currentBuildingData.prefab.name, removeAll: true);
-            }
-
             // Get the currently applied RICO settings (local, author, mod).
             RICOBuilding currentData = RICOUtils.CurrentRICOSetting(currentSelection);
 
@@ -168,7 +161,7 @@ namespace PloppableRICO
             {
                 // Convert the 'live' prefab (instance in PrefabCollection) and update household count and builidng level for all current instances.
                 Loading.convertPrefabs.ConvertPrefab(currentData, PrefabCollection<BuildingInfo>.FindLoaded(currentBuildingData.prefab.name));
-                UpdateHouseholds(currentBuildingData.prefab.name, currentData.level);
+                CitizenUnitUtils.UpdateCitizenUnits(currentBuildingData.prefab.name);
             }
             else
             {
@@ -368,67 +361,6 @@ namespace PloppableRICO
                     return "high";
             }
         }
-
-
-        /// <summary>
-        /// Updates household counts for all buildings in scene with the given prefab name.
-        /// Can also remove all households, setting the total to zero.
-        /// </summary>
-        /// <param name="prefabName">Prefab name</param>
-        /// <param name="removeAll">If true, all households will be removed (count set to 0)</param>
-        private void UpdateHouseholds(string prefabName, int level = 0, bool removeAll = false)
-        {
-            int homeCount = 0;
-            int visitCount = 0;
-            int homeCountChanged = 0;
-
-            // Get game buildings.
-            Building[] buildingBuffer = Singleton<BuildingManager>.instance.m_buildings.m_buffer;
-
-
-            // Iterate through each building in the scene.
-            for (ushort i = 0; i < buildingBuffer.Length; ++i)
-            {
-                // Check for matching name.
-                if (buildingBuffer[i].Info != null && buildingBuffer[i].Info.name != null && buildingBuffer[i].Info.name.Equals(prefabName))
-                {
-                    // Got a match!  Check level if applicable.
-                    if (level > 0)
-                    {
-                        // m_level is one less than building.level.
-                        byte newLevel = (byte)(level - 1);
-
-                        if (buildingBuffer[i].m_level != newLevel)
-                        {
-                            Logging.Message("found building '", prefabName, "' with level ", (buildingBuffer[i].m_level + 1), ", overriding to level ", level);
-                            buildingBuffer[i].m_level = newLevel;
-                        }
-                    }
-
-                    // Update homecounts for any residential buildings.
-                    PrivateBuildingAI thisAI = buildingBuffer[i].Info.GetAI() as ResidentialBuildingAI;
-                    if (thisAI != null)
-                    {
-                        // This is residential! If we're not removing all households, recalculate home and visit counts using AI method.
-                        if (!removeAll)
-                        {
-                            homeCount = thisAI.CalculateHomeCount((ItemClass.Level)buildingBuffer[i].m_level, new Randomizer(i), buildingBuffer[i].Width, buildingBuffer[i].Length);
-                            visitCount = thisAI.CalculateVisitplaceCount((ItemClass.Level)buildingBuffer[i].m_level, new Randomizer(i), buildingBuffer[i].Width, buildingBuffer[i].Length);
-                        }
-
-                        // Apply changes via direct call to EnsureCitizenUnits prefix patch from this mod (in Simulation thread) and increment counter.
-                        Singleton<SimulationManager>.instance.AddAction(() => RealisticCitizenUnits.EnsureCitizenUnits(ref thisAI, i, ref buildingBuffer[i], homeCount, 0, visitCount, 0));
-                        ++homeCountChanged;
-                    }
-
-                    // Clear any problems.
-                    buildingBuffer[i].m_problems = 0;
-                }
-            }
-
-            Logging.Message("set household counts to ", homeCount, " for ", homeCountChanged, " '", prefabName, "' buildings");
-        }
-
 
 
         /// <summary>
