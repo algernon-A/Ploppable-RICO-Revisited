@@ -87,30 +87,33 @@ namespace PloppableRICO
 
                 // Create a base panel attached to our game object, perfectly overlaying the game options panel.
                 UIPanel basePanel = optionsGameObject.AddComponent<UIPanel>();
-                basePanel.absolutePosition = optionsPanel.absolutePosition;
-                basePanel.width = optionsPanel.width;
-                basePanel.height = 744f;
+                basePanel.width = optionsPanel.width - 10f;
+                basePanel.height = 725f;
+                basePanel.clipChildren = false;
+
+                // Needed to ensure position is consistent if we regenerate after initial opening (e.g. on language change).
+                basePanel.relativePosition = new Vector2(10f, 10f);
 
                 // Add tabstrip.
                 UITabstrip tabStrip = basePanel.AddUIComponent<UITabstrip>();
                 tabStrip.relativePosition = new Vector3(0, 0);
-                tabStrip.size = new Vector2(744f, 600f);
+                tabStrip.width = basePanel.width;
+                tabStrip.height = basePanel.height;
+                tabStrip.clipChildren = false;
 
                 // Tab container (the panels underneath each tab).
                 UITabContainer tabContainer = basePanel.AddUIComponent<UITabContainer>();
-                tabContainer.relativePosition = new Vector2(0f, 40f);
-                tabContainer.size = new Vector2(744f, 713f);
+                tabContainer.relativePosition = new Vector3(0, 30f);
+                tabContainer.width = tabStrip.width;
+                tabContainer.height = tabStrip.height;
+                tabContainer.clipChildren = false;
                 tabStrip.tabPages = tabContainer;
 
                 // Add tabs and panels.
-                Logging.KeyMessage("adding GrowableOptions");
-                new GrowableOptions(tabStrip, 0);
-                Logging.KeyMessage("adding PloppableOptions");
-                new PloppableOptions(tabStrip, 1);
-                Logging.KeyMessage("adding ComplaintOptions");
-                new ComplaintOptions(tabStrip, 2);
-                Logging.KeyMessage("adding ModOptions");
-                new ModOptions(tabStrip, 3);
+                new ModOptions(tabStrip, 0);
+                new GrowableOptions(tabStrip, 1);
+                new PloppableOptions(tabStrip, 2);
+                new ComplaintOptions(tabStrip, 3);
 
                 // Change tab size and text scale (to fit them all in...).
                 foreach (UIButton button in tabStrip.components)

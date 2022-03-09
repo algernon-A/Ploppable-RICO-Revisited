@@ -24,7 +24,7 @@ namespace PloppableRICO
             UIDropDown translationDropDown = (UIDropDown)helper.AddDropdown(Translations.Translate("TRN_CHOICE"), Translations.LanguageList, Translations.Index, (value) =>
             {
                 Translations.Index = value;
-                SettingsUtils.SaveSettings();
+                OptionsPanel.LocaleChanged();
             });
             translationDropDown.autoSize = false;
             translationDropDown.width = 270f;
@@ -45,7 +45,6 @@ namespace PloppableRICO
             notificationGroup.AddCheckbox(Translations.Translate("PRR_OPTION_WHATSNEW"), ModSettings.showWhatsNew, isChecked =>
             {
                 ModSettings.showWhatsNew = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Logging options.
@@ -55,7 +54,6 @@ namespace PloppableRICO
             logGroup.AddCheckbox(Translations.Translate("PRR_OPTION_MOREDEBUG"), Logging.detailLogging, isChecked =>
             {
                 Logging.detailLogging = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Thumbnail options.
@@ -65,7 +63,6 @@ namespace PloppableRICO
             thumbGroup.AddDropdown(Translations.Translate("PRR_OPTION_THUMBACK"), ModSettings.ThumbBackNames, ModSettings.thumbBacks, (value) =>
             {
                 ModSettings.thumbBacks = value;
-                SettingsUtils.SaveSettings();
             });
 
             // Add regenerate thumbnails button.
@@ -76,7 +73,6 @@ namespace PloppableRICO
             speedGroup.AddCheckbox(Translations.Translate("PRR_OPTION_SPEED"), ModSettings.speedBoost, isChecked =>
             {
                 ModSettings.speedBoost = isChecked;
-                SettingsUtils.SaveSettings();
             });
         }
     }

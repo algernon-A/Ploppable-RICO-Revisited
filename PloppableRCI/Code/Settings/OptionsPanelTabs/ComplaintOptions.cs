@@ -25,12 +25,10 @@ namespace PloppableRICO
             UICheckBox noValueRicoPlop = (UICheckBox)valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RPL"), ModSettings.noValueRicoPlop, isChecked =>
             {
                 ModSettings.noValueRicoPlop = isChecked;
-                SettingsUtils.SaveSettings();
             });
             valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RCO"), ModSettings.noValueRicoGrow, isChecked =>
             {
                 ModSettings.noValueRicoGrow = isChecked;
-                SettingsUtils.SaveSettings();
 
                 // If this is active, then the checkbox above also needs to be checked if it isn't already.
                 if (isChecked && !noValueRicoPlop.isChecked)
@@ -41,7 +39,6 @@ namespace PloppableRICO
             valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noValueOther, isChecked =>
             {
                 ModSettings.noValueOther = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Add 'ignore too few services complaint' checkboxes.
@@ -49,12 +46,10 @@ namespace PloppableRICO
             UICheckBox noServicesRicoPlop = (UICheckBox)servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RPL"), ModSettings.noServicesRicoPlop, isChecked =>
             {
                 ModSettings.noServicesRicoPlop = isChecked;
-                SettingsUtils.SaveSettings();
             });
             servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RCO"), ModSettings.noServicesRicoGrow, isChecked =>
             {
                 ModSettings.noServicesRicoGrow = isChecked;
-                SettingsUtils.SaveSettings();
 
                 // If this is active, then the checkbox above also needs to be checked if it isn't already.
                 if (isChecked && !noServicesRicoPlop.isChecked)
@@ -65,7 +60,6 @@ namespace PloppableRICO
             servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noServicesOther, isChecked =>
             {
                 ModSettings.noServicesOther = isChecked;
-                SettingsUtils.SaveSettings();
             });
         }
     }

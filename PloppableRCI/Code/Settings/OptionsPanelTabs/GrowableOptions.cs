@@ -25,12 +25,10 @@ namespace PloppableRICO
             plopGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.plopRico, isChecked =>
             {
                 ModSettings.plopRico = isChecked;
-                SettingsUtils.SaveSettings();
             });
             plopGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.plopOther, isChecked =>
             {
                 ModSettings.plopOther = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Add no zone checks checkboxes.
@@ -38,12 +36,10 @@ namespace PloppableRICO
             zoneGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.noZonesRico, isChecked =>
             {
                 ModSettings.noZonesRico = isChecked;
-                SettingsUtils.SaveSettings();
             });
             zoneGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noZonesOther, isChecked =>
             {
                 ModSettings.noZonesOther = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Add no specialisation checks checkboxes.
@@ -51,12 +47,10 @@ namespace PloppableRICO
             specGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.noSpecRico, isChecked =>
             {
                 ModSettings.noSpecRico = isChecked;
-                SettingsUtils.SaveSettings();
             });
             specGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noSpecOther, isChecked =>
             {
                 ModSettings.noSpecOther = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Add 'make plopped growables historical' checkboxes.
@@ -64,12 +58,10 @@ namespace PloppableRICO
             histGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.historicalRico, isChecked =>
             {
                 ModSettings.historicalRico = isChecked;
-                SettingsUtils.SaveSettings();
             });
             histGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.historicalOther, isChecked =>
             {
                 ModSettings.historicalOther = isChecked;
-                SettingsUtils.SaveSettings();
             });
 
             // Add level control checkboxes.
@@ -88,12 +80,10 @@ namespace PloppableRICO
                 levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.lockLevelRico, isChecked =>
                 {
                     ModSettings.lockLevelRico = isChecked;
-                    SettingsUtils.SaveSettings();
                 });
                 levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.lockLevelOther, isChecked =>
                 {
                     ModSettings.lockLevelOther = isChecked;
-                    SettingsUtils.SaveSettings();
                 });
             }
 
@@ -102,7 +92,6 @@ namespace PloppableRICO
             styleGroup.AddCheckbox(Translations.Translate("PRR_OPTION_STR"), PrivateBuildingSimStep.disableStyleDespawn, isChecked =>
             {
                 PrivateBuildingSimStep.disableStyleDespawn = isChecked;
-                SettingsUtils.SaveSettings();
             });
         }
     }

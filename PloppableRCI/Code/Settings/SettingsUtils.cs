@@ -51,7 +51,7 @@ namespace PloppableRICO
         {
             try
             {
-                // Pretty straightforward.  Serialisation is within GBRSettingsFile class.
+                // Pretty straightforward.
                 using (StreamWriter writer = new StreamWriter(SettingsFileName))
                 {
                     XmlSerializer xmlSerializer = new XmlSerializer(typeof(XMLSettingsFile));

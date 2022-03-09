@@ -118,7 +118,6 @@ namespace PloppableRICO
         {
             // Update mod settings.
             ModSettings.warnBulldoze = isChecked;
-            SettingsUtils.SaveSettings();
 
             // If we're in-game (dictionary has been initialized), iterate through dictionary, looking for RICO ploppable buildings and updating their auto-remove flags.
             if (Loading.xmlManager?.prefabHash != null)
@@ -147,7 +146,6 @@ namespace PloppableRICO
         private void DemolishAutoCheckChanged(UIComponent control, bool isChecked)
         {
             ModSettings.autoDemolish = isChecked;
-            SettingsUtils.SaveSettings();
         }
 
 
@@ -159,7 +157,6 @@ namespace PloppableRICO
         private void OverrideCostCheckChanged(UIComponent control, bool isChecked)
         {
             ModSettings.overrideCost = isChecked;
-            SettingsUtils.SaveSettings();
         }
 
 
@@ -171,7 +168,6 @@ namespace PloppableRICO
         private void NoCollapseCheckChanged(UIComponent control, bool isChecked)
         {
             ModSettings.noCollapse = isChecked;
-            SettingsUtils.SaveSettings();
         }
 
 
@@ -193,7 +189,6 @@ namespace PloppableRICO
                     {
                         // Sucessful parse; set value and return.
                         setting = (int)result;
-                        SettingsUtils.SaveSettings();
                         return;
                     }
                 }

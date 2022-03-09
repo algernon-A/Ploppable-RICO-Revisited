@@ -1,4 +1,6 @@
-﻿- Fix cross-threading issue with 'save and apply' function for residential building
+﻿- Rearrange options panel to put mod options tab first
+- Options panel automatically refreshes on language change
+- Fix cross-threading issue with 'save and apply' function for residential building
 - Update CitizenUnit handling code for 'save and apply' function
 
 
