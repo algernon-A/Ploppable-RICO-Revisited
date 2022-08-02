@@ -1,4 +1,6 @@
-﻿- Fix custom costs for highly-educated workers not saving
+﻿Version 2.4.13.1 -
+
+- Fix custom costs for highly-educated workers not saving
 
 
 Version 2.4.13 -
