@@ -1,14 +1,10 @@
-﻿Version 2.4.13.1 -
-
-- Fix custom costs for highly-educated workers not saving
-
-
-Version 2.4.13 -
+﻿Version 2.4.13 -
 
 - Rearrange options panel to put mod options tab first
 - Options panel automatically refreshes on language change
 - Fix cross-threading issue with 'save and apply' function for residential building
 - Update CitizenUnit handling code for 'save and apply' function
+- Fix custom costs for highly-educated workers not saving
 
 
 Version 2.4.12 -
