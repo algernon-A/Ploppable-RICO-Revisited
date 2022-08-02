@@ -92,6 +92,7 @@ namespace PloppableRICO
             costPerJob0Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob0);
             costPerJob1Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob1);
             costPerJob2Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob2);
+            costPerJob3Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob3);
 
             // Natural disasters.
             currentY += TitleMarginY;
