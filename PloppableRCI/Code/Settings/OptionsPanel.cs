@@ -121,6 +121,10 @@ namespace PloppableRICO
                     button.textScale = 0.8f;
                     button.width = 175f;
                 }
+
+                // Force panel refresh.
+                tabStrip.selectedIndex = -1;
+                tabStrip.selectedIndex = 0;
             }
             catch (Exception e)
             {
