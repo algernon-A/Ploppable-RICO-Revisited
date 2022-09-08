@@ -1,184 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F9A75B7-5104-467D-A29A-8F6833D60052}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>PloppableRICO</RootNamespace>
-    <AssemblyName>ploppablerico</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <DontImportPostSharp>True</DontImportPostSharp>
-    <LangVersion>7.3</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="xcopy /Y &quot;C:\Users\AJ\Desktop\PloppableRCI\PloppableRCI\bin\Debug\PloppableRCI.dll&quot; &quot;F:\SteamLibrary\steamapps\common\Cities_Skylines\Files\Mods\PloppableRCI\&quot;" workingdir="${ProjectDir}" externalConsole="True" />
-        <Command type="BeforeBuild" command="cmd /c &quot;IF EXIST 'E:\SteamLibrary\steamapps\common\Cities_Skylines\Files\Mods\PloppableRCI\PloppableRCI.dll' (del 'E:\SteamLibrary\steamapps\common\Cities_Skylines\Files\Mods\PloppableRCI\PloppableRCI.dll')&quot;" workingdir="${ProjectDir}" externalConsole="True" />
-      </CustomCommands>
-    </CustomCommands>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SkipPostSharp>True</SkipPostSharp>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SkipPostSharp>True</SkipPostSharp>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="CitiesHarmony.API, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\CitiesHarmony.API.2.1.0\lib\net35\CitiesHarmony.API.dll</HintPath>
-    </Reference>
-    <Reference Include="CitiesHarmony.Harmony, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\CitiesHarmony.Harmony.2.2.0\lib\net35\CitiesHarmony.Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>E:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Workflow.Runtime" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core">
-      <HintPath>E:\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>C:\Program Files (x86)\Steam\SteamApps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="ColossalManaged">
-      <HintPath>C:\Program Files (x86)\Steam\SteamApps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
-    </Reference>
-    <Reference Include="ICities">
-      <HintPath>C:\Program Files (x86)\Steam\SteamApps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files (x86)\Steam\SteamApps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Code\AI\AIUtils.cs" />
-    <Compile Include="Code\AI\WorkplaceAI.cs" />
-    <Compile Include="Code\Patches\CollapseBuilding.cs" />
-    <Compile Include="Code\Patches\ComplaintPatches.cs" />
-    <Compile Include="Code\Patches\NegativeIncomeFix.cs" />
-    <Compile Include="Code\Patches\PrivateBuildingSimStep.cs" />
-    <Compile Include="Code\Utils\CitizenUnitUtils.cs" />
-    <Compile Include="Code\Utils\Logging.cs" />
-    <Compile Include="Code\GUI\PanelFastList.cs" />
-    <Compile Include="Code\GUI\PloppablePanel.cs" />
-    <Compile Include="Code\GUI\UIPreviewRenderer.cs" />
-    <Compile Include="Code\GUI\Thumbnails.cs" />
-    <Compile Include="Code\Interfaces.cs" />
-    <Compile Include="Code\Notifications\DontShowAgainMessageBox.cs" />
-    <Compile Include="Code\Notifications\ListMessageBox.cs" />
-    <Compile Include="Code\Notifications\MessageBoxBase.cs" />
-    <Compile Include="Code\Notifications\WhatsNew.cs" />
-    <Compile Include="Code\Notifications\WhatsNewMessageBox.cs" />
-    <Compile Include="Code\Patches\OnLevelLoaded.cs" />
-    <Compile Include="Code\Patches\SpecializationPatches.cs" />
-    <Compile Include="Code\Settings\OptionsPanel.cs" />
-    <Compile Include="Code\Settings\OptionsPanelTabs\ComplaintOptions.cs" />
-    <Compile Include="Code\Settings\OptionsPanelTabs\ModOptions.cs" />
-    <Compile Include="Code\Settings\OptionsPanelTabs\GrowableOptions.cs" />
-    <Compile Include="Code\Settings\OptionsPanelTabs\PloppableOptions.cs" />
-    <Compile Include="Code\Settings\PanelUtils.cs" />
-    <Compile Include="Code\Utils\ModUtils.cs" />
-    <Compile Include="Code\Patches\PrivateBuildingAI.cs" />
-    <Compile Include="Code\Patches\MonumentsPatch.cs" />
-    <Compile Include="Code\Patches\RealisticCitizenUnits.cs" />
-    <Compile Include="Code\Patches\Patcher.cs" />
-    <Compile Include="Code\Patches\InitializePrefab.cs" />
-    <Compile Include="Code\Patches\InitPrefabTranspiler.cs" />
-    <Compile Include="Code\Utils\RICOUtils.cs" />
-    <Compile Include="Code\Settings\ModSettings.cs" />
-    <Compile Include="Code\Settings\SettingsUtils.cs" />
-    <Compile Include="Code\ConvertPrefabs.cs" />
-    <Compile Include="Code\GUI\CategoryUtils.cs" />
-    <Compile Include="Code\GUI\FastList.cs" />
-    <Compile Include="Code\GUI\SettingsPanel.cs" />
-    <Compile Include="Code\GUI\UIBuildingFilter.cs" />
-    <Compile Include="Code\GUI\UIBuildingRow.cs" />
-    <Compile Include="Code\GUI\UIPreviewPanel.cs" />
-    <Compile Include="Code\GUI\UIOptionsPanel.cs" />
-    <Compile Include="Code\GUI\UISavePanel.cs" />
-    <Compile Include="Code\GUI\UITitlebar.cs" />
-    <Compile Include="Code\GUI\UIutils.cs" />
-    <Compile Include="Code\TranslationFramework\TranslationFramework.cs" />
-    <Compile Include="Code\TranslationFramework\Language.cs" />
-    <Compile Include="Code\Utils\UIControls.cs" />
-    <Compile Include="Code\XML\CrpDataProvider.cs" />
-    <Compile Include="Code\XML\PloppableRICOBuilding.cs" />
-    <Compile Include="Code\XML\PloppableRICODefinition.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Code\Mod.cs" />
-    <Compile Include="Code\AI\ResidentialAI.cs" />
-    <Compile Include="Code\AI\IndustrialAI.cs" />
-    <Compile Include="Code\AI\ExtractorAI.cs" />
-    <Compile Include="Code\AI\OfficeAI.cs" />
-    <Compile Include="Code\GUI\PloppableTool.cs" />
-    <Compile Include="Code\AI\CommercialAI.cs" />
-    <Compile Include="Code\XML\RICOReader.cs" />
-    <Compile Include="Code\XML\XMLManager.cs" />
-    <Compile Include="Code\Loading.cs" />
-    <Compile Include="Code\Patches\BuildingTool.cs" />
-    <Compile Include="Code\Util.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Changelog.txt" />
-    <Content Include="Images\Logging option location.jpg" />
-    <Content Include="Images\PreviewImage.png" />
-    <Content Include="License.txt" />
-    <Content Include="Samples\PloppableRICODefinition.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Translations\ko-KR.csv" />
-    <None Include="Translations\de-DE.csv" />
-    <None Include="Translations\el-GR.csv" />
-    <None Include="Translations\es-ES.csv" />
-    <None Include="Translations\fr-FR.csv" />
-    <None Include="Translations\id-ID.csv" />
-    <None Include="Translations\it-IT.csv" />
-    <None Include="Translations\ja-JP.csv" />
-    <None Include="Translations\nl-NL.csv" />
-    <None Include="Translations\no-NO.csv" />
-    <None Include="Translations\pl-PL.csv" />
-    <None Include="Translations\pt-BR.csv" />
-    <None Include="Translations\ru-RU.csv" />
-    <None Include="Translations\sr-CS.csv" />
-    <None Include="Translations\tr-TR.csv" />
-    <None Include="Translations\zh-CN.csv" />
-    <None Include="Translations\en.csv" />
-    <None Include="Translations\zh-TW.csv" />
-  </ItemGroup>
-  <PropertyGroup>
-    <PostBuildEvent>mkdir "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)"
-del "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\*.dll"
-xcopy /y "$(TargetPath)" "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)"
-
-xcopy /y "$(SolutionDir)packages\CitiesHarmony.API.2.1.0\lib\net35\CitiesHarmony.API.dll" "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)"
-$(ProjectName)"
-mkdir "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations"
-del "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations\*.csv"
-xcopy /y "$(SolutionDir)\Translations\" "$(LOCALAPPDATA)\Colossal Order\Cities_Skylines\Addons\Mods\$(ProjectName)\Translations" /s /e
-</PostBuildEvent>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net35</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<AssemblyName>ploppablerico</AssemblyName>
+		<Title>Ploppable RICO Revisited</Title>
+		<AssemblyTitle>$(Title)</AssemblyTitle>
+		<Description>A Cities: Skylines mod.</Description>
+		<Authors>algernon,AJ3D</Authors>
+		<Copyright>Copyright © 2020-22 algernon (fork of work 2015-2018 by AJ3D and others)</Copyright>
+		<Product>$(Title)</Product>
+		<Version>2.4.13.0</Version>
+		<ManagedDLLPath>$(MSBuildProgramFiles32)/Steam/steamapps/common/Cities_Skylines/Cities_Data/Managed</ManagedDLLPath>
+		<AssemblySearchPaths>
+			$(AssemblySearchPaths);
+			$(ManagedDLLPath);
+		</AssemblySearchPaths>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+		<Reference Include="Assembly-CSharp" />
+		<Reference Include="ColossalManaged" />
+		<Reference Include="ICities" />
+		<Reference Include="UnityEngine" />
+	</ItemGroup>
+	<ItemGroup>
+		<_Translations Include="$(ProjectDir)/Translations/*.csv" />
+	</ItemGroup>
+	<Target Name="DeployToModDirectory" AfterTargets="Build">
+		<PropertyGroup>
+			<DeployDir>$(LOCALAPPDATA)/Colossal Order/Cities_Skylines/Addons/Mods/RICO revisited/</DeployDir>
+		</PropertyGroup>
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DeployDir)" />
+		<Copy SourceFiles="$(TargetDir)/CitiesHarmony.API.dll" DestinationFolder="$(DeployDir)" />
+		<Copy SourceFiles="@(_Translations)" DestinationFolder="$(DeployDir)/Translations" />
+	</Target>
 </Project>
