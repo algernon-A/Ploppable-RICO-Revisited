@@ -1,10 +1,10 @@
-﻿using System;
-using ColossalFramework.UI;
-using UnityEngine;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using AlgernonCommons.Translation;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     ///The far right column of the settings panel. Contains the drop downs and entry fields that allows players to assign RICO settings. 
     /// </summary>

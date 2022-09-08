@@ -1,10 +1,10 @@
-﻿using System;
-using UnityEngine;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using AlgernonCommons;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// Static class to coordinate thumbnail generation.
     /// </summary>

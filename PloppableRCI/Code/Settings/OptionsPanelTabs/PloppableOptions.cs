@@ -1,11 +1,12 @@
-﻿using System.Linq;
-using UnityEngine;
-using ColossalFramework;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System.Linq;
+    using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
+    using ColossalFramework;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// Options panel for setting growable building behaviour options.
     /// </summary>
@@ -32,16 +33,16 @@ namespace PloppableRICO
             int tabbingIndex = 0;
 
             // Add tab and helper.
-            UIPanel panel = PanelUtils.AddTab(tabStrip, Translations.Translate("PRR_OPTION_PLO"), tabIndex, false);
+            UIPanel panel = UITabstrips.AddTextTab(tabStrip, Translations.Translate("PRR_OPTION_PLO"), tabIndex, out UIButton _);
 
             // Demolition options.
-            UILabel demolishLabel = UIControls.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_DEM"), textScale: 1.125f);
+            UILabel demolishLabel = UILabels.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_DEM"), textScale: 1.125f);
             demolishLabel.font = Resources.FindObjectsOfTypeAll<UIFont>().FirstOrDefault((UIFont f) => f.name == "OpenSans-Semibold");
             demolishLabel.tabIndex = ++tabbingIndex;
             currentY += demolishLabel.height + TitleMarginY;
 
             // Add 'warn if bulldozing ploppables' checkbox.
-            UICheckBox demolishWarnCheck = UIControls.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_BDZ"));
+            UICheckBox demolishWarnCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_BDZ"));
             demolishWarnCheck.relativePosition = new Vector2(LeftMargin, currentY);
             demolishWarnCheck.isChecked = ModSettings.warnBulldoze;
             demolishWarnCheck.eventCheckChanged += DemolishWarnCheckChanged;
@@ -49,7 +50,7 @@ namespace PloppableRICO
             currentY += CheckRowHeight + Margin;
 
             // Add auto-demolish checkbox.
-            UICheckBox demolishAutoCheck = UIControls.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_IMP"));
+            UICheckBox demolishAutoCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_IMP"));
             demolishAutoCheck.relativePosition = new Vector2(LeftMargin, currentY);
             demolishAutoCheck.isChecked = ModSettings.autoDemolish;
             demolishAutoCheck.tabIndex = ++tabbingIndex;
@@ -57,17 +58,17 @@ namespace PloppableRICO
             currentY += CheckRowHeight;
 
             // Auto-demolish sub-label.
-            UILabel demolishAutoLabel = UIControls.AddLabel(panel, SubTitleX, currentY, Translations.Translate("PRR_OPTION_IMP2"), textScale: 1.125f);
+            UILabel demolishAutoLabel = UILabels.AddLabel(panel, SubTitleX, currentY, Translations.Translate("PRR_OPTION_IMP2"), textScale: 1.125f);
             demolishAutoLabel.font = Resources.FindObjectsOfTypeAll<UIFont>().FirstOrDefault((UIFont f) => f.name == "OpenSans-Regular");
             currentY += CheckRowHeight + GroupMargin;
 
             // Cost options.
-            UILabel costLabel = UIControls.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_CST"), textScale: 1.125f);
+            UILabel costLabel = UILabels.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_CST"), textScale: 1.125f);
             costLabel.font = Resources.FindObjectsOfTypeAll<UIFont>().FirstOrDefault((UIFont f) => f.name == "OpenSans-Semibold");
             currentY += costLabel.height + TitleMarginY;
 
             // Add override cost checkbox.
-            UICheckBox overrideCostCheck = UIControls.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_COV"));
+            UICheckBox overrideCostCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_COV"));
             overrideCostCheck.relativePosition = new Vector2(LeftMargin, currentY);
             overrideCostCheck.isChecked = ModSettings.overrideCost;
             overrideCostCheck.eventCheckChanged += OverrideCostCheckChanged;
@@ -96,12 +97,12 @@ namespace PloppableRICO
 
             // Natural disasters.
             currentY += TitleMarginY;
-            UILabel disasterLabel = UIControls.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_DIS"), textScale: 1.125f);
+            UILabel disasterLabel = UILabels.AddLabel(panel, TitleMarginX, currentY, Translations.Translate("PRR_OPTION_DIS"), textScale: 1.125f);
             disasterLabel.font = Resources.FindObjectsOfTypeAll<UIFont>().FirstOrDefault((UIFont f) => f.name == "OpenSans-Semibold");
             currentY += disasterLabel.height + TitleMarginY;
 
             // Add auto-demolish checkbox.
-            UICheckBox noCollapseCheck = UIControls.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_NOC"));
+            UICheckBox noCollapseCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_NOC"));
             noCollapseCheck.relativePosition = new Vector2(LeftMargin, currentY);
             noCollapseCheck.isChecked = ModSettings.noCollapse;
             noCollapseCheck.tabIndex = ++tabbingIndex;
@@ -210,7 +211,7 @@ namespace PloppableRICO
         /// <returns>New textfield</returns>
         private UITextField AddCostTextField(UIComponent parent, string labelKey, int initialValue, ref float yPos)
         {
-            UITextField costField = UIControls.AddPlainTextfield(parent, Translations.Translate(labelKey));
+            UITextField costField = UITextFields.AddPlainTextfield(parent, Translations.Translate(labelKey));
             costField.parent.relativePosition = new Vector2(LeftMargin, yPos);
             costField.text = initialValue.ToString();
             yPos += costField.parent.height + Margin;

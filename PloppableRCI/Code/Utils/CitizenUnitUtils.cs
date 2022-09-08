@@ -1,12 +1,12 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using ColossalFramework;
-using ColossalFramework.Math;
-using HarmonyLib;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.Runtime.CompilerServices;
+    using AlgernonCommons;
+    using ColossalFramework;
+    using ColossalFramework.Math;
+    using HarmonyLib;
+
     /// <summary>
     /// Utility class for dealing with CitizenUnits.
     /// </summary>

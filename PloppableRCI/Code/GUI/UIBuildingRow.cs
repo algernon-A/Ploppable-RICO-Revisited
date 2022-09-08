@@ -1,9 +1,9 @@
-﻿using UnityEngine;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using AlgernonCommons.Translation;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// An individual row in the list of buildings.
     /// </summary>

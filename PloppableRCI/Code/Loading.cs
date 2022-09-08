@@ -1,15 +1,22 @@
-using System.IO;
-using System.Collections.Generic;
-using ICities;
-using PloppableRICO.MessageBox;
-
+// <copyright file="Loading.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the Apache license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
 
 namespace PloppableRICO
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using AlgernonCommons;
+    using AlgernonCommons.Notifications;
+    using AlgernonCommons.Patching;
+    using AlgernonCommons.Translation;
+    using ICities;
+
     /// <summary>
     /// Main loading class: the mod runs from here.
     /// </summary>
-    public class Loading : LoadingExtensionBase
+    public sealed class Loading : PatcherLoadingBase<OptionsPanel, PatcherBase>
     {
         // Internal instances.
         internal static RICOPrefabManager xmlManager;
@@ -23,147 +30,104 @@ namespace PloppableRICO
         internal static PloppableRICODefinition mod1RicoDef;
         internal static PloppableRICODefinition mod2RicoDef;
 
-        // Internal flags.
-        internal static bool isModEnabled = false;
-        private static bool harmonyLoaded = false;
-
-        // Used to flag if conflicting mods are running.
-        private static bool conflictingMod = false;
-        internal static bool softModConflct;
-
+        private bool _softModConflct;
 
         /// <summary>
-        /// Called by the game when the mod is initialised at the start of the loading process.
+        /// Gets any text for a trailing confict notification paragraph (e.g. "These mods must be removed before this mod can operate").
         /// </summary>
-        /// <param name="loading">Loading mode (e.g. game, editor, scenario, etc.)</param>
-        public override void OnCreated(ILoading loading)
+        protected override string ConflictRemovedText => Translations.Translate("PRR_ERR_CON1");
+
+        /// <summary>
+        /// Checks for any mod conflicts.
+        /// Called as part of checking prior to executing any OnCreated actions.
+        /// </summary>
+        /// <returns>A list of conflicting mod names (null or empty if none).</returns>
+        protected override List<string> CheckModConflicts() => ConflictDetection.CheckConflictingMods();
+
+        /// <summary>
+        /// Performs any actions upon successful creation of the mod.
+        /// E.g. Can be used to patch any other mods.
+        /// </summary>
+        /// <param name="loading">Loading mode (e.g. game or editor).</param>
+        protected override void CreatedActions(ILoading loading)
         {
-            base.OnCreated(loading);
+            // Check for other mods, including any soft conflicts.
+            _softModConflct = ModUtils.CheckMods();
 
-            // Don't do anything if not in game (e.g. if we're going into an editor).
-            if (loading.currentMode != AppMode.Game)
+            // Check for Advanced Building Level Control.
+            ModUtils.ABLCReflection();
+
+            // Create instances if they don't already exist.
+            if (convertPrefabs == null)
             {
-                isModEnabled = false;
-                Logging.KeyMessage("not loading into game, skipping activation");
-
-                // Set harmonyLoaded flag to suppress Harmony warning when e.g. loading into editor.
-                harmonyLoaded = true;
-
-                // Unload Harmony patches and exit before doing anything further.
-                Patcher.UnpatchAll();
-                return;
+                convertPrefabs = new ConvertPrefabs();
             }
 
-            // Ensure that Harmony patches have been applied.
-            harmonyLoaded = Patcher.Patched;
-            if (!harmonyLoaded)
+            if (xmlManager == null)
             {
-                isModEnabled = false;
-                Logging.Error("Harmony patches not applied; aborting");
-                return;
+                xmlManager = new RICOPrefabManager
+                {
+                    prefabHash = new Dictionary<BuildingInfo, BuildingData>(),
+                };
             }
 
-            // Check for mod conflicts.
-            if (ModUtils.IsModConflict())
-            {
-                // Conflict detected.
-                conflictingMod = true;
-                isModEnabled = false;
+            // Reset broken prefabs list.
+            brokenPrefabs = new List<BuildingInfo>();
 
-                // Unload Harmony patches and exit before doing anything further.
-                Patcher.UnpatchAll();
-                return;
+            // Read any local RICO settings.
+            string ricoDefPath = "LocalRICOSettings.xml";
+            localRicoDef = null;
+
+            if (!File.Exists(ricoDefPath))
+            {
+                Logging.Message("no ", ricoDefPath, " file found");
             }
-
-            // Passed all checks - okay to load (if we haven't already fo some reason).
-            if (!isModEnabled)
+            else
             {
-                isModEnabled = true;
-                Logging.KeyMessage("v " + PloppableRICOMod.Version + " loading");
+                localRicoDef = RICOReader.ParseRICODefinition(ricoDefPath, isLocal: true);
 
-                // Check for other mods, including any soft conflicts.
-                softModConflct = ModUtils.CheckMods();
-
-                // Check for Advanced Building Level Control.
-                ModUtils.ABLCReflection();
-
-                // Create instances if they don't already exist.
-                if (convertPrefabs == null)
+                if (localRicoDef == null)
                 {
-                    convertPrefabs = new ConvertPrefabs();
-                }
-
-                if (xmlManager == null)
-                {
-                    xmlManager = new RICOPrefabManager
-                    {
-                        prefabHash = new Dictionary<BuildingInfo, BuildingData>(),
-                    };
-                }
-
-                // Reset broken prefabs list.
-                brokenPrefabs = new List<BuildingInfo>();
-
-                // Read any local RICO settings.
-                string ricoDefPath = "LocalRICOSettings.xml";
-                localRicoDef = null;
-
-                if (!File.Exists(ricoDefPath))
-                {
-                    Logging.Message("no ", ricoDefPath, " file found");
-                }
-                else
-                {
-                    localRicoDef = RICOReader.ParseRICODefinition(ricoDefPath, isLocal: true);
-
-                    if (localRicoDef == null)
-                    {
-                        Logging.Message("no valid definitions in ", ricoDefPath);
-                    }
+                    Logging.Message("no valid definitions in ", ricoDefPath);
                 }
             }
         }
 
-
         /// <summary>
-        /// Called by the game when level loading is complete.
+        /// Performs any actions upon successful level loading completion.
         /// </summary>
-        /// <param name="mode">Loading mode (e.g. game, editor, scenario, etc.)</param>
-        public override void OnLevelLoaded(LoadMode mode)
+        /// <param name="mode">Loading mode (e.g. game, editor, scenario, etc.).</param>
+        protected override void LoadedActions(LoadMode mode)
         {
-            base.OnLevelLoaded(mode);
-
-            // Check to see that Harmony 2 was properly loaded.
-            if (!harmonyLoaded)
+            // Report any 'soft' mod conflicts.
+            if (_softModConflct)
             {
-                // Harmony 2 wasn't loaded; display warning notification and exit.
-                ListMessageBox harmonyBox = MessageBoxBase.ShowModal<ListMessageBox>();
-
-                // Key text items.
-                harmonyBox.AddParas(Translations.Translate("ERR_HAR0"), Translations.Translate("PRR_ERR_HAR"), Translations.Translate("PRR_ERR_FAT"), Translations.Translate("ERR_HAR1"));
-
-                // List of dot points.
-                harmonyBox.AddList(Translations.Translate("ERR_HAR2"), Translations.Translate("ERR_HAR3"));
-
-                // Closing para.
-                harmonyBox.AddParas(Translations.Translate("MES_PAGE"));
+                // Soft conflict detected - display warning notification for each one.
+                foreach (string mod in ModUtils.conflictingModNames)
+                {
+                    if (mod.Equals("PTG") && ModSettings.dsaPTG == 0)
+                    {
+                        // Plop the Growables.
+                        DontShowAgainNotification softConflictBox = NotificationBase.ShowNotification<DontShowAgainNotification>();
+                        softConflictBox.AddParas(Translations.Translate("PRR_CON_PTG0"), Translations.Translate("PRR_CON_PTG1"), Translations.Translate("PRR_CON_PTG2"));
+                        softConflictBox.DSAButton.eventClicked += (component, clickEvent) => { ModSettings.dsaPTG = 1; XMLSettingsFile.Save(); };
+                    }
+                }
             }
 
-            // Check to see if a conflicting mod has been detected.
-            if (conflictingMod)
+            // Report any broken assets and remove from our prefab dictionary.
+            foreach (BuildingInfo prefab in brokenPrefabs)
             {
-                // Mod conflict detected - display warning notification and exit.
-                ListMessageBox modConflictBox = MessageBoxBase.ShowModal<ListMessageBox>();
-
-                // Key text items.
-                modConflictBox.AddParas(Translations.Translate("ERR_CON0"), Translations.Translate("PRR_ERR_CON0"), Translations.Translate("PRR_ERR_FAT"), Translations.Translate("ERR_CON1"));
-
-                // Add conflicting mod name(s).
-                modConflictBox.AddList(ModUtils.conflictingModNames.ToArray());
-
-                // Closing para.
-                modConflictBox.AddParas(Translations.Translate("PRR_ERR_CON1"));
+                Logging.Error("broken prefab: ", prefab.name);
+                xmlManager.prefabHash.Remove(prefab);
             }
+            brokenPrefabs.Clear();
+
+            // Init Ploppable Tool panel.
+            PloppableTool.Initialize();
+
+            // Add buttons to access building details from zoned building info panels.
+            SettingsPanel.AddInfoPanelButtons();
         }
     }
 }

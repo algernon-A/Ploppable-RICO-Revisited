@@ -1,8 +1,8 @@
-using System;
-
-
 namespace PloppableRICO
 {
+    using System;
+    using AlgernonCommons;
+
     /// <summary>
     ///This class assigns the RICO settings to the prefabs. 
     /// </summary>

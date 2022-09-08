@@ -45,7 +45,7 @@ namespace PloppableRICO
             // Titlebar label.
             titleLabel = AddUIComponent<UILabel>();
             titleLabel.relativePosition = new Vector3(50, 13);
-            titleLabel.text = "Ploppable RICO Revisited v" + PloppableRICOMod.Version;
+            titleLabel.text = Mod.Instance.Name;
 
             // Close button.
             closeButton = AddUIComponent<UIButton>();

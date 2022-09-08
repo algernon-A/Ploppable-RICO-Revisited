@@ -1,13 +1,14 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-using ColossalFramework.UI;
-using ColossalFramework.Math;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+    using AlgernonCommons;
+    using AlgernonCommons.Translation;
+    using ColossalFramework.Math;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// Scrollable building selection panel.
     /// </summary>

@@ -1,9 +1,10 @@
-﻿using ICities;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
+    using ColossalFramework.UI;
+    using ICities;
+
     /// <summary>
     /// Options panel for setting growable building behaviour options.
     /// </summary>
@@ -17,7 +18,7 @@ namespace PloppableRICO
         internal GrowableOptions(UITabstrip tabStrip, int tabIndex)
         {
             // Add tab and helper.
-            UIPanel panel = PanelUtils.AddTab(tabStrip, Translations.Translate("PRR_OPTION_GRO"), tabIndex, true);
+            UIPanel panel = UITabstrips.AddTextTab(tabStrip, Translations.Translate("PRR_OPTION_GRO"), tabIndex, out UIButton _, autoLayout: true);
             UIHelper helper = new UIHelper(panel);
 
             // Add plop growables checkboxes.

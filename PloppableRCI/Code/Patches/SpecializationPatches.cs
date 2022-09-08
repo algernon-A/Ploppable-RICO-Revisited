@@ -1,16 +1,16 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using ColossalFramework;
-using HarmonyLib;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
-	/// <summary>
-	/// Harmony Transpiler to add checks to see if commercial buildings should be demolished if they're outside of a district with relevant specialization settings.
-	/// </summary>
-	[HarmonyPatch(typeof(CommercialBuildingAI), "SimulationStep")]
+    using System.Collections.Generic;
+    using System.Linq;
+	using System.Reflection.Emit;
+	using AlgernonCommons;
+	using ColossalFramework;
+    using HarmonyLib;
+
+    /// <summary>
+    /// Harmony Transpiler to add checks to see if commercial buildings should be demolished if they're outside of a district with relevant specialization settings.
+    /// </summary>
+    [HarmonyPatch(typeof(CommercialBuildingAI), "SimulationStep")]
 	public static class ComSimStepTrans
 	{
 		/// <summary>

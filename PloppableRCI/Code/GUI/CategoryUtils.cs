@@ -1,5 +1,7 @@
 ﻿namespace PloppableRICO
 {
+    using AlgernonCommons.Translation;
+
     public enum Category
     {
         None = -1,

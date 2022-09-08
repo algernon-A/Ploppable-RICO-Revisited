@@ -1,18 +1,18 @@
-﻿using System;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using UnityEngine;
-using ColossalFramework;
-using HarmonyLib;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
-	/// <summary>
-	/// Harmony Prefix patch for BuildingTool.IsImportantBuilding, to help protect RICO buildings from automated bulldozing.
-	/// Based on boformers Larger Footprints mod.  Many thanks to him for his work.
-	/// </summary>
-	[HarmonyPatch(typeof(BuildingTool), "IsImportantBuilding")]
+    using System;
+    using System.Reflection;
+    using System.Runtime.CompilerServices;
+	using AlgernonCommons;
+    using ColossalFramework;
+    using HarmonyLib;
+    using UnityEngine;
+
+    /// <summary>
+    /// Harmony Prefix patch for BuildingTool.IsImportantBuilding, to help protect RICO buildings from automated bulldozing.
+    /// Based on boformers Larger Footprints mod.  Many thanks to him for his work.
+    /// </summary>
+    [HarmonyPatch(typeof(BuildingTool), "IsImportantBuilding")]
 	[HarmonyPatch(new Type[] { typeof(BuildingInfo), typeof(Building) },
 		new ArgumentType[] { ArgumentType.Normal, ArgumentType.Ref })]
 	internal static class ImportantBuildingPatch

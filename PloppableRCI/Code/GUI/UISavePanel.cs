@@ -1,14 +1,14 @@
-﻿using System.IO;
-using System.Xml;
-using System.Xml.Serialization;
-using UnityEngine;
-using ColossalFramework;
-using ColossalFramework.UI;
-using ColossalFramework.Math;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System.IO;
+    using System.Xml;
+    using System.Xml.Serialization;
+    using AlgernonCommons;
+    using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
+    using ColossalFramework.Math;
+    using ColossalFramework.UI;
+
     /// <summary>
     ///This panel is in the middle column on the bottom. It contains buttons to action changes to the RICO settings file and apply changes to the live game.
     /// </summary>
@@ -51,15 +51,15 @@ namespace PloppableRICO
             float buttonWidth = this.width - autoLayoutPadding.left - autoLayoutPadding.right;
 
             // Save button.
-            saveButton = UIControls.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_SAV"), buttonWidth);
+            saveButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_SAV"), buttonWidth);
             saveButton.eventClick += (control, clickEvent) => Save();
 
             // Add local settings button.
-            addLocalButton = UIControls.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_ADD"), buttonWidth);
+            addLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_ADD"), buttonWidth);
             addLocalButton.eventClick += (control, clickEvent) => AddLocal();
 
             // 'Remove local settings' button.
-            removeLocalButton = UIControls.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_REM"), buttonWidth);
+            removeLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_REM"), buttonWidth);
             removeLocalButton.eventClick += (control, clickEvent) => RemoveLocal();
 
             // Warning label for 'apply changes' being experimental.
@@ -72,7 +72,7 @@ namespace PloppableRICO
             warningLabel.text = "\r\n" + Translations.Translate("PRR_EXP");
 
             // 'Save and apply changes' button.
-            applyButton = UIControls.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_APP"), buttonWidth, scale: 0.8f);
+            applyButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_APP"), buttonWidth, scale: 0.8f);
             applyButton.eventClick += (control, clickEvent) => SaveAndApply();
             applyButton.wordWrap = true;
         }

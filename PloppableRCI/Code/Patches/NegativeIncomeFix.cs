@@ -1,8 +1,9 @@
-﻿using HarmonyLib;
-
-
+﻿
 namespace PloppableRICO
 {
+    using AlgernonCommons;
+    using HarmonyLib;
+
     /// <summary>
     /// Harmony patch to fix game bug where building incomes (tax revenue) can sometimes be negative for larger buildings.
     /// </summary>

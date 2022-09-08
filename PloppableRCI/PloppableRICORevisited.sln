@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29905.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RICO revisited", "RICO revisited.csproj", "{8F9A75B7-5104-467D-A29A-8F6833D60052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RICO revisited", "RICO revisited.csproj", "{8F9A75B7-5104-467D-A29A-8F6833D60052}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AlgernonCommonsPatchingShared", "..\..\AlgernonCommons\AlgernonCommonsPatchingShared.shproj", "{25AEF446-6F0D-43A8-BB84-D1306789B68C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,5 +23,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DA42352-F762-40C4-9FA1-29464F85B851}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\AlgernonCommons\AlgernonCommonsPatchingShared.projitems*{25aef446-6f0d-43a8-bb84-d1306789b68c}*SharedItemsImports = 13
+		..\..\AlgernonCommons\AlgernonCommonsPatchingShared.projitems*{8f9a75b7-5104-467d-a29a-8f6833d60052}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

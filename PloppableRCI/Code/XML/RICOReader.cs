@@ -1,11 +1,11 @@
-﻿using System;
-using System.Xml.Serialization;
-using System.IO;
-using System.Text;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.IO;
+    using System.Text;
+    using System.Xml.Serialization;
+    using AlgernonCommons;
+
     /// <summary>
     /// RICO configuration file reader.
     /// </summary>

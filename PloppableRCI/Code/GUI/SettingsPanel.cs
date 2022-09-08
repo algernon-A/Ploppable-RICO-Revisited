@@ -1,13 +1,14 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using UnityEngine;
-using ColossalFramework;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AlgernonCommons;
+    using AlgernonCommons.Translation;
+    using ColossalFramework;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// Settings panel manager static class.
     /// </summary>

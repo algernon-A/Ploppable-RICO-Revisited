@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.ComponentModel;
-using System.Xml.Serialization;
-using System.Text;
-using System.Text.RegularExpressions;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.ComponentModel;
+    using System.Linq;
+    using System.Text;
+    using System.Text.RegularExpressions;
+    using System.Xml.Serialization;
+    using AlgernonCommons;
+
     /// <summary>
     /// Ploppable RICO XML building definition.
     /// This is the core mod data defintion for handling buildings.

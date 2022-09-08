@@ -1,12 +1,9 @@
-﻿using System.Runtime.CompilerServices;
-using HarmonyLib;
-
-
-#pragma warning disable IDE0060 // Remove unused parameter
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System.Runtime.CompilerServices;
+    using AlgernonCommons;
+    using HarmonyLib;
+
     /// <summary>
     /// Harmony patch and reverse patch to catch exceptions when no valid monuments are avaliable (presumably because they've all been converted to Ploppable RICO buildings and/or skipped by LSM prefab skipping).
     /// </summary>
@@ -44,9 +41,7 @@ namespace PloppableRICO
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void RefreshMonumentsPanelRev(object instance)
         {
-            Logging.Error("RefreshMonumentsPanel reverse Harmony patch wasn't applied");
+            Logging.Error("RefreshMonumentsPanel reverse Harmony patch wasn't applied ", instance);
         }
     }
 }
-
-#pragma warning restore IDE0060 // Remove unused parameter

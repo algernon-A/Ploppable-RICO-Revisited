@@ -1,16 +1,16 @@
-﻿using System.IO;
-using ColossalFramework.Packaging;
-using HarmonyLib;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
-	/// <summary>
-	/// Patch for BuildingInfo.InitializePrefab, to read and apply RICO settings prior to prefab initialization.
-	/// Doing it this way (as opposed to the previous approach of changing prefab settings after initialization) solves a whole lot of issues,
-	/// and opens a lot of doors.
-	/// </summary>
-	[HarmonyPatch(typeof(BuildingInfo), "InitializePrefab")]
+    using System.IO;
+	using AlgernonCommons;
+    using ColossalFramework.Packaging;
+    using HarmonyLib;
+
+    /// <summary>
+    /// Patch for BuildingInfo.InitializePrefab, to read and apply RICO settings prior to prefab initialization.
+    /// Doing it this way (as opposed to the previous approach of changing prefab settings after initialization) solves a whole lot of issues,
+    /// and opens a lot of doors.
+    /// </summary>
+    [HarmonyPatch(typeof(BuildingInfo), "InitializePrefab")]
 	public static class InitializePrefabPatch
 	{
 		/// <summary>

@@ -1,4 +1,7 @@
-﻿Version 2.4.13 -
+﻿- Implement AlgernonCommons
+
+
+Version 2.4.13 -
 
 - Rearrange options panel to put mod options tab first
 - Options panel automatically refreshes on language change

@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Linq;
-using HarmonyLib;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection.Emit;
+    using AlgernonCommons;
+    using HarmonyLib;
+
     /// <summary>
     /// Harmony transpiler to remove two checks from BuildingInfo.InitializePrefab which throw exceptions when private building types have manual (ploppable) placement styles or include net assets.
     /// Removing these checks enables Ploppable RICO buildings to be initialised as RICO assets on load (instead of doing funky things to prefabs already initialised in their 'native' state).

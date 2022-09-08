@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Runtime.CompilerServices;
-using HarmonyLib;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Reflection.Emit;
+    using System.Runtime.CompilerServices;
+    using System.Linq;
+    using AlgernonCommons;
+    using HarmonyLib;
+
     /// <summary>
     /// Harmony transpiler to patch PrivateBuildingAI.SimulationStep calls to Building.CheckZoning, to implement 'no zoning checks' functionality.
     /// Done this way (instead of e.g. patching Building.CheckZoning directly) for compatibility with 81 tiles mod, which detours (!) Building.CheckZoning.

@@ -1,9 +1,11 @@
-﻿using ICities;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using AlgernonCommons;
+    using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
+    using ColossalFramework.UI;
+    using ICities;
+
     /// <summary>
     /// Options panel for setting basic mod options.
     /// </summary>
@@ -17,14 +19,14 @@ namespace PloppableRICO
         internal ModOptions(UITabstrip tabStrip, int tabIndex)
         {
             // Add tab and helper.
-            UIPanel panel = PanelUtils.AddTab(tabStrip, Translations.Translate("PRR_OPTION_MOD"), tabIndex, true);
+            UIPanel panel = UITabstrips.AddTextTab(tabStrip, Translations.Translate("PRR_OPTION_MOD"), tabIndex, out UIButton _, autoLayout: true);
             UIHelper helper = new UIHelper(panel);
 
 
             UIDropDown translationDropDown = (UIDropDown)helper.AddDropdown(Translations.Translate("TRN_CHOICE"), Translations.LanguageList, Translations.Index, (value) =>
             {
                 Translations.Index = value;
-                OptionsPanel.LocaleChanged();
+                OptionsPanelManager<OptionsPanel>.LocaleChanged();
             });
             translationDropDown.autoSize = false;
             translationDropDown.width = 270f;
@@ -51,9 +53,9 @@ namespace PloppableRICO
             UIHelperBase logGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_LOG"));
 
             // Add logging checkbox.
-            logGroup.AddCheckbox(Translations.Translate("PRR_OPTION_MOREDEBUG"), Logging.detailLogging, isChecked =>
+            logGroup.AddCheckbox(Translations.Translate("PRR_OPTION_MOREDEBUG"), Logging.DetailLogging, isChecked =>
             {
-                Logging.detailLogging = isChecked;
+                Logging.DetailLogging = isChecked;
             });
 
             // Thumbnail options.

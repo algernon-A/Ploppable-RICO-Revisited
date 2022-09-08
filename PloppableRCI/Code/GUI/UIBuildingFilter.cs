@@ -1,9 +1,10 @@
-﻿using UnityEngine;
-using ColossalFramework.UI;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// The building filter panel at the top of the settings panel.
     /// </summary>
@@ -181,7 +182,7 @@ namespace PloppableRICO
             }
 
             // 'Select all' button.
-            allCats = UIControls.AddButton(this, (FirstRowSize + Margin) * SecondRow, Margin, Translations.Translate("PRR_FTR_ALL"), 55f);
+            allCats = UIButtons.AddButton(this, (FirstRowSize + Margin) * SecondRow, Margin, Translations.Translate("PRR_FTR_ALL"), 55f);
             allCats.eventClick += (control, clickEvent) =>
             {
                 // Iterate through all toggles in top row and activate.
@@ -195,7 +196,7 @@ namespace PloppableRICO
             };
 
             // 'Select none'button.
-            noCats = UIControls.AddButton(this, allCats.relativePosition.x + allCats.width + Margin, Margin, Translations.Translate("PRR_FTR_NON"), 55f);
+            noCats = UIButtons.AddButton(this, allCats.relativePosition.x + allCats.width + Margin, Margin, Translations.Translate("PRR_FTR_NON"), 55f);
             noCats.eventClick += (c, p) =>
             {
                 // Iterate through all toggles and deactivate.
@@ -209,7 +210,7 @@ namespace PloppableRICO
             };
 
             // Name filter textfield.
-            nameFilter = UIControls.BigLabelledTextField(this, width - 200f, 0, Translations.Translate("PRR_FTR_NAM") + ": ");
+            nameFilter = UITextFields.AddBigLabelledTextField(this, width - 200f, 0, Translations.Translate("PRR_FTR_NAM") + ": ");
 
             // Trigger events when textfield is updated.
             nameFilter.eventTextChanged += (control, value) => EventFilteringChanged(this, 5);

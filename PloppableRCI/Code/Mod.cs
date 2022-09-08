@@ -1,74 +1,43 @@
-using ICities;
-using ColossalFramework.UI;
-using CitiesHarmony.API;
-
+// <copyright file="Mod.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the Apache license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
 
 namespace PloppableRICO
 {
+    using AlgernonCommons.Patching;
+    using AlgernonCommons.Translation;
+    using AlgernonCommons.XML;
+    using ICities;
+
     /// <summary>
     /// The base mod class for instantiation by the game.
     /// </summary>
-    public class PloppableRICOMod : IUserMod
+    public sealed class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
     {
-        // Public mod name and description.
-        public string Name => ModName + " " + Version;
+        /// <summary>
+        /// Gets the mod's base display name (name only).
+        /// </summary>
+        public override string BaseName => "RICO Revisited";
+
+        /// <summary>
+        /// Gets the mod's unique Harmony identfier.
+        /// </summary>
+        public override string HarmonyID => "com.github.algernon-A.csl.ploppablericorevisited";
+
+        /// <summary>
+        /// Gets the mod's description for display in the content manager.
+        /// </summary>
         public string Description => Translations.Translate("PRR_DESCRIPTION");
 
-        // Internal and private name and version components.
-        internal static string ModName => "RICO Revisited";
-        internal static string Version => BaseVersion + " " + Beta;
-        internal static string Beta => "";
-        internal static int BetaVersion => 0;
-        private static string BaseVersion => "2.4.13";
-
+        /// <summary>
+        /// Saves settings file.
+        /// </summary>
+        public override void SaveSettings() => XMLSettingsFile.Save();
 
         /// <summary>
-        /// Called by the game when the mod is enabled.
+        /// Loads settings file.
         /// </summary>
-        public void OnEnabled()
-        {
-            // Load settings file - need to do this before patching Harmony due to needing to set logging detail setting.
-            SettingsUtils.LoadSettings();
-
-            // Apply Harmony patches via Cities Harmony.
-            // Called here instead of OnCreated to allow the auto-downloader to do its work prior to launch.
-            HarmonyHelper.DoOnHarmonyReady(() => Patcher.PatchAll());
-
-            // Check to see if UIView is ready.
-            if (UIView.GetAView() != null)
-            {
-                // It's ready - attach the hook now.
-                OptionsPanel.OptionsEventHook();
-            }
-            else
-            {
-                // Otherwise, queue the hook for when the intro's finished loading.
-                LoadingManager.instance.m_introLoaded += OptionsPanel.OptionsEventHook;
-            }
-        }
-
-
-        /// <summary>
-        /// Called by the game when the mod is disabled.
-        /// </summary>
-        public void OnDisabled()
-        {
-            // Unapply Harmony patches via Cities Harmony.
-            if (HarmonyHelper.IsHarmonyInstalled)
-            {
-                Patcher.UnpatchAll();
-            }
-        }
-
-
-        /// <summary>
-        /// Called by the game when the mod options panel is setup.
-        /// </summary>
-        public void OnSettingsUI(UIHelperBase helper)
-        {
-            // Setup options panel reference.
-            OptionsPanel.optionsPanel = ((UIHelper)helper).self as UIScrollablePanel;
-            OptionsPanel.optionsPanel.autoLayout = false;
-        }
+        public override void LoadSettings() => XMLSettingsFile.Load();
     }
 }

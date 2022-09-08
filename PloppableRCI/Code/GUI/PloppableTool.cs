@@ -1,12 +1,13 @@
-﻿using System;
-using System.Linq;
-using UnityEngine;
-using ColossalFramework.UI;
-using System.Collections.Generic;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AlgernonCommons;
+    using AlgernonCommons.Translation;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// This class draws the RICO panel, populates it with building buttons, and activates the building tool when buttons are clicked. 
     /// </summary>

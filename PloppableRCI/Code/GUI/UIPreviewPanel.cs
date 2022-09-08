@@ -1,9 +1,9 @@
-﻿using ColossalFramework.UI;
-using UnityEngine;
-
-
-namespace PloppableRICO
+﻿namespace PloppableRICO
 {
+    using AlgernonCommons.Translation;
+    using ColossalFramework.UI;
+    using UnityEngine;
+
     /// <summary>
     /// Panel that contains the building preview image.
     /// </summary>
