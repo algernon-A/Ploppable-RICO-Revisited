@@ -1,156 +1,77 @@
 ﻿namespace PloppableRICO
 {
     using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
     using ColossalFramework.UI;
     using UnityEngine;
 
     /// <summary>
     /// An individual row in the list of buildings.
     /// </summary>
-    public class UIBuildingRow : UIPanel, UIFastListRow
+    public class UIBuildingRow : UIListRow
     {
-        // Height of each row.
-        private const int rowHeight = 40;
+        /// <summary>
+        /// Row height.
+        /// </summary>
+        internal const float CustomRowHeight = 30f;
 
         // Panel components.
-        private UIPanel panelBackground;
-        private UILabel buildingName;
-        private BuildingData buildingData;
-        private UISprite hasModSettings;
-        private UISprite hasAuthorSettings;
-        private UISprite hasLocalSettings;
-
-
-        // Background for each list item.
-        public UIPanel Background
-        {
-            get
-            {
-                if (panelBackground == null)
-                {
-                    panelBackground = AddUIComponent<UIPanel>();
-                    panelBackground.width = width;
-                    panelBackground.height = rowHeight;
-                    panelBackground.relativePosition = Vector2.zero;
-
-                    panelBackground.zOrder = 0;
-                }
-
-                return panelBackground;
-            }
-        }
-
+        private UILabel _buildingNameLabel;
+        private BuildingData _buildingData;
+        private UISprite _hasModSettings;
+        private UISprite _hasAuthorSettings;
+        private UISprite _hasLocalSettings;
 
         /// <summary>
-        /// Called when dimensions are changed, including as part of initial setup (required to set correct relative position of label).
+        /// Gets the height for this row.
         /// </summary>
-        protected override void OnSizeChanged()
-        {
-            base.OnSizeChanged();
-
-            if (buildingName != null)
-            {
-                Background.width = width;
-                buildingName.relativePosition = new Vector2(10f, 10f);
-
-                // Settings checkboxes.
-                hasModSettings.relativePosition = new Vector2(280f, 10f);
-                hasAuthorSettings.relativePosition = new Vector2(310f, 10f);
-                hasLocalSettings.relativePosition = new Vector2(340f, 10f);
-            }
-        }
-
+        public override float RowHeight => CustomRowHeight;
 
         /// <summary>
-        /// Mouse click event handler - updates the selected building to what was clicked.
+        /// Generates and displays a row.
         /// </summary>
-        /// <param name="p">Mouse event parameter</param>
-        protected override void OnClick(UIMouseEventParameter p)
-        {
-            base.OnClick(p);
-            SettingsPanel.Panel.UpdateSelectedBuilding(buildingData);
-        }
-
-
-        /// <summary>
-        /// Generates and displays a building row.
-        /// </summary>
-        /// <param name="data">Object to list</param>
-        /// <param name="isRowOdd">If the row is an odd-numbered row (for background banding)</param>
-        public void Display(object data, bool isRowOdd)
+        /// <param name="data">Object data to display.</param>
+        /// <param name="rowIndex">Row index number (for background banding).</param>
+        public override void Display(object data, int rowIndex)
         {
             // Perform initial setup for new rows.
-            if (buildingName == null)
+            if (_buildingNameLabel == null)
             {
-                isVisible = true;
-                canFocus = true;
-                isInteractive = true;
-                width = parent.width;
-                height = 40;
-
-                buildingName = AddUIComponent<UILabel>();
-                buildingName.width = 200;
+                _buildingNameLabel = AddLabel(10f, 270f, 1f);
 
                 // Checkboxes to indicate which items have custom settings.
-                hasModSettings = AddUIComponent<UISprite>();
-                hasModSettings.size = new Vector2(20, 20);
-                hasModSettings.relativePosition = new Vector3(280, 10);
-                hasModSettings.tooltip = Translations.Translate("PRR_SET_HASMOD");
-
-                hasAuthorSettings = AddUIComponent<UISprite>();
-                hasAuthorSettings.size = new Vector2(20, 20);
-                hasAuthorSettings.relativePosition = new Vector3(310, 10);
-                hasAuthorSettings.tooltip = Translations.Translate("PRR_SET_HASAUT");
-
-                hasLocalSettings = AddUIComponent<UISprite>();
-                hasLocalSettings.size = new Vector2(20, 20);
-                hasLocalSettings.relativePosition = new Vector3(340, 10);
-                hasLocalSettings.tooltip = Translations.Translate("PRR_SET_HASLOC");
+                _hasModSettings = AddSettingsCheck(280f, "PRR_SET_HASMOD");
+                _hasAuthorSettings = AddSettingsCheck(310f, "PRR_SET_HASAUT");
+                _hasLocalSettings = AddSettingsCheck(340f, "PRR_SET_HASLOC");
             }
 
             // Set selected building.
-            buildingData = data as BuildingData;
-            buildingName.text = buildingData.DisplayName;
-            buildingName.relativePosition = new Vector2(10f, 10f);
+            _buildingData = data as BuildingData;
+            _buildingNameLabel.text = _buildingData.DisplayName;
 
             // Update custom settings checkboxes to correct state.
-            hasModSettings.spriteName = buildingData.hasMod ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
-            hasAuthorSettings.spriteName = buildingData.hasAuthor ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
-            hasLocalSettings.spriteName = buildingData.hasLocal ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
+            _hasModSettings.spriteName = _buildingData.hasMod ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
+            _hasAuthorSettings.spriteName = _buildingData.hasAuthor ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
+            _hasLocalSettings.spriteName = _buildingData.hasLocal ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
 
             // Set initial background as deselected state.
-            Deselect(isRowOdd);
+            Deselect(rowIndex);
         }
 
-
         /// <summary>
-        /// Highlights the selected row.
+        /// Adds a settings check to the current row.
         /// </summary>
-        /// <param name="isRowOdd">If the row is an odd-numbered row (for background banding)</param>
-        public void Select(bool isRowOdd)
+        /// <param name="xPos">Check relative x-position.</param>
+        /// <param name="translationKey">Tooltip translation key.</param>
+        /// <returns>New settings check sprite.</returns>
+        private UISprite AddSettingsCheck(float xPos, string translationKey)
         {
-            Background.backgroundSprite = "ListItemHighlight";
-            Background.color = new Color32(255, 255, 255, 255);
-        }
+            UISprite newSprite = AddUIComponent<UISprite>();
+            newSprite.size = new Vector2(20f, 20f);
+            newSprite.relativePosition = new Vector2(xPos, Margin);
+            newSprite.tooltip = Translations.Translate(translationKey);
 
-
-        /// <summary>
-        /// Unhighlights the (un)selected row.
-        /// </summary>
-        /// <param name="isRowOdd">If the row is an odd-numbered row (for background banding)</param>
-        public void Deselect(bool isRowOdd)
-        {
-            if (isRowOdd)
-            {
-                // Lighter background for odd rows.
-                Background.backgroundSprite = "UnlockingItemBackground";
-                Background.color = new Color32(0, 0, 0, 128);
-            }
-            else
-            {
-                // Darker background for even rows.
-                Background.backgroundSprite = null;
-            }
+            return newSprite;
         }
     }
 }

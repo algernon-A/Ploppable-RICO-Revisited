@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using AlgernonCommons;
+    using AlgernonCommons.UI;
     using AlgernonCommons.Translation;
     using ColossalFramework;
     using ColossalFramework.UI;
@@ -22,7 +23,7 @@
         // Previous selection.
         private static BuildingInfo lastSelection;
         private static bool[] lastFilter;
-        private static float lastPostion;
+        private static int lastPostion;
         private static int lastIndex = -1;
 
 
@@ -186,7 +187,7 @@
         // Panel components.
         private UITitleBar titleBar;
         private UIBuildingFilter filterBar;
-        private UIFastList buildingSelection;
+        private UIList buildingSelection;
         private UIPreviewPanel previewPanel;
         private UISavePanel savePanel;
         private UIBuildingOptions buildingOptionsPanel;
@@ -231,10 +232,10 @@
         /// </summary>
         /// <param name="selectedIndex">Index of currently selected item</param>
         /// <param name="listPosition">Current list position</param>
-        internal void GetListPosition(out int selectedIndex, out float listPosition)
+        internal void GetListPosition(out int selectedIndex, out int listPosition)
         {
-            listPosition = buildingSelection.listPosition;
-            selectedIndex = buildingSelection.selectedIndex;
+            listPosition = buildingSelection.CurrentPosition;
+            selectedIndex = buildingSelection.SelectedIndex;
         }
 
 
@@ -243,10 +244,10 @@
         /// </summary>
         /// <param name="selectedIndex">Selected item index to set</param>
         /// <param name="listPosition">List position to set</param>
-        internal void SetListPosition(int selectedIndex, float listPosition)
+        internal void SetListPosition(int selectedIndex, int listPosition)
         {
-            buildingSelection.listPosition = listPosition ;
-            buildingSelection.selectedIndex = selectedIndex;
+            buildingSelection.CurrentPosition = listPosition;
+            buildingSelection.SelectedIndex = selectedIndex;
         }
 
 
@@ -262,10 +263,10 @@
 
             // Ensure the fastlist is filtered to include this building category only.
             filterBar.SelectBuildingCategory(building.category);
-            buildingSelection.rowsData = GenerateFastList();
+            buildingSelection.Data = GenerateFastList();
 
             // Find and select the building in the fastlist.
-            buildingSelection.FindBuilding(building.name);
+            buildingSelection.FindItem<BuildingData>(x => x.name.Equals(building.name));
 
             // Update the selected building to the current.
             UpdateSelectedBuilding(building);
@@ -323,20 +324,13 @@
                 {
                     if (value == -1) return;
 
-                    int listCount = buildingSelection.rowsData.m_size;
-                    float position = buildingSelection.listPosition;
+                    int listCount = buildingSelection.Data.m_size;
+                    int position = buildingSelection.CurrentPosition;
 
-                    buildingSelection.selectedIndex = -1;
-
-                    buildingSelection.rowsData = GenerateFastList();
+                    buildingSelection.Data = GenerateFastList();
                 };
 
                 // Set up panels.
-                // Left panel - list of buildings.
-                UIPanel leftPanel = AddUIComponent<UIPanel>();
-                leftPanel.width = LeftWidth;
-                leftPanel.height = PanelHeight - CheckFilterHeight;
-                leftPanel.relativePosition = new Vector3(Spacing, TitleHeight + FilterHeight + CheckFilterHeight + Spacing);
 
                 // Middle panel - building preview and edit panels.
                 UIPanel middlePanel = AddUIComponent<UIPanel>();
@@ -369,21 +363,14 @@
                 buildingOptionsPanel.Setup();
 
                 // Building selection list.
-                buildingSelection = UIFastList.Create<UIBuildingRow>(leftPanel);
-                buildingSelection.backgroundSprite = "UnlockingPanel";
-                buildingSelection.width = leftPanel.width;
-                buildingSelection.height = leftPanel.height;
-                buildingSelection.canSelect = true;
-                buildingSelection.rowHeight = 40;
-                buildingSelection.autoHideScrollbar = true;
-                buildingSelection.relativePosition = Vector3.zero;
-                buildingSelection.rowsData = new FastList<object>();
+                buildingSelection = UIList.AddUIList<UIBuildingRow>(this, Spacing, TitleHeight + FilterHeight + CheckFilterHeight + Spacing, LeftWidth, PanelHeight - CheckFilterHeight, UIBuildingRow.CustomRowHeight);
+                buildingSelection.EventSelectionChanged += (c, item) => UpdateSelectedBuilding(item as BuildingData);
 
                 // Set up filterBar to make sure selection filters are properly initialised before calling GenerateFastList.
                 filterBar.Setup();
 
                 // Populate the list.
-                buildingSelection.rowsData = GenerateFastList();
+                buildingSelection.Data = GenerateFastList();
             }
             catch (Exception e)
             {
