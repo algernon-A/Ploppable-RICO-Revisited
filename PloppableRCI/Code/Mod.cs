@@ -5,9 +5,9 @@
 
 namespace PloppableRICO
 {
+    using AlgernonCommons.Notifications;
     using AlgernonCommons.Patching;
     using AlgernonCommons.Translation;
-    using AlgernonCommons.XML;
     using ICities;
 
     /// <summary>
@@ -29,6 +29,11 @@ namespace PloppableRICO
         /// Gets the mod's description for display in the content manager.
         /// </summary>
         public string Description => Translations.Translate("PRR_DESCRIPTION");
+
+        /// <summary>
+        /// Gets the mod's what's new message array.
+        /// </summary>
+        public override WhatsNewMessage[] WhatsNewMessages => new WhatsNewMessageListing().Messages;
 
         /// <summary>
         /// Saves settings file.
