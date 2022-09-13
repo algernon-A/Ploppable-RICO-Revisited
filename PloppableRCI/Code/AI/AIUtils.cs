@@ -26,7 +26,7 @@ namespace PloppableRICO
             buildingData.m_flags &= ~Building.Flags.Demolishing;
 
             // Make sure building isn't 'turned off' (otherwise this could be an issue with coverted parks, monuments, etc. that were previously turned off). 
-            buildingData.m_problems &= ~Notification.Problem.TurnedOff;
+            buildingData.m_problems &= ~Notification.Problem1.TurnedOff;
         }
 
 
