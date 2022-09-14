@@ -1,3 +1,8 @@
+// <copyright file="ConvertPrefabs.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
 namespace PloppableRICO
 {
     using System;
@@ -104,6 +109,26 @@ namespace PloppableRICO
                                 aiClass = "High Residential - Level";
                                 break;
 
+                            case "wall2wall":
+                                // Wall-to-wall - requires Plazas & Promenades.
+                                if (Util.IsPPinstalled())
+                                {
+                                    // Need to do W2W manually as the ItemClassCollection may not have loaded the expansion when this is called.
+                                    ItemClass itemClass = new ItemClass()
+                                    {
+                                        m_service = ItemClass.Service.Residential,
+                                        m_subService = ItemClass.SubService.ResidentialWallToWall,
+                                        m_level = (ItemClass.Level)(buildingData.level - 1),
+                                    };
+
+                                    InitializePrefab(prefab, residentialAI, itemClass, buildingData.growable);
+                                    return;
+                                }
+
+                                // Plazas & Promenades not installed - fall back to high residential.
+                                aiClass = "High Residential - Level";
+                                break;
+
                             default:
                                 // Fall back to low residential as default.
                                 aiClass = "Low Residential - Level";
@@ -136,25 +161,45 @@ namespace PloppableRICO
                         officeAI.m_workplaceCount = buildingData.WorkplaceCount;
                         officeAI.m_constructionCost = buildingData.ConstructionCost;
 
-                        // Check if this is an IT Cluster specialisation.
-
                         // Determine AI class string according to subservice.
-                        if (buildingData.subService == "high tech")
+                        switch (buildingData.subService)
                         {
-                            // Apply IT cluster if GC installed, otherwise use Level 3 office.
-                            if (Util.IsGCinstalled())
-                            {
-                                aiClass = "Office - Hightech";
-                            }
-                            else
-                            {
-                                aiClass = "Office - Level3";
-                            }
-                        }
-                        else
-                        {
-                            // Not IT cluster - boring old ordinary office.
-                            aiClass = "Office - Level" + buildingData.level;
+                            case "high tech":
+                                // Apply IT cluster if GC installed, otherwise use Level 3 office.
+                                if (Util.IsGCinstalled())
+                                {
+                                    aiClass = "Office - Hightech";
+                                }
+                                else
+                                {
+                                    aiClass = "Office - Level3";
+                                }
+                                break;
+
+                            case "wall2wall":
+                                // Wall-to-wall - requires Plazas & Promenades.
+                                if (Util.IsPPinstalled())
+                                {
+                                    // Need to do W2W manually as the ItemClassCollection may not have loaded the expansion when this is called.
+                                    ItemClass itemClass = new ItemClass()
+                                    {
+                                        m_service = ItemClass.Service.Office,
+                                        m_subService = ItemClass.SubService.OfficeWallToWall,
+                                        m_level = (ItemClass.Level)(buildingData.level - 1),
+                                    };
+
+                                    InitializePrefab(prefab, officeAI, itemClass, buildingData.growable);
+                                    return;
+                                }
+
+                                // Plazas & Promenades not installed - fall back to standard office.
+                                aiClass = "Office - Level" + buildingData.level;
+                                break;
+
+                            default:
+                                // Boring old ordinary office.
+                                aiClass = "Office - Level" + buildingData.level;
+                                break;
                         }
 
                         // Initialize the prefab.
@@ -281,6 +326,26 @@ namespace PloppableRICO
                                 }
                                 break;
 
+                            // Wall-to-wall - requires Plazas & Promenades.
+                            case "wall2wall":
+                                if (Util.IsPPinstalled())
+                                {
+                                    // Need to do W2W manually as the ItemClassCollection may not have loaded the expansion when this is called.
+                                    ItemClass itemClass = new ItemClass()
+                                    {
+                                        m_service = ItemClass.Service.Commercial,
+                                        m_subService = ItemClass.SubService.CommercialWallToWall,
+                                        m_level = (ItemClass.Level)(buildingData.level - 1),
+                                    };
+
+                                    InitializePrefab(prefab, commercialAI, itemClass, buildingData.growable);
+                                    return;
+                                }
+
+                                // Plazas & Promenades not installed - fall back to high commercial.
+                                aiClass = "High Commercial - Level" + buildingData.level;
+                                break;
+
                             // Bog standard high commercial.
                             case "high":
                                 aiClass = "High Commercial - Level" + buildingData.level;
@@ -306,7 +371,6 @@ namespace PloppableRICO
             }
         }
 
-
         /// <summary>
         /// Applies settings to a BuildingInfo prefab.
         /// </summary>
@@ -314,7 +378,17 @@ namespace PloppableRICO
         /// <param name="ai">The building AI to apply.</param>
         /// <param name="aiClass">The AI class string to apply.</param>
         /// <param name="growable">Whether the prefab should be growable.</param>
-        private void InitializePrefab(BuildingInfo prefab, BuildingAI ai, String aiClass, bool growable)
+        private void InitializePrefab(BuildingInfo prefab, BuildingAI ai, string aiClass, bool growable) =>
+            InitializePrefab(prefab, ai, ItemClassCollection.FindClass(aiClass), growable);
+
+        /// <summary>
+        /// Applies settings to a BuildingInfo prefab.
+        /// </summary>
+        /// <param name="prefab">The prefab to modify.</param>
+        /// <param name="ai">The building AI to apply.</param>
+        /// <param name="itemClass">The ItemClass to apply.</param>
+        /// <param name="growable">Whether the prefab should be growable.</param>
+        private void InitializePrefab(BuildingInfo prefab, BuildingAI ai, ItemClass itemClass, bool growable)
         {
             // Non-zero construction time important for other mods (Real Time, Real Construction) - only for private building AIs.
             if (ai is PrivateBuildingAI privateBuildingAI)
@@ -325,19 +399,18 @@ namespace PloppableRICO
             // Assign required fields.
             prefab.m_buildingAI = ai;
             prefab.m_buildingAI.m_info = prefab;
-            prefab.m_class = ItemClassCollection.FindClass(aiClass);
+            prefab.m_class = itemClass;
             prefab.m_placementStyle = growable ? ItemClass.Placement.Automatic : ItemClass.Placement.Manual;
             prefab.m_autoRemove = growable || !ModSettings.warnBulldoze;
         }
-
 
         /// <summary>
         /// Returns and industrial service name given a category.
         /// Service name is 'Forestry' if category is 'forest', otherwise the service name is just the capitalised first letter of the category.
         /// </summary>
-        /// <param name="category">Category</param>
-        /// <returns>Service name</returns>
-        private string ServiceName(String category)
+        /// <param name="category">Category.</param>
+        /// <returns>Service name.</returns>
+        private string ServiceName(string category)
         {
             //  "forest" = "Forestry" 
             if (category == "forest")
@@ -351,12 +424,11 @@ namespace PloppableRICO
             }
         }
 
-
         /// <summary>
         /// Checks to see if the given subservice is a valid industrial subservice.
         /// </summary>
-        /// <param name="subservice">Subservice to check</param>
-        /// <returns>True if the subservice is a valid industry subservice, false otherwise</returns>
+        /// <param name="subservice">Subservice to check.</param>
+        /// <returns>True if the subservice is a valid industry subservice, false otherwise.</returns>
         private bool IsValidIndSubServ(string subservice)
         {
             // Check against each valid subservice.

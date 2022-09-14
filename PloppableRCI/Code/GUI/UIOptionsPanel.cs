@@ -42,6 +42,7 @@ namespace PloppableRICO
         {
             High = 0,
             Low,
+            Wall2Wall,
             HighEco,
             LowEco,
             NumSubs
@@ -52,6 +53,7 @@ namespace PloppableRICO
         {
             High = 0,
             Low,
+            Wall2Wall,
             Leisure,
             Tourist,
             Eco,
@@ -83,6 +85,7 @@ namespace PloppableRICO
         private enum OffSubIndex
         {
             Generic = 0,
+            Wall2Wall,
             IT,
             NumSubs
         };
@@ -123,6 +126,7 @@ namespace PloppableRICO
         private readonly string[] OfficeSubs = new string[(int)OffSubIndex.NumSubs]
         {
             Translations.Translate("PRR_SUB_GEN"),
+            Translations.Translate("PRR_SUB_W2W"),
             Translations.Translate("PRR_SUB_ITC")
         };
 
@@ -130,6 +134,7 @@ namespace PloppableRICO
         {
             Translations.Translate("PRR_SUB_HIG"),
             Translations.Translate("PRR_SUB_LOW"),
+            Translations.Translate("PRR_SUB_W2W"),
             Translations.Translate("PRR_SUB_HEC"),
             Translations.Translate("PRR_SUB_LEC")
         };
@@ -138,6 +143,7 @@ namespace PloppableRICO
         {
             Translations.Translate("PRR_SUB_HIG"),
             Translations.Translate("PRR_SUB_LOW"),
+            Translations.Translate("PRR_SUB_W2W"),
             Translations.Translate("PRR_SUB_LEI"),
             Translations.Translate("PRR_SUB_TOU"),
             Translations.Translate("PRR_SUB_ORG")
@@ -420,6 +426,7 @@ namespace PloppableRICO
                     switch (subService.selectedIndex)
                     {
                         case (int)ComSubIndex.High:
+                        case (int)ComSubIndex.Wall2Wall:
                             // High commercial.
                             uiCategory.selectedIndex = (int)UICatIndex.comhigh;
                             break;
@@ -807,6 +814,9 @@ namespace PloppableRICO
                         case "low":
                             subService.selectedIndex = (int)ResSubIndex.Low;
                             break;
+                        case "wall2wall":
+                            subService.selectedIndex = (int)ResSubIndex.Wall2Wall;
+                            break;
                         case "high eco":
                             subService.selectedIndex = (int)ResSubIndex.HighEco;
                             break;
@@ -855,7 +865,19 @@ namespace PloppableRICO
                     UpdateSubServiceMenu();
 
                     // Sub-service selection.
-                    subService.selectedIndex = (int)(currentSettings.subService == "high tech" ? OffSubIndex.IT : OffSubIndex.Generic);
+                    switch (currentSettings.subService)
+                    {
+                        case "wall2wall":
+                            subService.selectedIndex = (int)OffSubIndex.Wall2Wall;
+                            break;
+                        case "high tech":
+                            subService.selectedIndex = (int)OffSubIndex.IT;
+                            break;
+                        default:
+                            subService.selectedIndex = (int)OffSubIndex.Generic;
+                            break;
+                    }
+
                     break;
 
                 case "commercial":
@@ -869,6 +891,9 @@ namespace PloppableRICO
                     {
                         case "low":
                             subService.selectedIndex = (int)ComSubIndex.Low;
+                            break;
+                        case "wall2wall":
+                            subService.selectedIndex = (int)ComSubIndex.Wall2Wall;
                             break;
                         case "leisure":
                             subService.selectedIndex = (int)ComSubIndex.Leisure;
@@ -1061,11 +1086,11 @@ namespace PloppableRICO
                     break;
 
                 case (int)ServiceIndex.Commercial:
-                    level.items = (subService.selectedIndex == (int)ComSubIndex.Low || subService.selectedIndex == (int)ComSubIndex.High) ? WorkLevels : SingleLevel;
+                    level.items = (subService.selectedIndex == (int)ComSubIndex.Low || subService.selectedIndex == (int)ComSubIndex.High || subService.selectedIndex == (int)ComSubIndex.Wall2Wall) ? WorkLevels : SingleLevel;
                     break;
 
                 case (int)ServiceIndex.Office:
-                    level.items = subService.selectedIndex == (int)OffSubIndex.Generic ? WorkLevels : SingleLevel;
+                    level.items = subService.selectedIndex == (int)OffSubIndex.IT ? SingleLevel : WorkLevels;
                     break;
 
                 case (int)ServiceIndex.Extractor:
@@ -1183,6 +1208,9 @@ namespace PloppableRICO
                         case (int)ResSubIndex.Low:
                             subServiceName = "low";
                             break;
+                        case (int)ResSubIndex.Wall2Wall:
+                            subServiceName = "wall2wall";
+                            break;
                         case (int)ResSubIndex.HighEco:
                             subServiceName = "high eco";
                             break;
@@ -1216,8 +1244,18 @@ namespace PloppableRICO
 
                 case (int)ServiceIndex.Office:
                     serviceName = "office";
-                    if (subService.selectedIndex == (int)OffSubIndex.Generic) subServiceName = "none";
-                    else if (subService.selectedIndex == (int)OffSubIndex.IT) subServiceName = "high tech";
+                    switch (subService.selectedIndex)
+                    {
+                        case (int)OffSubIndex.Generic:
+                            subServiceName = "none";
+                            break;
+                        case (int)OffSubIndex.Wall2Wall:
+                            subServiceName = "wall2wall";
+                            break;
+                        case (int)OffSubIndex.IT:
+                            subServiceName = "high tech";
+                            break;
+                    }
                     break;
 
                 case (int)ServiceIndex.Commercial:
@@ -1229,6 +1267,9 @@ namespace PloppableRICO
                             break;
                         case (int)ComSubIndex.Low:
                             subServiceName = "low";
+                            break;
+                        case (int)ComSubIndex.Wall2Wall:
+                            subServiceName = "wall2wall";
                             break;
                         case (int)ComSubIndex.Leisure:
                             subServiceName = "leisure";

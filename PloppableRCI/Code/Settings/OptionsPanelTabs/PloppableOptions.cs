@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="PloppableOptions.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System.Linq;
     using AlgernonCommons.Translation;
@@ -24,8 +29,8 @@
         /// <summary>
         /// Adds growable options tab to tabstrip.
         /// </summary>
-        /// <param name="tabStrip">Tab strip to add to</param>
-        /// <param name="tabIndex">Index number of tab</param>
+        /// <param name="tabStrip">Tab strip to add to.</param>
+        /// <param name="tabIndex">Index number of tab.</param>
         internal PloppableOptions(UITabstrip tabStrip, int tabIndex)
         {
             // Y position indicator.
@@ -110,12 +115,11 @@
             currentY += CheckRowHeight;
         }
 
-
         /// <summary>
         /// Event handler for demolish warning checkbox.
         /// </summary>
-        /// <param name="control">Calling UIComponent</param>
-        /// <param name="isChecked">New isChecked state</param>
+        /// <param name="control">Calling UIComponent.</param>
+        /// <param name="isChecked">New isChecked state.</param>
         private void DemolishWarnCheckChanged(UIComponent control, bool isChecked)
         {
             // Update mod settings.
@@ -139,46 +143,42 @@
             }
         }
 
-
         /// <summary>
         /// Event handler for auto demolish checkbox.
         /// </summary>
-        /// <param name="control">Calling UIComponent</param>
-        /// <param name="isChecked">New isChecked state</param>
-        private void DemolishAutoCheckChanged(UIComponent control, bool isChecked)
+        /// <param name="c">Calling UIComponent.</param>
+        /// <param name="isChecked">New isChecked state.</param>
+        private void DemolishAutoCheckChanged(UIComponent c, bool isChecked)
         {
             ModSettings.autoDemolish = isChecked;
         }
 
-
         /// <summary>
         /// Event handler for override cost checkbox.
         /// </summary>
-        /// <param name="control">Calling UIComponent</param>
-        /// <param name="isChecked">New isChecked state</param>
-        private void OverrideCostCheckChanged(UIComponent control, bool isChecked)
+        /// <param name="c">Calling UIComponent.</param>
+        /// <param name="isChecked">New isChecked state.</param>
+        private void OverrideCostCheckChanged(UIComponent c, bool isChecked)
         {
             ModSettings.overrideCost = isChecked;
         }
 
-
         /// <summary>
         /// Event handler for no collapse checkbox.
         /// </summary>
-        /// <param name="control">Calling UIComponent</param>
-        /// <param name="isChecked">New isChecked state</param>
-        private void NoCollapseCheckChanged(UIComponent control, bool isChecked)
+        /// <param name="c">Calling UIComponent.</param>
+        /// <param name="isChecked">New isChecked state.</param>
+        private void NoCollapseCheckChanged(UIComponent c, bool isChecked)
         {
             ModSettings.noCollapse = isChecked;
         }
 
-
         /// <summary>
         /// Procesesses text change events.
         /// </summary>
-        /// <param name="textField">Textfield control</param
-        /// <param name="text">Text to attempt to parse</param
-        /// <param name="setting">Field to store result in</param>
+        /// <param name="textField">Textfield control.</param>
+        /// <param name="text">Text to attempt to parse.</param>
+        /// <param name="setting">Field to store result in.</param>
         private void TextSubmitted(UITextField textField, string text, ref int setting)
         {
             if (textField != null)
@@ -200,15 +200,14 @@
             }
         }
 
-
         /// <summary>
         /// Adds a cost-factor textfield to the panel.
         /// </summary>
-        /// <param name="parent">Parent component</param>
-        /// <param name="labelKey">Text label translation key</param>
-        /// <param name="initialValue">Initial value</param>
-        /// <param name="yPos">Relative Y position (will be incremented for next control)</param>
-        /// <returns>New textfield</returns>
+        /// <param name="parent">Parent component.</param>
+        /// <param name="labelKey">Text label translation key.</param>
+        /// <param name="initialValue">Initial value.</param>
+        /// <param name="yPos">Relative Y position (will be incremented for next control).</param>
+        /// <returns>New textfield.</returns>
         private UITextField AddCostTextField(UIComponent parent, string labelKey, int initialValue, ref float yPos)
         {
             UITextField costField = UITextFields.AddPlainTextfield(parent, Translations.Translate(labelKey));

@@ -1,19 +1,49 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Collections.Generic;
-using ColossalFramework.Plugins;
-
+﻿// <copyright file="Util.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
 
 namespace PloppableRICO
 {
-    // Get .crp files (for building information and pretty pictures).
+    using System;
+    using System.Collections.Generic;
+    using ColossalFramework.Plugins;
+
+    /// <summary>
+    /// Various RICO-related utilities.
+    /// </summary>
     public static class Util
     {
+        /// <summary>
+        /// Gets a value indicating whether the After Dark expansion is installed.
+        /// </summary>
+        /// <returns>True if After Dark is installed, false otherwise.</returns>
+        public static bool IsADinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.AfterDarkDLC);
+
+        /// <summary>
+        /// Gets a value indicating whether the Green Cities expansion is installed.
+        /// </summary>
+        /// <returns>True if Green Cities is installed, false otherwise.</returns>
+        public static bool IsGCinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.GreenCitiesDLC);
+
+
+        /// <summary>
+        /// Gets a value indicating whether the Plazas and Promenades expansion is installed.
+        /// </summary>
+        /// <returns>True if Plazas and Promenades is installed, false otherwise.</returns>
+        public static bool IsPPinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.PlazasAndPromenadesDLC);
+
+        /// <summary>
+        /// Gets the default workplace distribution for the given service, subservice, and level.
+        /// </summary>
+        /// <param name="service">Service.</param>
+        /// <param name="subservice">Sub-service.</param>
+        /// <param name="level">Level.</param>
+        /// <returns>Workplace distribution array.</returns>
         public static int[] WorkplaceDistributionOf(string service, string subservice, string level)
         {
             // Workplace distributions by building category, subservice, and level.
-            Dictionary<String, int[]> distributions = new Dictionary<String, int[]>()
+            Dictionary<string, int[]> distributions = new Dictionary<string, int[]>()
             {
                 { "IndustrialIndustrialFarming", new int[] { 100, 100, 0, 0, 0 } },
                 { "IndustrialIndustrialForestry", new int[] { 100, 100, 0, 0, 0 } },
@@ -25,6 +55,9 @@ namespace PloppableRICO
                 { "OfficeNoneLevel1", new int[] { 100, 0, 40, 50, 10 } },
                 { "OfficeNoneLevel2", new int[] { 100, 0, 20, 50, 30 } },
                 { "OfficeNoneLevel3", new int[] { 100, 0, 0, 40, 60 } },
+                { "OfficeOfficeWallToWallLevel1", new int[] { 100, 0, 40, 50, 10 } },
+                { "OfficeOfficeWallToWallLevel2", new int[] { 100, 0, 20, 50, 30 } },
+                { "OfficeOfficeWallToWallLevel3", new int[] { 100, 0, 0, 40, 60 } },
                 { "ExtractorIndustrialFarming", new int[] { 100, 100, 0, 0, 0 } },
                 { "ExtractorIndustrialForestry", new int[] { 100, 100, 0, 0, 0 } },
                 { "ExtractorIndustrialOre", new int[] { 100, 20, 60, 20, 0 } },
@@ -37,6 +70,9 @@ namespace PloppableRICO
                 { "CommercialCommercialHighLevel1", new int[] { 100, 0, 40, 50, 10 } },
                 { "CommercialCommercialHighLevel2", new int[] { 100, 0, 20, 50, 30 } },
                 { "CommercialCommercialHighLevel3", new int[] { 100, 0, 0, 40, 60 } },
+                { "CommercialCommercialWallToWallLevel1", new int[] { 100, 0, 40, 50, 10 } },
+                { "CommercialCommercialWallToWallLevel2", new int[] { 100, 0, 20, 50, 30 } },
+                { "CommercialCommercialWallToWallLevel3", new int[] { 100, 0, 0, 40, 60 } },
                 { "CommercialCommercialEco", new int[] { 100, 50, 50, 0, 0 } },
                 { "OfficeOfficeHighTech", new int[] { 100, 0, 10, 40, 50 } },
             };
@@ -52,6 +88,9 @@ namespace PloppableRICO
             distributions.Add("officenoneLevel1", distributions["OfficeNoneLevel1"]);
             distributions.Add("officenoneLevel2", distributions["OfficeNoneLevel2"]);
             distributions.Add("officenoneLevel3", distributions["OfficeNoneLevel3"]);
+            distributions.Add("officewall2wallLevel1", distributions["OfficeOfficeWallToWallLevel1"]);
+            distributions.Add("officewall2wallLevel2", distributions["OfficeOfficeWallToWallLevel2"]);
+            distributions.Add("officewall2wallLevel3", distributions["OfficeOfficeWallToWallLevel3"]);
             distributions.Add("extractorfarming", distributions["ExtractorIndustrialFarming"]);
             distributions.Add("extractorforestry", distributions["ExtractorIndustrialForestry"]);
             distributions.Add("extractorore", distributions["ExtractorIndustrialOre"]);
@@ -64,6 +103,9 @@ namespace PloppableRICO
             distributions.Add("commercialhighLevel1", distributions["CommercialCommercialHighLevel1"]);
             distributions.Add("commercialhighLevel2", distributions["CommercialCommercialHighLevel2"]);
             distributions.Add("commercialhighLevel3", distributions["CommercialCommercialHighLevel3"]);
+            distributions.Add("commercialwall2wallLevel1", distributions["CommercialCommercialWallToWallLevel1"]);
+            distributions.Add("commercialwall2wallLevel2", distributions["CommercialCommercialWallToWallLevel2"]);
+            distributions.Add("commercialwall2wallLevel3", distributions["CommercialCommercialWallToWallLevel3"]);
             distributions.Add("commercialeco", distributions["CommercialCommercialEco"]);
             distributions.Add("officehigh tech", distributions["OfficeOfficeHighTech"]);
 
@@ -102,8 +144,11 @@ namespace PloppableRICO
             }
         }
 
-
-        // Return maximum level permitted for each subservice.
+        /// <summary>
+        /// Returns the maximum permitted level for the given sub-service.
+        /// </summary>
+        /// <param name="subService">Subservice.</param>
+        /// <returns>Maximum permitted level (1-based).</returns>
         public static int MaxLevelOf(ItemClass.SubService subService)
         {
             switch (subService)
@@ -112,10 +157,13 @@ namespace PloppableRICO
                 case ItemClass.SubService.ResidentialHigh:
                 case ItemClass.SubService.ResidentialLowEco:
                 case ItemClass.SubService.ResidentialHighEco:
+                case ItemClass.SubService.ResidentialWallToWall:
                     return 5;
                 case ItemClass.SubService.CommercialLow:
                 case ItemClass.SubService.CommercialHigh:
+                case ItemClass.SubService.CommercialWallToWall:
                 case ItemClass.SubService.OfficeGeneric:
+                case ItemClass.SubService.OfficeWallToWall:
                 case ItemClass.SubService.IndustrialGeneric:
                     return 3;
                 default:
@@ -123,8 +171,12 @@ namespace PloppableRICO
             }
         }
 
-
-        // Proper name of category based on category and subservice combination.
+        /// <summary>
+        /// Gets the proper UI category name based on category and subservice combination.
+        /// </summary>
+        /// <param name="service">Service.</param>
+        /// <param name="subservice">Sub-service.</param>
+        /// <returns>UI category name.</returns>
         public static string UICategoryOf(string service, string subservice)
         {
             string category = "";
@@ -135,16 +187,16 @@ namespace PloppableRICO
                 switch (service)
                 {
                     case "residential":
-                        category = subservice == "high" ? "reshigh" : "reslow";
+                        category = subservice.Equals("high") || subservice.Equals("wall2wall") ? "reshigh" : "reslow";
                         break;
                     case "commercial":
-                        category = subservice == "high" ? "comhigh" : "comlow";
+                        category = subservice.Equals("high") || subservice.Equals("wall2wall") ? "comhigh" : "comlow";
                         break;
                     case "office":
                         category = "office";
                         break;
                     case "industrial":
-                        category = subservice == "generic" ? "industrial" : subservice;
+                        category = subservice.Equals("generic") ? "industrial" : subservice;
                         break;
                     case "extractor":
                         category = subservice;
@@ -158,8 +210,11 @@ namespace PloppableRICO
             return category;
         }
 
-
-        // Path for mod settings.
+        /// <summary>
+        /// Gets the settings mod filepath.
+        /// </summary>
+        /// <param name="name">Settings mod name.</param>
+        /// <returns>Mod filepath.</returns>
         public static string SettingsModPath(string name)
         {
             IEnumerable<PluginManager.PluginInfo> modList = PluginManager.instance.GetPluginsInfo();
@@ -174,13 +229,5 @@ namespace PloppableRICO
             }
             return modPath;
         }
-
-
-        // Check if After Dark DLC is installed.
-        public static bool IsADinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.AfterDarkDLC);
-
-
-        // Check if Green Cities is installed.
-        public static bool IsGCinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.GreenCitiesDLC);
     }
 }

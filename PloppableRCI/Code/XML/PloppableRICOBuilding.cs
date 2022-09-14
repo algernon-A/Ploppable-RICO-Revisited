@@ -351,7 +351,7 @@
 
 
                 // Sub-service errors.  We can work with office or industrial, but not commercial or residential.
-                if (!new Regex(@"^(high|low|generic|farming|oil|forest|ore|none|tourist|leisure|high tech|eco|high eco|low eco)$").IsMatch(subService))
+                if (!new Regex(@"^(high|low|generic|farming|oil|forest|ore|none|tourist|leisure|high tech|eco|high eco|low eco|wall2wall)$").IsMatch(subService))
                 {
                     // Allow for invalid subservices for office and industrial buildings.
                     if (!(service == "office" || service == "industrial"))
