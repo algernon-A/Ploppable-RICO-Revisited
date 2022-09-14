@@ -5,6 +5,7 @@
     using System.Linq;
     using AlgernonCommons;
     using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
     using ColossalFramework.UI;
     using UnityEngine;
 
@@ -183,7 +184,7 @@
                     // Draw tabs in tabstrip.
                     TabButtons[i] = new UIButton(); 
                     TabButtons[i] = Tabs.AddUIComponent<UIButton>();
-                    TabButtons[i].size = new Vector2(46, 25);
+                    TabButtons[i].size = new Vector2(46f, 25f);
                     TabButtons[i].normalBgSprite = "SubBarButtonBase";
                     TabButtons[i].disabledBgSprite = "SubBarButtonBaseDisabled";
                     TabButtons[i].pressedBgSprite = "SubBarButtonBasePressed";
@@ -246,8 +247,7 @@
                 }
 
                 // Settings tab.
-                showSettings = UIUtils.CreateButton(Tabs);
-                showSettings.size = new Vector2(100, 25);
+                showSettings = UIButtons.AddButton(Tabs, 0f, 0f, Translations.Translate("PRR_SET"), 100f, 25f, 0.9f, tooltip: Translations.Translate("PRR_NAME"));
                 showSettings.normalBgSprite = "SubBarButtonBase";
                 showSettings.eventClick += (component, clickEvent) =>
                 {
@@ -311,7 +311,7 @@
             UICategories tooltips = new UICategories();
             for (int i = 0; i <= NumTypes; i++)
             {
-                TabButtons[i].tooltip = tooltips.names[i];
+                TabButtons[i].tooltip = tooltips.Names[i];
             }
         }
 

@@ -1,7 +1,13 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="UIOptionsPanel.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System;
     using AlgernonCommons.Translation;
+    using AlgernonCommons.UI;
     using ColossalFramework.UI;
     using UnityEngine;
 
@@ -63,7 +69,6 @@
             NumSubs
         };
 
-
         // Sub-service indexes - extractor.
         private enum ExtSubIndex
         {
@@ -81,7 +86,6 @@
             IT,
             NumSubs
         };
-
 
         // UI category indexes.
         private enum UICatIndex
@@ -103,7 +107,6 @@
             selfsufficient,
             none
         }
-
 
         // Whole buncha UI strings.
         private readonly string[] Services = new string[(int)ServiceIndex.NumServes]
@@ -220,11 +223,10 @@
         // Construction.
         private UITextField construction;
 
-
         /// <summary>
         /// Updates the options panel when the building selection changes, including showing/hiding relevant controls.
         /// </summary>
-        /// <param name="buildingData">RICO building data</param>
+        /// <param name="buildingData">RICO building data.</param>
         internal void SelectionChanged(BuildingData buildingData)
         {
             // Set current data.
@@ -270,7 +272,6 @@
             // Show or hide settings menu as approprite (hide if no valid settings for this building).
             settingDropDown.parent.isVisible = selectedIndex >= (int)SettingTypeIndex.Local;
         }
-
 
         /// <summary>
         /// Reads current settings from UI elements, and saves them to XML.
@@ -380,9 +381,8 @@
             currentSettings.pollutionEnabled = pollutionEnabled.isChecked;
         }
 
-
         /// <summary>
-        /// Automatically pdates UI category selection based on selected service and subservice.
+        /// Automatically updates UI category selection based on selected service and subservice.
         /// </summary>
         internal void UpdateUICategory()
         {
@@ -445,7 +445,6 @@
                     break;
             }
         }
-
 
         /// <summary>
         /// Performs initial setup for the panel; we no longer use Start() as that's not sufficiently reliable (race conditions), and is no longer needed, with the new create/destroy process.
@@ -520,7 +519,7 @@
 
             // Dropdown menu - UI category.
             uiCategory = RICODropDown(enableRICOPanel, 90f, Translations.Translate("PRR_OPT_UIC"));
-            uiCategory.items = (new UICategories()).names;
+            uiCategory.items = (new UICategories()).Names;
 
             // Dropdown menu - building level.
             level = RICODropDown(enableRICOPanel, 120f, Translations.Translate("PRR_LEVEL"));
@@ -532,8 +531,8 @@
             subService.eventSelectedIndexChanged += (control, value) => UpdateWorkplaceBreakdowns();
 
             // Base text fields.
-            construction = UIUtils.CreateTextField(enableRICOPanel, 150f, Translations.Translate("PRR_OPT_CST"));
-            manual = UIUtils.CreateTextField(enableRICOPanel, 180f, Translations.Translate("PRR_OPT_CNT"));
+            construction = RICOTextField(enableRICOPanel, 150f, Translations.Translate("PRR_OPT_CST"));
+            manual = RICOTextField(enableRICOPanel, 180f, Translations.Translate("PRR_OPT_CNT"));
 
             // Base checkboxes.
             growable = RICOLabelledCheckBox(enableRICOPanel, 0f, Translations.Translate("PRR_OPT_GRO"));
@@ -541,10 +540,10 @@
             realityIgnored = RICOLabelledCheckBox(enableRICOPanel, 240f, Translations.Translate("PRR_OPT_POP"));
 
             // Workplace breakdown by education level.
-            uneducated = UIUtils.CreateTextField(enableRICOPanel, 300f, Translations.Translate("PRR_OPT_JB0"));
-            educated = UIUtils.CreateTextField(enableRICOPanel, 330f, Translations.Translate("PRR_OPT_JB1"));
-            welleducated = UIUtils.CreateTextField(enableRICOPanel, 360f, Translations.Translate("PRR_OPT_JB2"));
-            highlyeducated = UIUtils.CreateTextField(enableRICOPanel, 390f, Translations.Translate("PRR_OPT_JB3"));
+            uneducated = RICOTextField(enableRICOPanel, 300f, Translations.Translate("PRR_OPT_JB0"));
+            educated = RICOTextField(enableRICOPanel, 330f, Translations.Translate("PRR_OPT_JB1"));
+            welleducated = RICOTextField(enableRICOPanel, 360f, Translations.Translate("PRR_OPT_JB2"));
+            highlyeducated = RICOTextField(enableRICOPanel, 390f, Translations.Translate("PRR_OPT_JB3"));
 
             // Event handlers to update employment totals on change.
             manual.eventTextChanged += (control, value) => UpdateWorkplaceBreakdowns();
@@ -556,7 +555,6 @@
             // Event handler for realistic population checkbox to toggle state of population textfields.
             realityIgnored.eventCheckChanged += SetTextfieldState;
         }
-
 
         /// <summary>
         /// Event handler - handles changes to settings selection.
@@ -694,13 +692,12 @@
             disableEvents = false;
         }
 
-
         /// <summary>
         /// Event handler - updates the options panel when the service dropdown is changed.
         /// </summary>
-        /// <param name="component">Calling component (ignored)</param>
-        /// <param name="value">New service dropdown selected index</param>
-        private void ServiceChanged(UIComponent _, int value)
+        /// <param name="c">Calling component.</param>
+        /// <param name="value">New service dropdown selected index.</param>
+        private void ServiceChanged(UIComponent c, int value)
         {
             // Ignore event if disabled flag is set.
             if (!disableEvents)
@@ -737,13 +734,12 @@
             }
         }
 
-
         /// <summary>
         /// Event handler - updates the options panel when the sub-service dropdown is changed.
         /// </summary>
-        /// <param name="component">Calling component (ignored)</param>
-        /// <param name="value">New service dropdown selected index (ignored)</param>
-        private void SubServiceChanged(UIComponent component, int value)
+        /// <param name="c">Calling component.</param>
+        /// <param name="value">New service dropdown selected index (ignored).</param>
+        private void SubServiceChanged(UIComponent c, int value)
         {
             // Ignore event if disabled flag is set.
             if (!disableEvents)
@@ -752,7 +748,6 @@
                 UpdateLevelMenu();
             }
         }
-
 
         /// <summary>
         /// Updates the total workplaces textfield with the sum of the workplace breakdown boxes.
@@ -781,11 +776,10 @@
             }
         }
 
-
         /// <summary>
         /// Updates the values in the RICO options panel to match the selected building (control visibility should already be set).
         /// </summary>
-        /// <param name="buildingData">RICO building record</param>
+        /// <param name="building">RICO building record.</param>
         private void SettingChanged(RICOBuilding building)
         {
             // Workplaces.
@@ -1007,7 +1001,6 @@
             ricoEnabled.isChecked = building.ricoEnabled;
         }
 
-
         /// <summary>
         /// Updates the sub-service menu based on current service and sub-service selections.
         /// </summary>
@@ -1048,7 +1041,6 @@
             UpdateUICategory();
         }
 
-
         /// <summary>
         /// Updates the level menu based on current service and sub-service selections.
         /// </summary>
@@ -1085,12 +1077,11 @@
             level.selectedIndex = Mathf.Max(0, Mathf.Min(level.selectedIndex, level.items.Length - 1));
         }
 
-
         /// <summary>
         /// Reconfigures the RICO options panel to display relevant options for a given service.
         /// This simply hides/shows different option fields for the various services.
         /// </summary>
-        /// <param name="service">RICO service</param>
+        /// <param name="service">RICO service to display.</param>
         private void UpdateElementVisibility(string service)
         {
             // Reconfigure the RICO options panel to display relevant options for a given service.
@@ -1127,7 +1118,6 @@
                     break;
             }
         }
-
 
         /// <summary>
         /// Updates the textfield state depending on the state of the 'use realistic population' checkbox state.
@@ -1168,7 +1158,6 @@
                 highlyeducated.tooltip = Translations.Translate("PRR_OPT_JB3");
             }
         }
-
 
         /// <summary>
         /// Returns the current service and subservice based on current menu selections.
@@ -1279,7 +1268,6 @@
             }
         }
 
-
         /// <summary>
         /// Updates workplace breakdowns to ratios applicable to current settings.
         /// </summary>
@@ -1332,14 +1320,13 @@
             disableEvents = false;
         }
 
-
         /// <summary>
         /// Creates a RICO-style dropdown menu.
         /// </summary>
-        /// <param name="parent">Parent component</param>
-        /// <param name="yPos">Relative Y position</param>
-        /// <param name="label">Label text</param>
-        /// <returns>New dropdown menu</returns>
+        /// <param name="parent">Parent component.</param>
+        /// <param name="yPos">Relative Y position.</param>
+        /// <param name="label">Label text.</param>
+        /// <returns>New dropdown menu.</returns>
         public static UIDropDown RICODropDown(UIComponent parent, float yPos, string label)
         {
             // Parent container.
@@ -1410,13 +1397,12 @@
             return dropDown;
         }
 
-
         /// <summary>
         /// Creates a RICO-style checkbox with a label.
         /// </summary>
-        /// <param name="parent">Parent component</param>
-        /// <param name="yPos">Relative Y position</param>
-        /// <param name="label">Label text</param>
+        /// <param name="parent">Parent component.</param>
+        /// <param name="yPos">Relative Y position.</param>
+        /// <param name="label">Label text.</param>
         /// <returns>New checkbox</returns>
         public static UICheckBox RICOLabelledCheckBox(UIComponent parent, float yPos, string label)
         {
@@ -1444,14 +1430,13 @@
             return checkBox;
         }
 
-
         /// <summary>
         /// Creates a checkbox bar.
         /// </summary>
-        /// <param name="parent">Parent component</param>
-        /// <param name="label">Label text</param>
-        /// <param name="width">Bar width</param>
-        /// <returns>New checkbox</returns>
+        /// <param name="parent">Parent component.</param>
+        /// <param name="label">Label text.</param>
+        /// <param name="width">Bar width.</param>
+        /// <returns>New checkbox.</returns>
         private static UICheckBox RICOCheckBar(UIComponent parent, string label, float width)
         {
             // Create panel.
@@ -1476,13 +1461,12 @@
             return checkBox;
         }
 
-
         /// <summary>
         /// Creates a Plopapble RICO-style checkbox.
         /// </summary>
-        /// <param name="parent">Parent component</param>
-        /// <param name="xPos">Relative X position</param>
-        /// <returns>New checkbox</returns>
+        /// <param name="parent">Parent component.</param>
+        /// <param name="xPos">Relative X position.</param>
+        /// <returns>New checkbox.</returns>
         private static UICheckBox RICOCheckBox(UIComponent parent, float xPos)
         {
 
@@ -1505,6 +1489,33 @@
             checkBox.checkedBoxObject.relativePosition = Vector3.zero;
 
             return checkBox;
+        }
+        
+        /// <summary>
+        /// Creates a Ploppable RICO-style textfield.
+        /// </summary>
+        /// <param name="parent">Parent component.</param>
+        /// <param name="yPos">Relative Y position.</param>
+        /// <param name="label">Text label.</param>
+        /// <returns>New UITextField</returns>
+        public static UITextField RICOTextField(UIComponent parent, float yPos, string label)
+        {
+            UIPanel container = parent.AddUIComponent<UIPanel>();
+            container.height = 25;
+            container.relativePosition = new Vector3(0, yPos, 0);
+
+            UILabel Label = container.AddUIComponent<UILabel>();
+            Label.textScale = 0.8f;
+            Label.text = label;
+            Label.relativePosition = new Vector3(15, 6, 0);
+
+            Label.verticalAlignment = UIVerticalAlignment.Middle;
+            Label.autoSize = false;
+            Label.autoHeight = true;
+            Label.width = 170f;
+            Label.wordWrap = true;
+
+            return UITextFields.AddTextField(container, 190f, 0f, 100f, 20f, vertPad: 3);
         }
     }
 }

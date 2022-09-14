@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="UIBuildingFilter.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using AlgernonCommons.Translation;
     using AlgernonCommons.UI;
@@ -33,34 +38,31 @@
         private UIButton noCats;
         private UITextField nameFilter;
 
-
-        // FIlter by settings checkboxes.
+        // 'Filter by settings' checkboxes.
         internal UICheckBox[] SettingsFilter => settingsFilter;
-
-
-        // Event to trigger when filtering changes.
+        
+        /// <summary>
+        /// Triggered when the filter changes.
+        /// </summary>
         public event PropertyChangedEventHandler<int> EventFilteringChanged;
-
 
         /// <summary>
         /// The trimmed current text contents of the name filter textfield.
         /// </summary>
         internal string FilterString => nameFilter.text.Trim();
 
-
         /// <summary>
         /// Checks whether or not the specified category is currently selected.
         /// </summary>
-        /// <param name="category">Category to query</param>
-        /// <returns>True if selected; false otherwise</returns>
+        /// <param name="category">Category to query.</param>
+        /// <returns>True if selected; false otherwise.</returns>
         internal bool IsCatSelected(Category category) => categoryToggles[(int)category].isChecked;
-
 
         /// <summary>
         /// Category togle button event handler.  Toggles the button state and updates the filter accordingly.
         /// </summary>
-        /// <param name="control"></param>
-        public void ToggleCat(UICheckBox control)
+        /// <param name="c">Callling component.</param>
+        public void ToggleCat(UICheckBox c)
         {
             // If either shift or control is NOT held down, deselect all other toggles and select this one.
             if (!(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
@@ -71,23 +73,22 @@
                 }
                 
                 // Select this toggle.
-                control.isChecked = true;
+                c.isChecked = true;
             }
             else
             {
                 // Shift or control IS held down; toggle this control.
-                control.isChecked = !control.isChecked;
+                c.isChecked = !c.isChecked;
             }
 
             // Trigger an update.
             EventFilteringChanged(this, 0);
         }
 
-
         /// <summary>
         /// Checks whether or not all categories are currently selected.
         /// </summary>
-        /// <returns>True if all categories are selected; false otherwise</returns>
+        /// <returns>True if all categories are selected; false otherwise.</returns>
         internal bool AllCatsSelected()
         {
             return categoryToggles[(int)Category.Monument].isChecked &&
@@ -101,7 +102,6 @@
                 categoryToggles[(int)Category.Office].isChecked &&
                 categoryToggles[(int)Category.Industrial].isChecked;
         }
-
 
         /// <summary>
         /// Returns the current filter state as a boolean array.
@@ -127,11 +127,10 @@
             return filterState;
         }
 
-
         /// <summary>
         /// Sets the current filter configuration from provided boolean array.
         /// </summary>
-        /// <param name="filterState">Filter state to apply</param>
+        /// <param name="filterState">Filter state to apply.</param>
         internal void SetFilter(bool[] filterState)
         {
             // Set toggle states from array.
@@ -147,7 +146,6 @@
             }
         }
 
-
         /// <summary>
         /// Performs initial setup for the panel; we no longer use Start() as that's not sufficiently reliable (race conditions), and is no longer needed, with the new create/destroy process.
         /// </summary>
@@ -159,9 +157,14 @@
             // First row.
             for (int i = 0; i < SecondRow; i++)
             {
-                categoryToggles[i] = UIUtils.CreateIconToggle(this, OriginalCategories.atlases[i], OriginalCategories.spriteNames[i], OriginalCategories.spriteNames[i] + "Disabled");
-                categoryToggles[i].tooltip = Translations.Translate(OriginalCategories.tooltipKeys[i]);
-                categoryToggles[i].relativePosition = new Vector2((FirstRowSize + Margin) * i, FirstRowY);
+                categoryToggles[i] = UICheckBoxes.AddIconToggle(
+                    this,
+                    (FirstRowSize + Margin) * i,
+                    FirstRowY,
+                    OriginalCategories.Atlases[i],
+                    OriginalCategories.SpriteNames[i],
+                    OriginalCategories.SpriteNames[i] + "Disabled",
+                    tooltip: Translations.Translate(OriginalCategories.TooltipKeys[i]));
                 categoryToggles[i].isChecked = true;
                 categoryToggles[i].readOnly = true;
                 categoryToggles[i].eventClick += (control, clickEvent) => ToggleCat(control as UICheckBox);
@@ -170,9 +173,16 @@
             // Second row (starts disabled).
             for (int i = SecondRow; i < NumOfCategories; i++)
             {
-                categoryToggles[i] = UIUtils.CreateIconToggle(this, OriginalCategories.atlases[i], OriginalCategories.spriteNames[i], OriginalCategories.spriteNames[i] + "Disabled", 25f);
-                categoryToggles[i].tooltip = Translations.Translate(OriginalCategories.tooltipKeys[i]);
-                categoryToggles[i].relativePosition = new Vector2((SecondRowSize + Margin) * (i - SecondRow), SecondRowY);
+                categoryToggles[i] = UICheckBoxes.AddIconToggle(
+                    this,
+                    (SecondRowSize + Margin) * (i - SecondRow),
+                    SecondRowY,
+                    OriginalCategories.Atlases[i],
+                    OriginalCategories.SpriteNames[i],
+                    OriginalCategories.SpriteNames[i] + "Disabled",
+                    25f,
+                    25f,
+                    Translations.Translate(OriginalCategories.TooltipKeys[i]));
                 categoryToggles[i].isChecked = true;
                 categoryToggles[i].readOnly = true;
                 categoryToggles[i].eventClick += (control, clickEvent) => ToggleCat(control as UICheckBox);
@@ -286,11 +296,10 @@
             settingsFilter[3].tooltip = Translations.Translate("PRR_SET_HASANY");
         }
 
-
         /// <summary>
         /// Sets the category toggles so that the one that includes the provided category is on, and the rest are off.
         /// </summary>
-        /// <param name="buildingClass">RICO category of the building (to match toggle categories)</param>
+        /// <param name="category">RICO category of the building (to match toggle categories).</param>
         internal void SelectBuildingCategory(Category category)
         {
             // Iterate through each category.

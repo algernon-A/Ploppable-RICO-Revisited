@@ -1,82 +1,13 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="Thumbnails.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
-    using System;
     using AlgernonCommons;
     using ColossalFramework.UI;
     using UnityEngine;
-
-    /// <summary>
-    /// Static class to coordinate thumbnail generation.
-    /// </summary>
-    public static class ThumbnailManager
-    {
-        // Instances.
-        private static GameObject gameObject;
-        private static ThumbnailGenerator _generator;
-        private static UIPreviewRenderer _renderer;
-        internal static UIPreviewRenderer Renderer => _renderer;
-
-        
-        /// <summary>
-        /// Forces immediate rendering of a thumbnail.
-        /// </summary>
-        /// <param name="buildingData"></param>
-        public static void CreateThumbnail(BuildingData buildingData)
-        {
-            if (gameObject == null)
-            {
-                Create();
-            }
-
-            _generator.CreateThumbnail(buildingData);
-        }
-
-
-        /// <summary>
-        /// Creates our renderer GameObject.
-        /// </summary>
-        internal static void Create()
-        {
-            try
-            {
-                // If no instance already set, create one.
-                if (gameObject == null)
-                {
-                    // Give it a unique name for easy finding with ModTools.
-                    gameObject = new GameObject("RICOThumbnailRenderer");
-                    gameObject.transform.parent = UIView.GetAView().transform;
-
-                    // Add our queue manager and renderer directly to the gameobject.
-                    _renderer = gameObject.AddComponent<UIPreviewRenderer>();
-                    _generator = new ThumbnailGenerator();
-                }
-            }
-            catch (Exception e)
-            {
-                Logging.LogException(e, "exception creating renderer");
-            }
-        }
-
-
-        /// <summary>
-        /// Cleans up when finished.
-        /// </summary>
-        internal static void Close()
-        {
-            if (gameObject != null)
-            {
-                // Destroy gameobject components.
-                GameObject.Destroy(_renderer);
-                GameObject.Destroy(gameObject);
-
-                // Let the garbage collector cleanup.
-                _generator = null;
-                _renderer = null;
-                gameObject = null;
-            }
-        }
-    }
-    
 
     /// <summary>
     /// Creates thumbnail images.
@@ -86,7 +17,6 @@
     {
         // Renderer for thumbnail images.
         private readonly UIPreviewRenderer renderer;
-
 
         /// <summary>
         /// Constructor.
@@ -103,13 +33,11 @@
             renderer.CameraRotation = 210f;
         }
 
-
         /// <summary>
         /// Generates building thumbnail images (normal, focused, hovered, pressed and disabled) for the given building prefab.
         /// Thumbnails are no longer applied to the m_Thumbnail and m_Atlas fields of the prefab, but to the BuildingData record.
         /// </summary>
-        /// <param name="prefab">The BuildingInfo prefab to generate thumbnails for</param>
-        /// <param name="name">The display name of the prefab.</param>
+        /// <param name="building">RICO BuildingData record.</param>
         internal void CreateThumbnail(BuildingData building)
         {
             // Reset zoom.
@@ -185,17 +113,15 @@
             building.thumbnailAtlas = thumbnailAtlas;
         }
 
-
         /// <summary>
         /// Generates building thumbnail variants - focused, hovered, pressed, and disabled., 
         /// </summary>
-        /// <param name="baseTexture">Base texture of the thumbnail</param>
-        /// <returns>2d variant icon textures</returns>
+        /// <param name="baseTexture">Base texture of the thumbnail.</param>
+        /// <returns>2d variant icon textures.</returns>
         private Texture2D[] GenerateThumbnailVariants(Texture2D baseTexture)
         {
             Color32[] variantPixels = new Color32[baseTexture.width * baseTexture.height];
             Color32[] basePixels = baseTexture.GetPixels32();
-
 
             // Focused.
             ColorFilter(basePixels, variantPixels, 32, 64, 128, 2);
@@ -229,17 +155,16 @@
             };
         }
 
-
         /// <summary>
         /// Applies an RGB filter to a source colour, optionally reducing the intensity of the source colour before filtering (alpha is left unchanged).
         /// </summary>
-        /// <param name="sourceColor">Source colour to filter</param>
-        /// <param name="resultColor">Result of filtering</param>
-        /// <param name="filterR">Red component of filter</param>
-        /// <param name="filterG">Green component of filter</param>
-        /// <param name="filterB">Blue component of filter</param>
-        /// <param name="filterStrength">Each channel (RGB) of the original colour is bitshifted right this number before filtering (to reduce its intensity)</param>
-        private void ColorFilter(Color32[] sourceColor, Color32[] resultColor, byte filterR, byte filterG, byte filterB , byte filterStrength)
+        /// <param name="sourceColor">Source colour to filter.</param>
+        /// <param name="resultColor">Result of filtering.</param>
+        /// <param name="filterR">Red component of filter.</param>
+        /// <param name="filterG">Green component of filter.</param>
+        /// <param name="filterB">Blue component of filter.</param>
+        /// <param name="filterStrength">Each channel (RGB) of the original colour is bitshifted right this number before filtering (to reduce its intensity).</param>
+        private void ColorFilter(Color32[] sourceColor, Color32[] resultColor, byte filterR, byte filterG, byte filterB, byte filterStrength)
         {
             for (int i = 0; i < sourceColor.Length; i++)
             {
@@ -250,17 +175,15 @@
                 resultColor[i].a = sourceColor[i].a;
             }
         }
-        
 
         /// <summary>
         /// Adds a collection of textures to an atlas.
         /// </summary>
-        /// <param name="atlas">Atlas to add to</param>
-        /// <param name="newTextures">Textures to add</param>
+        /// <param name="atlas">Atlas to add to.</param>
+        /// <param name="newTextures">Textures to add.</param>
         private void AddTexturesToAtlas(UITextureAtlas atlas, Texture2D[] newTextures)
         {
             Texture2D[] textures = new Texture2D[atlas.count + newTextures.Length];
-
 
             // Populate textures with sprites from the atlas.
             for (int i = 0; i < atlas.count; i++)
@@ -274,7 +197,7 @@
             {
                 textures[atlas.count + i] = newTextures[i];
             }
-            
+
             // Repack atlas with our new additions (regions are individual texture areas within the atlas).
             Rect[] regions = atlas.texture.PackTextures(textures, atlas.padding, 4096, false);
 

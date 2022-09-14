@@ -1,35 +1,109 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="CategoryUtils.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using AlgernonCommons.Translation;
 
+    /// <summary>
+    /// Building selection filter categories.
+    /// </summary>
     public enum Category
     {
+        /// <summary>
+        /// No selection.
+        /// </summary>
         None = -1,
+        
+        /// <summary>
+        /// Monuments, unique buildings, and miscellaneous.
+        /// </summary>
         Monument,
+
+        /// <summary>
+        /// Beautification buildings.
+        /// </summary>
         Beautification,
+
+        /// <summary>
+        /// Residential buildings.
+        /// </summary>
         Residential,
+
+        /// <summary>
+        /// Commercial buildings.
+        /// </summary>
         Commercial,
+
+        /// <summary>
+        /// Office buildings.
+        /// </summary>
         Office,
+
+        /// <summary>
+        /// Industrial buildings.
+        /// </summary>
         Industrial,
+
+        /// <summary>
+        /// Education buildings.
+        /// </summary>
         Education,
+
+        /// <summary>
+        /// Health and deathcare buildings.
+        /// </summary>
         Health,
+
+        /// <summary>
+        /// Fire service buildings.
+        /// </summary>
         Fire,
+
+        /// <summary>
+        /// Police service buildings.
+        /// </summary>
         Police,
+
+        /// <summary>
+        /// Electricity buildings.
+        /// </summary>
         Power,
+
+        /// <summary>
+        /// Water, sewage, and heating buildings.
+        /// </summary>
         Water,
+
+        /// <summary>
+        /// Garbage processing buildings.
+        /// </summary>
         Garbage,
+
+        /// <summary>
+        /// Industries DLC buildings.
+        /// </summary>
         PlayerIndustry,
+
+        /// <summary>
+        /// Number of categories.
+        /// </summary>
         NumCategories
     }
 
-
     /// <summary>
-    /// Data struct for original building categories (to sort settings panel building list).
+    /// Data class for original building categories (to sort settings panel building list).
     /// </summary>
     internal static class OriginalCategories
     {
         // Icons representing each category.
-        internal static readonly string[] spriteNames =
+
+        /// <summary>
+        /// Sprite icon names for each category.
+        /// </summary>
+        internal static readonly string[] SpriteNames =
         {
             "ToolbarIconMonuments",
             "ToolbarIconBeautification",
@@ -47,8 +121,10 @@
             "ToolbarIconPlayerIndustry",
         };
 
-        // Icon atlas name for each of the above sprites.
-        internal static readonly string[] atlases =
+        /// <summary>
+        /// Sprite icon atlas names for each category.
+        /// </summary>
+        internal static readonly string[] Atlases =
         {
             "Ingame",
             "Ingame" ,
@@ -66,8 +142,10 @@
             "Ingame"
         };
 
-        // Tooltips.
-        internal static readonly string[] tooltipKeys =
+        /// <summary>
+        /// Tooltips for each category.
+        /// </summary>
+        internal static readonly string[] TooltipKeys =
         {
             "PRR_CAT_MON",
             "PRR_CAT_BEA",
@@ -86,14 +164,15 @@
         };
     }
 
-
-
     /// <summary>
-    /// Data struct for Ploppable RICO Revisited UI category names.
+    /// Ploppable RICO Revisited UI category names (translated keys) for display.
     /// </summary>
     internal class UICategories
     {
-        internal readonly string[] names =
+        /// <summary>
+        /// UI Category names.
+        /// </summary>
+        internal readonly string[] Names =
         {
             Translations.Translate("PRR_UIC_REL"),
             Translations.Translate("PRR_UIC_REH"),

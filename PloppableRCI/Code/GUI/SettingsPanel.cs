@@ -182,10 +182,9 @@
         private const float BottomMargin = 10f;
         private const float Spacing = 5f;
         private const float CheckFilterHeight = UIBuildingFilter.SettingsFilterHeight;
-        internal const float TitleHeight = 40f;
+        private const float TitleHeight = 40f;
 
         // Panel components.
-        private UITitleBar titleBar;
         private UIBuildingFilter filterBar;
         private UIList buildingSelection;
         private UIPreviewPanel previewPanel;
@@ -309,9 +308,34 @@
                 relativePosition = new Vector3(Mathf.Floor((GetUIView().fixedWidth - width) / 2), Mathf.Floor((GetUIView().fixedHeight - height) / 2));
                 backgroundSprite = "UnlockingPanel2";
 
-                // Titlebar.
-                titleBar = AddUIComponent<UITitleBar>();
-                titleBar.Setup();
+                // Make it draggable.
+                UIDragHandle dragHandle = AddUIComponent<UIDragHandle>();
+                dragHandle.width = width - 50;
+                dragHandle.height = height;
+                dragHandle.relativePosition = Vector3.zero;
+                dragHandle.target = parent;
+
+                // Decorative icon (top-left).
+                UISprite iconSprite = AddUIComponent<UISprite>();
+                iconSprite.spriteName = "ToolbarIconZoomOutCity";
+                UISprites.ResizeSprite(iconSprite, 30f, 30f);
+                iconSprite.relativePosition = new Vector2(10f, 5f);
+
+                // Titlebar label.
+                UILabel titleLabel = AddUIComponent<UILabel>();
+                titleLabel.relativePosition = new Vector2(50f, 13f);
+                titleLabel.text = Mod.Instance.Name;
+
+                // Close button.
+                UIButton closeButton = AddUIComponent<UIButton>();
+                closeButton.relativePosition = new Vector3(width - 35f, 2f);
+                closeButton.normalBgSprite = "buttonclose";
+                closeButton.hoveredBgSprite = "buttonclosehover";
+                closeButton.pressedBgSprite = "buttonclosepressed";
+                closeButton.eventClick += (c, clickEvent) =>
+                {
+                    SettingsPanel.Close();
+                };
 
                 // Filter.
                 filterBar = AddUIComponent<UIBuildingFilter>();
