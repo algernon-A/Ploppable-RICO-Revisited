@@ -1,18 +1,24 @@
-﻿using ColossalFramework;
-using ColossalFramework.Math;
-
+﻿// <copyright file="AIUtils.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
 
 namespace PloppableRICO
 {
+    using ColossalFramework;
+    using ColossalFramework.Math;
+
+    /// <summary>
+    /// AI utility methods.
+    /// </summary>
     internal static class AIUtils
     {
-
         /// <summary>
         /// Sets the building flags of the selected building to be 'Ploppable RICO Friendly', to ensure the persistence and operation of Ploppable RICO buildings.
         /// Called for Ploppable RICO buildings before and after each simulation step to force the relevant flags.
         /// For our purposes, this is simpler and more robust than the alternative of having to do some messy work with the SimulationStep code.
         /// </summary>
-        /// <param name="buildingData">Building instance data</param>
+        /// <param name="buildingData">Building instance data.</param>
         internal static void SetBuildingFlags(ref Building buildingData)
         {
             // Force reset timers to zero.
@@ -29,12 +35,12 @@ namespace PloppableRICO
             buildingData.m_problems &= ~Notification.Problem1.TurnedOff;
         }
 
-
         /// <summary>
         /// Calculates the construction cost of a workplace, depending on current settings (overrides or default). 
         /// </summary>
-        /// <param name="thisAI">AI reference to calculate for</param>
-        /// <returns>Final construction cost</returns>
+        /// <param name="thisAI">AI reference to calculate for.</param>
+        /// <param name="fixedCost">Fixed construction cost.</param>
+        /// <returns>Final construction cost.</returns>
         internal static int WorkplaceConstructionCost(PrivateBuildingAI thisAI, int fixedCost)
         {
             int baseCost;
