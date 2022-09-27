@@ -1,4 +1,7 @@
-﻿Version 2.5 -
+﻿- Update AlgernonCommons
+
+
+Version 2.5 -
 
 - Compatibility updates for game version 1.15
 - Implement AlgernonCommons

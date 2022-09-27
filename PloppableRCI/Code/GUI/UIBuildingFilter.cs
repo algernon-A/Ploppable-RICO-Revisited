@@ -180,9 +180,9 @@ namespace PloppableRICO
                     OriginalCategories.Atlases[i],
                     OriginalCategories.SpriteNames[i],
                     OriginalCategories.SpriteNames[i] + "Disabled",
-                    25f,
-                    25f,
-                    Translations.Translate(OriginalCategories.TooltipKeys[i]));
+                    width: 25f,
+                    height: 25f,
+                    tooltip: Translations.Translate(OriginalCategories.TooltipKeys[i]));
                 categoryToggles[i].isChecked = true;
                 categoryToggles[i].readOnly = true;
                 categoryToggles[i].eventClick += (control, clickEvent) => ToggleCat(control as UICheckBox);
