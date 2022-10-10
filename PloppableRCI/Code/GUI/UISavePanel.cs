@@ -161,7 +161,7 @@
             {
                 // Convert the 'live' prefab (instance in PrefabCollection) and update household count and builidng level for all current instances.
                 Loading.convertPrefabs.ConvertPrefab(currentData, PrefabCollection<BuildingInfo>.FindLoaded(currentBuildingData.prefab.name));
-                CitizenUnitUtils.UpdateCitizenUnits(currentBuildingData.prefab.name);
+                CitizenUnitUtils.UpdateCitizenUnits(currentBuildingData.prefab, false);
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿- Update AlgernonCommons
+﻿- Fix "Save and Apply" not always removing existing households when Realistic Population mod is not installed
+- Update AlgernonCommons
 
 
 Version 2.5 -
