@@ -19,20 +19,13 @@ namespace PloppableRICO
         internal OptionsPanel()
         {
             // Add tabstrip.
-            UITabstrip tabstrip = UITabstrips.AddTabStrip(this, 0f, 0f, OptionsPanelManager<OptionsPanel>.PanelWidth, OptionsPanelManager<OptionsPanel>.PanelHeight, out _);
+            UITabstrip tabstrip = AutoTabstrip.AddTabstrip(this, 0f, 0f, OptionsPanelManager<OptionsPanel>.PanelWidth, OptionsPanelManager<OptionsPanel>.PanelHeight, out _);
 
             // Add tabs and panels.
             new ModOptions(tabstrip, 0);
             new GrowableOptions(tabstrip, 1);
             new PloppableOptions(tabstrip, 2);
             new ComplaintOptions(tabstrip, 3);
-
-            // Change tab size and text scale (to fit them all in...).
-            foreach (UIButton button in tabstrip.components)
-            {
-                button.textScale = 0.8f;
-                button.width = 175f;
-            }
 
             // Force panel refresh.
             tabstrip.selectedIndex = -1;
