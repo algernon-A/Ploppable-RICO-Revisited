@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="PrivateBuildingAIPatches.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System.Collections.Generic;
     using System.Reflection;
@@ -6,22 +11,29 @@
     using AlgernonCommons;
     using HarmonyLib;
 
+    /// <summary>
+    /// Harmony patches to disable despawning due to district style mismatch.
+    /// </summary>
     [HarmonyPatch(typeof(PrivateBuildingAI), nameof(PrivateBuildingAI.SimulationStep))]
-    public static class PrivateBuildingSimStep
+    public static class PrivateBuildingAIPatches
     {
-        public static bool disableStyleDespawn = false;
+        private static bool s_disableStyleDespawn = false;
 
         /// <summary>
-        /// Harmony transpiler to disable despawning due to district style mismatch if relevant mod option is set.
+        /// Gets or sets a value indicating whether building style forced despawning is disabled (true means disabled).
         /// </summary>
-        /// <param name="instructions">CIL code to alter.</param>
-        /// <returns></returns>
+        internal static bool DisableStyleDespawn { get => s_disableStyleDespawn; set => s_disableStyleDespawn = value; }
+
+        /// <summary>
+        /// Harmony transpiler to PrivateBuildingAI.SimulationStep to disable despawning due to district style mismatch if relevant mod option is set.
+        /// </summary>
+        /// <param name="instructions">Original ILCode.</param>
+        /// <returns>Modified ILCode.</returns>
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             // Instruction parsing.
             IEnumerator<CodeInstruction> instructionsEnumerator = instructions.GetEnumerator();
             CodeInstruction instruction;
-            //Label targetLabel = generator.DefineLabel();
             bool inserted = false;
 
             Logging.KeyMessage("transpiling PrivateBuildingAI.SimulationStep");
@@ -37,7 +49,7 @@
                 if (!inserted && instruction.opcode == OpCodes.Ble)
                 {
                     // Found it - reflect disableStyleDespawn field.
-                    FieldInfo disableField = typeof(PrivateBuildingSimStep).GetField(nameof(disableStyleDespawn), BindingFlags.Static | BindingFlags.Public);
+                    FieldInfo disableField = AccessTools.Field(typeof(PrivateBuildingAIPatches), nameof(s_disableStyleDespawn));
                     if (disableField == null)
                     {
                         Logging.Error("couldn't reflect disableStyleDespawn");

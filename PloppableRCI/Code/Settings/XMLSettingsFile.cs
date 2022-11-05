@@ -75,7 +75,7 @@ namespace PloppableRICO
         /// Gets or sets a value indicating whether building style forced despawning is disabled (true means disabled).
         /// </summary>
         [XmlElement("NoStyleDespawn")]
-        public bool NoStyleDespawn { get => PrivateBuildingSimStep.disableStyleDespawn; set => PrivateBuildingSimStep.disableStyleDespawn = value; }
+        public bool NoStyleDespawn { get => PrivateBuildingAIPatches.DisableStyleDespawn; set => PrivateBuildingAIPatches.DisableStyleDespawn = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether land value complaints are disabled for Ploppable RICO ploppables (true means disabled).
@@ -174,9 +174,9 @@ namespace PloppableRICO
                 ModSettings.thumbBacks = value;
 
                 // Bounds check.
-                if ((int)ModSettings.thumbBacks > (int)ModSettings.ThumbBackCats.numCats - 1 || ModSettings.thumbBacks < 0)
+                if ((int)ModSettings.thumbBacks > (int)ModSettings.ThumbBackCats.NumCats - 1 || ModSettings.thumbBacks < 0)
                 {
-                    ModSettings.thumbBacks = (int)ModSettings.ThumbBackCats.skybox;
+                    ModSettings.thumbBacks = (int)ModSettings.ThumbBackCats.Skybox;
                 }
             }
         }
@@ -191,7 +191,7 @@ namespace PloppableRICO
             {
                 if (value)
                 {
-                    ModSettings.thumbBacks = (int)ModSettings.ThumbBackCats.plain;
+                    ModSettings.thumbBacks = (int)ModSettings.ThumbBackCats.Plain;
                 }
             }
         }

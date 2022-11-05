@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="InitPrefabTranspiler.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -17,8 +22,8 @@
         /// <summary>
         /// Harmony transpiler removing two checks from BuildingInfo.InitializePrefab.
         /// </summary>
-        /// <param name="instructions">CIL code to alter.</param>
-        /// <returns></returns>
+        /// <param name="instructions">Original ILCode.</param>
+        /// <returns>Modified ILCode.</returns>
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             // The checks we're targeting for removal are fortunately clearly defined by their exception operands.
@@ -28,7 +33,7 @@
             string[] targetOperands =
             {
                 "Private building cannot have manual placement style",
-                "Private building cannot include roads or other net types"
+                "Private building cannot include roads or other net types",
             };
 
             List<CodeInstruction> codes = new List<CodeInstruction>(instructions);
@@ -39,7 +44,7 @@
                 // Stores the number of operands to cut.
                 int cutCount = 0;
 
-                // Iterate through each opcode in the CIL, looking for an ldarg.0 immediately followed by an ldstr.
+                // Iterate through each opcode in the ILCode, looking for an ldarg.0 immediately followed by an ldstr.
                 for (int i = 0; i < codes.Count; i++)
                 {
                     if ((codes[i].opcode == OpCodes.Ldarg_0) && (codes[i + 1].opcode == OpCodes.Ldstr))
@@ -53,9 +58,9 @@
                                 cutCount++;
                             }
 
-                            Logging.Message("InitPrefab transpiler removing CIL (offset ", cutCount, ") from ", i, " (", codes[i].opcode, " to ", codes[i + cutCount].opcode, ") - ", targetOperand);
+                            Logging.Message("InitPrefab transpiler removing ILCode (offset ", cutCount, ") from ", i, " (", codes[i].opcode, " to ", codes[i + cutCount].opcode, ") - ", targetOperand);
 
-                            // Remove the CIL from the ldarg.0 to the throw (inclusive).
+                            // Remove the ILCode from the ldarg.0 to the throw (inclusive).
                             // +1 to avoid fencepost error (need to include original instruction as well).
                             codes.RemoveRange(i, cutCount + 1);
 

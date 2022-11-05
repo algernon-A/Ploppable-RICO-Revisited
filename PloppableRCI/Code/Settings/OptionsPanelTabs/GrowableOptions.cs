@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="GrowableOptions.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using AlgernonCommons.Translation;
     using AlgernonCommons.UI;
@@ -11,10 +16,10 @@
     internal class GrowableOptions
     {
         /// <summary>
-        /// Adds growable options tab to tabstrip.
+        /// Initializes a new instance of the <see cref="GrowableOptions"/> class.
         /// </summary>
-        /// <param name="tabStrip">Tab strip to add to</param>
-        /// <param name="tabIndex">Index number of tab</param>
+        /// <param name="tabStrip">Tab strip to add to.</param>
+        /// <param name="tabIndex">Index number of tab.</param>
         internal GrowableOptions(UITabstrip tabStrip, int tabIndex)
         {
             // Add tab and helper.
@@ -90,9 +95,9 @@
 
             // Add 'disable style despawn' checkbox.
             UIHelperBase styleGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_STY"));
-            styleGroup.AddCheckbox(Translations.Translate("PRR_OPTION_STR"), PrivateBuildingSimStep.disableStyleDespawn, isChecked =>
+            styleGroup.AddCheckbox(Translations.Translate("PRR_OPTION_STR"), PrivateBuildingAIPatches.DisableStyleDespawn, isChecked =>
             {
-                PrivateBuildingSimStep.disableStyleDespawn = isChecked;
+                PrivateBuildingAIPatches.DisableStyleDespawn = isChecked;
             });
         }
     }
