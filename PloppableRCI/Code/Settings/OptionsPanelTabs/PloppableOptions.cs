@@ -27,7 +27,7 @@ namespace PloppableRICO
         private const float SubTitleX = 49f;
 
         /// <summary>
-        /// Adds growable options tab to tabstrip.
+        /// Initializes a new instance of the <see cref="PloppableOptions"/> class.
         /// </summary>
         /// <param name="tabStrip">Tab strip to add to.</param>
         /// <param name="tabIndex">Index number of tab.</param>
@@ -83,8 +83,8 @@ namespace PloppableRICO
             // Houshold costs.
             UITextField costPerHouseField = AddCostTextField(panel, "PRR_OPTION_CPH", ModSettings.costPerHousehold, ref currentY);
             UITextField costMultResLevelField = AddCostTextField(panel, "PRR_OPTION_CHM", ModSettings.costMultResLevel, ref currentY);
-            costPerHouseField.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerHousehold);
-            costMultResLevelField.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costMultResLevel);
+            costPerHouseField.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerHousehold);
+            costMultResLevelField.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costMultResLevel);
 
             // Workplace costs.
             UITextField costPerJob0Field = AddCostTextField(panel, "PRR_OPTION_CJ0", ModSettings.costPerJob0, ref currentY);
@@ -95,10 +95,10 @@ namespace PloppableRICO
             costPerJob1Field.tabIndex = ++tabbingIndex;
             costPerJob2Field.tabIndex = ++tabbingIndex;
             costPerJob3Field.tabIndex = ++tabbingIndex;
-            costPerJob0Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob0);
-            costPerJob1Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob1);
-            costPerJob2Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob2);
-            costPerJob3Field.eventTextSubmitted += (control, text) => TextSubmitted(control as UITextField, text, ref ModSettings.costPerJob3);
+            costPerJob0Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob0);
+            costPerJob1Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob1);
+            costPerJob2Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob2);
+            costPerJob3Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob3);
 
             // Natural disasters.
             currentY += TitleMarginY;

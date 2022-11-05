@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="ModSettings.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using AlgernonCommons.Translation;
 
@@ -9,7 +14,7 @@
     {
         // General mod settings.
         internal static bool speedBoost = false;
-        internal static int thumbBacks = (byte)ThumbBackCats.skybox;
+        internal static int thumbBacks = (byte)ThumbBackCats.Skybox;
 
         // Growable plopping settings.
         internal static bool plopRico = true;
@@ -50,31 +55,45 @@
         internal static int costPerJob3 = 35;
 
         // What's new notification version.
-        internal static string whatsNewVersion = "0.0";
-        internal static int whatsNewBetaVersion = 0;
         internal static bool showWhatsNew = true;
 
         // Soft conflict notification (don't show again) flags.
         internal static int dsaPTG = 0;
 
-        // Thumbnail background category enum.
+        /// <summary>
+        /// Thumbnail background category enum.
+        /// </summary>
         public enum ThumbBackCats
         {
-            color,
-            plain,
-            skybox,
-            numCats
+            /// <summary>
+            /// Colored background.
+            /// </summary>
+            Color,
+
+            /// <summary>
+            /// Plain background.
+            /// </summary>
+            Plain,
+
+            /// <summary>
+            /// Skybox background.
+            /// </summary>
+            Skybox,
+
+            /// <summary>
+            /// Number of categories.
+            /// </summary>
+            NumCats,
         }
 
-
         /// <summary>
-        /// Thumbnail backround names (for dropdown menu).
+        /// Gets the array of thumbnail backround names (for dropdown menu).
         /// </summary>
         internal static string[] ThumbBackNames => new string[]
         {
             Translations.Translate("PRR_THUMB_COLOR"),
             Translations.Translate("PRR_THUMB_PLAIN"),
-            Translations.Translate("PRR_THUMB_SKY")
+            Translations.Translate("PRR_THUMB_SKY"),
         };
     }
 }

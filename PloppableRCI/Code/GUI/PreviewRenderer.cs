@@ -180,13 +180,13 @@ namespace PloppableRICO
             }
 
             // Set background - plain if this is a thumbnail and the 'skybox' option isn't selected.
-            if (isThumb && ModSettings.thumbBacks != (byte)ModSettings.ThumbBackCats.skybox)
+            if (isThumb && ModSettings.thumbBacks != (byte)ModSettings.ThumbBackCats.Skybox)
             {
                 // Is a thumbnail - user plain-colour background.
                 _renderCamera.clearFlags = CameraClearFlags.Color;
 
                 // Set dark sky-blue background colour if the default 'color' background is set
-                if (ModSettings.thumbBacks == (byte)ModSettings.ThumbBackCats.color)
+                if (ModSettings.thumbBacks == (byte)ModSettings.ThumbBackCats.Color)
                 {
                     _renderCamera.backgroundColor = new Color32(33, 151, 199, 255);
                 }

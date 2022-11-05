@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="ModOptions.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using AlgernonCommons;
     using AlgernonCommons.Translation;
@@ -12,16 +17,15 @@
     internal class ModOptions
     {
         /// <summary>
-        /// Adds mod options tab to tabstrip.
+        /// Initializes a new instance of the <see cref="ModOptions"/> class.
         /// </summary>
-        /// <param name="tabStrip">Tab strip to add to</param>
-        /// <param name="tabIndex">Index number of tab</param>
+        /// <param name="tabStrip">Tab strip to add to.</param>
+        /// <param name="tabIndex">Index number of tab.</param>
         internal ModOptions(UITabstrip tabStrip, int tabIndex)
         {
             // Add tab and helper.
             UIPanel panel = UITabstrips.AddTextTab(tabStrip, Translations.Translate("PRR_OPTION_MOD"), tabIndex, out UIButton _, autoLayout: true);
             UIHelper helper = new UIHelper(panel);
-
 
             UIDropDown translationDropDown = (UIDropDown)helper.AddDropdown(Translations.Translate("TRN_CHOICE"), Translations.LanguageList, Translations.Index, (value) =>
             {
@@ -43,6 +47,7 @@
 
             // Notification options.
             UIHelperBase notificationGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_NOT"));
+
             // Add logging checkbox.
             notificationGroup.AddCheckbox(Translations.Translate("PRR_OPTION_WHATSNEW"), ModSettings.showWhatsNew, isChecked =>
             {
