@@ -18,7 +18,7 @@ namespace PloppableRICO
         /// Harmony Postfix patch to EcomonyWrapper.OnAddResource to fix any negative income.
         /// </summary>
         /// <param name="resource">Resource being added.</param>
-        /// <param name="amount">Amount being added.</param
+        /// <param name="amount">Amount being added.</param>
         /// <param name="subService">Building SubService.</param>
         public static void Postfix(EconomyManager.Resource resource,  ref int amount, ItemClass.SubService subService)
         {

@@ -354,17 +354,17 @@ namespace PloppableRICO
             int selectedIndex;
 
             // Set menu settings index.
-            if (buildingData.hasLocal)
+            if (buildingData.HasLocal)
             {
                 // Local settings have priority - select them if they exist.
                 selectedIndex = (int)SettingTypeIndex.Local;
             }
-            else if (buildingData.hasAuthor)
+            else if (buildingData.HasAuthor)
             {
                 // Then author settings - select them if no local settings.
                 selectedIndex = (int)SettingTypeIndex.Author;
             }
-            else if (buildingData.hasMod)
+            else if (buildingData.HasMod)
             {
                 // Finally, set mod settings if no other settings.
                 selectedIndex = (int)SettingTypeIndex.Mod;
@@ -397,22 +397,22 @@ namespace PloppableRICO
         internal void SaveRICO()
         {
             // Don't do anything if no current local selection.
-            if (!_currentBuildingData.hasLocal || _currentSettings == null)
+            if (!_currentBuildingData.HasLocal || _currentSettings == null)
             {
                 return;
             }
 
             // Set service and subservice.
             GetService(out string serviceString, out string subServiceString);
-            _currentSettings.service = serviceString;
-            _currentSettings.subService = subServiceString;
+            _currentSettings.m_service = serviceString;
+            _currentSettings.m_subService = subServiceString;
 
             // Set level.
-            _currentSettings.level = _levelMenu.selectedIndex + 1;
+            _currentSettings.m_level = _levelMenu.selectedIndex + 1;
 
             // Get home/total worker count, with default of zero.
             int.TryParse(_manualPopField.text, out int manualCount);
-            _currentSettings.homeCount = manualCount;
+            _currentSettings.m_homeCount = manualCount;
 
             // Get workplace breakdown.
             int[] a = new int[4] { 0, 0, 0, 0 };
@@ -426,7 +426,7 @@ namespace PloppableRICO
             if (a[0] + a[1] + a[2] + a[3] == 0)
             {
                 // No workplace breakdown provided (all fields zero); use total workplaces ('manual', previously parsed as manualCount) and allocate.
-                int[] d = Util.WorkplaceDistributionOf(_currentSettings.service, _currentSettings.subService, "Level" + _currentSettings.level);
+                int[] d = RICOUtils.WorkplaceDistributionOf(_currentSettings.m_service, _currentSettings.m_subService, "Level" + _currentSettings.m_level);
                 a = WorkplaceAIHelper.DistributeWorkplaceLevels(manualCount, d);
 
                 // Check and adjust for any rounding errors, assigning 'leftover' jobs to the lowest education level.
@@ -493,10 +493,10 @@ namespace PloppableRICO
             }
 
             // Remaining items.
-            _currentSettings.ricoEnabled = _ricoEnabled.isChecked;
-            _currentSettings.growable = _growableCheck.isChecked;
-            _currentSettings.RealityIgnored = !_realityIgnoredCheck.isChecked;
-            _currentSettings.pollutionEnabled = _pollutionEnabledCheck.isChecked;
+            _currentSettings.m_ricoEnabled = _ricoEnabled.isChecked;
+            _currentSettings.m_growable = _growableCheck.isChecked;
+            _currentSettings.m_realityIgnored = !_realityIgnoredCheck.isChecked;
+            _currentSettings.m_pollutionEnabled = _pollutionEnabledCheck.isChecked;
         }
 
         /// <summary>
@@ -602,10 +602,10 @@ namespace PloppableRICO
                 // Local settings.
                 case (int)SettingTypeIndex.Local:
                     // Does the current building have local settings?
-                    if (_currentBuildingData.hasLocal)
+                    if (_currentBuildingData.HasLocal)
                     {
                         // Yes - update display.
-                        _currentSettings = _currentBuildingData.local;
+                        _currentSettings = _currentBuildingData.Local;
                         _titleLabel.text = Translations.Translate("PRR_SET_HASLOC");
 
                         // (Re)enable input fields.
@@ -625,7 +625,7 @@ namespace PloppableRICO
                         // 'Growable' can only be set in local settings.
                         // Only show growable checkbox where assets meet the prequisites:
                         // Growables can't have any dimension greater than 4 or contain any net structures.
-                        if (_currentBuildingData.prefab.GetWidth() <= 4 && _currentBuildingData.prefab.GetLength() <= 4 && !(_currentBuildingData.prefab.m_paths != null && _currentBuildingData.prefab.m_paths.Length != 0))
+                        if (_currentBuildingData.Prefab.GetWidth() <= 4 && _currentBuildingData.Prefab.GetLength() <= 4 && !(_currentBuildingData.Prefab.m_paths != null && _currentBuildingData.Prefab.m_paths.Length != 0))
                         {
                             _growableCheck.Enable();
                             _growableCheck.parent.Show();
@@ -642,10 +642,10 @@ namespace PloppableRICO
                 // Author settings.
                 case (int)SettingTypeIndex.Author:
                     // Does the current building have author settings?
-                    if (_currentBuildingData.hasAuthor)
+                    if (_currentBuildingData.HasAuthor)
                     {
                         // Yes - leave input fields disabled and update display.
-                        _currentSettings = _currentBuildingData.author;
+                        _currentSettings = _currentBuildingData.Author;
                         _titleLabel.text = Translations.Translate("PRR_SET_HASAUT");
                     }
                     else
@@ -659,10 +659,10 @@ namespace PloppableRICO
                 // Mod settings.
                 case (int)SettingTypeIndex.Mod:
                     // Does the current building have mod settings?
-                    if (_currentBuildingData.hasMod)
+                    if (_currentBuildingData.HasMod)
                     {
                         // Yes - leave input fields disabled and update display.
-                        _currentSettings = _currentBuildingData.mod;
+                        _currentSettings = _currentBuildingData.Mod;
                         _titleLabel.text = Translations.Translate("PRR_SET_HASMOD");
                     }
                     else
@@ -685,7 +685,7 @@ namespace PloppableRICO
                 // Show 'enable rico' check.
                 _ricoEnabled.parent.Show();
 
-                UpdateElementVisibility(_currentSettings.service);
+                UpdateElementVisibility(_currentSettings.m_service);
                 SettingChanged(_currentSettings);
             }
 
@@ -803,19 +803,19 @@ namespace PloppableRICO
             _highlyEducatedWorkerField.text = building.Workplaces[3].ToString();
 
             // Service and sub-service.
-            switch (building.service)
+            switch (building.m_service)
             {
                 case "residential":
                     _serviceMenu.selectedIndex = (int)ServiceIndex.Residential;
 
                     // Display homecount.
-                    _manualPopField.text = building.homeCount.ToString();
+                    _manualPopField.text = building.m_homeCount.ToString();
 
                     // Update sub-service menu.
                     UpdateSubServiceMenu();
 
                     // Sub-service.
-                    switch (_currentSettings.subService)
+                    switch (_currentSettings.m_subService)
                     {
                         case "low":
                             _subServiceMenu.selectedIndex = (int)ResSubIndex.Low;
@@ -843,7 +843,7 @@ namespace PloppableRICO
                     UpdateSubServiceMenu();
 
                     // Sub-service selection.
-                    switch (_currentSettings.subService)
+                    switch (_currentSettings.m_subService)
                     {
                         case "farming":
                             _subServiceMenu.selectedIndex = (int)IndSubIndex.Farming;
@@ -871,7 +871,7 @@ namespace PloppableRICO
                     UpdateSubServiceMenu();
 
                     // Sub-service selection.
-                    switch (_currentSettings.subService)
+                    switch (_currentSettings.m_subService)
                     {
                         case "wall2wall":
                             _subServiceMenu.selectedIndex = (int)OffSubIndex.Wall2Wall;
@@ -893,7 +893,7 @@ namespace PloppableRICO
                     UpdateSubServiceMenu();
 
                     // Sub-service selection.
-                    switch (_currentSettings.subService)
+                    switch (_currentSettings.m_subService)
                     {
                         case "low":
                             _subServiceMenu.selectedIndex = (int)ComSubIndex.Low;
@@ -924,7 +924,7 @@ namespace PloppableRICO
                     UpdateSubServiceMenu();
 
                     // Sub-service selection.
-                    switch (_currentSettings.subService)
+                    switch (_currentSettings.m_subService)
                     {
                         case "forest":
                             _subServiceMenu.selectedIndex = (int)ExtSubIndex.Forestry;
@@ -1016,22 +1016,22 @@ namespace PloppableRICO
 
             // Building level.
             UpdateLevelMenu();
-            _levelMenu.selectedIndex = Mathf.Min(_levelMenu.items.Length, building.level) - 1;
+            _levelMenu.selectedIndex = Mathf.Min(_levelMenu.items.Length, building.m_level) - 1;
 
             // Construction cost.
             _constructionCostField.text = building.ConstructionCost.ToString();
 
             // Use realistic population.
-            _realityIgnoredCheck.isChecked = !building.RealityIgnored;
+            _realityIgnoredCheck.isChecked = !building.m_realityIgnored;
 
             // Pollution enabled
-            _pollutionEnabledCheck.isChecked = building.pollutionEnabled;
+            _pollutionEnabledCheck.isChecked = building.m_pollutionEnabled;
 
             // Growable.
-            _growableCheck.isChecked = building.growable;
+            _growableCheck.isChecked = building.m_growable;
 
             // Enable RICO.
-            _ricoEnabled.isChecked = building.ricoEnabled;
+            _ricoEnabled.isChecked = building.m_ricoEnabled;
         }
 
         /// <summary>
@@ -1352,7 +1352,7 @@ namespace PloppableRICO
                 GetService(out string serviceString, out string subServiceString);
 
                 // Allocate out total workplaces ('manual').
-                int[] distribution = Util.WorkplaceDistributionOf(serviceString, subServiceString, "Level" + (_levelMenu.selectedIndex + 1));
+                int[] distribution = RICOUtils.WorkplaceDistributionOf(serviceString, subServiceString, "Level" + (_levelMenu.selectedIndex + 1));
                 allocation = WorkplaceAIHelper.DistributeWorkplaceLevels(int.Parse(_manualPopField.text), distribution);
 
                 // Check and adjust for any rounding errors, assigning 'leftover' jobs to the lowest education level.

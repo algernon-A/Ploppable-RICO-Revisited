@@ -1,6 +1,6 @@
 ﻿// <copyright file="XMLSettingsFile.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
-// Licensed under the Apache license. See LICENSE.txt file in the project root for full license information.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
 
 namespace PloppableRICO
@@ -182,7 +182,7 @@ namespace PloppableRICO
         }
 
         /// <summary>
-        /// Sets the thumbnail background setting from the legacy 'use plain thumbnails' conversion.
+        /// Sets a value indicating whether to use the thumbnail background setting from the legacy 'use plain thumbnails' conversion.
         /// </summary>
         [XmlElement("PlainThumbs")]
         public bool PlainThumbs

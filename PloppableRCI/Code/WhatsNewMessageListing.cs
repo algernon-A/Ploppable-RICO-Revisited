@@ -1,6 +1,6 @@
 ﻿// <copyright file="WhatsNewMessageListing.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
-// Licensed under the Apache license. See LICENSE.txt file in the project root for full license information.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
 
 namespace PloppableRICO
@@ -24,8 +24,8 @@ namespace PloppableRICO
                 MessagesAreKeys = true,
                 Messages = new string[]
                 {
-                    "PRR_UPD_25_0"
-                }
+                    "PRR_UPD_25_0",
+                },
             },
             new WhatsNewMessage
             {
@@ -33,8 +33,8 @@ namespace PloppableRICO
                 MessagesAreKeys = true,
                 Messages = new string[]
                 {
-                    "PRR_UPD_243_0"
-                }
+                    "PRR_UPD_243_0",
+                },
             },
             new WhatsNewMessage
             {
@@ -42,8 +42,8 @@ namespace PloppableRICO
                 MessagesAreKeys = true,
                 Messages = new string[]
                 {
-                    "PRR_UPD_242_0"
-                }
+                    "PRR_UPD_242_0",
+                },
             },
             new WhatsNewMessage
             {
@@ -51,8 +51,8 @@ namespace PloppableRICO
                 MessagesAreKeys = true,
                 Messages = new string[]
                 {
-                    "PRR_UPD_241_0"
-                }
+                    "PRR_UPD_241_0",
+                },
             },
             new WhatsNewMessage
             {
@@ -63,8 +63,8 @@ namespace PloppableRICO
                     "PRR_UPD_240_0",
                     "PRR_UPD_240_1",
                     "PRR_UPD_240_2",
-                    "PRR_UPD_240_3"
-                }
+                    "PRR_UPD_240_3",
+                },
             },
             new WhatsNewMessage
             {
@@ -72,8 +72,8 @@ namespace PloppableRICO
                 MessagesAreKeys = true,
                 Messages = new string[]
                 {
-                    "PRR_UPD_237_0"
-                }
+                    "PRR_UPD_237_0",
+                },
             },
             new WhatsNewMessage
             {
@@ -81,8 +81,8 @@ namespace PloppableRICO
                 MessagesAreKeys = true,
                 Messages = new string[]
                 {
-                    "PRR_UPD_236_0"
-                }
+                    "PRR_UPD_236_0",
+                },
             },
             new WhatsNewMessage
             {
@@ -92,8 +92,8 @@ namespace PloppableRICO
                 {
                     "PRR_UPD_235_0",
                     "PRR_UPD_235_1",
-                    "PRR_UPD_235_2"
-                }
+                    "PRR_UPD_235_2",
+                },
             },
             new WhatsNewMessage
             {
@@ -103,8 +103,8 @@ namespace PloppableRICO
                 {
                     "PRR_UPD_234_0",
                     "PRR_UPD_234_1",
-                    "PRR_UPD_234_2"
-                }
+                    "PRR_UPD_234_2",
+                },
             },
             new WhatsNewMessage
             {
@@ -115,9 +115,9 @@ namespace PloppableRICO
                     "PRR_UPD_23_2",
                     "PRR_UPD_23_3",
                     "PRR_UPD_23_4",
-                    "PRR_UPD_23_5"
-                }
-            }
+                    "PRR_UPD_23_5",
+                },
+            },
         };
     }
 }
