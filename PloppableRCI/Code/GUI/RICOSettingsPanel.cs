@@ -17,117 +17,28 @@ namespace PloppableRICO
     /// <summary>
     /// Base class of the RICO settings panel.  Based (via AJ3D's Ploppable RICO) ultimately on SamsamTS's Building Themes panel; many thanks to him for his work.
     /// </summary>
-    public class RICOSettingsPanel : UIPanel
+    internal class RICOSettingsPanel : UIPanel
     {
         // Layout constants.
         private const float LeftWidth = 400f;
         private const float MiddleWidth = 250f;
         private const float RightWidth = 300f;
-        private const float FilterHeight = UIBuildingFilter.FilterBarHeight;
+        private const float FilterHeight = BuildingFilterPanel.FilterBarHeight;
         private const float PanelHeight = 550f;
         private const float BottomMargin = 10f;
         private const float Spacing = 5f;
-        private const float CheckFilterHeight = UIBuildingFilter.SettingsFilterHeight;
+        private const float CheckFilterHeight = BuildingFilterPanel.SettingsFilterHeight;
         private const float TitleHeight = 40f;
 
         // Panel components.
-        private readonly UIBuildingFilter _filterBar;
+        private readonly BuildingFilterPanel _filterBar;
         private readonly UIList _buildingSelection;
-        private readonly UIPreviewPanel _previewPanel;
-        private readonly UISavePanel _savePanel;
-        private readonly UIBuildingOptions _buildingOptionsPanel;
-
-        // Selected items.
-        internal BuildingData currentSelection;
+        private readonly PreviewPanel _previewPanel;
+        private readonly SavePanel _savePanel;
+        private readonly BuildingOptionsPanel _buildingOptionsPanel;
 
         /// <summary>
-        /// Called to save building data.
-        /// </summary>
-        internal void Save() => _buildingOptionsPanel.SaveRICO();
-
-        /// <summary>
-        /// Refreshes the building selection list.
-        /// </summary>
-        public void RefreshList() => _buildingSelection.Refresh();
-
-        /// <summary>
-        /// Updates the UI Category of the building in the options panel.
-        /// </summary>
-        internal void UpdateUICategory() => _buildingOptionsPanel.UpdateUICategory();
-
-        /// <summary>
-        /// Gets the current filter state as a boolean array.
-        /// </summary>
-        /// <returns>Current filter toggle settings</returns>
-        internal bool[] GetFilter() => _filterBar.GetFilter();
-
-        /// <summary>
-        /// Sets the filter state to match a boolean array.
-        /// </summary>
-        internal void SetFilter(bool[] filterState) => _filterBar.SetFilter(filterState);
-
-        /// <summary>
-        /// Gets the current index and list positions of the building selection list.
-        /// </summary>
-        /// <param name="selectedIndex">Index of currently selected item</param>
-        /// <param name="listPosition">Current list position</param>
-        internal void GetListPosition(out int selectedIndex, out int listPosition)
-        {
-            listPosition = _buildingSelection.CurrentPosition;
-            selectedIndex = _buildingSelection.SelectedIndex;
-        }
-
-        /// <summary>
-        /// Sets the current index and list positions of the building selection list.
-        /// </summary>
-        /// <param name="selectedIndex">Selected item index to set</param>
-        /// <param name="listPosition">List position to set</param>
-        internal void SetListPosition(int selectedIndex, int listPosition)
-        {
-            _buildingSelection.CurrentPosition = listPosition;
-            _buildingSelection.SelectedIndex = selectedIndex;
-        }
-
-        /// <summary>
-        /// Called to select a building from 'outside' the building details editor (e.g. by button on building info panel).
-        /// Sets the filter to only display the relevant category for the relevant building, and makes that building selected in the list.
-        /// </summary>
-        /// <param name="buildingInfo">The BuildingInfo record for this building.</param>
-        internal void SelectBuilding(BuildingInfo buildingInfo)
-        {
-            // Get the RICO BuildingData associated with this prefab.
-            BuildingData building = Loading.xmlManager.prefabHash[buildingInfo];
-
-            // Ensure the fastlist is filtered to include this building category only.
-            _filterBar.SelectBuildingCategory(building.category);
-            _buildingSelection.Data = GenerateFastList();
-
-            // Find and select the building in the fastlist.
-            _buildingSelection.FindItem<BuildingData>(x => x.name.Equals(building.name));
-
-            // Update the selected building to the current.
-            UpdateSelectedBuilding(building);
-        }
-
-        /// <summary>
-        /// Called when the building selection changes to update other panels.
-        /// </summary>
-        /// <param name="building"></param>
-        internal void UpdateSelectedBuilding(BuildingData building)
-        {
-            if (building != null)
-            {
-                // Update sub-panels.
-                currentSelection = Loading.xmlManager.prefabHash[building.prefab];
-
-                _buildingOptionsPanel.SelectionChanged(currentSelection);
-                _savePanel.SelectionChanged(currentSelection);
-                _previewPanel.Show(currentSelection);
-            }
-        }
-
-        /// <summary>
-        /// Performs initial setup for the panel.
+        /// Initializes a new instance of the <see cref="RICOSettingsPanel"/> class.
         /// </summary>
         internal RICOSettingsPanel()
         {
@@ -174,7 +85,7 @@ namespace PloppableRICO
                 };
 
                 // Filter.
-                _filterBar = AddUIComponent<UIBuildingFilter>();
+                _filterBar = AddUIComponent<BuildingFilterPanel>();
                 _filterBar.width = width - (Spacing * 2);
                 _filterBar.height = FilterHeight;
                 _filterBar.relativePosition = new Vector3(Spacing, TitleHeight);
@@ -182,7 +93,10 @@ namespace PloppableRICO
                 // Event handler to dealth with changes to filtering.
                 _filterBar.EventFilteringChanged += (component, value) =>
                 {
-                    if (value == -1) return;
+                    if (value == -1)
+                    {
+                        return;
+                    }
 
                     int listCount = _buildingSelection.Data.m_size;
                     int position = _buildingSelection.CurrentPosition;
@@ -196,38 +110,34 @@ namespace PloppableRICO
                 UIPanel middlePanel = AddUIComponent<UIPanel>();
                 middlePanel.width = MiddleWidth;
                 middlePanel.height = PanelHeight;
-                middlePanel.relativePosition = new Vector3(LeftWidth + (Spacing * 2), TitleHeight + FilterHeight + Spacing);
+                middlePanel.relativePosition = new Vector2(LeftWidth + (Spacing * 2), TitleHeight + FilterHeight + Spacing);
 
-                _previewPanel = middlePanel.AddUIComponent<UIPreviewPanel>();
+                _previewPanel = middlePanel.AddUIComponent<PreviewPanel>();
                 _previewPanel.width = middlePanel.width;
                 _previewPanel.height = (PanelHeight - Spacing) / 2;
-                _previewPanel.relativePosition = Vector3.zero;
+                _previewPanel.relativePosition = Vector2.zero;
                 _previewPanel.Setup();
 
-                _savePanel = middlePanel.AddUIComponent<UISavePanel>();
+                _savePanel = middlePanel.AddUIComponent<SavePanel>();
                 _savePanel.width = middlePanel.width;
                 _savePanel.height = (PanelHeight - Spacing) / 2;
-                _savePanel.relativePosition = new Vector3(0, _previewPanel.height + Spacing);
+                _savePanel.relativePosition = new Vector2(0, _previewPanel.height + Spacing);
                 _savePanel.Setup();
 
                 // Right panel - mod calculations.
                 UIPanel rightPanel = AddUIComponent<UIPanel>();
                 rightPanel.width = RightWidth;
                 rightPanel.height = PanelHeight;
-                rightPanel.relativePosition = new Vector3(LeftWidth + MiddleWidth + (Spacing * 3), TitleHeight + FilterHeight + Spacing);
+                rightPanel.relativePosition = new Vector2(LeftWidth + MiddleWidth + (Spacing * 3), TitleHeight + FilterHeight + Spacing);
 
-                _buildingOptionsPanel = rightPanel.AddUIComponent<UIBuildingOptions>();
+                _buildingOptionsPanel = rightPanel.AddUIComponent<BuildingOptionsPanel>();
                 _buildingOptionsPanel.width = RightWidth;
                 _buildingOptionsPanel.height = PanelHeight;
-                _buildingOptionsPanel.relativePosition = Vector3.zero;
-                _buildingOptionsPanel.Setup();
+                _buildingOptionsPanel.relativePosition = Vector2.zero;
 
                 // Building selection list.
                 _buildingSelection = UIList.AddUIList<UIBuildingRow>(this, Spacing, TitleHeight + FilterHeight + CheckFilterHeight + Spacing, LeftWidth, PanelHeight - CheckFilterHeight, UIBuildingRow.CustomRowHeight);
                 _buildingSelection.EventSelectionChanged += (c, item) => UpdateSelectedBuilding(item as BuildingData);
-
-                // Set up filterBar to make sure selection filters are properly initialised before calling GenerateFastList.
-                _filterBar.Setup();
 
                 // Populate the list.
                 _buildingSelection.Data = GenerateFastList();
@@ -239,9 +149,101 @@ namespace PloppableRICO
         }
 
         /// <summary>
+        /// Gets the current selection.
+        /// </summary>
+        internal BuildingData CurrentSelection { get; private set; }
+
+        /// <summary>
+        /// Called to save building data.
+        /// </summary>
+        internal void Save() => _buildingOptionsPanel.SaveRICO();
+
+        /// <summary>
+        /// Refreshes the building selection list.
+        /// </summary>
+        internal void RefreshList() => _buildingSelection.Refresh();
+
+        /// <summary>
+        /// Updates the UI Category of the building in the options panel.
+        /// </summary>
+        internal void UpdateUICategory() => _buildingOptionsPanel.UpdateUICategory();
+
+        /// <summary>
+        /// Gets the current filter state as a boolean array.
+        /// </summary>
+        /// <returns>Current filter toggle settings.</returns>
+        internal bool[] GetFilter() => _filterBar.GetFilter();
+
+        /// <summary>
+        /// Sets the filter state to match a boolean array.
+        /// </summary>
+        /// <param name="filterState">Filter state array.</param>
+        internal void SetFilter(bool[] filterState) => _filterBar.SetFilter(filterState);
+
+        /// <summary>
+        /// Gets the current index and list positions of the building selection list.
+        /// </summary>
+        /// <param name="selectedIndex">Index of currently selected item.</param>
+        /// <param name="listPosition">Current list position.</param>
+        internal void GetListPosition(out int selectedIndex, out int listPosition)
+        {
+            listPosition = _buildingSelection.CurrentPosition;
+            selectedIndex = _buildingSelection.SelectedIndex;
+        }
+
+        /// <summary>
+        /// Sets the current index and list positions of the building selection list.
+        /// </summary>
+        /// <param name="selectedIndex">Selected item index to set.</param>
+        /// <param name="listPosition">List position to set.</param>
+        internal void SetListPosition(int selectedIndex, int listPosition)
+        {
+            _buildingSelection.CurrentPosition = listPosition;
+            _buildingSelection.SelectedIndex = selectedIndex;
+        }
+
+        /// <summary>
+        /// Called to select a building from 'outside' the building details editor (e.g. by button on building info panel).
+        /// Sets the filter to only display the relevant category for the relevant building, and makes that building selected in the list.
+        /// </summary>
+        /// <param name="buildingInfo">The BuildingInfo record for this building.</param>
+        internal void SelectBuilding(BuildingInfo buildingInfo)
+        {
+            // Get the RICO BuildingData associated with this prefab.
+            BuildingData building = Loading.xmlManager.prefabHash[buildingInfo];
+
+            // Ensure the fastlist is filtered to include this building category only.
+            _filterBar.SelectBuildingCategory(building.category);
+            _buildingSelection.Data = GenerateFastList();
+
+            // Find and select the building in the fastlist.
+            _buildingSelection.FindItem<BuildingData>(x => x.name.Equals(building.name));
+
+            // Update the selected building to the current.
+            UpdateSelectedBuilding(building);
+        }
+
+        /// <summary>
+        /// Called when the building selection changes to update other panels.
+        /// </summary>
+        /// <param name="building">New selected building.</param>
+        internal void UpdateSelectedBuilding(BuildingData building)
+        {
+            if (building != null)
+            {
+                // Update sub-panels.
+                CurrentSelection = Loading.xmlManager.prefabHash[building.prefab];
+
+                _buildingOptionsPanel.SelectionChanged(CurrentSelection);
+                _savePanel.SelectionChanged(CurrentSelection);
+                _previewPanel.Show(CurrentSelection);
+            }
+        }
+
+        /// <summary>
         /// Generates the list of buildings depending on current filter settings.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>New building fastlist.</returns>
         private FastList<object> GenerateFastList()
         {
             // List to store all building prefabs that pass the filter.
@@ -267,10 +269,13 @@ namespace PloppableRICO
                 }
 
                 // Filter by settings.
-                if (_filterBar.SettingsFilter[0].isChecked && !item.hasMod) continue;
-                if (_filterBar.SettingsFilter[1].isChecked && !item.hasAuthor) continue;
-                if (_filterBar.SettingsFilter[2].isChecked && !item.hasLocal) continue;
-                if (_filterBar.SettingsFilter[3].isChecked && !(item.hasMod || item.hasAuthor || item.hasLocal)) continue;
+                if ((_filterBar.SettingsFilter[0].isChecked && !item.hasMod)
+                    || (_filterBar.SettingsFilter[1].isChecked && !item.hasAuthor)
+                    || (_filterBar.SettingsFilter[2].isChecked && !item.hasLocal)
+                    || (_filterBar.SettingsFilter[3].isChecked && !(item.hasMod || item.hasAuthor || item.hasLocal)))
+                {
+                    continue;
+                }
 
                 // Filter by name.
                 if (!_filterBar.FilterString.IsNullOrWhiteSpace() && !item.name.ToLower().Contains(_filterBar.FilterString.ToLower()))
@@ -286,7 +291,7 @@ namespace PloppableRICO
             FastList<object> fastList = new FastList<object>
             {
                 m_buffer = filteredList.OrderBy(x => x.DisplayName).ToArray(),
-                m_size = filteredList.Count
+                m_size = filteredList.Count,
             };
 
             return fastList;

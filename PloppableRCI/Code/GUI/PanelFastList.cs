@@ -14,7 +14,7 @@ namespace PloppableRICO
     /// <typeparam name="T"></typeparam>
     public interface IUIFastListItem<O, T> where T : UIComponent
     {
-        T component
+        T Component
         {
             get;
             set;
@@ -96,12 +96,12 @@ namespace PloppableRICO
                     if (m_items == null) return;
                     for (int i = 0; i < m_items.m_size; i++)
                     {
-                        if (m_items.m_buffer[i].component != null)
+                        if (m_items.m_buffer[i].Component != null)
                         {
                             if (m_canSelect)
-                                m_items.m_buffer[i].component.eventClick += OnItemClicked;
+                                m_items.m_buffer[i].Component.eventClick += OnItemClicked;
                             else
-                                m_items.m_buffer[i].component.eventClick -= OnItemClicked;
+                                m_items.m_buffer[i].Component.eventClick -= OnItemClicked;
                         }
                     }
                 }
@@ -364,12 +364,12 @@ namespace PloppableRICO
             {
                 for (int i = 0; i < m_items.m_size; i++)
                 {
-                    if (m_items.m_buffer[i].component == null)
+                    if (m_items.m_buffer[i].Component == null)
                     {
-                        m_items.m_buffer[i].component = CreateItem();
+                        m_items.m_buffer[i].Component = CreateItem();
                         m_items.m_buffer[i].Init();
                     }
-                    m_items.m_buffer[i].component.enabled = false;
+                    m_items.m_buffer[i].Component.enabled = false;
                 }
             }
 
@@ -408,13 +408,13 @@ namespace PloppableRICO
                     {
                         int itemPos = i * nbCol + j;
                         I item = m_items.m_buffer[itemPos];
-                        if (item.component == null)
+                        if (item.Component == null)
                         {
-                            item.component = CreateItem();
+                            item.Component = CreateItem();
                             item.Init();
 
                             if (m_canSelect)
-                                item.component.eventClick += OnItemClicked;
+                                item.Component.eventClick += OnItemClicked;
                         }
 
                         int dataPos = startPos + itemPos;
@@ -429,13 +429,13 @@ namespace PloppableRICO
                                 m_selectedId = itemPos;
                             }
 
-                            item.component.enabled = true;
+                            item.Component.enabled = true;
                         }
                         else
                         {
-                            item.component.enabled = false;
+                            item.Component.enabled = false;
                         }
-                        item.component.relativePosition = new Vector3(j * itemWidth, i * itemHeight /*- offset*/);
+                        item.Component.relativePosition = new Vector3(j * itemWidth, i * itemHeight /*- offset*/);
                     }
                 }
 
@@ -457,13 +457,13 @@ namespace PloppableRICO
                 for (int i = 0; i < m_items.m_size; i++)
                 {
                     I item = m_items.m_buffer[i];
-                    if (item.component == null)
+                    if (item.Component == null)
                     {
-                        item.component = CreateItem();
+                        item.Component = CreateItem();
                         item.Init();
 
                         if (m_canSelect)
-                            item.component.eventClick += OnItemClicked;
+                            item.Component.eventClick += OnItemClicked;
                     }
 
                     int dataPos = Mathf.FloorToInt(m_pos + i);
@@ -479,14 +479,14 @@ namespace PloppableRICO
                             m_selectedId = i;
                         }
 
-                        item.component.enabled = true;
+                        item.Component.enabled = true;
                     }
                     else
                     {
-                        item.component.enabled = false;
+                        item.Component.enabled = false;
                     }
 
-                    item.component.relativePosition = new Vector3(i * itemWidth - offset, 0);
+                    item.Component.relativePosition = new Vector3(i * itemWidth - offset, 0);
                 }
 
                 if (m_leftArrow != null)
@@ -609,7 +609,7 @@ namespace PloppableRICO
 
             for (int i = 0; i < max; i++)
             {
-                if (component == (UIComponent)m_items.m_buffer[i].component)
+                if (component == (UIComponent)m_items.m_buffer[i].Component)
                 {
                     int selectedIndex = i + Mathf.FloorToInt(m_pos);
                     selectedItem = m_itemsData[selectedIndex];
@@ -667,9 +667,9 @@ namespace PloppableRICO
                 // Remove excess items
                 for (int i = nbItems; i < m_items.m_size; i++)
                 {
-                    if (m_items.m_buffer[i].component != null)
+                    if (m_items.m_buffer[i].Component != null)
                     {
-                        Destroy(m_items.m_buffer[i].component.gameObject);
+                        Destroy(m_items.m_buffer[i].Component.gameObject);
                     }
                 }
 

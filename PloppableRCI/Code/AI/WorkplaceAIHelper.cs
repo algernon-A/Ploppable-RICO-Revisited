@@ -1,4 +1,4 @@
-// <copyright file="WorkplaceAI.cs" company="algernon (K. Algernon A. Sheppard)">
+// <copyright file="WorkplaceAIHelper.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -6,13 +6,32 @@
 namespace PloppableRICO
 {
     using ColossalFramework.Math;
-    using System.Linq;
 
     /// <summary>
     /// Workplace AI helper utilities.
     /// </summary>
     internal static class WorkplaceAIHelper
     {
+        /// <summary>
+        /// Workplace level calculation interface.
+        /// </summary>
+        internal interface IWorkplaceLevelCalculator
+        {
+            /// <summary>
+            /// Calculates the workplaces for this building according to base method (non-RICO settings).
+            /// Called by WorkPlaceAIHelper to access the base game method; for implementing functionality of mods that have detoured/patched that method (e.g. Realistic Population mods).
+            /// </summary>
+            /// <param name="level">Building level.</param>
+            /// <param name="r">Randomizer.</param>
+            /// <param name="width">Building plot width (in cells).</param>
+            /// <param name="length">Building plot length (in cells).</param>
+            /// <param name="level0">The number of uneducated jobs.</param>
+            /// <param name="level1">The number of educated jobs.</param>
+            /// <param name="level2">The number of well-educated jobs.</param>
+            /// <param name="level3">The number of highly-educated jobs.</param>
+            void CalculateBaseWorkplaceCount(ItemClass.Level level, Randomizer r, int width, int length, out int level0, out int level1, out int level2, out int level3);
+        }
+
         /// <summary>
         /// Calculates the workplaces for this building according to RICO settings.
         /// </summary>
@@ -89,26 +108,6 @@ namespace PloppableRICO
             }
 
             return distributedJobs;
-        }
-        
-        /// <summary>
-        /// Workplace level calculation interface.
-        /// </summary>
-        public interface IWorkplaceLevelCalculator
-        {
-            /// <summary>
-            /// Calculates the workplaces for this building according to base method (non-RICO settings).
-            /// Called by WorkPlaceAIHelper to access the base game method; for implementing functionality of mods that have detoured/patched that method (e.g. Realistic Population mods).
-            /// </summary>
-            /// <param name="level">Building level.</param>
-            /// <param name="r">Randomizer.</param>
-            /// <param name="width">Building plot width (in cells).</param>
-            /// <param name="length">Building plot length (in cells).</param>
-            /// <param name="level0">The number of uneducated jobs.</param>
-            /// <param name="level1">The number of educated jobs.</param>
-            /// <param name="level2">The number of well-educated jobs.</param>
-            /// <param name="level3">The number of highly-educated jobs.</param>
-            void CalculateBaseWorkplaceCount(ItemClass.Level level, Randomizer r, int width, int length, out int level0, out int level1, out int level2, out int level3);
         }
     }
 }

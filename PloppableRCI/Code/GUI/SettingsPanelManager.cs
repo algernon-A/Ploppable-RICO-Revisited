@@ -14,7 +14,7 @@ namespace PloppableRICO
     /// <summary>
     /// Settings panel manager static class.
     /// </summary>
-    public static class SettingsPanelManager
+    internal static class SettingsPanelManager
     {
         // Instance references.
         private static GameObject s_gameObject;
@@ -29,11 +29,12 @@ namespace PloppableRICO
         /// <summary>
         /// Gets the active instance.
         /// </summary>
-        public static RICOSettingsPanel Panel => s_panel;
+        internal static RICOSettingsPanel Panel => s_panel;
 
         /// <summary>
         /// Creates the panel object in-game and displays it.
         /// </summary>
+        /// <param name="selected">Selected building prefab (null if none).</param>
         internal static void Open(BuildingInfo selected = null)
         {
             try
@@ -82,7 +83,7 @@ namespace PloppableRICO
         internal static void Close()
         {
             // Save current selection for next time.
-            s_lastSelection = Panel?.currentSelection?.prefab;
+            s_lastSelection = Panel?.CurrentSelection?.prefab;
             s_lastFilter = Panel?.GetFilter();
             Panel?.GetListPosition(out s_lastIndex, out s_lastPostion);
 
@@ -106,7 +107,7 @@ namespace PloppableRICO
         /// Adds a Ploppable RICO button to a building info panel to directly access that building's RICO settings.
         /// The button will be added to the right of the panel with a small margin from the panel edge, at the relative Y position specified.
         /// </summary>
-        /// <param name="infoPanel">Infopanel to apply the button to</param>
+        /// <param name="infoPanel">Infopanel to apply the button to.</param>
         private static void AddInfoPanelButton(BuildingWorldInfoPanel infoPanel)
         {
             UIButton panelButton = infoPanel.component.AddUIComponent<UIButton>();
@@ -154,13 +155,13 @@ namespace PloppableRICO
             panelButton.relativePosition += new Vector3(-5f, relativeY, 0f);
 
             // Event handler.
-            panelButton.eventClick += (control, clickEvent) =>
+            panelButton.eventClick += (c, p) =>
             {
                 // Select current building in the building details panel and show.
                 Open(InstanceManager.GetPrefabInfo(WorldInfoPanel.GetCurrentInstanceID()) as BuildingInfo);
 
                 // Manually unfocus control, otherwise it can stay focused until next UI event (looks untidy).
-                control.Unfocus();
+                c.Unfocus();
             };
         }
     }

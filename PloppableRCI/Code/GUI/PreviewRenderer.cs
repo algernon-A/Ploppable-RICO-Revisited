@@ -1,92 +1,130 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using ColossalFramework;
-
+﻿// <copyright file="PreviewRenderer.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
 
 namespace PloppableRICO
 {
+    using System.Collections.Generic;
+    using ColossalFramework;
+    using UnityEngine;
+
     /// <summary>
     /// Render a 3d image of a given mesh.
     /// </summary>
-    public class UIPreviewRenderer : MonoBehaviour
+    internal class PreviewRenderer : MonoBehaviour
     {
         // Rendering settings.
-        private readonly Camera renderCamera;
-        private Mesh currentMesh;
-        private Bounds currentBounds;
-        private float currentRotation;
-        private float currentZoom;
+        private readonly Camera _renderCamera;
+        private Mesh _currentMesh;
+        private Bounds _currentBounds;
+        private float _currentRotation;
+        private float _currentZoom;
         private Material _material;
 
         // Rendering sub-components.
-        private List<BuildingInfo.MeshInfo> subMeshes;
-        private List<BuildingInfo.SubInfo> subBuildings;
+        private List<BuildingInfo.MeshInfo> _subMeshes;
+        private List<BuildingInfo.SubInfo> _subBuildings;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PreviewRenderer"/> class.
+        /// </summary>
+        internal PreviewRenderer()
+        {
+            // Set up camera.
+            _renderCamera = new GameObject("Camera").AddComponent<Camera>();
+            _renderCamera.transform.SetParent(transform);
+            _renderCamera.targetTexture = new RenderTexture(512, 512, 24, RenderTextureFormat.ARGB32);
+            _renderCamera.allowHDR = true;
+            _renderCamera.enabled = false;
+
+            // Basic defaults.
+            _renderCamera.pixelRect = new Rect(0f, 0f, 512, 512);
+            _renderCamera.backgroundColor = new Color(0, 0, 0, 0);
+            _renderCamera.fieldOfView = 30f;
+            _renderCamera.nearClipPlane = 1f;
+            _renderCamera.farClipPlane = 1000f;
+        }
 
         /// <summary>
         /// Sets material to render.
         /// </summary>
-        public Material Material { set => _material = value; }
-
-
-        /// <summary>
-        /// Initialise the new renderer object.
-        /// </summary>
-        public UIPreviewRenderer()
-        {
-            // Set up camera.
-            renderCamera = new GameObject("Camera").AddComponent<Camera>();
-            renderCamera.transform.SetParent(transform);
-            renderCamera.targetTexture = new RenderTexture(512, 512, 24, RenderTextureFormat.ARGB32);
-            renderCamera.allowHDR = true;
-            renderCamera.enabled = false;
-
-            // Basic defaults.
-            renderCamera.pixelRect = new Rect(0f, 0f, 512, 512);
-            renderCamera.backgroundColor = new Color(0, 0, 0, 0);
-            renderCamera.fieldOfView = 30f;
-            renderCamera.nearClipPlane = 1f;
-            renderCamera.farClipPlane = 1000f;
-        }
-
+        internal Material Material { set => _material = value; }
 
         /// <summary>
-        /// Image size.
+        /// Gets or sets the preview image size.
         /// </summary>
-        public Vector2 Size
+        internal Vector2 Size
         {
-            get => new Vector2(renderCamera.targetTexture.width, renderCamera.targetTexture.height);
+            get => new Vector2(_renderCamera.targetTexture.width, _renderCamera.targetTexture.height);
 
             set
             {
                 if (Size != value)
                 {
                     // New size; set camera output sizes accordingly.
-                    renderCamera.targetTexture = new RenderTexture((int)value.x, (int)value.y, 24, RenderTextureFormat.ARGB32);
-                    renderCamera.pixelRect = new Rect(0f, 0f, value.x, value.y);
+                    _renderCamera.targetTexture = new RenderTexture((int)value.x, (int)value.y, 24, RenderTextureFormat.ARGB32);
+                    _renderCamera.pixelRect = new Rect(0f, 0f, value.x, value.y);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the currently rendered mesh.
+        /// </summary>
+        internal Mesh Mesh
+        {
+            get => _currentMesh;
+
+            set => _currentMesh = value;
+        }
+
+        /// <summary>
+        /// Gets the current building texture.
+        /// </summary>
+        internal RenderTexture Texture => _renderCamera.targetTexture;
+
+        /// <summary>
+        /// Gets or sets the preview camera rotation (in degrees).
+        /// </summary>
+        internal float CameraRotation
+        {
+            get => _currentRotation;
+            set => _currentRotation = value % 360f;
+        }
+
+        /// <summary>
+        /// Gets or sets the preview zoom level.
+        /// </summary>
+        internal float Zoom
+        {
+            get => _currentZoom;
+
+            set
+            {
+                _currentZoom = Mathf.Clamp(value, 0.5f, 5f);
             }
         }
 
         /// <summary>
         /// Sets mesh and material from a BuildingInfo prefab.
         /// </summary>
-        /// <param name="prefab">Prefab to render</param>
-        /// <returns>True if the target was valid (prefab or at least one subbuilding contains a valid material, and the prefab has at least one primary mesh, submesh, or subbuilding)</returns>
-        public bool SetTarget(BuildingInfo prefab)
+        /// <param name="prefab">Prefab to render.</param>
+        /// <returns>True if the target was valid (prefab or at least one subbuilding contains a valid material, and the prefab has at least one primary mesh, submesh, or subbuilding).</returns>
+        internal bool SetTarget(BuildingInfo prefab)
         {
             // Assign main mesh and material.
             Mesh = prefab.m_mesh;
             _material = prefab.m_material;
 
             // Set up or clear submesh list.
-            if (subMeshes == null)
+            if (_subMeshes == null)
             {
-                subMeshes = new List<BuildingInfo.MeshInfo>();
+                _subMeshes = new List<BuildingInfo.MeshInfo>();
             }
             else
             {
-                subMeshes.Clear();
+                _subMeshes.Clear();
             }
 
             // Add any submeshes to our submesh list.
@@ -94,25 +132,25 @@ namespace PloppableRICO
             {
                 for (int i = 0; i < prefab.m_subMeshes.Length; i++)
                 {
-                    subMeshes.Add(prefab.m_subMeshes[i]);
+                    _subMeshes.Add(prefab.m_subMeshes[i]);
                 }
             }
 
             // Set up or clear sub-building list.
-            if (subBuildings == null)
+            if (_subBuildings == null)
             {
-                subBuildings = new List<BuildingInfo.SubInfo>();
+                _subBuildings = new List<BuildingInfo.SubInfo>();
             }
             else
             {
-                subBuildings.Clear();
+                _subBuildings.Clear();
             }
 
             if (prefab.m_subBuildings != null && prefab.m_subBuildings.Length > 0)
             {
                 for (int i = 0; i < prefab.m_subBuildings.Length; i++)
                 {
-                    subBuildings.Add(prefab.m_subBuildings[i]);
+                    _subBuildings.Add(prefab.m_subBuildings[i]);
 
                     // If we don't already have a valid material, grab this one.
                     if (_material == null)
@@ -122,65 +160,21 @@ namespace PloppableRICO
                 }
             }
 
-            return _material != null && (currentMesh != null || subBuildings.Count > 0 || subMeshes.Count > 0);
+            return _material != null && (_currentMesh != null || _subBuildings.Count > 0 || _subMeshes.Count > 0);
         }
-
-
-        /// <summary>
-        /// Currently rendered mesh.
-        /// </summary>
-        public Mesh Mesh
-        {
-            get => currentMesh;
-
-            set => currentMesh = value;
-        }
-
-
-        /// <summary>
-        /// Current building texture.
-        /// </summary>
-        public RenderTexture Texture
-        {
-            get => renderCamera.targetTexture;
-        }
-
-
-        /// <summary>
-        /// Preview camera rotation (degrees).
-        /// </summary>
-        public float CameraRotation
-        {
-            get { return currentRotation; }
-            set { currentRotation = value % 360f; }
-        }
-
-
-        /// <summary>
-        /// Zoom level.
-        /// </summary>
-        public float Zoom
-        {
-            get { return currentZoom; }
-            set
-            {
-                currentZoom = Mathf.Clamp(value, 0.5f, 5f);
-            }
-        }
-
 
         /// <summary>
         /// Render the current mesh.
         /// </summary>
-        /// <param name="isThumb">True if this is a thumbnail render, false otherwise</param>
-        public void Render(bool isThumb)
+        /// <param name="isThumb">True if this is a thumbnail render, false otherwise.</param>
+        internal void Render(bool isThumb)
         {
             // Check to see if we have submeshes or sub-buildings.
-            bool hasSubMeshes = subMeshes != null && subMeshes.Count > 0;
-            bool hasSubBuildings = subBuildings != null && subBuildings.Count > 0;
+            bool hasSubMeshes = _subMeshes != null && _subMeshes.Count > 0;
+            bool hasSubBuildings = _subBuildings != null && _subBuildings.Count > 0;
 
             // If no primary mesh and no other meshes, don't do anything here.
-            if (currentMesh == null && !hasSubBuildings && !hasSubMeshes)
+            if (_currentMesh == null && !hasSubBuildings && !hasSubMeshes)
             {
                 return;
             }
@@ -189,24 +183,24 @@ namespace PloppableRICO
             if (isThumb && ModSettings.thumbBacks != (byte)ModSettings.ThumbBackCats.skybox)
             {
                 // Is a thumbnail - user plain-colour background.
-                renderCamera.clearFlags = CameraClearFlags.Color;
+                _renderCamera.clearFlags = CameraClearFlags.Color;
 
                 // Set dark sky-blue background colour if the default 'color' background is set
                 if (ModSettings.thumbBacks == (byte)ModSettings.ThumbBackCats.color)
                 {
-                    renderCamera.backgroundColor = new Color32(33, 151, 199, 255);
+                    _renderCamera.backgroundColor = new Color32(33, 151, 199, 255);
                 }
             }
             else
             {
                 // Not a thumbnail - use skybox background.
-                renderCamera.clearFlags = CameraClearFlags.Skybox;
+                _renderCamera.clearFlags = CameraClearFlags.Skybox;
             }
 
             // Back up current game InfoManager mode.
             InfoManager infoManager = Singleton<InfoManager>.instance;
             InfoManager.InfoMode currentMode = infoManager.CurrentMode;
-            InfoManager.SubInfoMode currentSubMode = infoManager.CurrentSubMode; ;
+            InfoManager.SubInfoMode currentSubMode = infoManager.CurrentSubMode;
 
             // Set current game InfoManager to default (don't want to render with an overlay mode).
             infoManager.SetCurrentMode(InfoManager.InfoMode.None, InfoManager.SubInfoMode.Default);
@@ -230,36 +224,36 @@ namespace PloppableRICO
 
             // Reset the bounding box to be the smallest that can encapsulate all verticies of the new mesh.
             // That way the preview image is the largest size that fits cleanly inside the preview size.
-            currentBounds = new Bounds(Vector3.zero, Vector3.zero);
+            _currentBounds = new Bounds(Vector3.zero, Vector3.zero);
             Vector3[] vertices;
 
             // Set default model position.
             Vector3 modelPosition = new Vector3(0f, 0f, 0f);
 
             // Add our main mesh, if any (some are null, because they only 'appear' through subbuildings - e.g. Boston Residence Garage).
-            if (currentMesh != null && _material != null)
+            if (_currentMesh != null && _material != null)
             {
                 // Use separate verticies instance instead of accessing Mesh.vertices each time (which is slow).
                 // >10x measured performance improvement by doing things this way instead.
-                vertices = currentMesh.vertices;
+                vertices = _currentMesh.vertices;
                 for (int i = 0; i < vertices.Length; i++)
                 {
                     // Exclude vertices with large negative Y values (underground) from our bounds (e.g. SoCal Laguna houses), otherwise the result doesn't look very good.
                     if (vertices[i].y > -2)
                     {
-                        currentBounds.Encapsulate(vertices[i]);
+                        _currentBounds.Encapsulate(vertices[i]);
                     }
                 }
 
                 // Calculate rendering matrix and add mesh to scene.
                 Matrix4x4 matrix = Matrix4x4.TRS(modelPosition, Quaternion.Euler(Vector3.zero), Vector3.one);
-                Graphics.DrawMesh(currentMesh, matrix, _material, 0, renderCamera, 0, null, true, true);
+                Graphics.DrawMesh(_currentMesh, matrix, _material, 0, _renderCamera, 0, null, true, true);
             }
 
             // Render submeshes, if any.
             if (hasSubMeshes)
             {
-                foreach (BuildingInfo.MeshInfo subMesh in subMeshes)
+                foreach (BuildingInfo.MeshInfo subMesh in _subMeshes)
                 {
                     // Get local reference.
                     BuildingInfoBase subInfo = subMesh?.m_subInfo;
@@ -273,7 +267,7 @@ namespace PloppableRICO
                         // We need to rotate the submesh before we apply the model rotation.
                         // Note that the order of multiplication (relative to the angle of operation) is reversed in the code, because of the way Unity overloads the multiplication operator.
                         // Note also that the submesh angle needs to be inverted to rotate correctly around the Y axis in our space.
-                        Quaternion relativeRotation = Quaternion.AngleAxis((subMesh.m_angle * -1), Vector3.up);
+                        Quaternion relativeRotation = Quaternion.AngleAxis(subMesh.m_angle * -1, Vector3.up);
 
                         // Calculate relative position of mesh given its starting position and our model rotation.
                         Vector3 relativePosition = subMesh.m_position;
@@ -282,7 +276,7 @@ namespace PloppableRICO
                         Matrix4x4 matrix = Matrix4x4.TRS(relativePosition + modelPosition, relativeRotation, Vector3.one);
 
                         // Add submesh to scene.
-                        Graphics.DrawMesh(subInfo.m_mesh, matrix, subInfo.m_material, 0, renderCamera, 0, null, true, true);
+                        Graphics.DrawMesh(subInfo.m_mesh, matrix, subInfo.m_material, 0, _renderCamera, 0, null, true, true);
 
                         // Expand our bounds to encapsulate the submesh.
                         vertices = subInfo.m_mesh.vertices;
@@ -292,7 +286,7 @@ namespace PloppableRICO
                             if (vertices[i].y + relativePosition.y > -2)
                             {
                                 // Transform coordinates to our model rotation before encapsulating, otherwise we tend to cut off corners.
-                                currentBounds.Encapsulate(relativeRotation * (vertices[i] + subMesh.m_position));
+                                _currentBounds.Encapsulate(relativeRotation * (vertices[i] + subMesh.m_position));
                             }
                         }
                     }
@@ -302,7 +296,7 @@ namespace PloppableRICO
             // Render subbuildings, if any.
             if (hasSubBuildings)
             {
-                foreach (BuildingInfo.SubInfo subBuilding in subBuildings)
+                foreach (BuildingInfo.SubInfo subBuilding in _subBuildings)
                 {
                     // Get local reference.
                     BuildingInfo subInfo = subBuilding?.m_buildingInfo;
@@ -320,7 +314,7 @@ namespace PloppableRICO
                         Matrix4x4 matrix = Matrix4x4.TRS(relativePosition + modelPosition, relativeRotation, Vector3.one);
 
                         // Add subbuilding to scene.
-                        Graphics.DrawMesh(subInfo.m_mesh, matrix, subInfo.m_material, 0, renderCamera, 0, null, true, true);
+                        Graphics.DrawMesh(subInfo.m_mesh, matrix, subInfo.m_material, 0, _renderCamera, 0, null, true, true);
 
                         // Expand our bounds to encapsulate the submesh.
                         vertices = subInfo.m_mesh.vertices;
@@ -329,7 +323,7 @@ namespace PloppableRICO
                             // Exclude vertices with large negative Y values (underground) from our bounds (e.g. SoCal Laguna houses), otherwise the result doesn't look very good.
                             if (vertices[i].y + relativePosition.y > -2)
                             {
-                                currentBounds.Encapsulate(vertices[i] + relativePosition);
+                                _currentBounds.Encapsulate(vertices[i] + relativePosition);
                             }
                         }
                     }
@@ -337,19 +331,19 @@ namespace PloppableRICO
             }
 
             // Set zoom to encapsulate entire model.
-            float magnitude = currentBounds.extents.magnitude;
+            float magnitude = _currentBounds.extents.magnitude;
             float clipExtent = (magnitude + 16f) * 1.5f;
-            float clipCenter = magnitude * currentZoom;
+            float clipCenter = magnitude * _currentZoom;
 
             // Clip planes.
-            renderCamera.nearClipPlane = Mathf.Max(clipCenter - clipExtent, 0.01f);
-            renderCamera.farClipPlane = clipCenter + clipExtent;
+            _renderCamera.nearClipPlane = Mathf.Max(clipCenter - clipExtent, 0.01f);
+            _renderCamera.farClipPlane = clipCenter + clipExtent;
 
             // Camera position and rotation - directly behind the model, facing forward.
-            renderCamera.transform.position = (-Vector3.forward * clipCenter) + currentBounds.center;
-            renderCamera.transform.RotateAround(currentBounds.center, Vector3.right, 20f);
-            renderCamera.transform.RotateAround(currentBounds.center, Vector3.up, -currentRotation);
-            renderCamera.transform.LookAt(currentBounds.center);
+            _renderCamera.transform.position = (-Vector3.forward * clipCenter) + _currentBounds.center;
+            _renderCamera.transform.RotateAround(_currentBounds.center, Vector3.right, 20f);
+            _renderCamera.transform.RotateAround(_currentBounds.center, Vector3.up, -_currentRotation);
+            _renderCamera.transform.LookAt(_currentBounds.center);
 
             // If game is currently in nighttime, enable sun and disable moon lighting.
             if (gameMainLight == DayNightProperties.instance.moonLightSource)
@@ -359,12 +353,12 @@ namespace PloppableRICO
             }
 
             // Light settings.
-            renderLight.transform.eulerAngles = new Vector3(55f, -currentRotation - 20f, 0f);
+            renderLight.transform.eulerAngles = new Vector3(55f, -_currentRotation - 20f, 0f);
             renderLight.intensity = 2f;
             renderLight.color = Color.white;
 
             // Render!
-            renderCamera.RenderWithShader(_material.shader, "");
+            _renderCamera.RenderWithShader(_material.shader, string.Empty);
 
             // Restore game lighting.
             RenderManager.instance.MainLight = gameMainLight;

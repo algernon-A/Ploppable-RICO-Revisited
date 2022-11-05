@@ -1,4 +1,4 @@
-﻿// <copyright file="Thumbnails.cs" company="algernon (K. Algernon A. Sheppard)">
+﻿// <copyright file="ThumbnailGenerator.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -13,24 +13,24 @@ namespace PloppableRICO
     /// Creates thumbnail images.
     /// Inspired by Boogieman Sam's FindIt! UI.
     /// </summary>
-    public class ThumbnailGenerator
+    internal class ThumbnailGenerator
     {
         // Renderer for thumbnail images.
-        private readonly UIPreviewRenderer renderer;
+        private readonly PreviewRenderer _renderer;
 
         /// <summary>
-        /// Constructor.
+        /// Initializes a new instance of the <see cref="ThumbnailGenerator"/> class.
         /// </summary>
-        public ThumbnailGenerator()
+        internal ThumbnailGenerator()
         {
             Logging.Message("creating thumbnail generator");
 
             // Get local reference from parent.
-            renderer = ThumbnailManager.Renderer;
+            _renderer = ThumbnailManager.Renderer;
 
             // Size and setting for thumbnail images: 109 x 100, doubled for anti-aliasing.
-            renderer.Size = new Vector2(109, 100) * 2f;
-            renderer.CameraRotation = 210f;
+            _renderer.Size = new Vector2(109, 100) * 2f;
+            _renderer.CameraRotation = 210f;
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace PloppableRICO
         internal void CreateThumbnail(BuildingData building)
         {
             // Reset zoom.
-            renderer.Zoom = 4f;
+            _renderer.Zoom = 4f;
 
             // Don't do anything with null prefabs.
             if (building?.prefab == null)
@@ -50,7 +50,7 @@ namespace PloppableRICO
             }
 
             // Set mesh and material for render.
-            if (!renderer.SetTarget(building.prefab))
+            if (!_renderer.SetTarget(building.prefab))
             {
                 // Something went wrong - this isn't a valid rendering target; exit.
                 Logging.Message("no thumbnail generated for null mesh ", building.prefab.name);
@@ -62,22 +62,22 @@ namespace PloppableRICO
             {
                 Color originalColor = building.prefab.m_material.color;
                 building.prefab.m_material.color = building.prefab.m_color0;
-                renderer.Render(true);
+                _renderer.Render(true);
                 building.prefab.m_material.color = originalColor;
             }
             else
             {
                 // No temporary colour change needed.
-                renderer.Render(true);
+                _renderer.Render(true);
             }
 
             // Back up game's current active texture.
             RenderTexture gameActiveTexture = RenderTexture.active;
 
             // Convert the render to a 2D texture.
-            Texture2D thumbnailTexture = new Texture2D(renderer.Texture.width, renderer.Texture.height);
-            RenderTexture.active = renderer.Texture;
-            thumbnailTexture.ReadPixels(new Rect(0f, 0f, (float)renderer.Texture.width, (float)renderer.Texture.height), 0, 0);
+            Texture2D thumbnailTexture = new Texture2D(_renderer.Texture.width, _renderer.Texture.height);
+            RenderTexture.active = _renderer.Texture;
+            thumbnailTexture.ReadPixels(new Rect(0f, 0f, (float)_renderer.Texture.width, (float)_renderer.Texture.height), 0, 0);
             thumbnailTexture.Apply();
 
             // Temporary texture for resizing render to thumbnail size (109 x 100).
@@ -114,7 +114,7 @@ namespace PloppableRICO
         }
 
         /// <summary>
-        /// Generates building thumbnail variants - focused, hovered, pressed, and disabled., 
+        /// Generates building thumbnail variants - focused, hovered, pressed, and disabled.
         /// </summary>
         /// <param name="baseTexture">Base texture of the thumbnail.</param>
         /// <returns>2d variant icon textures.</returns>
@@ -145,13 +145,12 @@ namespace PloppableRICO
             pressedTexture.name = baseTexture.name + "Pressed";
 
             // Don't bother with 'disabled' texture since we don't use it, and we save memory by not adding it.
-
             return new Texture2D[]
             {
                 baseTexture,
                 focusedTexture,
                 hoveredTexture,
-                pressedTexture
+                pressedTexture,
             };
         }
 
@@ -213,7 +212,7 @@ namespace PloppableRICO
                     texture = textures[i],
                     name = textures[i].name,
                     border = (spriteInfo != null) ? spriteInfo.border : new RectOffset(),
-                    region = regions[i]
+                    region = regions[i],
                 });
             }
 

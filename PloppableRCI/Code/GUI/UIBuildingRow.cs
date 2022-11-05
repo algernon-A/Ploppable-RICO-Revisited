@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="UIBuildingRow.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using AlgernonCommons.Translation;
     using AlgernonCommons.UI;
@@ -8,7 +13,7 @@
     /// <summary>
     /// An individual row in the list of buildings.
     /// </summary>
-    public class UIBuildingRow : UIListRow
+    internal class UIBuildingRow : UIListRow
     {
         /// <summary>
         /// Row height.
@@ -75,4 +80,3 @@
         }
     }
 }
-

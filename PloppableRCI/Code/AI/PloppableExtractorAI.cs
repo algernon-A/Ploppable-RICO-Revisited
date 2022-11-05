@@ -13,19 +13,8 @@ namespace PloppableRICO
         /// <summary>
         /// Gets the construction cost of the building.
         /// </summary>
-        /// <returns>Construction cost</returns>
+        /// <returns>Construction cost.</returns>
         public override int GetConstructionCost() => AIUtils.WorkplaceConstructionCost(this, m_constructionCost);
-
-
-        /// <summary>
-        /// Returns the construction time of the building.
-        /// For ploppable RICO buildings this is always zero.
-        /// </summary>
-        /// <returns>Construction time (always 0).</returns>
-        protected override int GetConstructionTime()
-        {
-            return 0;
-        }
 
         /// <summary>
         /// Returns the acceptable width for this class of building AI.
@@ -60,7 +49,7 @@ namespace PloppableRICO
         /// <returns>Generated building name.</returns>
         public override string GenerateName(ushort buildingID, InstanceID caller)
         {
-            return base.m_info.GetUncheckedLocalizedTitle();
+            return m_info.GetUncheckedLocalizedTitle();
         }
 
         /// <summary>
@@ -103,6 +92,16 @@ namespace PloppableRICO
 
             // Ensure flags are still applied.
             AIUtils.SetBuildingFlags(ref buildingData);
+        }
+
+        /// <summary>
+        /// Returns the construction time of the building.
+        /// For ploppable RICO buildings this is always zero.
+        /// </summary>
+        /// <returns>Construction time (always 0).</returns>
+        protected override int GetConstructionTime()
+        {
+            return 0;
         }
 
         /// <summary>

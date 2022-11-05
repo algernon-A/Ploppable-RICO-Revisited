@@ -1,4 +1,4 @@
-﻿// <copyright file="UIPreviewPanel.cs" company="algernon (K. Algernon A. Sheppard)">
+﻿// <copyright file="PreviewPanel.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -13,12 +13,12 @@ namespace PloppableRICO
     /// <summary>
     /// Panel that contains the building preview image.
     /// </summary>
-    public class UIPreviewPanel : UIPanel
+    internal class PreviewPanel : UIPanel
     {
         // Panel components.
         private UITextureSprite previewSprite;
         private UISprite noPreviewSprite;
-        private UIPreviewRenderer previewRender;
+        private PreviewRenderer previewRender;
         private UILabel buildingName;
         private UILabel buildingLevel;
         private UILabel buildingSize;
@@ -31,11 +31,11 @@ namespace PloppableRICO
         /// Render and show a preview of a building.
         /// </summary>
         /// <param name="building">The building to render.</param>
-        public void Show(BuildingData building)
+        internal void Show(BuildingData building)
         {
             // Update current selection to the new building.
             currentSelection = building;
-            renderPrefab = (currentSelection == null || currentSelection.name == null) ? null : (PrefabCollection<BuildingInfo>.FindLoaded(currentSelection.name));
+            renderPrefab = (currentSelection == null || currentSelection.name == null) ? null : PrefabCollection<BuildingInfo>.FindLoaded(currentSelection.name);
 
             // Generate render if there's a selection with a mesh.
             if (renderPrefab != null && renderPrefab.m_mesh != null)
@@ -53,7 +53,6 @@ namespace PloppableRICO
 
                 // Render at next update.
                 RenderPreview();
-
             }
             else
             {
@@ -108,7 +107,7 @@ namespace PloppableRICO
             noPreviewSprite.relativePosition = Vector3.zero;
 
             // Initialise renderer; use double size for anti-aliasing.
-            previewRender = gameObject.AddComponent<UIPreviewRenderer>();
+            previewRender = gameObject.AddComponent<PreviewRenderer>();
             previewRender.Size = previewSprite.size * 2;
 
             // Click-and-drag rotation.
@@ -188,11 +187,10 @@ namespace PloppableRICO
             }
         }
 
-
         /// <summary>
         /// Rotates the preview camera (model rotation) in accordance with mouse movement.
         /// </summary>
-        /// <param name="c">Calling component</param>
+        /// <param name="c">Calling component.</param>
         /// <param name="p">Mouse event parameter.</param>
         private void RotateCamera(UIComponent c, UIMouseEventParameter p)
         {

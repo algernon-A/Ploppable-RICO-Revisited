@@ -11,6 +11,8 @@ namespace PloppableRICO
     /// <summary>
     /// Replacement for Extractor AI for growable RICO buildings.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:Fields should be private", Justification = "Consistency with game member style")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1307:Accessible fields should begin with upper-case letter", Justification = "Consistency with game member style")]
     public class GrowableExtractorAI : IndustrialExtractorAI, IWorkplaceLevelCalculator
     {
         /// <summary>
@@ -50,13 +52,12 @@ namespace PloppableRICO
         public override void CalculateWorkplaceCount(ItemClass.Level level, Randomizer r, int width, int length, out int level0, out int level1, out int level2, out int level3) =>
             WorkplaceAIHelper.CalculateWorkplaceCount(level, m_ricoData, this, r, width, length, out level0, out level1, out level2, out level3);
 
-
         /// <summary>
         /// Calculates the workplaces for this building according to base method (non-RICO settings).
         /// Called by WorkPlaceAIHelper to access the base game method; for implementing functionality of mods that have detoured/patched that method (e.g. Realistic Population mods).
         /// </summary>
-        /// <param name="level">Building level</param>
-        /// <param name="r">Randomizer</param>
+        /// <param name="level">Building level.</param>
+        /// <param name="r">Randomizer.</param>
         /// <param name="width">Building plot width (in cells).</param>
         /// <param name="length">Building plot length (in cells).</param>
         /// <param name="level0">The number of uneducated jobs.</param>
@@ -65,7 +66,7 @@ namespace PloppableRICO
         /// <param name="level3">The number of highly-educated jobs.</param>
         public void CalculateBaseWorkplaceCount(ItemClass.Level level, Randomizer r, int width, int length, out int level0, out int level1, out int level2, out int level3)
         {
-            base.CalculateWorkplaceCount(level, r, width, length, out level0, out level1, out level2, out level3); ;
+            base.CalculateWorkplaceCount(level, r, width, length, out level0, out level1, out level2, out level3);
         }
 
         /// <summary>

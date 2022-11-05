@@ -13,23 +13,23 @@ namespace PloppableRICO
     /// <summary>
     /// Static class to coordinate thumbnail generation.
     /// </summary>
-    public static class ThumbnailManager
+    internal static class ThumbnailManager
     {
         // Instances.
         private static GameObject s_gameObject;
         private static ThumbnailGenerator s_generator;
-        private static UIPreviewRenderer s_renderer;
+        private static PreviewRenderer s_renderer;
 
         /// <summary>
         /// Gets the renderer instance.
         /// </summary>
-        internal static UIPreviewRenderer Renderer => s_renderer;
+        internal static PreviewRenderer Renderer => s_renderer;
 
         /// <summary>
         /// Forces immediate rendering of a thumbnail.
         /// </summary>
-        /// <param name="buildingData"></param>
-        public static void CreateThumbnail(BuildingData buildingData)
+        /// <param name="buildingData">RICO building data record.</param>
+        internal static void CreateThumbnail(BuildingData buildingData)
         {
             if (s_gameObject == null)
             {
@@ -54,7 +54,7 @@ namespace PloppableRICO
                     s_gameObject.transform.parent = UIView.GetAView().transform;
 
                     // Add our queue manager and renderer directly to the gameobject.
-                    s_renderer = s_gameObject.AddComponent<UIPreviewRenderer>();
+                    s_renderer = s_gameObject.AddComponent<PreviewRenderer>();
                     s_generator = new ThumbnailGenerator();
                 }
             }

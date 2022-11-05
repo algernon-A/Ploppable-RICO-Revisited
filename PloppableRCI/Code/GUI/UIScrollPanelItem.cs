@@ -1,4 +1,4 @@
-﻿// <copyright file="PloppablePanel.cs" company="algernon (K. Algernon A. Sheppard)">
+﻿// <copyright file="UIScrollPanelItem.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -15,99 +15,90 @@ namespace PloppableRICO
     using UnityEngine;
 
     /// <summary>
-    /// Scrollable building selection panel.
-    /// </summary>
-    public class UIScrollPanel : UIFastList<BuildingData, UIScrollPanelItem, UIButton>
-    {
-        // Empty - we only need the inheritence with the specified types.
-    }
-
-    /// <summary>
     /// Individual building items for the building selection panel.
     /// </summary>
     public class UIScrollPanelItem : IUIFastListItem<BuildingData, UIButton>
     {
         // Information overlays.
-        private UILabel nameLabel, levelLabel, sizeLabel;
+        private UILabel _nameLabel;
+        private UILabel _levelLabel;
+        private UILabel _sizeLabel;
 
         // Currently active data.
-        internal BuildingData currentData;
-
+        private BuildingData _currentData;
 
         /// <summary>
-        /// UIButton component.
-        /// Property, not field, for inheritance.
+        /// Gets or sets the UIButton component.
         /// </summary>
-        public UIButton component { get; set; }
-
+        public UIButton Component { get; set; }
 
         /// <summary>
         /// Initialises the individual display item (as blank).
         /// </summary>
         public void Init()
         {
-            component.text = string.Empty;
+            Component.text = string.Empty;
 
             // Basic layout.
-            component.tooltipAnchor = UITooltipAnchor.Anchored;
-            component.horizontalAlignment = UIHorizontalAlignment.Left;
-            component.verticalAlignment = UIVerticalAlignment.Top;
-            component.pivot = UIPivotPoint.TopLeft;
-            component.foregroundSpriteMode = UIForegroundSpriteMode.Fill;
-            component.group = component.parent;
+            Component.tooltipAnchor = UITooltipAnchor.Anchored;
+            Component.horizontalAlignment = UIHorizontalAlignment.Left;
+            Component.verticalAlignment = UIVerticalAlignment.Top;
+            Component.pivot = UIPivotPoint.TopLeft;
+            Component.foregroundSpriteMode = UIForegroundSpriteMode.Fill;
+            Component.group = Component.parent;
 
             // Hide the "can't afford" big red crossout that's shown by default.
-            UIComponent uIComponent = (component.childCount <= 0) ? null : component.components[0];
+            UIComponent uIComponent = (Component.childCount <= 0) ? null : Component.components[0];
             if (uIComponent != null)
             {
                 uIComponent.isVisible = false;
             }
 
             // Information label - building name.
-            nameLabel = component.AddUIComponent<UILabel>();
-            nameLabel.textScale = 0.6f;
-            nameLabel.useDropShadow = true;
-            nameLabel.dropShadowColor = new Color32(80, 80, 80, 255);
-            nameLabel.dropShadowOffset = new Vector2(2, -2);
-            nameLabel.autoSize = false;
-            nameLabel.autoHeight = true;
-            nameLabel.wordWrap = true;
-            nameLabel.width = component.width - 10;
-            nameLabel.isVisible = true;
-            nameLabel.relativePosition = new Vector3(5, 5);
+            _nameLabel = Component.AddUIComponent<UILabel>();
+            _nameLabel.textScale = 0.6f;
+            _nameLabel.useDropShadow = true;
+            _nameLabel.dropShadowColor = new Color32(80, 80, 80, 255);
+            _nameLabel.dropShadowOffset = new Vector2(2, -2);
+            _nameLabel.autoSize = false;
+            _nameLabel.autoHeight = true;
+            _nameLabel.wordWrap = true;
+            _nameLabel.width = Component.width - 10;
+            _nameLabel.isVisible = true;
+            _nameLabel.relativePosition = new Vector3(5, 5);
 
             // Information label - building level.
-            levelLabel = component.AddUIComponent<UILabel>();
-            levelLabel.textScale = 0.6f;
-            levelLabel.useDropShadow = true;
-            levelLabel.dropShadowColor = new Color32(80, 80, 80, 255);
-            levelLabel.dropShadowOffset = new Vector2(2, -2);
-            levelLabel.autoSize = true;
-            levelLabel.isVisible = true;
-            levelLabel.anchor = UIAnchorStyle.Bottom | UIAnchorStyle.Left;
-            levelLabel.relativePosition = new Vector3(5, component.height - 10);
+            _levelLabel = Component.AddUIComponent<UILabel>();
+            _levelLabel.textScale = 0.6f;
+            _levelLabel.useDropShadow = true;
+            _levelLabel.dropShadowColor = new Color32(80, 80, 80, 255);
+            _levelLabel.dropShadowOffset = new Vector2(2, -2);
+            _levelLabel.autoSize = true;
+            _levelLabel.isVisible = true;
+            _levelLabel.anchor = UIAnchorStyle.Bottom | UIAnchorStyle.Left;
+            _levelLabel.relativePosition = new Vector3(5, Component.height - 10);
 
             // Information label - building size.
-            sizeLabel = component.AddUIComponent<UILabel>();
-            sizeLabel.textScale = 0.6f;
-            sizeLabel.useDropShadow = true;
-            sizeLabel.dropShadowColor = new Color32(80, 80, 80, 255);
-            sizeLabel.dropShadowOffset = new Vector2(2, -2);
-            sizeLabel.autoSize = true;
-            sizeLabel.isVisible = true;
-            sizeLabel.anchor = UIAnchorStyle.Bottom | UIAnchorStyle.Left;
+            _sizeLabel = Component.AddUIComponent<UILabel>();
+            _sizeLabel.textScale = 0.6f;
+            _sizeLabel.useDropShadow = true;
+            _sizeLabel.dropShadowColor = new Color32(80, 80, 80, 255);
+            _sizeLabel.dropShadowOffset = new Vector2(2, -2);
+            _sizeLabel.autoSize = true;
+            _sizeLabel.isVisible = true;
+            _sizeLabel.anchor = UIAnchorStyle.Bottom | UIAnchorStyle.Left;
 
             // Tooltip.
-            component.eventMouseHover += (component, mouseEvent) =>
+            Component.eventMouseHover += (component, mouseEvent) =>
             {
                 // Reset the tooltip before showing each time, as sometimes it gets clobbered either by the game or another mod.
-                component.tooltip = BuildingTooltip(currentData);
+                component.tooltip = BuildingTooltip(_currentData);
             };
 
             // Double-click to open building's settings.
-            component.eventDoubleClick += (component, mouseEvent) =>
+            Component.eventDoubleClick += (component, mouseEvent) =>
             {
-                SettingsPanelManager.Open(currentData.prefab);
+                SettingsPanelManager.Open(_currentData.prefab);
             };
         }
 
@@ -119,7 +110,7 @@ namespace PloppableRICO
         public void Display(BuildingData data, int index)
         {
             // Safety first!
-            if (component == null || data?.prefab == null)
+            if (Component == null || data?.prefab == null)
             {
                 return;
             }
@@ -127,36 +118,36 @@ namespace PloppableRICO
             try
             {
                 // Set current data reference.
-                currentData = data;
-                component.name = data.name;
+                _currentData = data;
+                Component.name = data.name;
 
                 // Ensure component is unfocused.
-                component.Unfocus();
+                Component.Unfocus();
 
                 // See if we've already got a thumbnail for this building.
                 if (data.thumbnailAtlas == null)
                 {
                     // No thumbnail yet - clear the sprite and queue thumbnail for rendering.
-                    ThumbnailManager.CreateThumbnail(currentData);
+                    ThumbnailManager.CreateThumbnail(_currentData);
                 }
 
                 // Apply icons.
-                component.atlas = currentData.thumbnailAtlas;
-                component.normalFgSprite = currentData.DisplayName;
-                component.hoveredFgSprite = currentData.DisplayName + "Hovered";
-                component.pressedFgSprite = currentData.DisplayName + "Pressed";
-                component.focusedFgSprite = null;
+                Component.atlas = _currentData.thumbnailAtlas;
+                Component.normalFgSprite = _currentData.DisplayName;
+                Component.hoveredFgSprite = _currentData.DisplayName + "Hovered";
+                Component.pressedFgSprite = _currentData.DisplayName + "Pressed";
+                Component.focusedFgSprite = null;
 
                 // Information label - building name.
-                nameLabel.text = data.DisplayName;
+                _nameLabel.text = data.DisplayName;
 
                 // Information label - building level.
-                levelLabel.text = Translations.Translate("PRR_LVL") + " " + ((int)data.prefab.m_class.m_level + 1);
+                _levelLabel.text = Translations.Translate("PRR_LVL") + " " + ((int)data.prefab.m_class.m_level + 1);
 
                 // Information label - building size.
-                sizeLabel.text = data.prefab.GetWidth() + "x" + data.prefab.GetLength();
+                _sizeLabel.text = data.prefab.GetWidth() + "x" + data.prefab.GetLength();
                 // Right anchor is unreliable, so have to set position manually.
-                sizeLabel.relativePosition = new Vector3(component.width - sizeLabel.width - 5, component.height - 10);
+                _sizeLabel.relativePosition = new Vector3(Component.width - _sizeLabel.width - 5, Component.height - 10);
             }
             catch (Exception e)
             {
@@ -165,7 +156,6 @@ namespace PloppableRICO
             }
         }
 
-
         /// <summary>
         /// Selects an item, including setting the current tool to plop the selected building.
         /// </summary>
@@ -173,13 +163,13 @@ namespace PloppableRICO
         public void Select(int index)
         {
             // Focus the icon.
-            component.normalFgSprite = currentData.DisplayName + "Focused";
-            component.hoveredFgSprite = currentData.DisplayName + "Focused";
+            Component.normalFgSprite = _currentData.DisplayName + "Focused";
+            Component.hoveredFgSprite = _currentData.DisplayName + "Focused";
 
             // Apply building prefab to the tool.
             BuildingTool buildingTool = ToolsModifierControl.SetTool<BuildingTool>();
             {
-                buildingTool.m_prefab = currentData.prefab;
+                buildingTool.m_prefab = _currentData.prefab;
                 buildingTool.m_relocate = 0;
             }
         }
@@ -191,8 +181,8 @@ namespace PloppableRICO
         public void Deselect(int index)
         {
             // Restore normal (unfocused) icons.
-            component.normalFgSprite = currentData.DisplayName;
-            component.hoveredFgSprite = currentData.DisplayName + "Hovered";
+            Component.normalFgSprite = _currentData.DisplayName;
+            Component.hoveredFgSprite = _currentData.DisplayName + "Hovered";
         }
 
         /// <summary>

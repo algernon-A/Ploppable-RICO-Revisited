@@ -1,4 +1,4 @@
-﻿// <copyright file="UISavePanel.cs" company="algernon (K. Algernon A. Sheppard)">
+﻿// <copyright file="SavePanel.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -15,9 +15,9 @@ namespace PloppableRICO
     using ColossalFramework.UI;
 
     /// <summary>
-    ///This panel is in the middle column on the bottom. It contains buttons to action changes to the RICO settings file and apply changes to the live game.
+    /// This panel is in the middle column on the bottom. It contains buttons to action changes to the RICO settings file and apply changes to the live game.
     /// </summary>
-    public class UISavePanel : UIPanel
+    internal class SavePanel : UIPanel
     {
         // Panel components.
         private UIButton _saveButton;
@@ -28,7 +28,11 @@ namespace PloppableRICO
         // Selection reference.
         private BuildingData currentSelection;
 
-        public void SelectionChanged(BuildingData buildingData)
+        /// <summary>
+        /// Updates the current selection.
+        /// </summary>
+        /// <param name="buildingData">New selection.</param>
+        internal void SelectionChanged(BuildingData buildingData)
         {
             currentSelection = buildingData;
         }
@@ -56,15 +60,15 @@ namespace PloppableRICO
 
             // Save button.
             _saveButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_SAV"), buttonWidth);
-            _saveButton.eventClick += (control, clickEvent) => Save();
+            _saveButton.eventClick += (c, p) => Save();
 
             // Add local settings button.
             _addLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_ADD"), buttonWidth);
-            _addLocalButton.eventClick += (control, clickEvent) => AddLocal();
+            _addLocalButton.eventClick += (c, p) => AddLocal();
 
             // 'Remove local settings' button.
             _removeLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_REM"), buttonWidth);
-            _removeLocalButton.eventClick += (control, clickEvent) => RemoveLocal();
+            _removeLocalButton.eventClick += (c, p) => RemoveLocal();
 
             // Warning label for 'apply changes' being experimental.
             UILabel warningLabel = this.AddUIComponent<UILabel>();
@@ -77,7 +81,7 @@ namespace PloppableRICO
 
             // 'Save and apply changes' button.
             _applyButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_APP"), buttonWidth, scale: 0.8f);
-            _applyButton.eventClick += (control, clickEvent) => SaveAndApply();
+            _applyButton.eventClick += (c, p) => SaveAndApply();
             _applyButton.wordWrap = true;
         }
 

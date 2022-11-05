@@ -31,12 +31,12 @@ namespace PloppableRICO
             buildingData.m_flags &= ~Building.Flags.Abandoned;
             buildingData.m_flags &= ~Building.Flags.Demolishing;
 
-            // Make sure building isn't 'turned off' (otherwise this could be an issue with coverted parks, monuments, etc. that were previously turned off). 
+            // Make sure building isn't 'turned off' (otherwise this could be an issue with coverted parks, monuments, etc. that were previously turned off).
             buildingData.m_problems &= ~Notification.Problem1.TurnedOff;
         }
 
         /// <summary>
-        /// Calculates the construction cost of a workplace, depending on current settings (overrides or default). 
+        /// Calculates the construction cost of a workplace, depending on current settings (overrides or default).
         /// </summary>
         /// <param name="thisAI">AI reference to calculate for.</param>
         /// <param name="fixedCost">Fixed construction cost.</param>
@@ -53,7 +53,7 @@ namespace PloppableRICO
             if (ModSettings.overrideCost)
             {
                 // Yes - calculate based on workplaces by level multiplied by appropriate cost-per-job setting.
-                thisAI.CalculateWorkplaceCount(thisLevel, new Randomizer(), thisInfo.GetWidth(), thisInfo.GetLength(), out int jobs0, out int jobs1, out int jobs2, out int jobs3);
+                thisAI.CalculateWorkplaceCount(thisLevel, default, thisInfo.GetWidth(), thisInfo.GetLength(), out int jobs0, out int jobs1, out int jobs2, out int jobs3);
                 baseCost = (ModSettings.costPerJob0 * jobs0) + (ModSettings.costPerJob1 * jobs1) + (ModSettings.costPerJob2 * jobs2) + (ModSettings.costPerJob3 * jobs3);
             }
             else

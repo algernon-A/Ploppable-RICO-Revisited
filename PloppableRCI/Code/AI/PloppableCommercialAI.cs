@@ -1,4 +1,4 @@
-﻿// <copyright file="GrowableCommercialAI.cs" company="algernon (K. Algernon A. Sheppard)">
+﻿// <copyright file="PloppableCommercialAI.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -15,16 +15,6 @@ namespace PloppableRICO
         /// </summary>
         /// <returns>Construction cost.</returns>
         public override int GetConstructionCost() => AIUtils.WorkplaceConstructionCost(this, m_constructionCost);
-
-        /// <summary>
-        /// Returns the construction time of the building.
-        /// For ploppable RICO buildings this is always zero.
-        /// </summary>
-        /// <returns>Construction time (always 0).</returns>
-        protected override int GetConstructionTime()
-        {
-            return 0;
-        }
 
         /// <summary>
         /// Returns the acceptable width for this class of building AI.
@@ -59,7 +49,7 @@ namespace PloppableRICO
         /// <returns>Generated building name.</returns>
         public override string GenerateName(ushort buildingID, InstanceID caller)
         {
-            return base.m_info.GetUncheckedLocalizedTitle();
+            return m_info.GetUncheckedLocalizedTitle();
         }
 
         /// <summary>
@@ -78,7 +68,7 @@ namespace PloppableRICO
         /// That causes a check to fail in CheckBuildingLevel and prevents the building from upgrading.
         /// </summary>
         /// <param name="buildingID">Instance ID of the original building.</param>
-        /// <param name="data">Building data struct</param>
+        /// <param name="data">Building data struct.</param>
         /// <returns>The BuildingInfo record of the building to upgrade to (always null).</returns>
         public override BuildingInfo GetUpgradeInfo(ushort buildingID, ref Building data)
         {
@@ -102,6 +92,16 @@ namespace PloppableRICO
 
             // Ensure flags are still applied.
             AIUtils.SetBuildingFlags(ref buildingData);
+        }
+
+        /// <summary>
+        /// Returns the construction time of the building.
+        /// For ploppable RICO buildings this is always zero.
+        /// </summary>
+        /// <returns>Construction time (always 0).</returns>
+        protected override int GetConstructionTime()
+        {
+            return 0;
         }
 
         /// <summary>
