@@ -18,13 +18,26 @@ namespace PloppableRICO
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony")]
     internal static class BuildingToolPatches
     {
-        // Delegate to CommonBuildingAI.BuildingCompleted (protected method).
+        /// <summary>
+        /// Delegate to ABLC.LockBuildingLevel.
+        /// </summary>
+        /// <param name="buildingID">Targeted building.</param>
+        /// <param name="level">Level to set.</param>
+        internal delegate void LockBuildingLevelDelegate(ushort buildingID, ItemClass.Level level);
+
+        // Delegates.
         private static BuildingCompletedDelegate s_buildingCompleted;
+        private static LockBuildingLevelDelegate s_lockBuildingLevel;
 
         /// <summary>
         /// Delegate to CommonBuildingAI.BuildingCompleted (open delegate).
         /// </summary>
         private delegate void BuildingCompletedDelegate(CommonBuildingAI instance, ushort buildingID, ref Building buildingData);
+
+        /// <summary>
+        /// Gets or sets the delegate to ABLC.LockBuildingLevel.
+        /// </summary>
+        internal static LockBuildingLevelDelegate LockBuildingLevel { get => s_lockBuildingLevel;  set => s_lockBuildingLevel = value; }
 
         /// <summary>
         /// Called by Harmony when patching to peform pre-patch actions.
@@ -125,9 +138,9 @@ namespace PloppableRICO
                 }
 
                 // Enable ABLC level lock if option is set and ABLC is running.
-                if (ModUtils.ablcLockBuildingLevel != null && ((ModSettings.lockLevelOther && !isRICO) || (ModSettings.lockLevelRico && isRICO)))
+                if (s_lockBuildingLevel != null && ((ModSettings.lockLevelOther && !isRICO) || (ModSettings.lockLevelRico && isRICO)))
                 {
-                    ModUtils.ablcLockBuildingLevel.Invoke(null, new object[] { __result, Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result].m_level });
+                    s_lockBuildingLevel(__result, (ItemClass.Level)Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result].m_level);
                 }
             }
         }

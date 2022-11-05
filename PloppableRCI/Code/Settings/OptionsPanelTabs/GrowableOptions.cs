@@ -74,13 +74,13 @@ namespace PloppableRICO
             UIHelperBase levelGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_BLC"));
 
             // If we haven't already, check for Advanced Building Level Control.
-            if (ModUtils.ablcLockBuildingLevel == null)
+            if (BuildingToolPatches.LockBuildingLevel == null)
             {
                 ModUtils.ABLCReflection();
             }
 
             // Is it (still) null?
-            if (ModUtils.ablcLockBuildingLevel != null)
+            if (BuildingToolPatches.LockBuildingLevel != null)
             {
                 // ABLC installed; display checkboxes.
                 levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.lockLevelRico, isChecked =>
