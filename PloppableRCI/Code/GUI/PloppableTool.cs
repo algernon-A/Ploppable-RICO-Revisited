@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="PloppableTool.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System;
     using System.Collections.Generic;
@@ -19,7 +24,6 @@
         private const int NumTypes = 14;
         // Number of UI tabs: +1 to account for 'Settings' tab.
         private const int NumTabs = NumTypes + 1;
-
 
         // Object instances.
         private static GameObject _gameObject;
@@ -43,7 +47,6 @@
         // State flag.
         private bool hasShown;
 
-
         // Names used to identify icons for tabs (specific game icon names - not just made up).
         private readonly string[] Names = new string[]
         {
@@ -63,7 +66,6 @@
             "Hightech",
             "Selfsufficient"
         };
-
 
         /// <summary>
         /// Initializes the Ploppable Tool (including panel).
@@ -99,7 +101,6 @@
                 }
             }
         }
-        
 
         /// <summary>
         /// Awaken the Kraken! Or PloppableTool tool controller, whatever.
@@ -108,7 +109,6 @@
         {
             this.m_toolController = ToolsModifierControl.toolController;
         }
-        
 
         /// <summary>
         /// Destroys the Ploppable Tool GameObject.
@@ -125,7 +125,6 @@
                 Logging.LogException(e, "exception destorying PloppableTool");
             }
         }
-
 
         /// <summary>
         /// Draws the Ploppable Tool panel.
@@ -251,12 +250,11 @@
                 showSettings.normalBgSprite = "SubBarButtonBase";
                 showSettings.eventClick += (component, clickEvent) =>
                 {
-                    SettingsPanel.Open(scrollPanel?.selectedItem?.prefab);
+                    SettingsPanelManager.Open(scrollPanel?.selectedItem?.prefab);
                 };
 
                 // Add UI text.
                 SetText();
-
 
                 // Toggle active state on visibility changed if we're using the UI speed boost (deactivating when hidden to minimise UI workload and impact on performance).
                 buildingPanel.eventVisibilityChanged += (component, isVisible) =>
@@ -295,7 +293,6 @@
             }
         }
 
-
         /// <summary>
         /// Adds/updates text components of the Ploppable Tool Panel (tooltips, settings button) according to the current language.
         /// </summary>
@@ -315,7 +312,6 @@
             }
         }
 
-
         /// <summary>
         /// Sets the sprite for a given Ploppable Tool panel tab.
         /// </summary>
@@ -329,7 +325,6 @@
             tabSprite.spriteName = spriteName;
             tabSprite.size = new Vector2(35, 25);
         }
-
 
         /// <summary>
         /// Handles click events for Ploppable Tool panel tabs.
@@ -388,7 +383,6 @@
                 sprite.spriteName += "Focused";
             }
         }
-
 
         /// <summary>
         /// Returns the UI category index for the given UI category string.
@@ -476,7 +470,6 @@
             }
         }
 
-
         /// <summary>
         /// Regenerates all thumbnails.
         /// Useful for e.g. regenerating thumbnails.
@@ -496,7 +489,6 @@
                 }
             }
         }
-
 
         /// <summary>
         /// Sets up the building scroll panel.
@@ -545,7 +537,6 @@
                 }
             };
         }
-
 
         /// <summary>
         /// Adds a left or right arrow button to the panel.

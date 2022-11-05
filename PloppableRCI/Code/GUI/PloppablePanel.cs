@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="PloppablePanel.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System;
     using System.Linq;
@@ -16,7 +21,6 @@
     {
         // Empty - we only need the inheritence with the specified types.
     }
-
 
     /// <summary>
     /// Individual building items for the building selection panel.
@@ -103,10 +107,9 @@
             // Double-click to open building's settings.
             component.eventDoubleClick += (component, mouseEvent) =>
             {
-                SettingsPanel.Open(currentData.prefab);
+                SettingsPanelManager.Open(currentData.prefab);
             };
         }
-
 
         /// <summary>
         /// Displays a line item as required.
@@ -181,7 +184,6 @@
             }
         }
 
-
         /// <summary>
         /// Deselects an item.
         /// </summary>
@@ -192,7 +194,6 @@
             component.normalFgSprite = currentData.DisplayName;
             component.hoveredFgSprite = currentData.DisplayName + "Hovered";
         }
-
 
         /// <summary>
         /// Creates a tooltip string for a building, including key stats.

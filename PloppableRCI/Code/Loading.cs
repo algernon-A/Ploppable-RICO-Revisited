@@ -127,7 +127,7 @@ namespace PloppableRICO
             PloppableTool.Initialize();
 
             // Add buttons to access building details from zoned building info panels.
-            SettingsPanel.AddInfoPanelButtons();
+            SettingsPanelManager.AddInfoPanelButtons();
         }
     }
 }

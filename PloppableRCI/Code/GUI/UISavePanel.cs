@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="UISavePanel.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System.IO;
     using System.Xml;
@@ -15,14 +20,13 @@
     public class UISavePanel : UIPanel
     {
         // Panel components.
-        private UIButton saveButton;
-        private UIButton addLocalButton;
-        private UIButton removeLocalButton;
-        private UIButton applyButton;
+        private UIButton _saveButton;
+        private UIButton _addLocalButton;
+        private UIButton _removeLocalButton;
+        private UIButton _applyButton;
 
         // Selection reference.
         private BuildingData currentSelection;
-
 
         public void SelectionChanged(BuildingData buildingData)
         {
@@ -51,16 +55,16 @@
             float buttonWidth = this.width - autoLayoutPadding.left - autoLayoutPadding.right;
 
             // Save button.
-            saveButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_SAV"), buttonWidth);
-            saveButton.eventClick += (control, clickEvent) => Save();
+            _saveButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_SAV"), buttonWidth);
+            _saveButton.eventClick += (control, clickEvent) => Save();
 
             // Add local settings button.
-            addLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_ADD"), buttonWidth);
-            addLocalButton.eventClick += (control, clickEvent) => AddLocal();
+            _addLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_ADD"), buttonWidth);
+            _addLocalButton.eventClick += (control, clickEvent) => AddLocal();
 
             // 'Remove local settings' button.
-            removeLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_REM"), buttonWidth);
-            removeLocalButton.eventClick += (control, clickEvent) => RemoveLocal();
+            _removeLocalButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_REM"), buttonWidth);
+            _removeLocalButton.eventClick += (control, clickEvent) => RemoveLocal();
 
             // Warning label for 'apply changes' being experimental.
             UILabel warningLabel = this.AddUIComponent<UILabel>();
@@ -72,11 +76,10 @@
             warningLabel.text = "\r\n" + Translations.Translate("PRR_EXP");
 
             // 'Save and apply changes' button.
-            applyButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_APP"), buttonWidth, scale: 0.8f);
-            applyButton.eventClick += (control, clickEvent) => SaveAndApply();
-            applyButton.wordWrap = true;
+            _applyButton = UIButtons.AddButton(this, autoLayoutPadding.left, 0f, Translations.Translate("PRR_SAV_APP"), buttonWidth, scale: 0.8f);
+            _applyButton.eventClick += (control, clickEvent) => SaveAndApply();
+            _applyButton.wordWrap = true;
         }
-
 
         /// <summary>
         /// Saves the current RICO settings to file.
@@ -84,7 +87,7 @@
         private void Save()
         {
             // Read current settings from UI elements and convert to XML.
-            SettingsPanel.Panel.Save();
+            SettingsPanelManager.Panel.Save();
 
             // If the local settings file doesn't already exist, create a new blank template.
             if (!File.Exists("LocalRICOSettings.xml"))
@@ -139,7 +142,7 @@
             }
 
             // Force an update of all panels with current values.
-            SettingsPanel.Panel.UpdateSelectedBuilding(currentSelection);
+            SettingsPanelManager.Panel.UpdateSelectedBuilding(currentSelection);
         }
 
 
@@ -169,9 +172,8 @@
             }
 
             // Force an update of all panels with current values.
-            SettingsPanel.Panel.UpdateSelectedBuilding(currentSelection);
+            SettingsPanelManager.Panel.UpdateSelectedBuilding(currentSelection);
         }
-
 
         /// <summary>
         /// Adds new (default) local RICO settings to the selected building.
@@ -258,18 +260,17 @@
             }
 
             // Update settings panel with new settings if RICO is enabled for this building.
-            SettingsPanel.Panel.UpdateSelectedBuilding(currentSelection);
+            SettingsPanelManager.Panel.UpdateSelectedBuilding(currentSelection);
 
             // Refresh the selection list (to make sure settings checkboxes reflect new state).
-            SettingsPanel.Panel.RefreshList();
+            SettingsPanelManager.Panel.RefreshList();
 
             // Update UI category.
-            SettingsPanel.Panel.UpdateUICategory();
+            SettingsPanelManager.Panel.UpdateUICategory();
 
             // Save new settings to file.
             Save();
         }
-
 
         /// <summary>
         /// Removes RICO local settings from the currently selected prefab.
@@ -287,15 +288,14 @@
             currentSelection.hasLocal = false;
 
             // Update the current selection now that it no longer has local settings.
-            SettingsPanel.Panel.UpdateSelectedBuilding(currentSelection);
+            SettingsPanelManager.Panel.UpdateSelectedBuilding(currentSelection);
 
             // Refresh the selection list (to make sure settings checkboxes reflect new state).
-            SettingsPanel.Panel.RefreshList();
+            SettingsPanelManager.Panel.RefreshList();
 
             // Update settings file with change.
             Save();
         }
-
 
         /// <summary>
         /// Returns the RICO service (as a string) of the currently selected prefab.
@@ -316,7 +316,6 @@
                     return "residential";
             }
         }
-
 
         /// <summary>
         /// Returns the RICO subservice (as a string) of the currently selected prefab.
@@ -360,29 +359,6 @@
                 default:
                     return "high";
             }
-        }
-
-
-        /// <summary>
-        /// Checks to see if the currently applied RICO service for the selected building is residential.
-        /// </summary>
-        /// <returns>True if residential, otherwise false.</returns>
-        private bool IsCurrentResidential()
-        {
-            if (currentSelection.hasLocal)
-            {
-                return currentSelection.local.service == "residential";
-            }
-            else if (currentSelection.hasAuthor)
-            {
-                return currentSelection.author.service == "residential";
-            }
-            else if (currentSelection.hasMod)
-            {
-                return currentSelection.mod.service == "residential";
-            }
-
-            return false;
         }
     }
 }
