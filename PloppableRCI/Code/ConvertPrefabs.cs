@@ -9,43 +9,42 @@ namespace PloppableRICO
     using AlgernonCommons;
 
     /// <summary>
-    ///This class assigns the RICO settings to the prefabs. 
+    /// Assigns custom RICO AIs to prefabs.
     /// </summary>
     internal class ConvertPrefabs
     {
         /// <summary>
         /// Interpret and apply RICO settings to a building prefab.
         /// </summary>
-        /// <param name="buildingData">RICO building data to apply</param>
-        /// <param name="prefab">The building prefab to be changed</param>
+        /// <param name="buildingData">RICO building data to apply.</param>
+        /// <param name="prefab">The building prefab to be changed.</param>
         internal void ConvertPrefab(RICOBuilding buildingData, BuildingInfo prefab)
         {
             // AI class  for prefab init.
             string aiClass;
 
-
             if (prefab != null)
             {
                 // Check eligibility for any growable assets.
-                if (buildingData.growable)
+                if (buildingData.m_growable)
                 {
                     // Growables can't have any dimension greater than 4.
                     if (prefab.GetWidth() > 4 || prefab.GetLength() > 4)
                     {
-                        buildingData.growable = false;
+                        buildingData.m_growable = false;
                         Logging.Error("building '", prefab.name, "' can't be growable because it is too big");
                     }
 
                     // Growables can't have net structures.
                     if (prefab.m_paths != null && prefab.m_paths.Length != 0)
                     {
-                        buildingData.growable = false;
+                        buildingData.m_growable = false;
                         Logging.Error("building '", prefab.name, "' can't be growable because it contains network assets");
                     }
                 }
 
                 // Apply AI based on service.
-                switch (buildingData.service)
+                switch (buildingData.m_service)
                 {
                     // Dummy AI.
                     case "dummy":
@@ -66,7 +65,7 @@ namespace PloppableRICO
                     case "residential":
 
                         // Get AI.
-                        GrowableResidentialAI residentialAI = buildingData.growable ? prefab.gameObject.AddComponent<GrowableResidentialAI>() : prefab.gameObject.AddComponent<PloppableResidentialAI>();
+                        GrowableResidentialAI residentialAI = buildingData.m_growable ? prefab.gameObject.AddComponent<GrowableResidentialAI>() : prefab.gameObject.AddComponent<PloppableResidentialAI>();
                         if (residentialAI == null)
                         {
                             throw new Exception("Ploppable RICO residential AI not found.");
@@ -75,14 +74,14 @@ namespace PloppableRICO
                         // Assign basic parameters.
                         residentialAI.m_ricoData = buildingData;
                         residentialAI.m_constructionCost = buildingData.ConstructionCost;
-                        residentialAI.m_homeCount = buildingData.homeCount;
+                        residentialAI.m_homeCount = buildingData.m_homeCount;
 
                         // Determine AI class string according to subservice.
-                        switch (buildingData.subService)
+                        switch (buildingData.m_subService)
                         {
                             case "low eco":
                                 // Apply eco service if GC installed, otherwise use normal low residential.
-                                if (Util.IsGCinstalled())
+                                if (RICOUtils.IsGCinstalled())
                                 {
                                     aiClass = "Low Residential Eco - Level";
                                 }
@@ -90,11 +89,12 @@ namespace PloppableRICO
                                 {
                                     aiClass = "Low Residential - Level";
                                 }
+
                                 break;
 
                             case "high eco":
                                 // Apply eco service if GC installed, otherwise use normal high residential.
-                                if (Util.IsGCinstalled())
+                                if (RICOUtils.IsGCinstalled())
                                 {
                                     aiClass = "High Residential Eco - Level";
                                 }
@@ -102,6 +102,7 @@ namespace PloppableRICO
                                 {
                                     aiClass = "High Residential - Level";
                                 }
+
                                 break;
 
                             case "high":
@@ -111,17 +112,17 @@ namespace PloppableRICO
 
                             case "wall2wall":
                                 // Wall-to-wall - requires Plazas & Promenades.
-                                if (Util.IsPPinstalled())
+                                if (RICOUtils.IsPPinstalled())
                                 {
                                     // Need to do W2W manually as the ItemClassCollection may not have loaded the expansion when this is called.
                                     ItemClass itemClass = new ItemClass()
                                     {
                                         m_service = ItemClass.Service.Residential,
                                         m_subService = ItemClass.SubService.ResidentialWallToWall,
-                                        m_level = (ItemClass.Level)(buildingData.level - 1),
+                                        m_level = (ItemClass.Level)(buildingData.m_level - 1),
                                     };
 
-                                    InitializePrefab(prefab, residentialAI, itemClass, buildingData.growable);
+                                    InitializePrefab(prefab, residentialAI, itemClass, buildingData.m_growable);
                                     return;
                                 }
 
@@ -134,15 +135,16 @@ namespace PloppableRICO
                                 aiClass = "Low Residential - Level";
 
                                 // If invalid subservice, report.
-                                if (buildingData.subService != "low")
+                                if (buildingData.m_subService != "low")
                                 {
-                                    Logging.Message("Residential building ", buildingData.Name, " has invalid subservice ", buildingData.subService, "; reverting to low residential");
+                                    Logging.Message("Residential building ", buildingData.Name, " has invalid subservice ", buildingData.m_subService, "; reverting to low residential");
                                 }
+
                                 break;
                         }
 
                         // Initialize the prefab.
-                        InitializePrefab(prefab, residentialAI, aiClass + buildingData.level, buildingData.growable);
+                        InitializePrefab(prefab, residentialAI, aiClass + buildingData.m_level, buildingData.m_growable);
 
                         break;
 
@@ -150,7 +152,7 @@ namespace PloppableRICO
                     case "office":
 
                         // Get AI.
-                        GrowableOfficeAI officeAI = buildingData.growable ? prefab.gameObject.AddComponent<GrowableOfficeAI>() : prefab.gameObject.AddComponent<PloppableOfficeAI>();
+                        GrowableOfficeAI officeAI = buildingData.m_growable ? prefab.gameObject.AddComponent<GrowableOfficeAI>() : prefab.gameObject.AddComponent<PloppableOfficeAI>();
                         if (officeAI == null)
                         {
                             throw new Exception("Ploppable RICO Office AI not found.");
@@ -162,11 +164,11 @@ namespace PloppableRICO
                         officeAI.m_constructionCost = buildingData.ConstructionCost;
 
                         // Determine AI class string according to subservice.
-                        switch (buildingData.subService)
+                        switch (buildingData.m_subService)
                         {
                             case "high tech":
                                 // Apply IT cluster if GC installed, otherwise use Level 3 office.
-                                if (Util.IsGCinstalled())
+                                if (RICOUtils.IsGCinstalled())
                                 {
                                     aiClass = "Office - Hightech";
                                 }
@@ -174,43 +176,44 @@ namespace PloppableRICO
                                 {
                                     aiClass = "Office - Level3";
                                 }
+
                                 break;
 
                             case "wall2wall":
                                 // Wall-to-wall - requires Plazas & Promenades.
-                                if (Util.IsPPinstalled())
+                                if (RICOUtils.IsPPinstalled())
                                 {
                                     // Need to do W2W manually as the ItemClassCollection may not have loaded the expansion when this is called.
                                     ItemClass itemClass = new ItemClass()
                                     {
                                         m_service = ItemClass.Service.Office,
                                         m_subService = ItemClass.SubService.OfficeWallToWall,
-                                        m_level = (ItemClass.Level)(buildingData.level - 1),
+                                        m_level = (ItemClass.Level)(buildingData.m_level - 1),
                                     };
 
-                                    InitializePrefab(prefab, officeAI, itemClass, buildingData.growable);
+                                    InitializePrefab(prefab, officeAI, itemClass, buildingData.m_growable);
                                     return;
                                 }
 
                                 // Plazas & Promenades not installed - fall back to standard office.
-                                aiClass = "Office - Level" + buildingData.level;
+                                aiClass = "Office - Level" + buildingData.m_level;
                                 break;
 
                             default:
                                 // Boring old ordinary office.
-                                aiClass = "Office - Level" + buildingData.level;
+                                aiClass = "Office - Level" + buildingData.m_level;
                                 break;
                         }
 
                         // Initialize the prefab.
-                        InitializePrefab(prefab, officeAI, aiClass, buildingData.growable);
+                        InitializePrefab(prefab, officeAI, aiClass, buildingData.m_growable);
 
                         break;
 
                     // Industrial AI.
                     case "industrial":
                         // Get AI.
-                        GrowableIndustrialAI industrialAI = buildingData.growable ? prefab.gameObject.AddComponent<GrowableIndustrialAI>() : prefab.gameObject.AddComponent<PloppableIndustrialAI>();
+                        GrowableIndustrialAI industrialAI = buildingData.m_growable ? prefab.gameObject.AddComponent<GrowableIndustrialAI>() : prefab.gameObject.AddComponent<PloppableIndustrialAI>();
                         if (industrialAI == null)
                         {
                             throw new Exception("Ploppable RICO Industrial AI not found.");
@@ -220,30 +223,30 @@ namespace PloppableRICO
                         industrialAI.m_ricoData = buildingData;
                         industrialAI.m_workplaceCount = buildingData.WorkplaceCount;
                         industrialAI.m_constructionCost = buildingData.ConstructionCost;
-                        industrialAI.m_pollutionEnabled = buildingData.pollutionEnabled;
+                        industrialAI.m_pollutionEnabled = buildingData.m_pollutionEnabled;
 
                         // Determine AI class string according to subservice.
                         // Check for valid subservice.
-                        if (IsValidIndSubServ(buildingData.subService))
+                        if (IsValidIndSubServ(buildingData.m_subService))
                         {
                             // Specialised industry.
-                            aiClass = ServiceName(buildingData.subService) + " - Processing";
+                            aiClass = ServiceName(buildingData.m_subService) + " - Processing";
                         }
                         else
                         {
                             // Generic industry.
-                            aiClass = "Industrial - Level" + buildingData.level;
+                            aiClass = "Industrial - Level" + buildingData.m_level;
                         }
 
                         // Initialize the prefab.
-                        InitializePrefab(prefab, industrialAI, aiClass, buildingData.growable);
+                        InitializePrefab(prefab, industrialAI, aiClass, buildingData.m_growable);
 
                         break;
 
                     // Extractor AI.
                     case "extractor":
                         // Get AI.
-                        GrowableExtractorAI extractorAI = buildingData.growable ? prefab.gameObject.AddComponent<GrowableExtractorAI>() : prefab.gameObject.AddComponent<PloppableExtractorAI>();
+                        GrowableExtractorAI extractorAI = buildingData.m_growable ? prefab.gameObject.AddComponent<GrowableExtractorAI>() : prefab.gameObject.AddComponent<PloppableExtractorAI>();
                         if (extractorAI == null)
                         {
                             throw new Exception("Ploppable RICO Extractor AI not found.");
@@ -253,17 +256,17 @@ namespace PloppableRICO
                         extractorAI.m_ricoData = buildingData;
                         extractorAI.m_workplaceCount = buildingData.WorkplaceCount;
                         extractorAI.m_constructionCost = buildingData.ConstructionCost;
-                        extractorAI.m_pollutionEnabled = buildingData.pollutionEnabled;
+                        extractorAI.m_pollutionEnabled = buildingData.m_pollutionEnabled;
 
                         // Check that we have a valid industry subservice.
-                        if (IsValidIndSubServ(buildingData.subService))
+                        if (IsValidIndSubServ(buildingData.m_subService))
                         {
                             // Initialise the prefab.
-                            InitializePrefab(prefab, extractorAI, ServiceName(buildingData.subService) + " - Extractor", buildingData.growable);
+                            InitializePrefab(prefab, extractorAI, ServiceName(buildingData.m_subService) + " - Extractor", buildingData.m_growable);
                         }
                         else
                         {
-                            Logging.Error("invalid industry subservice ", buildingData.subService, " for extractor ", buildingData.Name);
+                            Logging.Error("invalid industry subservice ", buildingData.m_subService, " for extractor ", buildingData.Name);
                         }
 
                         break;
@@ -271,7 +274,7 @@ namespace PloppableRICO
                     // Commercial AI.
                     case "commercial":
                         // Get AI.
-                        GrowableCommercialAI commercialAI = buildingData.growable ? prefab.gameObject.AddComponent<GrowableCommercialAI>() : prefab.gameObject.AddComponent<PloppableCommercialAI>();
+                        GrowableCommercialAI commercialAI = buildingData.m_growable ? prefab.gameObject.AddComponent<GrowableCommercialAI>() : prefab.gameObject.AddComponent<PloppableCommercialAI>();
                         if (commercialAI == null)
                         {
                             throw new Exception("Ploppable RICO Commercial AI not found.");
@@ -283,12 +286,12 @@ namespace PloppableRICO
                         commercialAI.m_constructionCost = buildingData.ConstructionCost;
 
                         // Determine AI class string according to subservice.
-                        switch (buildingData.subService)
+                        switch (buildingData.m_subService)
                         {
                             // Organic and Local Produce.
                             case "eco":
                                 // Apply eco specialisation if GC installed, otherwise use Level 1 low commercial.
-                                if (Util.IsGCinstalled())
+                                if (RICOUtils.IsGCinstalled())
                                 {
                                     // Eco commercial buildings only import food goods.
                                     commercialAI.m_incomingResource = TransferManager.TransferReason.Food;
@@ -298,12 +301,13 @@ namespace PloppableRICO
                                 {
                                     aiClass = "Low Commercial - Level1";
                                 }
+
                                 break;
 
                             // Tourism.
                             case "tourist":
                                 // Apply tourist specialisation if AD installed, otherwise use Level 1 low commercial.
-                                if (Util.IsADinstalled())
+                                if (RICOUtils.IsADinstalled())
                                 {
                                     aiClass = "Tourist Commercial - Land";
                                 }
@@ -311,12 +315,13 @@ namespace PloppableRICO
                                 {
                                     aiClass = "Low Commercial - Level1";
                                 }
+
                                 break;
 
                             // Leisure.
                             case "leisure":
                                 // Apply leisure specialisation if AD installed, otherwise use Level 1 low commercial.
-                                if (Util.IsADinstalled())
+                                if (RICOUtils.IsADinstalled())
                                 {
                                     aiClass = "Leisure Commercial";
                                 }
@@ -324,47 +329,49 @@ namespace PloppableRICO
                                 {
                                     aiClass = "Low Commercial - Level1";
                                 }
+
                                 break;
 
                             // Wall-to-wall - requires Plazas & Promenades.
                             case "wall2wall":
-                                if (Util.IsPPinstalled())
+                                if (RICOUtils.IsPPinstalled())
                                 {
                                     // Need to do W2W manually as the ItemClassCollection may not have loaded the expansion when this is called.
                                     ItemClass itemClass = new ItemClass()
                                     {
                                         m_service = ItemClass.Service.Commercial,
                                         m_subService = ItemClass.SubService.CommercialWallToWall,
-                                        m_level = (ItemClass.Level)(buildingData.level - 1),
+                                        m_level = (ItemClass.Level)(buildingData.m_level - 1),
                                     };
 
-                                    InitializePrefab(prefab, commercialAI, itemClass, buildingData.growable);
+                                    InitializePrefab(prefab, commercialAI, itemClass, buildingData.m_growable);
                                     return;
                                 }
 
                                 // Plazas & Promenades not installed - fall back to high commercial.
-                                aiClass = "High Commercial - Level" + buildingData.level;
+                                aiClass = "High Commercial - Level" + buildingData.m_level;
                                 break;
 
                             // Bog standard high commercial.
                             case "high":
-                                aiClass = "High Commercial - Level" + buildingData.level;
+                                aiClass = "High Commercial - Level" + buildingData.m_level;
                                 break;
 
                             // Fall back to low commercial as default.
                             default:
-                                aiClass = "Low Commercial - Level" + buildingData.level;
+                                aiClass = "Low Commercial - Level" + buildingData.m_level;
 
                                 // If invalid subservice, report.
-                                if (buildingData.subService != "low")
+                                if (buildingData.m_subService != "low")
                                 {
-                                    Logging.Message("Commercial building ", buildingData.Name, " has invalid subService ", buildingData.subService, "; reverting to low commercial.");
+                                    Logging.Message("Commercial building ", buildingData.Name, " has invalid subService ", buildingData.m_subService, "; reverting to low commercial.");
                                 }
+
                                 break;
                         }
 
                         // Initialize the prefab.
-                        InitializePrefab(prefab, commercialAI, aiClass, buildingData.growable);
+                        InitializePrefab(prefab, commercialAI, aiClass, buildingData.m_growable);
 
                         break;
                 }
@@ -412,7 +419,7 @@ namespace PloppableRICO
         /// <returns>Service name.</returns>
         private string ServiceName(string category)
         {
-            //  "forest" = "Forestry" 
+            // "forest" = "Forestry"
             if (category == "forest")
             {
                 return "Forestry";
@@ -432,7 +439,7 @@ namespace PloppableRICO
         private bool IsValidIndSubServ(string subservice)
         {
             // Check against each valid subservice.
-            return (subservice == "farming" || subservice == "forest" || subservice == "oil" || subservice == "ore");
+            return subservice == "farming" || subservice == "forest" || subservice == "oil" || subservice == "ore";
         }
     }
 }

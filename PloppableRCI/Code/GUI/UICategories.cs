@@ -1,4 +1,4 @@
-﻿// <copyright file="CategoryUtils.cs" company="algernon (K. Algernon A. Sheppard)">
+﻿// <copyright file="UICategories.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
@@ -10,6 +10,7 @@ namespace PloppableRICO
     /// <summary>
     /// Ploppable RICO Revisited UI category names (translated keys) for display.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:Fields should be private", Justification = "Simple data class")]
     internal class UICategories
     {
         /// <summary>

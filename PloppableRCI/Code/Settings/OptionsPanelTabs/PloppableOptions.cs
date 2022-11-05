@@ -5,6 +5,7 @@
 
 namespace PloppableRICO
 {
+    using System.Collections.Generic;
     using System.Linq;
     using AlgernonCommons.Translation;
     using AlgernonCommons.UI;
@@ -125,19 +126,19 @@ namespace PloppableRICO
             // Update mod settings.
             ModSettings.warnBulldoze = isChecked;
 
-            // If we're in-game (dictionary has been initialized), iterate through dictionary, looking for RICO ploppable buildings and updating their auto-remove flags.
-            if (Loading.xmlManager?.prefabHash != null)
+            // If we're in-game, iterate through dictionary, looking for RICO ploppable buildings and updating their auto-remove flags.
+            if (Loading.IsLoaded)
             {
-                foreach (BuildingInfo prefab in Loading.xmlManager.prefabHash.Keys)
+                foreach (KeyValuePair<BuildingInfo, BuildingData> entry in PrefabManager.PrefabDictionary)
                 {
                     // Get active RICO settings.
-                    RICOBuilding building = RICOUtils.CurrentRICOSetting(Loading.xmlManager.prefabHash[prefab]);
+                    RICOBuilding building = entry.Value.ActiveSetting;
 
                     // Check that it's enabled and isn't growable.
-                    if (building != null && building.ricoEnabled && !building.growable)
+                    if (building != null && building.m_ricoEnabled && !building.m_growable)
                     {
                         // Apply flag.
-                        prefab.m_autoRemove = !isChecked;
+                        entry.Key.m_autoRemove = !isChecked;
                     }
                 }
             }

@@ -98,7 +98,7 @@ namespace PloppableRICO
         /// Returns the construction time of the building.
         /// For ploppable RICO buildings this is always zero.
         /// </summary>
-        /// <returns>Construction time (always 0)</returns>
+        /// <returns>Construction time (always 0).</returns>
         protected override int GetConstructionTime()
         {
             return 0;

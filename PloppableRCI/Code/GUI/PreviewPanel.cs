@@ -35,7 +35,7 @@ namespace PloppableRICO
         {
             // Update current selection to the new building.
             currentSelection = building;
-            renderPrefab = (currentSelection == null || currentSelection.name == null) ? null : PrefabCollection<BuildingInfo>.FindLoaded(currentSelection.name);
+            renderPrefab = (currentSelection == null || currentSelection.Name == null) ? null : PrefabCollection<BuildingInfo>.FindLoaded(currentSelection.Name);
 
             // Generate render if there's a selection with a mesh.
             if (renderPrefab != null && renderPrefab.m_mesh != null)
@@ -78,13 +78,13 @@ namespace PloppableRICO
 
                 // Set and show building level.
                 buildingLevel.isVisible = true;
-                buildingLevel.text = Translations.Translate("PRR_LEVEL") + " " + Mathf.Min((int)currentSelection.prefab.GetClassLevel() + 1, Util.MaxLevelOf(currentSelection.prefab.GetSubService()));
+                buildingLevel.text = Translations.Translate("PRR_LEVEL") + " " + Mathf.Min((int)currentSelection.Prefab.GetClassLevel() + 1, RICOUtils.MaxLevelOf(currentSelection.Prefab.GetSubService()));
                 UILabels.TruncateLabel(buildingLevel, width - 45);
                 buildingLevel.autoHeight = true;
 
                 // Set and show building size.
                 buildingSize.isVisible = true;
-                buildingSize.text = currentSelection.prefab.GetWidth() + "x" + currentSelection.prefab.GetLength();
+                buildingSize.text = currentSelection.Prefab.GetWidth() + "x" + currentSelection.Prefab.GetLength();
                 UILabels.TruncateLabel(buildingSize, width - 45);
                 buildingSize.autoHeight = true;
             }

@@ -1,6 +1,6 @@
 // <copyright file="Loading.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
-// Licensed under the Apache license. See LICENSE.txt file in the project root for full license information.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 // </copyright>
 
 namespace PloppableRICO
@@ -19,16 +19,15 @@ namespace PloppableRICO
     public sealed class Loading : PatcherLoadingBase<OptionsPanel, PatcherBase>
     {
         // Internal instances.
-        internal static RICOPrefabManager xmlManager;
-        internal static ConvertPrefabs convertPrefabs;
+        internal static ConvertPrefabs s_convertPrefabs;
 
         // Broken prefabs list.
-        internal static List<BuildingInfo> brokenPrefabs;
+        internal static List<BuildingInfo> s_brokenPrefabs;
 
         // RICO definitions.
-        internal static PloppableRICODefinition localRicoDef;
-        internal static PloppableRICODefinition mod1RicoDef;
-        internal static PloppableRICODefinition mod2RicoDef;
+        internal static PloppableRICODefinition s_localRicoDef;
+        internal static PloppableRICODefinition s_mod1RicoDef;
+        internal static PloppableRICODefinition s_mod2RicoDef;
 
         private bool _softModConflct;
 
@@ -58,25 +57,20 @@ namespace PloppableRICO
             ModUtils.ABLCReflection();
 
             // Create instances if they don't already exist.
-            if (convertPrefabs == null)
+            if (s_convertPrefabs == null)
             {
-                convertPrefabs = new ConvertPrefabs();
+                s_convertPrefabs = new ConvertPrefabs();
             }
 
-            if (xmlManager == null)
-            {
-                xmlManager = new RICOPrefabManager
-                {
-                    prefabHash = new Dictionary<BuildingInfo, BuildingData>(),
-                };
-            }
+            // Reset prefab dictionary.
+            PrefabManager.PrefabDictionary.Clear();
 
             // Reset broken prefabs list.
-            brokenPrefabs = new List<BuildingInfo>();
+            s_brokenPrefabs = new List<BuildingInfo>();
 
             // Read any local RICO settings.
             string ricoDefPath = "LocalRICOSettings.xml";
-            localRicoDef = null;
+            s_localRicoDef = null;
 
             if (!File.Exists(ricoDefPath))
             {
@@ -84,9 +78,9 @@ namespace PloppableRICO
             }
             else
             {
-                localRicoDef = RICOReader.ParseRICODefinition(ricoDefPath, isLocal: true);
+                s_localRicoDef = RICOReader.ParseRICODefinition(ricoDefPath, isLocal: true);
 
-                if (localRicoDef == null)
+                if (s_localRicoDef == null)
                 {
                     Logging.Message("no valid definitions in ", ricoDefPath);
                 }
@@ -103,25 +97,30 @@ namespace PloppableRICO
             if (_softModConflct)
             {
                 // Soft conflict detected - display warning notification for each one.
-                foreach (string mod in ModUtils.conflictingModNames)
+                foreach (string mod in ModUtils.ConflictingModNames)
                 {
                     if (mod.Equals("PTG") && ModSettings.dsaPTG == 0)
                     {
                         // Plop the Growables.
                         DontShowAgainNotification softConflictBox = NotificationBase.ShowNotification<DontShowAgainNotification>();
                         softConflictBox.AddParas(Translations.Translate("PRR_CON_PTG0"), Translations.Translate("PRR_CON_PTG1"), Translations.Translate("PRR_CON_PTG2"));
-                        softConflictBox.DSAButton.eventClicked += (component, clickEvent) => { ModSettings.dsaPTG = 1; XMLSettingsFile.Save(); };
+                        softConflictBox.DSAButton.eventClicked += (c, p) =>
+                        {
+                            ModSettings.dsaPTG = 1;
+                            XMLSettingsFile.Save();
+                        };
                     }
                 }
             }
 
             // Report any broken assets and remove from our prefab dictionary.
-            foreach (BuildingInfo prefab in brokenPrefabs)
+            foreach (BuildingInfo prefab in s_brokenPrefabs)
             {
                 Logging.Error("broken prefab: ", prefab.name);
-                xmlManager.prefabHash.Remove(prefab);
+                PrefabManager.PrefabDictionary.Remove(prefab);
             }
-            brokenPrefabs.Clear();
+
+            s_brokenPrefabs.Clear();
 
             // Init Ploppable Tool panel.
             PloppableTool.Initialize();

@@ -55,9 +55,9 @@ namespace PloppableRICO
             _buildingNameLabel.text = _buildingData.DisplayName;
 
             // Update custom settings checkboxes to correct state.
-            _hasModSettings.spriteName = _buildingData.hasMod ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
-            _hasAuthorSettings.spriteName = _buildingData.hasAuthor ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
-            _hasLocalSettings.spriteName = _buildingData.hasLocal ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
+            _hasModSettings.spriteName = _buildingData.HasMod ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
+            _hasAuthorSettings.spriteName = _buildingData.HasAuthor ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
+            _hasLocalSettings.spriteName = _buildingData.HasLocal ? "AchievementCheckedTrue" : "AchievementCheckedFalse";
 
             // Set initial background as deselected state.
             Deselect(rowIndex);

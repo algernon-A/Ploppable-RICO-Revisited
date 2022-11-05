@@ -1,4 +1,9 @@
-﻿namespace PloppableRICO
+﻿// <copyright file="RICOReader.cs" company="algernon (K. Algernon A. Sheppard)">
+// Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
+// Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
+
+namespace PloppableRICO
 {
     using System;
     using System.IO;
@@ -11,13 +16,12 @@
     /// </summary>
     public class RICOReader
     {
-
         /// <summary>
         /// Loads and parses the given RICO file.
         /// </summary>
-        /// <param name="ricoDefPath">Definition file path</param>
-        /// <param name="isLocal">True if this is a local settings file, false for author settings file</param>
-        /// <returns>Parsed Ploppable RICO definition file</returns>
+        /// <param name="ricoDefPath">Definition file path.</param>
+        /// <param name="isLocal">True if this is a local settings file, false for author settings file.</param>
+        /// <returns>Parsed Ploppable RICO definition file.</returns>
         public static PloppableRICODefinition ParseRICODefinition(string ricoDefPath, bool isLocal = false)
         {
             // Local settings flag.
@@ -33,7 +37,7 @@
                     XmlElementAttribute attr = new XmlElementAttribute
                     {
                         ElementName = "RICOBuilding",
-                        Type = typeof(RICOBuilding)
+                        Type = typeof(RICOBuilding),
                     };
                     XmlAttributeOverrides attrOverrides = new XmlAttributeOverrides();
                     attrOverrides.Add(typeof(RICOBuilding), "Building", attrs);
@@ -53,15 +57,15 @@
                         foreach (RICOBuilding building in result.Buildings)
                         {
                             // Check for fatal errors in each building.
-                            errorList = building.FatalErrors;
+                            errorList = building.CheckFatalErrors();
                             if (errorList.Length == 0)
                             {
                                 // No fatal errors; check for non-fatal errors.
-                                errorList = building.NonFatalErrors;
+                                errorList = building.CheckNonFatalErrors();
 
                                 if (errorList.Length != 0)
                                 {
-                                    if (isLocal && building.ricoEnabled)
+                                    if (isLocal && building.m_ricoEnabled)
                                     {
                                         // Errors in local settings need to be reported, except for buildings that aren't activated in RICO (e.g. for when the user has de-activated a RICO builidng with issues).
                                         Logging.Error("non-fatal errors for building '", building.Name, "' in local settings:\r\n", errorList);

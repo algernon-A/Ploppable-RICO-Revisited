@@ -98,19 +98,19 @@ namespace PloppableRICO
             // Double-click to open building's settings.
             Component.eventDoubleClick += (component, mouseEvent) =>
             {
-                SettingsPanelManager.Open(_currentData.prefab);
+                SettingsPanelManager.Open(_currentData.Prefab);
             };
         }
 
         /// <summary>
         /// Displays a line item as required.
         /// </summary>
-        /// <param name="data">RICO BuildingData record to display</param>
-        /// <param name="index">Index number of this item in the visible panel</param>
+        /// <param name="data">RICO BuildingData record to display.</param>
+        /// <param name="index">Index number of this item in the visible panel.</param>
         public void Display(BuildingData data, int index)
         {
             // Safety first!
-            if (Component == null || data?.prefab == null)
+            if (Component == null || data?.Prefab == null)
             {
                 return;
             }
@@ -119,20 +119,20 @@ namespace PloppableRICO
             {
                 // Set current data reference.
                 _currentData = data;
-                Component.name = data.name;
+                Component.name = data.Name;
 
                 // Ensure component is unfocused.
                 Component.Unfocus();
 
                 // See if we've already got a thumbnail for this building.
-                if (data.thumbnailAtlas == null)
+                if (data.ThumbnailAtlas == null)
                 {
                     // No thumbnail yet - clear the sprite and queue thumbnail for rendering.
                     ThumbnailManager.CreateThumbnail(_currentData);
                 }
 
                 // Apply icons.
-                Component.atlas = _currentData.thumbnailAtlas;
+                Component.atlas = _currentData.ThumbnailAtlas;
                 Component.normalFgSprite = _currentData.DisplayName;
                 Component.hoveredFgSprite = _currentData.DisplayName + "Hovered";
                 Component.pressedFgSprite = _currentData.DisplayName + "Pressed";
@@ -142,24 +142,25 @@ namespace PloppableRICO
                 _nameLabel.text = data.DisplayName;
 
                 // Information label - building level.
-                _levelLabel.text = Translations.Translate("PRR_LVL") + " " + ((int)data.prefab.m_class.m_level + 1);
+                _levelLabel.text = Translations.Translate("PRR_LVL") + " " + ((int)data.Prefab.m_class.m_level + 1);
 
                 // Information label - building size.
-                _sizeLabel.text = data.prefab.GetWidth() + "x" + data.prefab.GetLength();
+                _sizeLabel.text = data.Prefab.GetWidth() + "x" + data.Prefab.GetLength();
+
                 // Right anchor is unreliable, so have to set position manually.
                 _sizeLabel.relativePosition = new Vector3(Component.width - _sizeLabel.width - 5, Component.height - 10);
             }
             catch (Exception e)
             {
                 // Just carry on without displaying this button - don't stop the whole UI just for one failure.
-                Logging.LogException(e, "exception displaying ScrollPanelItem" );
+                Logging.LogException(e, "exception displaying ScrollPanelItem");
             }
         }
 
         /// <summary>
         /// Selects an item, including setting the current tool to plop the selected building.
         /// </summary>
-        /// <param name="index">Display list index number of building to select</param>
+        /// <param name="index">Display list index number of building to select.</param>
         public void Select(int index)
         {
             // Focus the icon.
@@ -169,7 +170,7 @@ namespace PloppableRICO
             // Apply building prefab to the tool.
             BuildingTool buildingTool = ToolsModifierControl.SetTool<BuildingTool>();
             {
-                buildingTool.m_prefab = _currentData.prefab;
+                buildingTool.m_prefab = _currentData.Prefab;
                 buildingTool.m_relocate = 0;
             }
         }
@@ -177,7 +178,7 @@ namespace PloppableRICO
         /// <summary>
         /// Deselects an item.
         /// </summary>
-        /// <param name="index">Display list index number of building to deselect</param>
+        /// <param name="index">Display list index number of building to deselect.</param>
         public void Deselect(int index)
         {
             // Restore normal (unfocused) icons.
@@ -188,14 +189,14 @@ namespace PloppableRICO
         /// <summary>
         /// Creates a tooltip string for a building, including key stats.
         /// </summary>
-        /// <param name="building">Building to generate for</param>
-        /// <returns>A tooltip string</returns>
+        /// <param name="building">Building to generate for.</param>
+        /// <returns>A tooltip string.</returns>
         private string BuildingTooltip(BuildingData building)
         {
             // Safety check.
-            if (building?.prefab == null)
+            if (building?.Prefab == null)
             {
-                return String.Empty;
+                return string.Empty;
             }
 
             StringBuilder tooltip = new StringBuilder();
@@ -205,7 +206,7 @@ namespace PloppableRICO
             // Construction cost.
             try
             {
-                tooltip.AppendLine(LocaleFormatter.FormatCost(building.prefab.GetConstructionCost(), false));
+                tooltip.AppendLine(LocaleFormatter.FormatCost(building.Prefab.GetConstructionCost(), false));
             }
             catch
             {
@@ -213,15 +214,15 @@ namespace PloppableRICO
             }
 
             // Only add households or workplaces for Private AI types, not for e.g. Beautification (dummy service).
-            if (building.prefab.GetAI() is PrivateBuildingAI thisAI)
+            if (building.Prefab.GetAI() is PrivateBuildingAI thisAI)
             {
                 // Household or workplace count.
-                if (building.prefab.GetService() == ItemClass.Service.Residential)
+                if (building.Prefab.GetService() == ItemClass.Service.Residential)
                 {
                     // Residential - households.
                     tooltip.Append(Translations.Translate("PRR_HOU"));
                     tooltip.Append(": ");
-                    tooltip.AppendLine(thisAI.CalculateHomeCount(building.prefab.GetClassLevel(), new Randomizer(), building.prefab.GetWidth(), building.prefab.GetLength()).ToString());
+                    tooltip.AppendLine(thisAI.CalculateHomeCount(building.Prefab.GetClassLevel(), default, building.Prefab.GetWidth(), building.Prefab.GetLength()).ToString());
                 }
                 else
                 {
@@ -230,16 +231,16 @@ namespace PloppableRICO
 
                     tooltip.Append(Translations.Translate("PRR_WOR"));
                     tooltip.Append(": ");
-                    thisAI.CalculateWorkplaceCount(building.prefab.GetClassLevel(), new Randomizer(), building.prefab.GetWidth(), building.prefab.GetLength(), out workplaces[0], out workplaces[1], out workplaces[2], out workplaces[3]);
+                    thisAI.CalculateWorkplaceCount(building.Prefab.GetClassLevel(), default, building.Prefab.GetWidth(), building.Prefab.GetLength(), out workplaces[0], out workplaces[1], out workplaces[2], out workplaces[3]);
                     tooltip.AppendLine(workplaces.Sum().ToString());
                 }
             }
 
             // Physical size.
             tooltip.Append("Size: ");
-            tooltip.Append(building.prefab.GetWidth());
+            tooltip.Append(building.Prefab.GetWidth());
             tooltip.Append("x");
-            tooltip.AppendLine(building.prefab.GetLength().ToString());
+            tooltip.AppendLine(building.Prefab.GetLength().ToString());
 
             return tooltip.ToString();
         }

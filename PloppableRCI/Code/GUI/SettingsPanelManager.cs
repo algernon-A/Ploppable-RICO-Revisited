@@ -83,7 +83,7 @@ namespace PloppableRICO
         internal static void Close()
         {
             // Save current selection for next time.
-            s_lastSelection = Panel?.CurrentSelection?.prefab;
+            s_lastSelection = Panel?.CurrentSelection?.Prefab;
             s_lastFilter = Panel?.GetFilter();
             Panel?.GetListPosition(out s_lastIndex, out s_lastPostion);
 

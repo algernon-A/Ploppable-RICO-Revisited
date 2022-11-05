@@ -147,10 +147,10 @@ namespace PloppableRICO
                 Logging.Message("regenerating all thumbnails");
 
                 // Step through each loaded and active RICO prefab.
-                foreach (BuildingData buildingData in Loading.xmlManager.prefabHash.Values)
+                foreach (BuildingData buildingData in PrefabManager.PrefabDictionary.Values)
                 {
                     // Cancel its atlas.
-                    buildingData.thumbnailAtlas = null;
+                    buildingData.ThumbnailAtlas = null;
                 }
             }
         }
@@ -266,14 +266,14 @@ namespace PloppableRICO
                 _tabButtons[14].eventClick += (component, clickEvent) => TabClicked(14, _tabSprites[14]);
 
                 // Hide AD tabs if AD is not installed.
-                if (!Util.IsADinstalled())
+                if (!RICOUtils.IsADinstalled())
                 {
                     _tabButtons[10].isVisible = false;
                     _tabButtons[11].isVisible = false;
                 }
 
                 // Hide GC tabs if GC is not installed.
-                if (!Util.IsGCinstalled())
+                if (!RICOUtils.IsGCinstalled())
                 {
                     _tabButtons[12].isVisible = false;
                     _tabButtons[13].isVisible = false;
@@ -285,7 +285,7 @@ namespace PloppableRICO
                 _showSettings.normalBgSprite = "SubBarButtonBase";
                 _showSettings.eventClick += (component, clickEvent) =>
                 {
-                    SettingsPanelManager.Open(_scrollPanel?.selectedItem?.prefab);
+                    SettingsPanelManager.Open(_scrollPanel?.selectedItem?.Prefab);
                 };
 
                 // Add UI text.
@@ -356,10 +356,10 @@ namespace PloppableRICO
             List<BuildingData> buildingList = new List<BuildingData>();
 
             // Iterate through each prefab in our collection and see if it has RICO settings with a matching UI category.
-            foreach (BuildingData buildingData in Loading.xmlManager.prefabHash.Values)
+            foreach (BuildingData buildingData in PrefabManager.PrefabDictionary.Values)
             {
                 // Get the currently active RICO setting (if any) for this building.
-                RICOBuilding ricoSetting = RICOUtils.CurrentRICOSetting(buildingData);
+                RICOBuilding ricoSetting = buildingData.ActiveSetting;
 
                 // See if there's a valid RICO setting.
                 if (ricoSetting != null)
@@ -429,7 +429,7 @@ namespace PloppableRICO
                 case "ore":
                     return 9;
                 case "leisure":
-                    if (Util.IsADinstalled())
+                    if (RICOUtils.IsADinstalled())
                     {
                         return 10;
                     }
@@ -440,7 +440,7 @@ namespace PloppableRICO
                     }
 
                 case "tourist":
-                    if (Util.IsADinstalled())
+                    if (RICOUtils.IsADinstalled())
                     {
                         return 11;
                     }
@@ -451,7 +451,7 @@ namespace PloppableRICO
                     }
 
                 case "organic":
-                    if (Util.IsGCinstalled())
+                    if (RICOUtils.IsGCinstalled())
                     {
                         return 12;
                     }
@@ -463,7 +463,7 @@ namespace PloppableRICO
 
                 case "hightech":
                     // IT cluster.
-                    if (Util.IsGCinstalled())
+                    if (RICOUtils.IsGCinstalled())
                     {
                         return 13;
                     }
@@ -475,7 +475,7 @@ namespace PloppableRICO
 
                 case "selfsufficient":
                     // Self-sufficient (eco) residential.
-                    if (Util.IsGCinstalled())
+                    if (RICOUtils.IsGCinstalled())
                     {
                         return 14;
                     }

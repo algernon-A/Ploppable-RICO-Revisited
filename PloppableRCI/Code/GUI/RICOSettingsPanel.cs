@@ -210,14 +210,14 @@ namespace PloppableRICO
         internal void SelectBuilding(BuildingInfo buildingInfo)
         {
             // Get the RICO BuildingData associated with this prefab.
-            BuildingData building = Loading.xmlManager.prefabHash[buildingInfo];
+            BuildingData building = PrefabManager.PrefabDictionary[buildingInfo];
 
             // Ensure the fastlist is filtered to include this building category only.
-            _filterBar.SelectBuildingCategory(building.category);
+            _filterBar.SelectBuildingCategory(building.Category);
             _buildingSelection.Data = GenerateFastList();
 
             // Find and select the building in the fastlist.
-            _buildingSelection.FindItem<BuildingData>(x => x.name.Equals(building.name));
+            _buildingSelection.FindItem<BuildingData>(x => x.Name.Equals(building.Name));
 
             // Update the selected building to the current.
             UpdateSelectedBuilding(building);
@@ -232,7 +232,7 @@ namespace PloppableRICO
             if (building != null)
             {
                 // Update sub-panels.
-                CurrentSelection = Loading.xmlManager.prefabHash[building.prefab];
+                CurrentSelection = PrefabManager.PrefabDictionary[building.Prefab];
 
                 _buildingOptionsPanel.SelectionChanged(CurrentSelection);
                 _savePanel.SelectionChanged(CurrentSelection);
@@ -250,10 +250,10 @@ namespace PloppableRICO
             List<BuildingData> filteredList = new List<BuildingData>();
 
             // Iterate through all loaded building prefabs and add them to the list if they meet the filter conditions.
-            foreach (BuildingData item in Loading.xmlManager.prefabHash.Values)
+            foreach (BuildingData item in PrefabManager.PrefabDictionary.Values)
             {
                 // Skip any null or invalid prefabs.
-                if (item?.prefab == null)
+                if (item?.Prefab == null)
                 {
                     continue;
                 }
@@ -261,7 +261,7 @@ namespace PloppableRICO
                 // Filter by zoning category.
                 if (!_filterBar.AllCatsSelected())
                 {
-                    Category category = item.category;
+                    Category category = item.Category;
                     if (category == Category.None || !_filterBar.IsCatSelected(category))
                     {
                         continue;
@@ -269,16 +269,16 @@ namespace PloppableRICO
                 }
 
                 // Filter by settings.
-                if ((_filterBar.SettingsFilter[0].isChecked && !item.hasMod)
-                    || (_filterBar.SettingsFilter[1].isChecked && !item.hasAuthor)
-                    || (_filterBar.SettingsFilter[2].isChecked && !item.hasLocal)
-                    || (_filterBar.SettingsFilter[3].isChecked && !(item.hasMod || item.hasAuthor || item.hasLocal)))
+                if ((_filterBar.SettingsFilter[0].isChecked && !item.HasMod)
+                    || (_filterBar.SettingsFilter[1].isChecked && !item.HasAuthor)
+                    || (_filterBar.SettingsFilter[2].isChecked && !item.HasLocal)
+                    || (_filterBar.SettingsFilter[3].isChecked && !(item.HasMod || item.HasAuthor || item.HasLocal)))
                 {
                     continue;
                 }
 
                 // Filter by name.
-                if (!_filterBar.FilterString.IsNullOrWhiteSpace() && !item.name.ToLower().Contains(_filterBar.FilterString.ToLower()))
+                if (!_filterBar.FilterString.IsNullOrWhiteSpace() && !item.Name.ToLower().Contains(_filterBar.FilterString.ToLower()))
                 {
                     continue;
                 }

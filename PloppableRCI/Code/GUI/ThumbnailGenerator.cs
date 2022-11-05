@@ -44,26 +44,26 @@ namespace PloppableRICO
             _renderer.Zoom = 4f;
 
             // Don't do anything with null prefabs.
-            if (building?.prefab == null)
+            if (building?.Prefab == null)
             {
                 return;
             }
 
             // Set mesh and material for render.
-            if (!_renderer.SetTarget(building.prefab))
+            if (!_renderer.SetTarget(building.Prefab))
             {
                 // Something went wrong - this isn't a valid rendering target; exit.
-                Logging.Message("no thumbnail generated for null mesh ", building.prefab.name);
+                Logging.Message("no thumbnail generated for null mesh ", building.Prefab.name);
                 return;
             }
 
             // If the selected building has colour variations, temporarily set the colour to the default for rendering.
-            if (building.prefab.m_useColorVariations)
+            if (building.Prefab.m_useColorVariations)
             {
-                Color originalColor = building.prefab.m_material.color;
-                building.prefab.m_material.color = building.prefab.m_color0;
+                Color originalColor = building.Prefab.m_material.color;
+                building.Prefab.m_material.color = building.Prefab.m_color0;
                 _renderer.Render(true);
-                building.prefab.m_material.color = originalColor;
+                building.Prefab.m_material.color = originalColor;
             }
             else
             {
@@ -110,7 +110,7 @@ namespace PloppableRICO
             AddTexturesToAtlas(thumbnailAtlas, GenerateThumbnailVariants(thumbnailTexture));
 
             // Add atlas to our building data record.
-            building.thumbnailAtlas = thumbnailAtlas;
+            building.ThumbnailAtlas = thumbnailAtlas;
         }
 
         /// <summary>

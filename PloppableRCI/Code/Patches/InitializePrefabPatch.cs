@@ -35,17 +35,11 @@ namespace PloppableRICO
             }
 
             // Create a new building record for this prefab and add it to our lists.
-            BuildingData buildingData = new BuildingData
-            {
-                prefab = __instance,
-                name = __instance.name,
-                density = Loading.xmlManager.SetPrefabDensity(__instance),
-                category = Loading.xmlManager.AssignCategory(__instance),
-            };
-            Loading.xmlManager.prefabHash[__instance] = buildingData;
+            BuildingData buildingData = new BuildingData(__instance);
+            PrefabManager.PrefabDictionary[__instance] = buildingData;
 
             // Add to broken prefabs list (will be removed later if it's not broken).
-            Loading.brokenPrefabs.Add(__instance);
+            Loading.s_brokenPrefabs.Add(__instance);
 
             // Search for PloppableRICODefinition.xml files with this asset.
             // Need to use FindAssetByName(string, AssetType) because FindAssetByName(string) doesn't catch all assets at this stage of initialisation
@@ -74,8 +68,8 @@ namespace PloppableRICO
                             {
                                 // Match!  Add these author settings to our prefab dictionary.
                                 Logging.Message("found author settings for ", buildingDef.Name);
-                                Loading.xmlManager.prefabHash[__instance].author = buildingDef;
-                                Loading.xmlManager.prefabHash[__instance].hasAuthor = true;
+                                PrefabManager.PrefabDictionary[__instance].Author = buildingDef;
+                                PrefabManager.PrefabDictionary[__instance].HasAuthor = true;
                             }
                         }
                     }
@@ -83,78 +77,78 @@ namespace PloppableRICO
             }
 
             // Check for and add any local settings for this prefab to our list.
-            if (Loading.localRicoDef != null)
+            if (Loading.s_localRicoDef != null)
             {
                 // Step through our previously loaded local settings and see if we've got a match.
-                foreach (RICOBuilding buildingDef in Loading.localRicoDef.Buildings)
+                foreach (RICOBuilding buildingDef in Loading.s_localRicoDef.Buildings)
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
                         // Match!  Add these author settings to our prefab dictionary.
-                        Loading.xmlManager.prefabHash[__instance].local = buildingDef;
-                        Loading.xmlManager.prefabHash[__instance].hasLocal = true;
+                        PrefabManager.PrefabDictionary[__instance].Local = buildingDef;
+                        PrefabManager.PrefabDictionary[__instance].HasLocal = true;
                     }
                 }
             }
 
             // Check for any Workshop RICO mod settings for this prefab.
-            if (Loading.mod1RicoDef != null)
+            if (Loading.s_mod1RicoDef != null)
             {
                 // Step through our previously loaded local settings and see if we've got a match.
-                foreach (RICOBuilding buildingDef in Loading.mod1RicoDef.Buildings)
+                foreach (RICOBuilding buildingDef in Loading.s_mod1RicoDef.Buildings)
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
                         // Match!  Add these author settings to our prefab dictionary.
-                        Loading.xmlManager.prefabHash[__instance].mod = buildingDef;
-                        Loading.xmlManager.prefabHash[__instance].hasMod = true;
+                        PrefabManager.PrefabDictionary[__instance].Mod = buildingDef;
+                        PrefabManager.PrefabDictionary[__instance].HasMod = true;
                     }
                 }
             }
 
             // Check for Modern Japan CCP mod settings for this prefab.
-            if (Loading.mod2RicoDef != null)
+            if (Loading.s_mod2RicoDef != null)
             {
                 // Step through our previously loaded local settings and see if we've got a match.
-                foreach (RICOBuilding buildingDef in Loading.mod2RicoDef.Buildings)
+                foreach (RICOBuilding buildingDef in Loading.s_mod2RicoDef.Buildings)
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
                         // Match!  Add these author settings to our prefab dictionary.
-                        Loading.xmlManager.prefabHash[__instance].mod = buildingDef;
-                        Loading.xmlManager.prefabHash[__instance].hasMod = true;
+                        PrefabManager.PrefabDictionary[__instance].Mod = buildingDef;
+                        PrefabManager.PrefabDictionary[__instance].HasMod = true;
                     }
                 }
             }
 
             // Apply appropriate RICO settings to prefab.
-            if (Loading.convertPrefabs != null)
+            if (Loading.s_convertPrefabs != null)
             {
                 // Start with local settings.
-                if (Loading.xmlManager.prefabHash[__instance].hasLocal)
+                if (PrefabManager.PrefabDictionary[__instance].HasLocal)
                 {
                     // If local settings disable RICO, dont convert.
-                    if (Loading.xmlManager.prefabHash[__instance].local.ricoEnabled)
+                    if (PrefabManager.PrefabDictionary[__instance].Local.m_ricoEnabled)
                     {
-                        Loading.convertPrefabs.ConvertPrefab(Loading.xmlManager.prefabHash[__instance].local, __instance);
+                        Loading.s_convertPrefabs.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Local, __instance);
                     }
                 }
-                else if (Loading.xmlManager.prefabHash[__instance].hasAuthor)
+                else if (PrefabManager.PrefabDictionary[__instance].HasAuthor)
                 {
                     // If no local settings, apply author settings.
                     // If author settings disable RICO, dont convert.
-                    if (Loading.xmlManager.prefabHash[__instance].author.ricoEnabled)
+                    if (PrefabManager.PrefabDictionary[__instance].Author.m_ricoEnabled)
                     {
-                        Loading.convertPrefabs.ConvertPrefab(Loading.xmlManager.prefabHash[__instance].author, __instance);
+                        Loading.s_convertPrefabs.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Author, __instance);
                     }
                 }
-                else if (Loading.xmlManager.prefabHash[__instance].hasMod)
+                else if (PrefabManager.PrefabDictionary[__instance].HasMod)
                 {
                     // If none of the above, apply mod settings.
                     // If mod settings disable RICO, dont convert.
-                    if (Loading.xmlManager.prefabHash[__instance].mod.ricoEnabled)
+                    if (PrefabManager.PrefabDictionary[__instance].Mod.m_ricoEnabled)
                     {
-                        Loading.convertPrefabs.ConvertPrefab(Loading.xmlManager.prefabHash[__instance].mod, __instance);
+                        Loading.s_convertPrefabs.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Mod, __instance);
                     }
                 }
                 else
@@ -193,7 +187,7 @@ namespace PloppableRICO
         public static void Postfix(BuildingInfo __instance)
         {
             // If we've made it here, the asset has initialised correctly (no PrefabExceptions thrown); remove it from broken prefabs list.
-            Loading.brokenPrefabs.Remove(__instance);
+            Loading.s_brokenPrefabs.Remove(__instance);
         }
 
         /// <summary>
