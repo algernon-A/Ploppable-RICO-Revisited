@@ -33,13 +33,13 @@ namespace PloppableRICO
         /// Gets or sets a value indicating whether plopped Ploppable RICO growables have zero construction time (instant build).
         /// </summary>
         [XmlElement("PlopRico")]
-        public bool InstantRicoConstruction { get => ModSettings.plopRico; set => ModSettings.plopRico = value; }
+        public bool InstantRicoConstruction { get => BuildingToolPatches.InstantRicoConstruction; set => BuildingToolPatches.InstantRicoConstruction = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether plopped generic growables have zero construction time (instant build).
         /// </summary>
         [XmlElement("PlopOther")]
-        public bool InstantOtherConstruction { get => ModSettings.plopOther; set => ModSettings.plopOther = value; }
+        public bool InstantOtherConstruction { get => BuildingToolPatches.InstantOtherConstruction; set => BuildingToolPatches.InstantOtherConstruction = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether disaster collapsing is disabled for ploppable RICO buildings.
@@ -81,61 +81,61 @@ namespace PloppableRICO
         /// Gets or sets a value indicating whether land value complaints are disabled for Ploppable RICO ploppables (true means disabled).
         /// </summary>
         [XmlElement("NoValueRicoPlop")]
-        public bool NoValueComplaintRicoPlop { get => ModSettings.noValueRicoPlop; set => ModSettings.noValueRicoPlop = value; }
+        public bool NoValueComplaintRicoPlop { get => LandValueComplaintPatches.NoValueRicoPlop; set => LandValueComplaintPatches.NoValueRicoPlop = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether land value complaints are disabled for Ploppable RICO growables (true means disabled).
         /// </summary>
         [XmlElement("NoValueRicoGrow")]
-        public bool NoValueComplaintRicoGrow { get => ModSettings.noValueRicoGrow; set => ModSettings.noValueRicoGrow = value; }
+        public bool NoValueComplaintRicoGrow { get => LandValueComplaintPatches.NoValueRicoGrow; set => LandValueComplaintPatches.NoValueRicoGrow = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether land value complaints are disabled for generic growables (true means disabled).
         /// </summary>
         [XmlElement("NoValueOther")]
-        public bool NoValueComplaintOther { get => ModSettings.noValueOther; set => ModSettings.noValueOther = value; }
+        public bool NoValueComplaintOther { get => LandValueComplaintPatches.NoValueOther; set => LandValueComplaintPatches.NoValueOther = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether not enough services complaints are disabled for Ploppable RICO ploppables (true means disabled).
         /// </summary>
         [XmlElement("NoServicesRicoPlop")]
-        public bool NoServicesComplaintRicoPlop { get => ModSettings.noServicesRicoPlop; set => ModSettings.noServicesRicoPlop = value; }
+        public bool NoServicesComplaintRicoPlop { get => TooFewServicesComplaintPatches.NoServicesRicoPlop; set => TooFewServicesComplaintPatches.NoServicesRicoPlop = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether not enough services complaints are disabled for Ploppable RICO growables (true means disabled).
         /// </summary>
         [XmlElement("NoServicesRicoGrow")]
-        public bool NoServicesComplaintRicoGrow { get => ModSettings.noServicesRicoGrow; set => ModSettings.noServicesRicoGrow = value; }
+        public bool NoServicesComplaintRicoGrow { get => TooFewServicesComplaintPatches.NoServicesRicoGrow; set => TooFewServicesComplaintPatches.NoServicesRicoGrow = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether not enough services complaints are disabled for generic growables (true means disabled).
         /// </summary>
         [XmlElement("NoServicesOther")]
-        public bool NoServicesComplaintOther { get => ModSettings.noServicesOther; set => ModSettings.noServicesOther = value; }
+        public bool NoServicesComplaintOther { get => TooFewServicesComplaintPatches.NoServicesOther; set => TooFewServicesComplaintPatches.NoServicesOther = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether plopped Ploppable RICO growables should be made historical.
         /// </summary>
         [XmlElement("MakeRicoHistorical")]
-        public bool MakeRicoHistorical { get => ModSettings.historicalRico; set => ModSettings.historicalRico = value; }
+        public bool MakeRicoHistorical { get => BuildingToolPatches.HistoricalRico; set => BuildingToolPatches.HistoricalRico = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether plopped generic growables should be made historical.
         /// </summary>
         [XmlElement("MakeOtherHistorical")]
-        public bool MakeOtherHistorical { get => ModSettings.historicalOther; set => ModSettings.historicalOther = value; }
+        public bool MakeOtherHistorical { get => BuildingToolPatches.HistoricalOther; set => BuildingToolPatches.HistoricalOther = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether plopped Ploppable RICO growables should have their levels locked via Advanced Building Level Control.
         /// </summary>
         [XmlElement("LockRicoLevel")]
-        public bool LockRicoLevel { get => ModSettings.lockLevelRico; set => ModSettings.lockLevelRico = value; }
+        public bool LockRicoLevel { get => BuildingToolPatches.LockLevelRico; set => BuildingToolPatches.LockLevelRico = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether plopped generic growables should have their levels locked via Advanced Building Level Control.
         /// </summary>
         [XmlElement("LockOtherLevel")]
-        public bool LockOtherLevel { get => ModSettings.lockLevelOther; set => ModSettings.lockLevelOther = value; }
+        public bool LockOtherLevel { get => BuildingToolPatches.LockLevelOther; set => BuildingToolPatches.LockLevelOther = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the panel is disabled when not in use.
@@ -200,37 +200,37 @@ namespace PloppableRICO
         /// Gets or sets a value indicating whether calculated building cost overrides are in effect.
         /// </summary>
         [XmlElement("OverrideCost")]
-        public bool OverrideCost { get => ModSettings.overrideCost; set => ModSettings.overrideCost = value; }
+        public bool OverrideCost { get => ModSettings.OverrideCost; set => ModSettings.OverrideCost = value; }
 
         /// <summary>
         /// Gets or sets the calculated cost override per household.
         /// </summary>
         [XmlElement("CostPerHousehold")]
-        public int CostPerHousehold { get => ModSettings.costPerHousehold; set => ModSettings.costPerHousehold = value; }
+        public int CostPerHousehold { get => ModSettings.CostPerHousehold; set => ModSettings.CostPerHousehold = value; }
 
         /// <summary>
         /// Gets or sets the calculated cost override multiplier by building level.
         /// </summary>
         [XmlElement("CostMultResLevel")]
-        public int CostMultResLevel { get => ModSettings.costMultResLevel; set => ModSettings.costMultResLevel = value; }
+        public int CostMultResLevel { get => ModSettings.CostMultResLevel; set => ModSettings.CostMultResLevel = value; }
 
         /// <summary>
         /// Gets or sets the calculated cost override per uneducated worker job.
         /// </summary>
         [XmlElement("CostPerUneducated")]
-        public int CostPerJob0 { get => ModSettings.costPerJob0; set => ModSettings.costPerJob0 = value; }
+        public int CostPerJob0 { get => ModSettings.CostPerJob0; set => ModSettings.CostPerJob0 = value; }
 
         /// <summary>
         /// Gets or sets the calculated cost override per educated worker job.
         /// </summary>
         [XmlElement("CostPerEducated")]
-        public int CostPerJob1 { get => ModSettings.costPerJob1; set => ModSettings.costPerJob1 = value; }
+        public int CostPerJob1 { get => ModSettings.CostPerJob1; set => ModSettings.CostPerJob1 = value; }
 
         /// <summary>
         /// Gets or sets the calculated cost override per well-educated worker job.
         /// </summary>
         [XmlElement("CostPerWellEducated")]
-        public int CostPerJob2 { get => ModSettings.costPerJob2; set => ModSettings.costPerJob2 = value; }
+        public int CostPerJob2 { get => ModSettings.CostPerJob2; set => ModSettings.CostPerJob2 = value; }
 
         /// <summary>
         /// Gets or sets the calculated cost override per highly-educated worker job.

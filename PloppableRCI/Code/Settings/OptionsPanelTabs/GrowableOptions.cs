@@ -28,13 +28,13 @@ namespace PloppableRICO
 
             // Add plop growables checkboxes.
             UIHelperBase plopGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_PLP"));
-            plopGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.plopRico, isChecked =>
+            plopGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), BuildingToolPatches.InstantRicoConstruction, isChecked =>
             {
-                ModSettings.plopRico = isChecked;
+                BuildingToolPatches.InstantRicoConstruction = isChecked;
             });
-            plopGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.plopOther, isChecked =>
+            plopGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), BuildingToolPatches.InstantOtherConstruction, isChecked =>
             {
-                ModSettings.plopOther = isChecked;
+                BuildingToolPatches.InstantOtherConstruction = isChecked;
             });
 
             // Add no zone checks checkboxes.
@@ -61,13 +61,13 @@ namespace PloppableRICO
 
             // Add 'make plopped growables historical' checkboxes.
             UIHelperBase histGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_HST"));
-            histGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.historicalRico, isChecked =>
+            histGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), BuildingToolPatches.HistoricalRico, isChecked =>
             {
-                ModSettings.historicalRico = isChecked;
+                BuildingToolPatches.HistoricalRico = isChecked;
             });
-            histGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.historicalOther, isChecked =>
+            histGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), BuildingToolPatches.HistoricalOther, isChecked =>
             {
-                ModSettings.historicalOther = isChecked;
+                BuildingToolPatches.HistoricalOther = isChecked;
             });
 
             // Add level control checkboxes.
@@ -83,13 +83,13 @@ namespace PloppableRICO
             if (BuildingToolPatches.LockBuildingLevel != null)
             {
                 // ABLC installed; display checkboxes.
-                levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.lockLevelRico, isChecked =>
+                levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), BuildingToolPatches.LockLevelRico, isChecked =>
                 {
-                    ModSettings.lockLevelRico = isChecked;
+                    BuildingToolPatches.LockLevelRico = isChecked;
                 });
-                levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.lockLevelOther, isChecked =>
+                levelGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), BuildingToolPatches.LockLevelOther, isChecked =>
                 {
-                    ModSettings.lockLevelOther = isChecked;
+                    BuildingToolPatches.LockLevelOther = isChecked;
                 });
             }
 

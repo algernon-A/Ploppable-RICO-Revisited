@@ -17,26 +17,10 @@ namespace PloppableRICO
         internal static int thumbBacks = (byte)ThumbBackCats.Skybox;
 
         // Growable plopping settings.
-        internal static bool plopRico = true;
-        internal static bool plopOther = true;
         internal static bool noZonesRico = true;
         internal static bool noZonesOther = true;
         internal static bool noSpecRico = true;
         internal static bool noSpecOther = true;
-
-        // Ignore complaint settings.
-        internal static bool noValueRicoPlop = true;
-        internal static bool noValueRicoGrow = true;
-        internal static bool noValueOther = false;
-        internal static bool noServicesRicoPlop = true;
-        internal static bool noServicesRicoGrow = true;
-        internal static bool noServicesOther = false;
-
-        // Levelling settings.
-        internal static bool historicalRico = true;
-        internal static bool historicalOther = false;
-        internal static bool lockLevelRico = false;
-        internal static bool lockLevelOther = false;
 
         // Ploppable demolition warnings.
         internal static bool warnBulldoze = false;
@@ -46,12 +30,12 @@ namespace PloppableRICO
         internal static bool noCollapse = true;
 
         // Cost overides.
-        internal static bool overrideCost = false;
-        internal static int costPerHousehold = 100;
-        internal static int costMultResLevel = 20;
-        internal static int costPerJob0 = 20;
-        internal static int costPerJob1 = 25;
-        internal static int costPerJob2 = 30;
+        internal static bool OverrideCost = false;
+        internal static int CostPerHousehold = 100;
+        internal static int CostMultResLevel = 20;
+        internal static int CostPerJob0 = 20;
+        internal static int CostPerJob1 = 25;
+        internal static int CostPerJob2 = 30;
         internal static int costPerJob3 = 35;
 
         // What's new notification version.

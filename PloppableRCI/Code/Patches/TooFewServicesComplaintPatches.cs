@@ -15,6 +15,26 @@ namespace PloppableRICO
     [HarmonyPatch]
     public static class TooFewServicesComplaintPatches
     {
+        // Ignore complaint settings.
+        private static bool s_noServicesRicoPlop = true;
+        private static bool s_noServicesRicoGrow = true;
+        private static bool s_noServicesOther = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether not enough services complaints are disabled for Ploppable RICO ploppables (true means disabled).
+        /// </summary>
+        internal static bool NoServicesRicoPlop { get => s_noServicesRicoPlop; set => s_noServicesRicoPlop = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether not enough services complaints are disabled for Ploppable RICO growables (true means disabled).
+        /// </summary>
+        internal static bool NoServicesRicoGrow { get => s_noServicesRicoGrow; set => s_noServicesRicoGrow = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether not enough services complaints are disabled for generic growables (true means disabled).
+        /// </summary>
+        internal static bool NoServicesOther { get => s_noServicesOther; set => s_noServicesOther = value; }
+
         /// <summary>
         /// Determines list of target methods to patch - in this case, LevelUpWrapper methods OnCalculateOfficeLevelUp and OnCalculateIndustrialLevelUp.
         /// </summary>
@@ -36,7 +56,7 @@ namespace PloppableRICO
             bool isRICO = RICOUtils.IsRICOBuilding(buildingID);
 
             // Check if the relevant 'ignore too few services complaint' setting is set.
-            if ((ModSettings.noServicesOther && !isRICO) || (ModSettings.noServicesRicoGrow && isRICO) || (ModSettings.noServicesRicoPlop && RICOUtils.IsRICOPloppable(buildingID)))
+            if ((s_noServicesOther & !isRICO) || (s_noServicesRicoGrow & isRICO) || (s_noServicesRicoPlop && RICOUtils.IsRICOPloppable(buildingID)))
             {
                 // It is - force too few services complaint off.
                 tooFewServices = false;

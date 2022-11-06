@@ -1,6 +1,7 @@
 ﻿// <copyright file="BuildingToolPatches.cs" company="algernon (K. Algernon A. Sheppard)">
 // Copyright (c) algernon (K. Algernon A. Sheppard). All rights reserved.
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+// </copyright>
 
 namespace PloppableRICO
 {
@@ -18,6 +19,20 @@ namespace PloppableRICO
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony")]
     internal static class BuildingToolPatches
     {
+        // Plopping settings.
+        private static bool s_plopRico = true;
+        private static bool s_plopOther = true;
+
+        // Levelling settings.
+        private static bool s_historicalRico = true;
+        private static bool s_historicalOther = false;
+        private static bool s_lockLevelRico = false;
+        private static bool s_lockLevelOther = false;
+
+        // Delegates.
+        private static BuildingCompletedDelegate s_buildingCompleted;
+        private static LockBuildingLevelDelegate s_lockBuildingLevel;
+
         /// <summary>
         /// Delegate to ABLC.LockBuildingLevel.
         /// </summary>
@@ -25,14 +40,40 @@ namespace PloppableRICO
         /// <param name="level">Level to set.</param>
         internal delegate void LockBuildingLevelDelegate(ushort buildingID, ItemClass.Level level);
 
-        // Delegates.
-        private static BuildingCompletedDelegate s_buildingCompleted;
-        private static LockBuildingLevelDelegate s_lockBuildingLevel;
-
         /// <summary>
         /// Delegate to CommonBuildingAI.BuildingCompleted (open delegate).
         /// </summary>
         private delegate void BuildingCompletedDelegate(CommonBuildingAI instance, ushort buildingID, ref Building buildingData);
+
+        /// <summary>
+        /// Gets or sets a value indicating whether plopped Ploppable RICO growables have zero construction time (instant build).
+        /// </summary>
+        internal static bool InstantRicoConstruction { get => s_plopRico; set => s_plopRico = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether plopped generic growables have zero construction time (instant build).
+        /// </summary>
+        internal static bool InstantOtherConstruction { get => s_plopOther; set => s_plopOther = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether plopped Ploppable RICO growables should be made historical.
+        /// </summary>
+        internal static bool HistoricalRico { get => s_historicalRico; set => s_historicalRico = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether plopped generic growables should be made historical.
+        /// </summary>
+        internal static bool HistoricalOther { get => s_historicalOther; set => s_historicalOther = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether plopped Ploppable RICO growables should have their levels locked via Advanced Building Level Control.
+        /// </summary>
+        internal static bool LockLevelRico { get => s_lockLevelRico; set => s_lockLevelRico = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether plopped generic growables should have their levels locked via Advanced Building Level Control.
+        /// </summary>
+        internal static bool LockLevelOther { get => s_lockLevelOther; set => s_lockLevelOther = value; }
 
         /// <summary>
         /// Gets or sets the delegate to ABLC.LockBuildingLevel.
@@ -117,7 +158,7 @@ namespace PloppableRICO
 
                 // Check if it's a RICO custom AI type.
                 // Enable 'ploppable growables' if option is set.
-                if ((ModSettings.plopOther && !isRICO) || (ModSettings.plopRico && isRICO))
+                if ((s_plopOther & !isRICO) || (s_plopRico & isRICO))
                 {
                     // Check to see if construction time is greater than zero.
                     if (buildingAI.m_constructionTime > 0)
@@ -132,13 +173,13 @@ namespace PloppableRICO
                 }
 
                 // Enable 'Make Historical' if option is set.
-                if ((ModSettings.historicalOther && !isRICO) || (ModSettings.historicalRico && isRICO))
+                if ((s_historicalOther & !isRICO) || (s_historicalRico & isRICO))
                 {
                     info.m_buildingAI.SetHistorical(__result, ref Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result], historical: true);
                 }
 
                 // Enable ABLC level lock if option is set and ABLC is running.
-                if (s_lockBuildingLevel != null && ((ModSettings.lockLevelOther && !isRICO) || (ModSettings.lockLevelRico && isRICO)))
+                if (s_lockBuildingLevel != null && ((s_lockLevelOther & !isRICO) || (s_lockLevelRico & isRICO)))
                 {
                     s_lockBuildingLevel(__result, (ItemClass.Level)Singleton<BuildingManager>.instance.m_buildings.m_buffer[__result].m_level);
                 }

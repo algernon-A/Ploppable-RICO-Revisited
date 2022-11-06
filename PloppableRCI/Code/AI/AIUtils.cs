@@ -49,11 +49,11 @@ namespace PloppableRICO
             ItemClass.Level thisLevel = thisInfo.GetClassLevel();
 
             // Are we overriding cost?
-            if (ModSettings.overrideCost)
+            if (ModSettings.OverrideCost)
             {
                 // Yes - calculate based on workplaces by level multiplied by appropriate cost-per-job setting.
                 thisAI.CalculateWorkplaceCount(thisLevel, default, thisInfo.GetWidth(), thisInfo.GetLength(), out int jobs0, out int jobs1, out int jobs2, out int jobs3);
-                baseCost = (ModSettings.costPerJob0 * jobs0) + (ModSettings.costPerJob1 * jobs1) + (ModSettings.costPerJob2 * jobs2) + (ModSettings.costPerJob3 * jobs3);
+                baseCost = (ModSettings.CostPerJob0 * jobs0) + (ModSettings.CostPerJob1 * jobs1) + (ModSettings.CostPerJob2 * jobs2) + (ModSettings.costPerJob3 * jobs3);
             }
             else
             {

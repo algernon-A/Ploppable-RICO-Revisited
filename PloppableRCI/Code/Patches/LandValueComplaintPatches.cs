@@ -15,6 +15,26 @@ namespace PloppableRICO
     [HarmonyPatch]
     public static class LandValueComplaintPatches
     {
+        // Ignore complaint settings.
+        private static bool s_noValueRicoPlop = true;
+        private static bool s_noValueRicoGrow = true;
+        private static bool s_noValueOther = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether land value complaints are disabled for Ploppable RICO ploppables (true means disabled).
+        /// </summary>
+        internal static bool NoValueRicoPlop { get => s_noValueRicoPlop; set => s_noValueRicoPlop = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether land value complaints are disabled for Ploppable RICO growables (true means disabled).
+        /// </summary>
+        internal static bool NoValueRicoGrow { get => s_noValueRicoGrow; set => s_noValueRicoGrow = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether land value complaints are disabled for generic growables (true means disabled).
+        /// </summary>
+        internal static bool NoValueOther { get => s_noValueOther; set => s_noValueOther = value; }
+
         /// <summary>
         /// Determines list of target methods to patch - in this case, LevelUpWrapper methods OnCalculateResidentialLevelUp and OnCommercialResidentialUp.
         /// </summary>
@@ -36,7 +56,7 @@ namespace PloppableRICO
             bool isRICO = RICOUtils.IsRICOBuilding(buildingID);
 
             // Check if the relevant 'ignore low land value complaint' setting is set.
-            if ((ModSettings.noValueOther && !isRICO) || (ModSettings.noValueRicoGrow && isRICO) || (ModSettings.noValueRicoPlop && RICOUtils.IsRICOPloppable(buildingID)))
+            if ((s_noValueOther & !isRICO) || (s_noValueRicoGrow & isRICO) || (s_noValueRicoPlop && RICOUtils.IsRICOPloppable(buildingID)))
             {
                 // It is - force land value complaint off.
                 landValueTooLow = false;

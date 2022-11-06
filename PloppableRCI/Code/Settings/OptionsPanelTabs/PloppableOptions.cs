@@ -76,29 +76,29 @@ namespace PloppableRICO
             // Add override cost checkbox.
             UICheckBox overrideCostCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_COV"));
             overrideCostCheck.relativePosition = new Vector2(LeftMargin, currentY);
-            overrideCostCheck.isChecked = ModSettings.overrideCost;
+            overrideCostCheck.isChecked = ModSettings.OverrideCost;
             overrideCostCheck.eventCheckChanged += OverrideCostCheckChanged;
             overrideCostCheck.tabIndex = ++tabbingIndex;
             currentY += CheckRowHeight + Margin;
 
             // Houshold costs.
-            UITextField costPerHouseField = AddCostTextField(panel, "PRR_OPTION_CPH", ModSettings.costPerHousehold, ref currentY);
-            UITextField costMultResLevelField = AddCostTextField(panel, "PRR_OPTION_CHM", ModSettings.costMultResLevel, ref currentY);
-            costPerHouseField.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerHousehold);
-            costMultResLevelField.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costMultResLevel);
+            UITextField costPerHouseField = AddCostTextField(panel, "PRR_OPTION_CPH", ModSettings.CostPerHousehold, ref currentY);
+            UITextField costMultResLevelField = AddCostTextField(panel, "PRR_OPTION_CHM", ModSettings.CostMultResLevel, ref currentY);
+            costPerHouseField.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.CostPerHousehold);
+            costMultResLevelField.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.CostMultResLevel);
 
             // Workplace costs.
-            UITextField costPerJob0Field = AddCostTextField(panel, "PRR_OPTION_CJ0", ModSettings.costPerJob0, ref currentY);
-            UITextField costPerJob1Field = AddCostTextField(panel, "PRR_OPTION_CJ1", ModSettings.costPerJob1, ref currentY);
-            UITextField costPerJob2Field = AddCostTextField(panel, "PRR_OPTION_CJ2", ModSettings.costPerJob2, ref currentY);
+            UITextField costPerJob0Field = AddCostTextField(panel, "PRR_OPTION_CJ0", ModSettings.CostPerJob0, ref currentY);
+            UITextField costPerJob1Field = AddCostTextField(panel, "PRR_OPTION_CJ1", ModSettings.CostPerJob1, ref currentY);
+            UITextField costPerJob2Field = AddCostTextField(panel, "PRR_OPTION_CJ2", ModSettings.CostPerJob2, ref currentY);
             UITextField costPerJob3Field = AddCostTextField(panel, "PRR_OPTION_CJ3", ModSettings.costPerJob3, ref currentY);
             costPerJob0Field.tabIndex = ++tabbingIndex;
             costPerJob1Field.tabIndex = ++tabbingIndex;
             costPerJob2Field.tabIndex = ++tabbingIndex;
             costPerJob3Field.tabIndex = ++tabbingIndex;
-            costPerJob0Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob0);
-            costPerJob1Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob1);
-            costPerJob2Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob2);
+            costPerJob0Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.CostPerJob0);
+            costPerJob1Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.CostPerJob1);
+            costPerJob2Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.CostPerJob2);
             costPerJob3Field.eventTextSubmitted += (c, text) => TextSubmitted(c as UITextField, text, ref ModSettings.costPerJob3);
 
             // Natural disasters.
@@ -161,7 +161,7 @@ namespace PloppableRICO
         /// <param name="isChecked">New isChecked state.</param>
         private void OverrideCostCheckChanged(UIComponent c, bool isChecked)
         {
-            ModSettings.overrideCost = isChecked;
+            ModSettings.OverrideCost = isChecked;
         }
 
         /// <summary>

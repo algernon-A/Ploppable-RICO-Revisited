@@ -28,13 +28,13 @@ namespace PloppableRICO
 
             // Add 'ignore low value complaint' checkboxes.
             UIHelperBase valueGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_VAL"));
-            UICheckBox noValueRicoPlop = (UICheckBox)valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RPL"), ModSettings.noValueRicoPlop, isChecked =>
+            UICheckBox noValueRicoPlop = (UICheckBox)valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RPL"), LandValueComplaintPatches.NoValueRicoPlop, isChecked =>
             {
-                ModSettings.noValueRicoPlop = isChecked;
+                LandValueComplaintPatches.NoValueRicoPlop = isChecked;
             });
-            valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RCO"), ModSettings.noValueRicoGrow, isChecked =>
+            valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RCO"), LandValueComplaintPatches.NoValueRicoGrow, isChecked =>
             {
-                ModSettings.noValueRicoGrow = isChecked;
+                LandValueComplaintPatches.NoValueRicoGrow = isChecked;
 
                 // If this is active, then the checkbox above also needs to be checked if it isn't already.
                 if (isChecked && !noValueRicoPlop.isChecked)
@@ -42,20 +42,20 @@ namespace PloppableRICO
                     noValueRicoPlop.isChecked = true;
                 }
             });
-            valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noValueOther, isChecked =>
+            valueGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), LandValueComplaintPatches.NoValueOther, isChecked =>
             {
-                ModSettings.noValueOther = isChecked;
+                LandValueComplaintPatches.NoValueOther = isChecked;
             });
 
             // Add 'ignore too few services complaint' checkboxes.
             UIHelperBase servicesGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_SVC"));
-            UICheckBox noServicesRicoPlop = (UICheckBox)servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RPL"), ModSettings.noServicesRicoPlop, isChecked =>
+            UICheckBox noServicesRicoPlop = (UICheckBox)servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RPL"), TooFewServicesComplaintPatches.NoServicesRicoPlop, isChecked =>
             {
-                ModSettings.noServicesRicoPlop = isChecked;
+                TooFewServicesComplaintPatches.NoServicesRicoPlop = isChecked;
             });
-            servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RCO"), ModSettings.noServicesRicoGrow, isChecked =>
+            servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RCO"), TooFewServicesComplaintPatches.NoServicesRicoGrow, isChecked =>
             {
-                ModSettings.noServicesRicoGrow = isChecked;
+                TooFewServicesComplaintPatches.NoServicesRicoGrow = isChecked;
 
                 // If this is active, then the checkbox above also needs to be checked if it isn't already.
                 if (isChecked && !noServicesRicoPlop.isChecked)
@@ -63,9 +63,9 @@ namespace PloppableRICO
                     noServicesRicoPlop.isChecked = true;
                 }
             });
-            servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noServicesOther, isChecked =>
+            servicesGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), TooFewServicesComplaintPatches.NoServicesOther, isChecked =>
             {
-                ModSettings.noServicesOther = isChecked;
+                TooFewServicesComplaintPatches.NoServicesOther = isChecked;
             });
         }
     }

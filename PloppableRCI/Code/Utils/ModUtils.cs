@@ -88,7 +88,7 @@ namespace PloppableRICO
                 if (ablcExternalCalls != null)
                 {
                     // Try to get LockBuildingLevel method.
-                    MethodInfo ablcLockBuildingLevel =  AccessTools.Method(ablcExternalCalls, "LockBuildingLevel");
+                    MethodInfo ablcLockBuildingLevel = AccessTools.Method(ablcExternalCalls, "LockBuildingLevel");
                     if (ablcLockBuildingLevel != null)
                     {
                         // Success!
