@@ -148,7 +148,7 @@ namespace PloppableRICO
                     }
                 }
 
-                // If we got here, no valid value was oarsed; set text field text to the currently stored value.
+                // If we got here, no valid value was parsed; set text field text to the currently stored value.
                 textField.text = setting.ToString();
             }
         }
