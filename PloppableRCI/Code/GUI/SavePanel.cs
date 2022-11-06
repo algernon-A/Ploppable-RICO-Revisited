@@ -166,7 +166,7 @@ namespace PloppableRICO
             if (currentData != null)
             {
                 // Convert the 'live' prefab (instance in PrefabCollection) and update household count and builidng level for all current instances.
-                Loading.s_convertPrefabs.ConvertPrefab(currentData, PrefabCollection<BuildingInfo>.FindLoaded(currentBuildingData.Prefab.name));
+                PrefabManager.ConvertPrefab(currentData, PrefabCollection<BuildingInfo>.FindLoaded(currentBuildingData.Prefab.name));
                 CitizenUnitUtils.UpdateCitizenUnits(currentBuildingData.Prefab, false);
             }
             else

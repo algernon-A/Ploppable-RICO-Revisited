@@ -18,17 +18,6 @@ namespace PloppableRICO
     /// </summary>
     public sealed class Loading : PatcherLoadingBase<OptionsPanel, PatcherBase>
     {
-        // Internal instances.
-        internal static ConvertPrefabs s_convertPrefabs;
-
-        // Broken prefabs list.
-        internal static List<BuildingInfo> s_brokenPrefabs;
-
-        // RICO definitions.
-        internal static PloppableRICODefinition s_localRicoDef;
-        internal static PloppableRICODefinition s_mod1RicoDef;
-        internal static PloppableRICODefinition s_mod2RicoDef;
-
         private bool _softModConflct;
 
         /// <summary>
@@ -56,35 +45,11 @@ namespace PloppableRICO
             // Check for Advanced Building Level Control.
             ModUtils.ABLCReflection();
 
-            // Create instances if they don't already exist.
-            if (s_convertPrefabs == null)
-            {
-                s_convertPrefabs = new ConvertPrefabs();
-            }
+            // Initialize prefab manager.
+            PrefabManager.Init();
 
-            // Reset prefab dictionary.
-            PrefabManager.PrefabDictionary.Clear();
-
-            // Reset broken prefabs list.
-            s_brokenPrefabs = new List<BuildingInfo>();
-
-            // Read any local RICO settings.
-            string ricoDefPath = "LocalRICOSettings.xml";
-            s_localRicoDef = null;
-
-            if (!File.Exists(ricoDefPath))
-            {
-                Logging.Message("no ", ricoDefPath, " file found");
-            }
-            else
-            {
-                s_localRicoDef = RICOReader.ParseRICODefinition(ricoDefPath, isLocal: true);
-
-                if (s_localRicoDef == null)
-                {
-                    Logging.Message("no valid definitions in ", ricoDefPath);
-                }
-            }
+            // Read any settings files.
+            InitializePrefabPatch.ReadSettings();
         }
 
         /// <summary>
@@ -113,14 +78,8 @@ namespace PloppableRICO
                 }
             }
 
-            // Report any broken assets and remove from our prefab dictionary.
-            foreach (BuildingInfo prefab in s_brokenPrefabs)
-            {
-                Logging.Error("broken prefab: ", prefab.name);
-                PrefabManager.PrefabDictionary.Remove(prefab);
-            }
-
-            s_brokenPrefabs.Clear();
+            // Handle broken assets.
+            PrefabManager.HandleBrokenAssets();
 
             // Init Ploppable Tool panel.
             PloppableTool.Initialize();

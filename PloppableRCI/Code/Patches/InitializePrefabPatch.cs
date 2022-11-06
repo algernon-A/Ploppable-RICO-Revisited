@@ -17,6 +17,21 @@ namespace PloppableRICO
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony")]
     public static class InitializePrefabPatch
     {
+        // RICO definitions.
+        private static PloppableRICODefinition s_localRicoDef;
+        private static PloppableRICODefinition s_mod1RicoDef;
+        private static PloppableRICODefinition s_mod2RicoDef;
+
+        /// <summary>
+        /// Sets the mod RICO definition file for the Workshop RICO Settings mod.
+        /// </summary>
+        internal static PloppableRICODefinition Mod1RicoDef { set => s_mod1RicoDef = value; }
+
+        /// <summary>
+        /// Sets the mod RICO definition file for the Modern Japan CCP RICO settings mod.
+        /// </summary>
+        internal static PloppableRICODefinition Mod2RicoDef { set => s_mod2RicoDef = value; }
+
         /// <summary>
         /// Harmony prefix patch for BuildingInfo.InitializePrefab.
         /// Reads and applies RICO settings prior to prefab initialization.
@@ -39,7 +54,7 @@ namespace PloppableRICO
             PrefabManager.PrefabDictionary[__instance] = buildingData;
 
             // Add to broken prefabs list (will be removed later if it's not broken).
-            Loading.s_brokenPrefabs.Add(__instance);
+            PrefabManager.BrokenPrefabs.Add(__instance);
 
             // Search for PloppableRICODefinition.xml files with this asset.
             // Need to use FindAssetByName(string, AssetType) because FindAssetByName(string) doesn't catch all assets at this stage of initialisation
@@ -77,10 +92,10 @@ namespace PloppableRICO
             }
 
             // Check for and add any local settings for this prefab to our list.
-            if (Loading.s_localRicoDef != null)
+            if (s_localRicoDef != null)
             {
                 // Step through our previously loaded local settings and see if we've got a match.
-                foreach (RICOBuilding buildingDef in Loading.s_localRicoDef.Buildings)
+                foreach (RICOBuilding buildingDef in s_localRicoDef.Buildings)
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
@@ -92,10 +107,10 @@ namespace PloppableRICO
             }
 
             // Check for any Workshop RICO mod settings for this prefab.
-            if (Loading.s_mod1RicoDef != null)
+            if (s_mod1RicoDef != null)
             {
                 // Step through our previously loaded local settings and see if we've got a match.
-                foreach (RICOBuilding buildingDef in Loading.s_mod1RicoDef.Buildings)
+                foreach (RICOBuilding buildingDef in s_mod1RicoDef.Buildings)
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
@@ -107,10 +122,10 @@ namespace PloppableRICO
             }
 
             // Check for Modern Japan CCP mod settings for this prefab.
-            if (Loading.s_mod2RicoDef != null)
+            if (s_mod2RicoDef != null)
             {
                 // Step through our previously loaded local settings and see if we've got a match.
-                foreach (RICOBuilding buildingDef in Loading.s_mod2RicoDef.Buildings)
+                foreach (RICOBuilding buildingDef in s_mod2RicoDef.Buildings)
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
@@ -122,57 +137,49 @@ namespace PloppableRICO
             }
 
             // Apply appropriate RICO settings to prefab.
-            if (Loading.s_convertPrefabs != null)
+            // Start with local settings.
+            if (PrefabManager.PrefabDictionary[__instance].HasLocal)
             {
-                // Start with local settings.
-                if (PrefabManager.PrefabDictionary[__instance].HasLocal)
+                // If local settings disable RICO, dont convert.
+                if (PrefabManager.PrefabDictionary[__instance].Local.m_ricoEnabled)
                 {
-                    // If local settings disable RICO, dont convert.
-                    if (PrefabManager.PrefabDictionary[__instance].Local.m_ricoEnabled)
-                    {
-                        Loading.s_convertPrefabs.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Local, __instance);
-                    }
+                    PrefabManager.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Local, __instance);
                 }
-                else if (PrefabManager.PrefabDictionary[__instance].HasAuthor)
+            }
+            else if (PrefabManager.PrefabDictionary[__instance].HasAuthor)
+            {
+                // If no local settings, apply author settings.
+                // If author settings disable RICO, dont convert.
+                if (PrefabManager.PrefabDictionary[__instance].Author.m_ricoEnabled)
                 {
-                    // If no local settings, apply author settings.
-                    // If author settings disable RICO, dont convert.
-                    if (PrefabManager.PrefabDictionary[__instance].Author.m_ricoEnabled)
-                    {
-                        Loading.s_convertPrefabs.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Author, __instance);
-                    }
+                    PrefabManager.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Author, __instance);
                 }
-                else if (PrefabManager.PrefabDictionary[__instance].HasMod)
+            }
+            else if (PrefabManager.PrefabDictionary[__instance].HasMod)
+            {
+                // If none of the above, apply mod settings.
+                // If mod settings disable RICO, dont convert.
+                if (PrefabManager.PrefabDictionary[__instance].Mod.m_ricoEnabled)
                 {
-                    // If none of the above, apply mod settings.
-                    // If mod settings disable RICO, dont convert.
-                    if (PrefabManager.PrefabDictionary[__instance].Mod.m_ricoEnabled)
-                    {
-                        Loading.s_convertPrefabs.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Mod, __instance);
-                    }
-                }
-                else
-                {
-                    // No RICO settings; replicate game InitializePrefab checks overridden by transpiler.
-                    int privateServiceIndex = ItemClass.GetPrivateServiceIndex(__instance.m_class.m_service);
-                    if (privateServiceIndex != -1)
-                    {
-                        if (__instance.m_placementStyle == ItemClass.Placement.Manual)
-                        {
-                            throw new PrefabException(__instance, "Private building cannot have manual placement style");
-                        }
-
-                        if (__instance.m_paths != null && __instance.m_paths.Length != 0)
-                        {
-                            throw new PrefabException(__instance, "Private building cannot include roads or other net types");
-                        }
-                    }
+                    PrefabManager.ConvertPrefab(PrefabManager.PrefabDictionary[__instance].Mod, __instance);
                 }
             }
             else
             {
-                // This means that there's been a significant failure.  Ploppable RICO settings can't be applied.
-                Logging.Error("convertPrefabs not initialised");
+                // No RICO settings; replicate game InitializePrefab checks overridden by transpiler.
+                int privateServiceIndex = ItemClass.GetPrivateServiceIndex(__instance.m_class.m_service);
+                if (privateServiceIndex != -1)
+                {
+                    if (__instance.m_placementStyle == ItemClass.Placement.Manual)
+                    {
+                        throw new PrefabException(__instance, "Private building cannot have manual placement style");
+                    }
+
+                    if (__instance.m_paths != null && __instance.m_paths.Length != 0)
+                    {
+                        throw new PrefabException(__instance, "Private building cannot include roads or other net types");
+                    }
+                }
             }
 
             // Continue on to execute game InitializePrefab.
@@ -187,7 +194,31 @@ namespace PloppableRICO
         public static void Postfix(BuildingInfo __instance)
         {
             // If we've made it here, the asset has initialised correctly (no PrefabExceptions thrown); remove it from broken prefabs list.
-            Loading.s_brokenPrefabs.Remove(__instance);
+            PrefabManager.BrokenPrefabs.Remove(__instance);
+        }
+
+        /// <summary>
+        /// Reads any local RICO settings file.
+        /// </summary>
+        internal static void ReadSettings()
+        {
+            // Read any local RICO settings.
+            string ricoDefPath = "LocalRICOSettings.xml";
+            s_localRicoDef = null;
+
+            if (!File.Exists(ricoDefPath))
+            {
+                Logging.Message("no ", ricoDefPath, " file found");
+            }
+            else
+            {
+                s_localRicoDef = RICOReader.ParseRICODefinition(ricoDefPath, isLocal: true);
+
+                if (s_localRicoDef == null)
+                {
+                    Logging.Message("no valid definitions in ", ricoDefPath);
+                }
+            }
         }
 
         /// <summary>
