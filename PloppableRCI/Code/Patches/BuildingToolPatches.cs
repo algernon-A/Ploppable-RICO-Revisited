@@ -23,6 +23,9 @@ namespace PloppableRICO
         private static bool s_plopRico = true;
         private static bool s_plopOther = true;
 
+        // Ploppable demolition warnings.
+        internal static bool s_autoDemolish = false;
+
         // Levelling settings.
         private static bool s_historicalRico = true;
         private static bool s_historicalOther = false;
@@ -81,6 +84,11 @@ namespace PloppableRICO
         internal static LockBuildingLevelDelegate LockBuildingLevel { get => s_lockBuildingLevel;  set => s_lockBuildingLevel = value; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether bulldozing Ploppable RICO ploppable buildings can be auto-demolished e.g. by building roads over them.
+        /// </summary>
+        internal static bool AutoDemolish { get => s_autoDemolish; set => s_autoDemolish = value; }
+
+        /// <summary>
         /// Called by Harmony when patching to peform pre-patch actions.
         /// </summary>
         public static void Prepare()
@@ -111,7 +119,7 @@ namespace PloppableRICO
         public static bool IsImportantBuildingPrefix(ref bool __result, BuildingInfo info)
         {
             // Only do this if our settings are set to ensure RICO buildings are important.
-            if (!ModSettings.autoDemolish)
+            if (!s_autoDemolish)
             {
                 // All we want to do here is ensure that ploppable RICO buildings are classified as "Important Buildings" (to "spare them from the wrath of the BuildingTool"...)
                 if (info.m_buildingAI is PloppableOfficeAI || info.m_buildingAI is PloppableExtractorAI || info.m_buildingAI is PloppableResidentialAI || info.m_buildingAI is PloppableCommercialAI || info.m_buildingAI is PloppableIndustrialAI)

@@ -45,31 +45,31 @@ namespace PloppableRICO
         /// Gets or sets a value indicating whether disaster collapsing is disabled for ploppable RICO buildings.
         /// </summary>
         [XmlElement("NoCollapse")]
-        public bool NoCollapse { get => ModSettings.noCollapse; set => ModSettings.noCollapse = value; }
+        public bool NoCollapse { get => CommonBuildingAIPatches.NoCollapse; set => CommonBuildingAIPatches.NoCollapse = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether Ploppable RICO growables can survive outside of the correct zone.
         /// </summary>
         [XmlElement("NoZonesRico")]
-        public bool NoZonesRico { get => ModSettings.noZonesRico; set => ModSettings.noZonesRico = value; }
+        public bool NoZonesRico { get => BuildingPatches.NoZonesRico; set => BuildingPatches.NoZonesRico = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether generic growables can survive outside of the correct zone.
         /// </summary>
         [XmlElement("NoZonesOther")]
-        public bool NoZonesOther { get => ModSettings.noZonesOther; set => ModSettings.noZonesOther = value; }
+        public bool NoZonesOther { get => BuildingPatches.NoZonesOther; set => BuildingPatches.NoZonesOther = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether Ploppable RICO growables can survive outside of the correct district specialization.
         /// </summary>
         [XmlElement("NoSpecRico")]
-        public bool NoSpecRico { get => ModSettings.noSpecRico; set => ModSettings.noSpecRico = value; }
+        public bool NoSpecRico { get => SpecializationPatches.NoSpecRico; set => SpecializationPatches.NoSpecRico = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether generic growables can survive outside of the correct district specialization.
         /// </summary>
         [XmlElement("NoSpecOther")]
-        public bool NoSpecOther { get => ModSettings.noSpecOther; set => ModSettings.noSpecOther = value; }
+        public bool NoSpecOther { get => SpecializationPatches.NoSpecOther; set => SpecializationPatches.NoSpecOther = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether building style forced despawning is disabled (true means disabled).
@@ -153,13 +153,13 @@ namespace PloppableRICO
         /// Gets or sets a value indicating whether bulldozing Ploppable RICO ploppable buildings displays the confirmation dialog.
         /// </summary>
         [XmlElement("WarnBulldoze")]
-        public bool WarnBulldoze { get => ModSettings.warnBulldoze; set => ModSettings.warnBulldoze = value; }
+        public bool WarnBulldoze { get => PrefabManager.WarnBulldoze; set => PrefabManager.WarnBulldoze = value; }
 
         /// <summary>
         /// Gets or sets a value indicating whether bulldozing Ploppable RICO ploppable buildings can be auto-demolished e.g. by building roads over them.
         /// </summary>
         [XmlElement("AutoDemolish")]
-        public bool AutoDemolish { get => ModSettings.autoDemolish; set => ModSettings.autoDemolish = value; }
+        public bool AutoDemolish { get => BuildingToolPatches.AutoDemolish; set => BuildingToolPatches.AutoDemolish = value; }
 
         /// <summary>
         /// Gets or sets the thumbnail background setting.

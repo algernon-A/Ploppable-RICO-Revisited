@@ -50,17 +50,17 @@ namespace PloppableRICO
             // Add 'warn if bulldozing ploppables' checkbox.
             UICheckBox demolishWarnCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_BDZ"));
             demolishWarnCheck.relativePosition = new Vector2(LeftMargin, currentY);
-            demolishWarnCheck.isChecked = ModSettings.warnBulldoze;
-            demolishWarnCheck.eventCheckChanged += DemolishWarnCheckChanged;
+            demolishWarnCheck.isChecked = PrefabManager.WarnBulldoze;
+            demolishWarnCheck.eventCheckChanged += (c, isChecked) => PrefabManager.WarnBulldoze = isChecked;
             demolishWarnCheck.tabIndex = ++tabbingIndex;
             currentY += CheckRowHeight + Margin;
 
             // Add auto-demolish checkbox.
             UICheckBox demolishAutoCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_IMP"));
             demolishAutoCheck.relativePosition = new Vector2(LeftMargin, currentY);
-            demolishAutoCheck.isChecked = ModSettings.autoDemolish;
+            demolishAutoCheck.isChecked = BuildingToolPatches.AutoDemolish;
             demolishAutoCheck.tabIndex = ++tabbingIndex;
-            demolishAutoCheck.eventCheckChanged += DemolishAutoCheckChanged;
+            demolishAutoCheck.eventCheckChanged += (c, isChecked) => BuildingToolPatches.AutoDemolish = isChecked;
             currentY += CheckRowHeight;
 
             // Auto-demolish sub-label.
@@ -110,48 +110,10 @@ namespace PloppableRICO
             // Add auto-demolish checkbox.
             UICheckBox noCollapseCheck = UICheckBoxes.AddPlainCheckBox(panel, Translations.Translate("PRR_OPTION_NOC"));
             noCollapseCheck.relativePosition = new Vector2(LeftMargin, currentY);
-            noCollapseCheck.isChecked = ModSettings.noCollapse;
+            noCollapseCheck.isChecked = CommonBuildingAIPatches.NoCollapse;
             noCollapseCheck.tabIndex = ++tabbingIndex;
-            noCollapseCheck.eventCheckChanged += NoCollapseCheckChanged;
+            noCollapseCheck.eventCheckChanged += (c, isChecked) => CommonBuildingAIPatches.NoCollapse = isChecked;
             currentY += CheckRowHeight;
-        }
-
-        /// <summary>
-        /// Event handler for demolish warning checkbox.
-        /// </summary>
-        /// <param name="control">Calling UIComponent.</param>
-        /// <param name="isChecked">New isChecked state.</param>
-        private void DemolishWarnCheckChanged(UIComponent control, bool isChecked)
-        {
-            // Update mod settings.
-            ModSettings.warnBulldoze = isChecked;
-
-            // If we're in-game, iterate through dictionary, looking for RICO ploppable buildings and updating their auto-remove flags.
-            if (Loading.IsLoaded)
-            {
-                foreach (KeyValuePair<BuildingInfo, BuildingData> entry in PrefabManager.PrefabDictionary)
-                {
-                    // Get active RICO settings.
-                    RICOBuilding building = entry.Value.ActiveSetting;
-
-                    // Check that it's enabled and isn't growable.
-                    if (building != null && building.m_ricoEnabled && !building.m_growable)
-                    {
-                        // Apply flag.
-                        entry.Key.m_autoRemove = !isChecked;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Event handler for auto demolish checkbox.
-        /// </summary>
-        /// <param name="c">Calling UIComponent.</param>
-        /// <param name="isChecked">New isChecked state.</param>
-        private void DemolishAutoCheckChanged(UIComponent c, bool isChecked)
-        {
-            ModSettings.autoDemolish = isChecked;
         }
 
         /// <summary>
@@ -162,16 +124,6 @@ namespace PloppableRICO
         private void OverrideCostCheckChanged(UIComponent c, bool isChecked)
         {
             ModSettings.OverrideCost = isChecked;
-        }
-
-        /// <summary>
-        /// Event handler for no collapse checkbox.
-        /// </summary>
-        /// <param name="c">Calling UIComponent.</param>
-        /// <param name="isChecked">New isChecked state.</param>
-        private void NoCollapseCheckChanged(UIComponent c, bool isChecked)
-        {
-            ModSettings.noCollapse = isChecked;
         }
 
         /// <summary>

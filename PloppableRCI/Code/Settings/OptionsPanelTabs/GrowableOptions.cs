@@ -39,24 +39,24 @@ namespace PloppableRICO
 
             // Add no zone checks checkboxes.
             UIHelperBase zoneGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_ZON"));
-            zoneGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.noZonesRico, isChecked =>
+            zoneGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), BuildingPatches.NoZonesRico, isChecked =>
             {
-                ModSettings.noZonesRico = isChecked;
+                BuildingPatches.NoZonesRico = isChecked;
             });
-            zoneGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noZonesOther, isChecked =>
+            zoneGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), BuildingPatches.NoZonesOther, isChecked =>
             {
-                ModSettings.noZonesOther = isChecked;
+                BuildingPatches.NoZonesOther = isChecked;
             });
 
             // Add no specialisation checks checkboxes.
             UIHelperBase specGroup = helper.AddGroup(Translations.Translate("PRR_OPTION_SPC"));
-            specGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), ModSettings.noSpecRico, isChecked =>
+            specGroup.AddCheckbox(Translations.Translate("PRR_OPTION_RGR"), SpecializationPatches.NoSpecRico, isChecked =>
             {
-                ModSettings.noSpecRico = isChecked;
+                SpecializationPatches.NoSpecRico = isChecked;
             });
-            specGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), ModSettings.noSpecOther, isChecked =>
+            specGroup.AddCheckbox(Translations.Translate("PRR_OPTION_OTH"), SpecializationPatches.NoSpecOther, isChecked =>
             {
-                ModSettings.noSpecOther = isChecked;
+                SpecializationPatches.NoSpecOther = isChecked;
             });
 
             // Add 'make plopped growables historical' checkboxes.

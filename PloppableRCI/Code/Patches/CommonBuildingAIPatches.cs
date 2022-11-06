@@ -14,6 +14,14 @@ namespace PloppableRICO
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony")]
     public static class CommonBuildingAIPatches
     {
+        // Disasters DLC behaviour setting.
+        private static bool s_noCollapse = true;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether disaster collapsing is disabled for ploppable RICO buildings.
+        /// </summary>
+        internal static bool NoCollapse { get => s_noCollapse; set => s_noCollapse = value; }
+
         /// <summary>
         /// Simple Prefix patch to toggle excecution of game method based on current settings.
         /// </summary>
@@ -22,7 +30,7 @@ namespace PloppableRICO
         /// <returns>False if the base method shouldn't be called (collapse has been prevented), true otherwise.</returns>
         public static bool Prefix(ref bool __result, CommonBuildingAI __instance)
         {
-            if (ModSettings.noCollapse && RICOUtils.IsRICOPloppableAI(__instance as PrivateBuildingAI))
+            if (s_noCollapse && RICOUtils.IsRICOPloppableAI(__instance as PrivateBuildingAI))
             {
                 __result = false;
 

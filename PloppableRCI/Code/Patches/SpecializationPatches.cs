@@ -20,6 +20,20 @@ namespace PloppableRICO
     [HarmonyPatch]
     public static class SpecializationPatches
     {
+        // Growable plopping settings.
+        private static bool s_noSpecRico = true;
+        private static bool s_noSpecOther = true;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether Ploppable RICO growables can survive outside of the correct district specialization.
+        /// </summary>
+        internal static bool NoSpecRico { get => s_noSpecRico; set => s_noSpecRico = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether generic growables can survive outside of the correct district specialization.
+        /// </summary>
+        internal static bool NoSpecOther { get => s_noSpecOther; set => s_noSpecOther = value; }
+
         /// <summary>
         /// Harmony Transpiler to add checks to see if commercial buildings should be demolished if they're outside of a district with relevant specialization settings.
         /// </summary>
@@ -167,7 +181,7 @@ namespace PloppableRICO
 
             // Check if the relevant 'ignore specialisation' setting is set.
             // If it is, we just don't do anything.  Otherwise, we mimic the base game's code for this ocurrence.
-            if (!(ModSettings.noSpecOther && !isRICO) && !(ModSettings.noSpecRico && isRICO))
+            if (!(s_noSpecOther & !isRICO) && !(s_noSpecRico & isRICO))
             {
                 buildingData.m_flags |= Building.Flags.Demolishing;
                 Singleton<SimulationManager>.instance.m_currentBuildIndex++;

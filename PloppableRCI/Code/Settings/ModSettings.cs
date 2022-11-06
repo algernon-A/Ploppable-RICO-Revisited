@@ -16,19 +16,6 @@ namespace PloppableRICO
         internal static bool speedBoost = false;
         internal static int thumbBacks = (byte)ThumbBackCats.Skybox;
 
-        // Growable plopping settings.
-        internal static bool noZonesRico = true;
-        internal static bool noZonesOther = true;
-        internal static bool noSpecRico = true;
-        internal static bool noSpecOther = true;
-
-        // Ploppable demolition warnings.
-        internal static bool warnBulldoze = false;
-        internal static bool autoDemolish = false;
-
-        // Disasters DLC behaviour.
-        internal static bool noCollapse = true;
-
         // Cost overides.
         internal static bool OverrideCost = false;
         internal static int CostPerHousehold = 100;

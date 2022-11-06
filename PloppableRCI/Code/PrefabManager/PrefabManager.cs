@@ -14,6 +14,9 @@ namespace PloppableRICO
     /// </summary>
     public static class PrefabManager
     {
+        // Bulldozing warning setting,
+        private static bool s_warnBulldoze = false;
+
         // Broken prefabs list.
         private static List<BuildingInfo> s_brokenPrefabs;
 
@@ -29,6 +32,36 @@ namespace PloppableRICO
         /// Gets the list of broken prefabs.
         /// </summary>
         internal static List<BuildingInfo> BrokenPrefabs => s_brokenPrefabs;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether bulldozing Ploppable RICO ploppable buildings displays the confirmation dialog.
+        /// </summary>
+        internal static bool WarnBulldoze
+        {
+            get => s_warnBulldoze;
+
+            set
+            {
+                s_warnBulldoze = value;
+
+                // If we're in-game, iterate through dictionary, looking for RICO ploppable buildings and updating their auto-remove flags.
+                if (Loading.IsLoaded)
+                {
+                    foreach (KeyValuePair<BuildingInfo, BuildingData> entry in PrefabDictionary)
+                    {
+                        // Get active RICO settings.
+                        RICOBuilding building = entry.Value.ActiveSetting;
+
+                        // Check that it's enabled and isn't growable.
+                        if (building != null && building.m_ricoEnabled && !building.m_growable)
+                        {
+                            // Apply flag.
+                            entry.Key.m_autoRemove = !value;
+                        }
+                    }
+                }
+            }
+        }
 
         /// <summary>
         /// Initializes the manager.
@@ -453,7 +486,7 @@ namespace PloppableRICO
             prefab.m_buildingAI.m_info = prefab;
             prefab.m_class = itemClass;
             prefab.m_placementStyle = growable ? ItemClass.Placement.Automatic : ItemClass.Placement.Manual;
-            prefab.m_autoRemove = growable || !ModSettings.warnBulldoze;
+            prefab.m_autoRemove = growable || !s_warnBulldoze;
         }
 
         /// <summary>

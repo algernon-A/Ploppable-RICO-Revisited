@@ -15,6 +15,20 @@ namespace PloppableRICO
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "Harmony")]
     public static class BuildingPatches
     {
+        // Zoning settings.
+        private static bool s_noZonesRico = true;
+        private static bool s_noZonesOther = true;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether Ploppable RICO growables can survive outside of the correct zone.
+        /// </summary>
+        internal static bool NoZonesRico { get => s_noZonesRico; set => s_noZonesRico = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether generic growables can survive outside of the correct zone.
+        /// </summary>
+        internal static bool NoZonesOther { get => s_noZonesOther; set => s_noZonesOther = value; }
+
         /// <summary>
         /// Harmony prefix patch to Building.CheckZoning to implement 'no zoning checks' functionality.
         /// </summary>
@@ -27,7 +41,7 @@ namespace PloppableRICO
             bool isRICO = RICOUtils.IsRICOAI(__instance.Info.GetAI() as PrivateBuildingAI);
 
             // Check if the relevant 'ignore zoning' setting is set.
-            if ((ModSettings.noZonesOther && !isRICO) || (ModSettings.noZonesRico && isRICO))
+            if ((s_noZonesOther && !isRICO) || (s_noZonesRico && isRICO))
             {
                 // It is - set the result to true (tell the game we're in a valid zone).
                 __result = true;
