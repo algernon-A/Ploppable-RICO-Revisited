@@ -1,4 +1,7 @@
-﻿- Update AlgernonCommons
+﻿Version 2.5.2 -
+
+- Update UI style
+- Update AlgernonCommons
 
 
 Version 2.5.1 -
