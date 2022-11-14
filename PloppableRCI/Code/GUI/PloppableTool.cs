@@ -209,7 +209,7 @@ namespace PloppableRICO
                 _tabs.padding = new RectOffset(0, 3, 0, 0);
 
                 // Get game sprite thumbnail atlas.
-                UITextureAtlas gameIconAtlas = Resources.FindObjectsOfTypeAll<UITextureAtlas>().FirstOrDefault(a => a.name == "Thumbnails");
+                UITextureAtlas gameIconAtlas = UITextures.GetTextureAtlas("Thumbnails");
 
                 // Scroll panel.
                 AddScrollPanel();
@@ -282,10 +282,16 @@ namespace PloppableRICO
 
                 // Settings tab.
                 _showSettings = UIButtons.AddButton(_tabs, 0f, 0f, Translations.Translate("PRR_SET"), 100f, 25f, 0.9f, tooltip: Translations.Translate("PRR_NAME"));
+                _showSettings.textColor = Color.white;
                 _showSettings.normalBgSprite = "SubBarButtonBase";
+                _showSettings.disabledBgSprite = "SubBarButtonBaseDisabled";
+                _showSettings.pressedBgSprite = "SubBarButtonBasePressed";
+                _showSettings.hoveredBgSprite = "SubBarButtonBaseHovered";
+                _showSettings.focusedBgSprite = "SubBarButtonBaseFocused";
                 _showSettings.eventClick += (component, clickEvent) =>
                 {
                     SettingsPanelManager.Open(_scrollPanel?.selectedItem?.Prefab);
+                    _showSettings.Unfocus();
                 };
 
                 // Add UI text.
