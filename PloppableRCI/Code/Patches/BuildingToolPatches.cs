@@ -24,7 +24,7 @@ namespace PloppableRICO
         private static bool s_plopOther = true;
 
         // Ploppable demolition warnings.
-        internal static bool s_autoDemolish = false;
+        private static bool s_autoDemolish = false;
 
         // Levelling settings.
         private static bool s_historicalRico = true;

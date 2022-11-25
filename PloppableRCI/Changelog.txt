@@ -1,4 +1,7 @@
-﻿Version 2.5.2 -
+﻿- Fix settings panel name filter sometimes appearing off-panel
+
+
+Version 2.5.2 -
 
 - Update UI style
 - Update AlgernonCommons

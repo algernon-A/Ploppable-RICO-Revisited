@@ -51,6 +51,9 @@ namespace PloppableRICO
         /// </summary>
         internal BuildingFilterPanel()
         {
+            // Set width.
+            width = RICOSettingsPanel.ContentWidth;
+
             // Category toggles.
             _categoryToggles = new UICheckBox[NumOfCategories];
 

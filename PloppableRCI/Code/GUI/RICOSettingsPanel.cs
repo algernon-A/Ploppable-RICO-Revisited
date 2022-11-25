@@ -19,7 +19,13 @@ namespace PloppableRICO
     /// </summary>
     internal class RICOSettingsPanel : UIPanel
     {
+        /// <summary>
+        /// Filter bar width.
+        /// </summary>
+        internal const float ContentWidth = LeftWidth + MiddleWidth + RightWidth + (Spacing * 2f);
+
         // Layout constants.
+        private const float PanelWidth = ContentWidth + (Spacing * 2f);
         private const float LeftWidth = 400f;
         private const float MiddleWidth = 250f;
         private const float RightWidth = 300f;
@@ -50,7 +56,7 @@ namespace PloppableRICO
                 // Basic setup.
                 canFocus = true;
                 isInteractive = true;
-                width = LeftWidth + MiddleWidth + RightWidth + (Spacing * 4);
+                width = PanelWidth;
                 height = PanelHeight + TitleHeight + FilterHeight + (Spacing * 2) + BottomMargin;
                 relativePosition = new Vector3(Mathf.Floor((GetUIView().fixedWidth - width) / 2), Mathf.Floor((GetUIView().fixedHeight - height) / 2));
                 backgroundSprite = "UnlockingPanel2";
@@ -86,9 +92,8 @@ namespace PloppableRICO
 
                 // Filter.
                 _filterBar = AddUIComponent<BuildingFilterPanel>();
-                _filterBar.width = width - (Spacing * 2);
                 _filterBar.height = FilterHeight;
-                _filterBar.relativePosition = new Vector3(Spacing, TitleHeight);
+                _filterBar.relativePosition = new Vector2(Spacing, TitleHeight);
 
                 // Event handler to dealth with changes to filtering.
                 _filterBar.EventFilteringChanged += (component, value) =>
