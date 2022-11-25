@@ -1,4 +1,6 @@
-﻿- Fix settings panel name filter sometimes appearing off-panel
+﻿Version 2.5.2.1 -
+
+- Fix settings panel name filter sometimes appearing off-panel
 
 
 Version 2.5.2 -

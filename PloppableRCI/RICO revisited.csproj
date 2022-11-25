@@ -8,7 +8,7 @@
 		<Authors>algernon,AJ3D</Authors>
 		<Copyright>Copyright © 2020-22 algernon (fork of work 2015-2018 by AJ3D and others)</Copyright>
 		<Product>$(Title)</Product>
-		<Version>2.5.2</Version>
+		<Version>2.5.2.1</Version>
 		<ManagedDLLPath>$(MSBuildProgramFiles32)/Steam/steamapps/common/Cities_Skylines/Cities_Data/Managed</ManagedDLLPath>
 		<AssemblySearchPaths>
 			$(AssemblySearchPaths);
