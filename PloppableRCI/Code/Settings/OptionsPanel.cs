@@ -19,7 +19,7 @@ namespace PloppableRICO
         internal OptionsPanel()
         {
             // Add tabstrip.
-            UITabstrip tabstrip = AutoTabstrip.AddTabstrip(this, 0f, 0f, OptionsPanelManager<OptionsPanel>.PanelWidth, OptionsPanelManager<OptionsPanel>.PanelHeight, out _);
+            AutoTabstrip tabstrip = AutoTabstrip.AddTabstrip(this, 0f, 0f, OptionsPanelManager<OptionsPanel>.PanelWidth, OptionsPanelManager<OptionsPanel>.PanelHeight, out _, tabHeight: 50f);
 
             // Add tabs and panels.
             new ModOptions(tabstrip, 0);

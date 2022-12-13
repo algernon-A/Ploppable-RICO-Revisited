@@ -275,6 +275,27 @@ namespace PloppableRICO
 
                                 // Plazas & Promenades not installed - fall back to standard office.
                                 aiClass = "Office - Level" + buildingData.m_level;
+
+                                break;
+
+                            case "financial":
+                                // Financial offices - requires FinancialDistricts.
+                                if (RICOUtils.IsFDinstalled())
+                                {
+                                    // Need to do financial office ItemClass manually as the ItemClassCollection may not have loaded the expansion when this is called.
+                                    ItemClass itemClass = new ItemClass()
+                                    {
+                                        m_service = ItemClass.Service.Office,
+                                        m_subService = ItemClass.SubService.OfficeFinancial,
+                                        m_level = (ItemClass.Level)(buildingData.m_level - 1),
+                                    };
+
+                                    InitializePrefab(prefab, officeAI, itemClass, buildingData.m_growable);
+                                    return;
+                                }
+
+                                // Financial Districts not installed - fall back to standard office.
+                                aiClass = "Office - Level" + buildingData.m_level;
                                 break;
 
                             default:

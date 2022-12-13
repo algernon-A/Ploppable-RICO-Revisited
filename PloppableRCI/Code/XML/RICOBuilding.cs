@@ -331,7 +331,7 @@ namespace PloppableRICO
             }
 
             // Sub-service errors.  We can work with office or industrial, but not commercial or residential.
-            if (!new Regex(@"^(high|low|generic|farming|oil|forest|ore|none|tourist|leisure|high tech|eco|high eco|low eco|wall2wall)$").IsMatch(m_subService))
+            if (!new Regex(@"^(high|low|generic|farming|oil|forest|ore|none|tourist|leisure|high tech|eco|high eco|low eco|wall2wall|financial)$").IsMatch(m_subService))
             {
                 // Allow for invalid subservices for office and industrial buildings.
                 if (!(m_service == "office" || m_service == "industrial"))

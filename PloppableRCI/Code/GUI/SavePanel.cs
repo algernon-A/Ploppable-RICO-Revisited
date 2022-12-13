@@ -351,6 +351,8 @@ namespace PloppableRICO
                     return "ore";
                 case ItemClass.SubService.OfficeGeneric:
                     return "none";
+                case ItemClass.SubService.OfficeFinancial:
+                    return "financial";
                 case ItemClass.SubService.OfficeHightech:
                     return "high tech";
                 case ItemClass.SubService.ResidentialLowEco:

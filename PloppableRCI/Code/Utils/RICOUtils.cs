@@ -63,6 +63,12 @@ namespace PloppableRICO
         internal static bool IsPPinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.PlazasAndPromenadesDLC);
 
         /// <summary>
+        /// Gets a value indicating whether the Financial Districts expansion is installed.
+        /// </summary>
+        /// <returns>True if Plazas and Promenades is installed, false otherwise.</returns>
+        internal static bool IsFDinstalled() => SteamHelper.IsDLCOwned(SteamHelper.DLC.FinancialDistrictsDLC);
+
+        /// <summary>
         /// Gets the default workplace distribution for the given service, subservice, and level.
         /// </summary>
         /// <param name="service">Service.</param>

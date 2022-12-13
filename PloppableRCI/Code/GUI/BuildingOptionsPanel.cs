@@ -32,6 +32,7 @@ namespace PloppableRICO
         {
             Translations.Translate("PRR_SUB_GEN"),
             Translations.Translate("PRR_SUB_W2W"),
+            Translations.Translate("PRR_SUB_FIN"),
             Translations.Translate("PRR_SUB_ITC"),
         };
 
@@ -317,6 +318,7 @@ namespace PloppableRICO
         {
             Generic = 0,
             Wall2Wall,
+            Financial,
             IT,
             NumSubs,
         }
@@ -879,6 +881,9 @@ namespace PloppableRICO
                         case "high tech":
                             _subServiceMenu.selectedIndex = (int)OffSubIndex.IT;
                             break;
+                        case "financial":
+                            _subServiceMenu.selectedIndex = (int)OffSubIndex.Financial;
+                            break;
                         default:
                             _subServiceMenu.selectedIndex = (int)OffSubIndex.Generic;
                             break;
@@ -1260,6 +1265,9 @@ namespace PloppableRICO
                             break;
                         case (int)OffSubIndex.Wall2Wall:
                             subServiceName = "wall2wall";
+                            break;
+                        case (int)OffSubIndex.Financial:
+                            subServiceName = "financial";
                             break;
                         case (int)OffSubIndex.IT:
                             subServiceName = "high tech";
