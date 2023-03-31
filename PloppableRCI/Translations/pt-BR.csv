@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Turismo"
 "PRR_SUB_ORG","Eco (Orgânico)"
 "PRR_SUB_GEN","Genérico"
+"PRR_SUB_FIN","Financeiro"
 "PRR_SUB_ITC","Conglomerado TI"
 "PRR_SUB_FAR","Agrícola"
 "PRR_SUB_FOR","Madeireira"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Construções de serviços não são mais visíveis por padrão no painel de opções RICO"
 "PRR_UPD_243_0","Adicionar opção para desabilitar notificações de atualização"
 "PRR_UPD_25_0","Compatibilidade com a versão 1.15 do jogo (Plazas & Promenades)"
+"PRR_UPD_253_0","Adicione suporte para escritórios financeiros"

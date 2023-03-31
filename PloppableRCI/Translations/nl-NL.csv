@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Tourisme"
 "PRR_SUB_ORG","Ecologisch"
 "PRR_SUB_GEN","Algemeen"
+"PRR_SUB_FIN","Financiën"
 "PRR_SUB_ITC","IT-bedrijven"
 "PRR_SUB_FAR","Agrarisch"
 "PRR_SUB_FOR","Bosbouw"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","onderhouds gebouwen zijn niet langer zichtbaar in het ''RICO'' instellingen paneel"
 "PRR_UPD_243_0","voeg optie toe om update notificaties uit te zetten."
 "PRR_UPD_25_0","Compatibiliteit met spelversie 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Ondersteuning voor financiële kantoren toegevoegd"

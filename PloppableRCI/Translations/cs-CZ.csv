@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Cestovní ruch"
 "PRR_SUB_ORG","Ekologické (organické)"
 "PRR_SUB_GEN","Obecné"
+"PRR_SUB_FIN","Financial"
 "PRR_SUB_ITC","IT klastr"
 "PRR_SUB_FAR","Farmaření"
 "PRR_SUB_FOR","Lesnictví"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Budovy služeb již nejsou ve výchozím nastavení viditelné v panelu nastavení RICO"
 "PRR_UPD_243_0","Přidat možnost zakázat oznámení aktualizace"
 "PRR_UPD_25_0","Kompatibilní s verzí 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Add support for financial offices"

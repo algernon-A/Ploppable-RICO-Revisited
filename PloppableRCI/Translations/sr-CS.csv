@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Turizam"
 "PRR_SUB_ORG","Ekološko"
 "PRR_SUB_GEN","Generično"
+"PRR_SUB_FIN","Financial"
 "PRR_SUB_ITC","IT klaster"
 "PRR_SUB_FAR","Poljoprivreda"
 "PRR_SUB_FOR","Šumarstvo"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Uslužne zgrade više nisu podrazumevno vidljive u panelu za RICO podešavanja"
 "PRR_UPD_243_0","Dodata opcija za gašenje obaveštenja"
 "PRR_UPD_25_0","Compatiblility with game version 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Add support for financial offices"

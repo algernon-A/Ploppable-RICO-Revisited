@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Τουρισμός"
 "PRR_SUB_ORG","Βιολογική παραγωγή"
 "PRR_SUB_GEN","Γενικό"
+"PRR_SUB_FIN","Financial"
 "PRR_SUB_ITC","Σύμπλεγμα Πληροφορικής"
 "PRR_SUB_FAR","Καλλιέργεια"
 "PRR_SUB_FOR","Δασοκομία"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Τα κτίρια υπηρεσιών δεν είναι πλέον ορατά από προεπιλογή στον πίνακα ρυθμίσεων RICO,"
 "PRR_UPD_243_0","Προσθήκη επιλογής για απενεργοποίηση ειδοποιήσεων ενημέρωσης."
 "PRR_UPD_25_0","Compatiblility with game version 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Add support for financial offices"

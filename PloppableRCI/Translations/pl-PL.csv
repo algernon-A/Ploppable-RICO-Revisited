@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Turystyka"
 "PRR_SUB_ORG","Ekologiczna"
 "PRR_SUB_GEN","Zwykła"
+"PRR_SUB_FIN","Financial"
 "PRR_SUB_ITC","Dziedzina IT"
 "PRR_SUB_FAR","Rolnictwo"
 "PRR_SUB_FOR","Leśnictwo"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Service buildings are no longer visible by default in the RICO settings panel"
 "PRR_UPD_243_0","Add option to disable update notifications"
 "PRR_UPD_25_0","Compatiblility with game version 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Add support for financial offices"

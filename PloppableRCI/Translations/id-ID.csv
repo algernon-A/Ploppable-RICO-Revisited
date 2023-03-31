@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Pariwisata"
 "PRR_SUB_ORG","Eco (organik)"
 "PRR_SUB_GEN","Umum"
+"PRR_SUB_FIN","Financial"
 "PRR_SUB_ITC","Kluster IT"
 "PRR_SUB_FAR","Pertanian"
 "PRR_SUB_FOR","Perhutanan"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Bangunan layanan tidak akan lagi terlihat di panel pengaturan RICO secara default"
 "PRR_UPD_243_0","Menambah opsi untuk mematikan notifikasi update"
 "PRR_UPD_25_0","Compatiblility with game version 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Add support for financial offices"

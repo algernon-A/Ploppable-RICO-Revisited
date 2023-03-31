@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","Tourismus"
 "PRR_SUB_ORG","Lokale Herstellung (Bio)"
 "PRR_SUB_GEN","Standard"
+"PRR_SUB_FIN","Finanzwesen"
 "PRR_SUB_ITC","IT-Unternehmen"
 "PRR_SUB_FAR","Landwirtschaft"
 "PRR_SUB_FOR","Forstwirtschaft"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Dienstleistungs-Gebäude sind im RICO Einstellungs-Auswahl nicht mehr standardmässig sichtbar"
 "PRR_UPD_243_0","Funktion zum Ausschalten von Aktualisierungs-Benachrichtigungen hinzugefügt"
 "PRR_UPD_25_0","Kompatibilität mit der Spielversion 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Unterstützung für Finanzbüros hinzugefügt"

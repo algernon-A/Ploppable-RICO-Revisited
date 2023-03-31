@@ -20,6 +20,7 @@
 "PRR_SUB_TOU","專業化觀光旅遊行政專區建築"
 "PRR_SUB_ORG","專業化本土製造服務和有機農業行政專區建築"
 "PRR_SUB_GEN","一般類型建築"
+"PRR_SUB_FIN","Financial"
 "PRR_SUB_ITC","專業化IT產業行政專區建築"
 "PRR_SUB_FAR","專業化農牧業行政專區建築"
 "PRR_SUB_FOR","專業化林業行政專區建築"
@@ -181,3 +182,4 @@
 "PRR_UPD_242_0","Service buildings are no longer visible by default in the RICO settings panel"
 "PRR_UPD_243_0","Add option to disable update notifications"
 "PRR_UPD_25_0","Compatiblility with game version 1.15 (Plazas & Promenades)"
+"PRR_UPD_253_0","Add support for financial offices"
