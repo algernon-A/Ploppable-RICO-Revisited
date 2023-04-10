@@ -37,17 +37,25 @@ namespace PloppableRICO
         private const float TitleHeight = 40f;
 
         // Panel components.
-        private readonly BuildingFilterPanel _filterBar;
-        private readonly UIList _buildingSelection;
-        private readonly PreviewPanel _previewPanel;
-        private readonly SavePanel _savePanel;
-        private readonly BuildingOptionsPanel _buildingOptionsPanel;
+        private BuildingFilterPanel _filterBar;
+        private UIList _buildingSelection;
+        private PreviewPanel _previewPanel;
+        private SavePanel _savePanel;
+        private BuildingOptionsPanel _buildingOptionsPanel;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RICOSettingsPanel"/> class.
+        /// Gets the current selection.
         /// </summary>
-        internal RICOSettingsPanel()
+        internal BuildingData CurrentSelection { get; private set; }
+
+        /// <summary>
+        /// Called by Unity when the object is created.
+        /// Used to perform setup.
+        /// </summary>
+        public override void Awake()
         {
+            base.Awake();
+
             try
             {
                 // Hide while we're setting up.
@@ -152,11 +160,6 @@ namespace PloppableRICO
                 Logging.LogException(e, "exception setting up settings panel");
             }
         }
-
-        /// <summary>
-        /// Gets the current selection.
-        /// </summary>
-        internal BuildingData CurrentSelection { get; private set; }
 
         /// <summary>
         /// Called to save building data.

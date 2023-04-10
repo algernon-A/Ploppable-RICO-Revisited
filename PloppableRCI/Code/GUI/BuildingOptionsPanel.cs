@@ -5,7 +5,6 @@
 
 namespace PloppableRICO
 {
-    using System;
     using AlgernonCommons.Translation;
     using AlgernonCommons.UI;
     using ColossalFramework.UI;
@@ -99,36 +98,36 @@ namespace PloppableRICO
         };
 
         // Panel title.
-        private readonly UIPanel _titlePanel;
-        private readonly UILabel _titleLabel;
+        private UIPanel _titlePanel;
+        private UILabel _titleLabel;
 
         // Settings selection.
-        private readonly UIDropDown _settingDropDown;
+        private UIDropDown _settingDropDown;
 
         // Enable RICO.
-        private readonly UIPanel _enableRICOPanel;
-        private readonly UICheckBox _ricoEnabled;
+        private UIPanel _enableRICOPanel;
+        private UICheckBox _ricoEnabled;
 
         // Cetegory menus.
-        private readonly UIDropDown _serviceMenu;
-        private readonly UIDropDown _subServiceMenu;
-        private readonly UIDropDown _levelMenu;
-        private readonly UIDropDown _uiCategoryMenu;
+        private UIDropDown _serviceMenu;
+        private UIDropDown _subServiceMenu;
+        private UIDropDown _levelMenu;
+        private UIDropDown _uiCategoryMenu;
 
         // Households / workplaces.
-        private readonly UITextField _manualPopField;
-        private readonly UITextField _uneducatedWorkerField;
-        private readonly UITextField _educatedWorkerField;
-        private readonly UITextField _wellEducatedWorkerField;
-        private readonly UITextField _highlyEducatedWorkerField;
+        private UITextField _manualPopField;
+        private UITextField _uneducatedWorkerField;
+        private UITextField _educatedWorkerField;
+        private UITextField _wellEducatedWorkerField;
+        private UITextField _highlyEducatedWorkerField;
 
         // Checkboxes.
-        private readonly UICheckBox _growableCheck;
-        private readonly UICheckBox _pollutionEnabledCheck;
-        private readonly UICheckBox _realityIgnoredCheck;
+        private UICheckBox _growableCheck;
+        private UICheckBox _pollutionEnabledCheck;
+        private UICheckBox _realityIgnoredCheck;
 
         // Construction cost.
-        private readonly UITextField _constructionCostField;
+        private UITextField _constructionCostField;
 
         // Event handling.
         private bool _disableEvents;
@@ -137,11 +136,110 @@ namespace PloppableRICO
         private BuildingData _currentBuildingData;
         private RICOBuilding _currentSettings;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BuildingOptionsPanel"/> class.
-        /// </summary>
-        internal BuildingOptionsPanel()
+        // Setting type indexes.
+        private enum SettingTypeIndex
         {
+            Local = 0,
+            Author,
+            Mod,
+        }
+
+        // Service indexes.
+        private enum ServiceIndex
+        {
+            None = 0,
+            Residential,
+            Industrial,
+            Office,
+            Commercial,
+            Extractor,
+            Dummy,
+            NumServes,
+        }
+
+        // Sub-service indexes - residential.
+        private enum ResSubIndex
+        {
+            High = 0,
+            Low,
+            Wall2Wall,
+            HighEco,
+            LowEco,
+            NumSubs,
+        }
+
+        // Sub-service indexes - commercial.
+        private enum ComSubIndex
+        {
+            High = 0,
+            Low,
+            Wall2Wall,
+            Leisure,
+            Tourist,
+            Eco,
+            NumSubs,
+        }
+
+        // Sub-service indexes - industrial.
+        private enum IndSubIndex
+        {
+            Generic = 0,
+            Farming,
+            Forestry,
+            Oil,
+            Ore,
+            NumSubs,
+        }
+
+        // Sub-service indexes - extractor.
+        private enum ExtSubIndex
+        {
+            Farming = 0,
+            Forestry,
+            Oil,
+            Ore,
+            NumSubs,
+        }
+
+        // Sub-service indexes - office.
+        private enum OffSubIndex
+        {
+            Generic = 0,
+            Wall2Wall,
+            Financial,
+            IT,
+            NumSubs,
+        }
+
+        // UI category indexes.
+        private enum UICatIndex
+        {
+            ResLow = 0,
+            ResHigh,
+            ComLow,
+            ComHigh,
+            Office,
+            Industrial,
+            Farming,
+            Forestry,
+            Oil,
+            Ore,
+            Leisure,
+            Tourist,
+            Organic,
+            HighTech,
+            SelfSufficient,
+            None,
+        }
+
+        /// <summary>
+        /// Called by Unity when the object is created.
+        /// Used to perform setup.
+        /// </summary>
+        public override void Awake()
+        {
+            base.Awake();
+
             // Basic setup.
             isVisible = true;
             canFocus = true;
@@ -246,102 +344,6 @@ namespace PloppableRICO
 
             // Event handler for realistic population checkbox to toggle state of population textfields.
             _realityIgnoredCheck.eventCheckChanged += SetTextfieldState;
-        }
-
-        // Setting type indexes.
-        private enum SettingTypeIndex
-        {
-            Local = 0,
-            Author,
-            Mod,
-        }
-
-        // Service indexes.
-        private enum ServiceIndex
-        {
-            None = 0,
-            Residential,
-            Industrial,
-            Office,
-            Commercial,
-            Extractor,
-            Dummy,
-            NumServes,
-        }
-
-        // Sub-service indexes - residential.
-        private enum ResSubIndex
-        {
-            High = 0,
-            Low,
-            Wall2Wall,
-            HighEco,
-            LowEco,
-            NumSubs,
-        }
-
-        // Sub-service indexes - commercial.
-        private enum ComSubIndex
-        {
-            High = 0,
-            Low,
-            Wall2Wall,
-            Leisure,
-            Tourist,
-            Eco,
-            NumSubs,
-        }
-
-        // Sub-service indexes - industrial.
-        private enum IndSubIndex
-        {
-            Generic = 0,
-            Farming,
-            Forestry,
-            Oil,
-            Ore,
-            NumSubs,
-        }
-
-        // Sub-service indexes - extractor.
-        private enum ExtSubIndex
-        {
-            Farming = 0,
-            Forestry,
-            Oil,
-            Ore,
-            NumSubs,
-        }
-
-        // Sub-service indexes - office.
-        private enum OffSubIndex
-        {
-            Generic = 0,
-            Wall2Wall,
-            Financial,
-            IT,
-            NumSubs,
-        }
-
-        // UI category indexes.
-        private enum UICatIndex
-        {
-            ResLow = 0,
-            ResHigh,
-            ComLow,
-            ComHigh,
-            Office,
-            Industrial,
-            Farming,
-            Forestry,
-            Oil,
-            Ore,
-            Leisure,
-            Tourist,
-            Organic,
-            HighTech,
-            SelfSufficient,
-            None,
         }
 
         /// <summary>

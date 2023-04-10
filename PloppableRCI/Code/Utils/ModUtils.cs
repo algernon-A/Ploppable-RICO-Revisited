@@ -33,7 +33,7 @@ namespace PloppableRICO
         /// <summary>
         /// Checks for known 'soft' mod conflicts and function extenders.
         /// </summary>
-        /// <returns>Whether or not a soft mod conflict was detected</returns>
+        /// <returns>Whether or not a soft mod conflict was detected.</returns>
         internal static bool CheckMods()
         {
             // Initialise flag and list of conflicting mods.
@@ -107,8 +107,8 @@ namespace PloppableRICO
         /// <summary>
         /// Checks to see if another mod is installed and enabled, based on a provided Steam Workshop ID.
         /// </summary>
-        /// <param name="id">Steam workshop ID</param>
-        /// <returns>True if the mod is installed and enabled, false otherwise</returns>
+        /// <param name="id">Steam workshop ID.</param>
+        /// <returns>True if the mod is installed and enabled, false otherwise.</returns>
         private static bool IsModEnabled(ulong id)
         {
             return PluginManager.instance.GetPluginsInfo().Any(mod => (mod.publishedFileID.AsUInt64 == id && mod.isEnabled));
@@ -117,7 +117,7 @@ namespace PloppableRICO
         /// <summary>
         ///  Checks for the Plop the Growables mod, as distinct from the PtG converter.
         /// </summary>
-        /// <returns>True if the original Plop the Growables mod is installed and active, false otherwise</returns>
+        /// <returns>True if the original Plop the Growables mod is installed and active, false otherwise.</returns>
         private static bool IsPtGInstalled()
         {
             // Iterate through the full list of plugins.

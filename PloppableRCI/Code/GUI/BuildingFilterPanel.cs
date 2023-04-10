@@ -40,17 +40,35 @@ namespace PloppableRICO
         private const float SettingsCheckSize = 20f;
 
         // Panel components.
-        private readonly UICheckBox[] _categoryToggles;
-        private readonly UICheckBox[] _settingsFilter;
-        private readonly UIButton _allCats;
-        private readonly UIButton _noCats;
-        private readonly UITextField _nameFilter;
+        private UICheckBox[] _categoryToggles;
+        private UICheckBox[] _settingsFilter;
+        private UIButton _allCats;
+        private UIButton _noCats;
+        private UITextField _nameFilter;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuildingFilterPanel"/> class.
+        /// Triggered when the filter changes.
         /// </summary>
-        internal BuildingFilterPanel()
+        internal event PropertyChangedEventHandler<int> EventFilteringChanged;
+
+        /// <summary>
+        /// Gets the settings filter checkbox array.
+        /// </summary>
+        internal UICheckBox[] SettingsFilter => _settingsFilter;
+
+        /// <summary>
+        /// Gets the trimmed current text contents of the name filter textfield.
+        /// </summary>
+        internal string FilterString => _nameFilter.text.Trim();
+
+        /// <summary>
+        /// Called by Unity when the object is created.
+        /// Used to perform setup.
+        /// </summary>
+        public override void Awake()
         {
+            base.Awake();
+
             // Set width.
             width = RICOSettingsPanel.ContentWidth;
 
@@ -198,21 +216,6 @@ namespace PloppableRICO
             _settingsFilter[2].tooltip = Translations.Translate("PRR_SET_HASLOC");
             _settingsFilter[3].tooltip = Translations.Translate("PRR_SET_HASANY");
         }
-
-        /// <summary>
-        /// Triggered when the filter changes.
-        /// </summary>
-        internal event PropertyChangedEventHandler<int> EventFilteringChanged;
-
-        /// <summary>
-        /// Gets the settings filter checkbox array.
-        /// </summary>
-        internal UICheckBox[] SettingsFilter => _settingsFilter;
-
-        /// <summary>
-        /// Gets the trimmed current text contents of the name filter textfield.
-        /// </summary>
-        internal string FilterString => _nameFilter.text.Trim();
 
         /// <summary>
         /// Checks whether or not the specified category is currently selected.
