@@ -1,4 +1,7 @@
-﻿Version 2.5.3 -
+﻿- Update bundled CitiesHarmony
+
+
+Version 2.5.3 -
 
 - Add support for financial office buildings
 
