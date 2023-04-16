@@ -38,15 +38,14 @@ namespace PloppableRICO
         /// Harmony priority is High, and before boformer's Prefab Hook, so that RICO assets are converted to their 'final' RICO state before initialization.
         /// </summary>
         /// <param name="__instance">Original method instance reference.</param>
-        /// <returns>Whether to continue InitializePrefab (always true).</returns>
         [HarmonyPriority(Priority.High)]
         [HarmonyBefore(new string[] { "github.com/boformer/PrefabHook" })]
-        public static bool Prefix(BuildingInfo __instance)
+        public static void Prefix(BuildingInfo __instance)
         {
             // Basic sanity check before proceeding; if failed, don't do anything here - just continue on to game method.
             if (__instance.name == null)
             {
-                return true;
+                return;
             }
 
             // Create a new building record for this prefab and add it to our lists.
@@ -99,7 +98,8 @@ namespace PloppableRICO
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
-                        // Match!  Add these author settings to our prefab dictionary.
+                        // Match!  Add these local settings to our prefab dictionary.
+                        Logging.Message("found local settings for ", buildingDef.Name);
                         PrefabManager.PrefabDictionary[__instance].Local = buildingDef;
                         PrefabManager.PrefabDictionary[__instance].HasLocal = true;
                     }
@@ -114,7 +114,8 @@ namespace PloppableRICO
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
-                        // Match!  Add these author settings to our prefab dictionary.
+                        // Match!  Add these mod settings to our prefab dictionary.
+                        Logging.Message("found mod settings for ", buildingDef.Name);
                         PrefabManager.PrefabDictionary[__instance].Mod = buildingDef;
                         PrefabManager.PrefabDictionary[__instance].HasMod = true;
                     }
@@ -181,9 +182,6 @@ namespace PloppableRICO
                     }
                 }
             }
-
-            // Continue on to execute game InitializePrefab.
-            return true;
         }
 
         /// <summary>
