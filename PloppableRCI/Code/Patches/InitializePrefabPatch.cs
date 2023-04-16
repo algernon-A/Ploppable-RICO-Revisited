@@ -99,7 +99,7 @@ namespace PloppableRICO
                     if (buildingDef.Name.Equals(__instance.name))
                     {
                         // Match!  Add these local settings to our prefab dictionary.
-                        Logging.Message("found local settings for ", buildingDef.Name);
+                        Logging.Message("applying local settings for ", buildingDef.Name);
                         PrefabManager.PrefabDictionary[__instance].Local = buildingDef;
                         PrefabManager.PrefabDictionary[__instance].HasLocal = true;
                     }
@@ -115,7 +115,7 @@ namespace PloppableRICO
                     if (buildingDef.Name.Equals(__instance.name))
                     {
                         // Match!  Add these mod settings to our prefab dictionary.
-                        Logging.Message("found mod settings for ", buildingDef.Name);
+                        Logging.Message("applying mod settings for ", buildingDef.Name);
                         PrefabManager.PrefabDictionary[__instance].Mod = buildingDef;
                         PrefabManager.PrefabDictionary[__instance].HasMod = true;
                     }
@@ -130,8 +130,9 @@ namespace PloppableRICO
                 {
                     if (buildingDef.Name.Equals(__instance.name))
                     {
-                        // Match!  Add these author settings to our prefab dictionary.
+                        // Match!  Add these mod settings to our prefab dictionary.
                         PrefabManager.PrefabDictionary[__instance].Mod = buildingDef;
+                        Logging.Message("applying mod settings for ", buildingDef.Name);
                         PrefabManager.PrefabDictionary[__instance].HasMod = true;
                     }
                 }
