@@ -6,8 +6,6 @@
 namespace PloppableRICO
 {
     using System.Collections.Generic;
-    using System.IO;
-    using AlgernonCommons;
     using AlgernonCommons.Notifications;
     using AlgernonCommons.Patching;
     using AlgernonCommons.Translation;
