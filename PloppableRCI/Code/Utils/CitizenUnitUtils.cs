@@ -16,10 +16,14 @@ namespace PloppableRICO
     /// Utility class for dealing with CitizenUnits.
     /// </summary>
     [HarmonyPatch]
-    public static class CitizenUnitUtils
+    internal static class CitizenUnitUtils
     {
+        // Dekegates to private game methods.
+        private static EnsureCitizenUnitsDelegate s_esuDelegate;
+        private static ReleaseUnitImplementationDelegate s_ruiDelegate;
+
         /// <summary>
-        /// Reverse patch for CitizenManager.EnsureCitizenUnits to access private method of original instance.
+        /// Delegate to BuildingAI.EnsureCitizenUnits.
         /// </summary>
         /// <param name="instance">BuildingAI instance.</param>
         /// <param name="buildingID">ID of this building.</param>
@@ -28,31 +32,48 @@ namespace PloppableRICO
         /// <param name="workCount">Building workplace count.</param>
         /// <param name="visitCount">Building vistor count.</param>
         /// <param name="studentCount">Building studetn count.</param>
-        [HarmonyReversePatch]
-        [HarmonyPatch(typeof(BuildingAI), "EnsureCitizenUnits")]
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void EnsureCitizenUnits(object instance, ushort buildingID, ref Building data, int homeCount, int workCount, int visitCount, int studentCount)
-        {
-            string message = "EnsureCitizenUnits reverse Harmony patch wasn't applied";
-            Logging.Error(message, instance, buildingID.ToString(), data, homeCount, workCount, visitCount, studentCount);
-            throw new NotImplementedException(message);
-        }
+        private delegate void EnsureCitizenUnitsDelegate(BuildingAI instance, ushort buildingID, ref Building data, int homeCount, int workCount, int visitCount, int studentCount);
 
         /// <summary>
-        /// Reverse patch for CitizenManager.ReleaseUnitImplementation to access private method of original instance.
+        /// Delegate to CitizenManager.ReleaseUnitImplementation.
         /// </summary>
         /// <param name="instance">CitizenManager instance.</param>
         /// <param name="unit">CitizenUnit ID.</param>
         /// <param name="data">CitizenUnit data.</param>
-        [HarmonyReversePatch]
-        [HarmonyPatch(typeof(CitizenManager), "ReleaseUnitImplementation")]
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public static void ReleaseUnitImplementation(object instance, uint unit, ref CitizenUnit data)
+        private delegate void ReleaseUnitImplementationDelegate(CitizenManager instance, uint unit, ref CitizenUnit data);
+
+        /// <summary>
+        /// Inititializes delegates.  Must be called prior to mod operation.
+        /// </summary>
+        internal static void InitializeDelegates()
         {
-            string message = "ReleaseUnitImplementation reverse Harmony patch wasn't applied";
-            Logging.Error(message, instance, unit, data);
-            throw new NotImplementedException(message);
+            Logging.KeyMessage("initializing delegates");
+
+            s_esuDelegate = AccessTools.MethodDelegate<EnsureCitizenUnitsDelegate>(AccessTools.Method(typeof(BuildingAI), "EnsureCitizenUnits"));
+            s_ruiDelegate = AccessTools.MethodDelegate<ReleaseUnitImplementationDelegate>(AccessTools.Method(typeof(CitizenManager), "ReleaseUnitImplementation"));
         }
+
+        /// <summary>
+        /// Delegate to CitizenManager.EnsureCitizenUnits to access private method of original instance.
+        /// </summary>
+        /// <param name="instance">BuildingAI instance.</param>
+        /// <param name="buildingID">ID of this building.</param>
+        /// <param name="data">Building data.</param>
+        /// <param name="homeCount">Building residential household count.</param>
+        /// <param name="workCount">Building workplace count.</param>
+        /// <param name="visitCount">Building vistor count.</param>
+        /// <param name="studentCount">Building studetn count.</param>
+        internal static void EnsureCitizenUnits(BuildingAI instance, ushort buildingID, ref Building data, int homeCount, int workCount, int visitCount, int studentCount) =>
+            s_esuDelegate(instance, buildingID, ref data, homeCount, workCount, visitCount, studentCount);
+
+        /// <summary>
+        /// Delegate to CitizenManager.ReleaseUnitImplementation to access private method of original instance.
+        /// </summary>
+        /// <param name="instance">CitizenManager instance.</param>
+        /// <param name="unit">CitizenUnit ID.</param>
+        /// <param name="data">CitizenUnit data.</param>
+        internal static void ReleaseUnitImplementation(CitizenManager instance, uint unit, ref CitizenUnit data) =>
+            s_ruiDelegate(instance, unit, ref data);
 
         /// <summary>
         /// Updates the CitizenUnits of already existing (placed/grown) building instances of the specified prefab, or all buildings of the specified service or subservice if prefab name is null.

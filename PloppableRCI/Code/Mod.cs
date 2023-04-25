@@ -36,6 +36,17 @@ namespace PloppableRICO
         public override WhatsNewMessage[] WhatsNewMessages => new WhatsNewMessageListing().Messages;
 
         /// <summary>
+        /// Called by the game when the mod is enabled.
+        /// </summary>
+        public override void OnEnabled()
+        {
+            base.OnEnabled();
+
+            // Ensure delegate setup.
+            CitizenUnitUtils.InitializeDelegates();
+        }
+
+        /// <summary>
         /// Saves settings file.
         /// </summary>
         public override void SaveSettings() => XMLSettingsFile.Save();
