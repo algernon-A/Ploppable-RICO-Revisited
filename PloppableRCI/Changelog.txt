@@ -1,4 +1,6 @@
-﻿- Update AlgernonCommons
+﻿Version 2.5.4 -
+
+- Update AlgernonCommons
 - Update bundled CitiesHarmony
 - Convert EnsureCitizenUnits reverse patch to delegate
 
