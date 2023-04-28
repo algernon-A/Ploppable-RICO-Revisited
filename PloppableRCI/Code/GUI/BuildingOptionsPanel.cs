@@ -276,7 +276,7 @@ namespace PloppableRICO
             _settingDropDown.eventSelectedIndexChanged += UpdateSettingSelection;
 
             // RICO enabled.
-            _ricoEnabled = RICOCheckBar(this, Translations.Translate("PRR_OPT_ENA"), this.width);
+            _ricoEnabled = RICOCheckBar(this, Translations.Translate("PRR_OPT_ENA"));
             _enableRICOPanel = this.AddUIComponent<UIPanel>();
             _enableRICOPanel.height = 0;
             _enableRICOPanel.isVisible = false;
@@ -614,6 +614,7 @@ namespace PloppableRICO
 
                         // (Re)enable input fields.
                         _ricoEnabled.Enable();
+                        _ricoEnabled.parent.Show();
                         _serviceMenu.Enable();
                         _subServiceMenu.Enable();
                         _levelMenu.Enable();
@@ -1497,15 +1498,16 @@ namespace PloppableRICO
         /// </summary>
         /// <param name="parent">Parent component.</param>
         /// <param name="label">Label text.</param>
-        /// <param name="width">Bar width.</param>
         /// <returns>New checkbox.</returns>
-        private UICheckBox RICOCheckBar(UIComponent parent, string label, float width)
+        private UICheckBox RICOCheckBar(UIComponent parent, string label)
         {
             // Create panel.
             UIPanel basePanel = parent.AddUIComponent<UIPanel>();
+            basePanel.autoSize = false;
+            basePanel.autoLayout = false;
             basePanel.height = 25f;
             basePanel.backgroundSprite = "ScrollbarTrack";
-            basePanel.width = width;
+            basePanel.width = RICOSettingsPanel.RightWidth;
             basePanel.relativePosition = new Vector2(0f, 5f);
 
             // Add checkbox.
@@ -1517,7 +1519,7 @@ namespace PloppableRICO
             checkBox.label.textScale = 0.8f;
             checkBox.label.autoSize = false;
             checkBox.label.size = new Vector2(190f, 18f);
-            checkBox.label.textAlignment = UIHorizontalAlignment.Center;
+            checkBox.label.textAlignment = UIHorizontalAlignment.Left;
             checkBox.label.relativePosition = new Vector2(25f, 2f);
 
             return checkBox;
@@ -1533,7 +1535,7 @@ namespace PloppableRICO
         {
             // Add checkbox.
             UICheckBox checkBox = parent.AddUIComponent<UICheckBox>();
-            checkBox.width = parent.width;
+            checkBox.width = RICOSettingsPanel.RightWidth - 8f;
             checkBox.height = 20f;
             checkBox.clipChildren = true;
             checkBox.relativePosition = new Vector2(xPos, 4f);

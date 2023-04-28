@@ -1,5 +1,6 @@
 ﻿Version 2.5.4 -
 
+- Fix "enable RICO" button sometimes not initializing properly
 - Update AlgernonCommons
 - Update bundled CitiesHarmony
 - Convert EnsureCitizenUnits reverse patch to delegate

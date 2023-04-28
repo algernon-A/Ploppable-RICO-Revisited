@@ -24,11 +24,15 @@ namespace PloppableRICO
         /// </summary>
         internal const float ContentWidth = LeftWidth + MiddleWidth + RightWidth + (Spacing * 2f);
 
+        /// <summary>
+        /// Building settings panel width.
+        /// </summary>
+        internal const float RightWidth = 300f;
+
         // Layout constants.
         private const float PanelWidth = ContentWidth + (Spacing * 2f);
         private const float LeftWidth = 400f;
         private const float MiddleWidth = 250f;
-        private const float RightWidth = 300f;
         private const float FilterHeight = BuildingFilterPanel.FilterBarHeight;
         private const float PanelHeight = 550f;
         private const float BottomMargin = 10f;
