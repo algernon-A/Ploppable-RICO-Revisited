@@ -555,7 +555,7 @@ namespace PloppableRICO
 
                         default:
                             // Tourist, leisure or eco.
-                            _uiCategoryMenu.selectedIndex = _subServiceMenu.selectedIndex + 8;
+                            _uiCategoryMenu.selectedIndex = _subServiceMenu.selectedIndex + 7;
                             break;
                     }
 
